@@ -6,5 +6,5 @@ CXX_FLAGS = -fPIC
 
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"baxter_sim_controllers\" -Dbaxter_sim_controllers_EXPORTS
 
-CXX_INCLUDES = -I/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_controllers/include -I/home/vagrant/ros_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
+CXX_INCLUDES = -I/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_controllers/include -I/home/alex/ros_ws/devel/include -I/opt/ros/melodic/include -I/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp 
 

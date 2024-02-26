@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::SetLinkProperties > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::SetLinkPropertiesRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::SetLinkProperties > 
+// service_traits::MD5Sum< ::gazebo_msgs::SetLinkPropertiesRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::SetLinkProperties >
 template<>
 struct MD5Sum< ::gazebo_msgs::SetLinkPropertiesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::SetLinkPropertiesRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::SetLinkPropertiesRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::SetLinkProperties > 
+// service_traits::DataType< ::gazebo_msgs::SetLinkPropertiesRequest> should match
+// service_traits::DataType< ::gazebo_msgs::SetLinkProperties >
 template<>
 struct DataType< ::gazebo_msgs::SetLinkPropertiesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::SetLinkPropertiesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::SetLinkPropertiesResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::SetLinkProperties > 
+// service_traits::MD5Sum< ::gazebo_msgs::SetLinkPropertiesResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::SetLinkProperties >
 template<>
 struct MD5Sum< ::gazebo_msgs::SetLinkPropertiesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::SetLinkPropertiesResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::SetLinkPropertiesResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::SetLinkProperties > 
+// service_traits::DataType< ::gazebo_msgs::SetLinkPropertiesResponse> should match
+// service_traits::DataType< ::gazebo_msgs::SetLinkProperties >
 template<>
 struct DataType< ::gazebo_msgs::SetLinkPropertiesResponse>
 {

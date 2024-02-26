@@ -150,10 +150,10 @@
   "c0039811b8cc919490b3cff748cdf46b")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<ApplyJointEffort-request>)))
   "Returns full string definition for message of type '<ApplyJointEffort-request>"
-  (cl:format cl:nil "~%string joint_name~%float64 effort~%time start_time~%~%duration duration~%~%~%~%~%~%~%"))
+  (cl:format cl:nil "# set urdf joint effort~%string joint_name           # joint to apply wrench (linear force and torque)~%float64 effort              # effort to apply~%time start_time             # optional wrench application start time (seconds)~%                            # if start_time < current time, start as soon as possible~%duration duration           # optional duration of wrench application time (seconds)~%                            # if duration < 0, apply wrench continuously without end~%                            # if duration = 0, do nothing~%                            # if duration < step size, assume step size and~%                            #               display warning in status_message~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'ApplyJointEffort-request)))
   "Returns full string definition for message of type 'ApplyJointEffort-request"
-  (cl:format cl:nil "~%string joint_name~%float64 effort~%time start_time~%~%duration duration~%~%~%~%~%~%~%"))
+  (cl:format cl:nil "# set urdf joint effort~%string joint_name           # joint to apply wrench (linear force and torque)~%float64 effort              # effort to apply~%time start_time             # optional wrench application start time (seconds)~%                            # if start_time < current time, start as soon as possible~%duration duration           # optional duration of wrench application time (seconds)~%                            # if duration < 0, apply wrench continuously without end~%                            # if duration = 0, do nothing~%                            # if duration < step size, assume step size and~%                            #               display warning in status_message~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <ApplyJointEffort-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'joint_name))
@@ -238,10 +238,10 @@
   "c0039811b8cc919490b3cff748cdf46b")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<ApplyJointEffort-response>)))
   "Returns full string definition for message of type '<ApplyJointEffort-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                # return true if effort application is successful~%string status_message       # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'ApplyJointEffort-response)))
   "Returns full string definition for message of type 'ApplyJointEffort-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                # return true if effort application is successful~%string status_message       # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <ApplyJointEffort-response>))
   (cl:+ 0
      1

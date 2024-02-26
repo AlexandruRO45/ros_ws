@@ -61,10 +61,10 @@
   "9ce56b4e9e54616de25d796dc972a262")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DeleteModel-request>)))
   "Returns full string definition for message of type '<DeleteModel-request>"
-  (cl:format cl:nil "string model_name~%~%~%"))
+  (cl:format cl:nil "string model_name                 # name of the Gazebo Model to be deleted~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DeleteModel-request)))
   "Returns full string definition for message of type 'DeleteModel-request"
-  (cl:format cl:nil "string model_name~%~%~%"))
+  (cl:format cl:nil "string model_name                 # name of the Gazebo Model to be deleted~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DeleteModel-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'model_name))
@@ -143,10 +143,10 @@
   "9ce56b4e9e54616de25d796dc972a262")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DeleteModel-response>)))
   "Returns full string definition for message of type '<DeleteModel-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                      # return true if deletion is successful~%string status_message             # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DeleteModel-response)))
   "Returns full string definition for message of type 'DeleteModel-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                      # return true if deletion is successful~%string status_message             # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DeleteModel-response>))
   (cl:+ 0
      1

@@ -61,10 +61,10 @@
   "5eade9afe7f232d78005bd0cafeab755")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<BodyRequest-request>)))
   "Returns full string definition for message of type '<BodyRequest-request>"
-  (cl:format cl:nil "string body_name~%~%~%"))
+  (cl:format cl:nil "string body_name   # name of the body requested. body names are prefixed by model name, e.g. pr2::base_link~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'BodyRequest-request)))
   "Returns full string definition for message of type 'BodyRequest-request"
-  (cl:format cl:nil "string body_name~%~%~%"))
+  (cl:format cl:nil "string body_name   # name of the body requested. body names are prefixed by model name, e.g. pr2::base_link~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <BodyRequest-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'body_name))

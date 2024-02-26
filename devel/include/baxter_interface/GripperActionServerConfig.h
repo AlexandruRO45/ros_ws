@@ -69,7 +69,7 @@ namespace baxter_interface
         field(a_f)
       {}
 
-      T (GripperActionServerConfig::* field);
+      T GripperActionServerConfig::* field;
 
       virtual void clamp(GripperActionServerConfig &config, const GripperActionServerConfig &max, const GripperActionServerConfig &min) const
       {
@@ -216,7 +216,7 @@ namespace baxter_interface
         }
       }
 
-      T (PT::* field);
+      T PT::* field;
       std::vector<GripperActionServerConfig::AbstractGroupDescriptionConstPtr> groups;
     };
 

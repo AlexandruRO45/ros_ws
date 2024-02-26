@@ -57,8 +57,8 @@ struct DataType< ::baxter_core_msgs::ListCameras > {
 };
 
 
-// service_traits::MD5Sum< ::baxter_core_msgs::ListCamerasRequest> should match 
-// service_traits::MD5Sum< ::baxter_core_msgs::ListCameras > 
+// service_traits::MD5Sum< ::baxter_core_msgs::ListCamerasRequest> should match
+// service_traits::MD5Sum< ::baxter_core_msgs::ListCameras >
 template<>
 struct MD5Sum< ::baxter_core_msgs::ListCamerasRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::baxter_core_msgs::ListCamerasRequest>
   }
 };
 
-// service_traits::DataType< ::baxter_core_msgs::ListCamerasRequest> should match 
-// service_traits::DataType< ::baxter_core_msgs::ListCameras > 
+// service_traits::DataType< ::baxter_core_msgs::ListCamerasRequest> should match
+// service_traits::DataType< ::baxter_core_msgs::ListCameras >
 template<>
 struct DataType< ::baxter_core_msgs::ListCamerasRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::baxter_core_msgs::ListCamerasRequest>
   }
 };
 
-// service_traits::MD5Sum< ::baxter_core_msgs::ListCamerasResponse> should match 
-// service_traits::MD5Sum< ::baxter_core_msgs::ListCameras > 
+// service_traits::MD5Sum< ::baxter_core_msgs::ListCamerasResponse> should match
+// service_traits::MD5Sum< ::baxter_core_msgs::ListCameras >
 template<>
 struct MD5Sum< ::baxter_core_msgs::ListCamerasResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::baxter_core_msgs::ListCamerasResponse>
   }
 };
 
-// service_traits::DataType< ::baxter_core_msgs::ListCamerasResponse> should match 
-// service_traits::DataType< ::baxter_core_msgs::ListCameras > 
+// service_traits::DataType< ::baxter_core_msgs::ListCamerasResponse> should match
+// service_traits::DataType< ::baxter_core_msgs::ListCameras >
 template<>
 struct DataType< ::baxter_core_msgs::ListCamerasResponse>
 {

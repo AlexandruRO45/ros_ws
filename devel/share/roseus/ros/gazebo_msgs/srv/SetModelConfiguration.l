@@ -167,30 +167,30 @@
 (setf (get gazebo_msgs::SetModelConfigurationRequest :md5sum-) "10e3139d3b669c40afc057d38956fff7")
 (setf (get gazebo_msgs::SetModelConfigurationRequest :datatype-) "gazebo_msgs/SetModelConfigurationRequest")
 (setf (get gazebo_msgs::SetModelConfigurationRequest :definition-)
-      "
-string model_name
-string urdf_param_name
+      "# Set Gazebo Model pose and twist
+string model_name           # model to set state (pose and twist)
+string urdf_param_name      # parameter name that contains the urdf XML.
 
-string[] joint_names
-float64[] joint_positions
+string[] joint_names        # list of joints to set positions.  if joint is not listed here, preserve current position.
+float64[] joint_positions   # set to this position.
 ---
-bool success
-string status_message
+bool success                # return true if setting state successful
+string status_message       # comments if available
 
 ")
 
 (setf (get gazebo_msgs::SetModelConfigurationResponse :md5sum-) "10e3139d3b669c40afc057d38956fff7")
 (setf (get gazebo_msgs::SetModelConfigurationResponse :datatype-) "gazebo_msgs/SetModelConfigurationResponse")
 (setf (get gazebo_msgs::SetModelConfigurationResponse :definition-)
-      "
-string model_name
-string urdf_param_name
+      "# Set Gazebo Model pose and twist
+string model_name           # model to set state (pose and twist)
+string urdf_param_name      # parameter name that contains the urdf XML.
 
-string[] joint_names
-float64[] joint_positions
+string[] joint_names        # list of joints to set positions.  if joint is not listed here, preserve current position.
+float64[] joint_positions   # set to this position.
 ---
-bool success
-string status_message
+bool success                # return true if setting state successful
+string status_message       # comments if available
 
 ")
 

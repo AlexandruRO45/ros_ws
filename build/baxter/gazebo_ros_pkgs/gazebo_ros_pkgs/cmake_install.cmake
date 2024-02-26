@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_pkgs
+# Install script for directory: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_pkgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_ros_pkgs" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_pkgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_ros_pkgs" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_pkgs/package.xml")
 endif()
 

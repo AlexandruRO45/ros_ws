@@ -178,13 +178,14 @@
 trajectory_msgs/JointTrajectory joint_trajectory
 geometry_msgs/Pose model_pose
 bool set_model_pose
-bool disable_physics_updates
+bool disable_physics_updates # defaults to false
 
 ================================================================================
 MSG: trajectory_msgs/JointTrajectory
 Header header
 string[] joint_names
 JointTrajectoryPoint[] points
+
 ================================================================================
 MSG: std_msgs/Header
 # Standard metadata for higher-level stamped data types.
@@ -235,8 +236,8 @@ float64 y
 float64 z
 float64 w
 ---
-bool success
-string status_message
+bool success                # return true if set wrench successful
+string status_message       # comments if available
 
 ")
 
@@ -247,13 +248,14 @@ string status_message
 trajectory_msgs/JointTrajectory joint_trajectory
 geometry_msgs/Pose model_pose
 bool set_model_pose
-bool disable_physics_updates
+bool disable_physics_updates # defaults to false
 
 ================================================================================
 MSG: trajectory_msgs/JointTrajectory
 Header header
 string[] joint_names
 JointTrajectoryPoint[] points
+
 ================================================================================
 MSG: std_msgs/Header
 # Standard metadata for higher-level stamped data types.
@@ -304,8 +306,8 @@ float64 y
 float64 z
 float64 w
 ---
-bool success
-string status_message
+bool success                # return true if set wrench successful
+string status_message       # comments if available
 
 ")
 

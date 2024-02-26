@@ -204,48 +204,48 @@
 (setf (get gazebo_msgs::GetJointPropertiesRequest :md5sum-) "7b30be900f50aa21efec4a0ec92d91c9")
 (setf (get gazebo_msgs::GetJointPropertiesRequest :datatype-) "gazebo_msgs/GetJointPropertiesRequest")
 (setf (get gazebo_msgs::GetJointPropertiesRequest :definition-)
-      "string joint_name
+      "string joint_name                    # name of joint
 ---
-
+# joint type
 uint8 type
-uint8 REVOLUTE    = 0
-uint8 CONTINUOUS  = 1
-uint8 PRISMATIC   = 2
-uint8 FIXED       = 3
-uint8 BALL        = 4
-uint8 UNIVERSAL   = 5
-
+uint8 REVOLUTE    = 0                # single DOF
+uint8 CONTINUOUS  = 1                # single DOF (revolute w/o joints)
+uint8 PRISMATIC   = 2                # single DOF
+uint8 FIXED       = 3                # 0 DOF
+uint8 BALL        = 4                # 3 DOF
+uint8 UNIVERSAL   = 5                # 2 DOF
+# dynamics properties
 float64[] damping
-
+# joint state
 float64[] position
 float64[] rate
-
-bool success
-string status_message
+# service return status
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 ")
 
 (setf (get gazebo_msgs::GetJointPropertiesResponse :md5sum-) "7b30be900f50aa21efec4a0ec92d91c9")
 (setf (get gazebo_msgs::GetJointPropertiesResponse :datatype-) "gazebo_msgs/GetJointPropertiesResponse")
 (setf (get gazebo_msgs::GetJointPropertiesResponse :definition-)
-      "string joint_name
+      "string joint_name                    # name of joint
 ---
-
+# joint type
 uint8 type
-uint8 REVOLUTE    = 0
-uint8 CONTINUOUS  = 1
-uint8 PRISMATIC   = 2
-uint8 FIXED       = 3
-uint8 BALL        = 4
-uint8 UNIVERSAL   = 5
-
+uint8 REVOLUTE    = 0                # single DOF
+uint8 CONTINUOUS  = 1                # single DOF (revolute w/o joints)
+uint8 PRISMATIC   = 2                # single DOF
+uint8 FIXED       = 3                # 0 DOF
+uint8 BALL        = 4                # 3 DOF
+uint8 UNIVERSAL   = 5                # 2 DOF
+# dynamics properties
 float64[] damping
-
+# joint state
 float64[] position
 float64[] rate
-
-bool success
-string status_message
+# service return status
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 ")
 

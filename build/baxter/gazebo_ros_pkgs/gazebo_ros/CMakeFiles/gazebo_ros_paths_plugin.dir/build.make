@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 # Include any dependencies generated for this target.
 include baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/depend.make
@@ -58,17 +58,17 @@ include baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir
 include baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/flags.make
 
 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/flags.make
-baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/vagrant/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o -c /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp
+baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alex/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o"
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o -c /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp
 
 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.i"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp > CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.i
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp > CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.i
 
 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.s"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp -o CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.s
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp -o CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.s
 
 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o.requires:
 
@@ -88,154 +88,152 @@ gazebo_ros_paths_plugin_OBJECTS = \
 # External object files for target gazebo_ros_paths_plugin
 gazebo_ros_paths_plugin_EXTERNAL_OBJECTS =
 
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/build.make
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-transport4.so.4.0.0
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-msgs1.so.1.0.0
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.1.1
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.2.0
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroslib.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librospack.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libactionlib.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librostime.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ccd.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroslib.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librospack.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libactionlib.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librostime.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-math4.so.4.0.0
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
-/home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/vagrant/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_ros_paths_plugin.dir/link.txt --verbose=$(VERBOSE)
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/build.make
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKsimbody.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKmath.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libSimTKcommon.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libblas.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-transport4.so.4.0.0
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-msgs1.so.1.0.0
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-common1.so.1.0.1
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-fuel_tools1.so.1.0.0
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroslib.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librospack.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libactionlib.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librostime.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblapack.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_client.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gui.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_sensors.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_rendering.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_physics.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_ode.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_transport.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_msgs.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_util.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_common.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_gimpact.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opcode.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libgazebo_opende_ou.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_signals.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_iostreams.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libsdformat.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreMain.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libOgrePaging.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroslib.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librospack.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpython2.7.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_program_options.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libtinyxml2.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2_ros.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libactionlib.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libmessage_filters.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_filesystem.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libxmlrpcpp.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libtf2.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_log4cxx.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librosconsole_backend_interface.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/liblog4cxx.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_regex.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libdynamic_reconfigure_config_init_mutex.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libroscpp_serialization.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/librostime.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /opt/ros/melodic/lib/libcpp_common.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_system.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_thread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_chrono.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_date_time.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libboost_atomic.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libpthread.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libprotobuf.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libignition-math4.so.4.0.0
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libuuid.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libswscale.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavdevice.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavformat.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavcodec.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: /usr/lib/x86_64-linux-gnu/libavutil.so
+/home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so: baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alex/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library /home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so"
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/gazebo_ros_paths_plugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/build: /home/vagrant/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so
+baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/build: /home/alex/ros_ws/devel/lib/libgazebo_ros_paths_plugin.so
 
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/build
 
@@ -244,10 +242,10 @@ baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/require
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/requires
 
 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/clean:
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_ros_paths_plugin.dir/cmake_clean.cmake
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_ros_paths_plugin.dir/cmake_clean.cmake
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/clean
 
 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vagrant/ros_ws/src /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros /home/vagrant/ros_ws/build /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/ros_ws/src /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros /home/alex/ros_ws/build /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/depend
 

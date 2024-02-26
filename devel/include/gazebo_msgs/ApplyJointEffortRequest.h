@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -39,7 +39,7 @@ struct ApplyJointEffortRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _joint_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _joint_name_type;
   _joint_name_type joint_name;
 
    typedef double _effort_type;
@@ -76,6 +76,23 @@ ros::message_operations::Printer< ::gazebo_msgs::ApplyJointEffortRequest_<Contai
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.joint_name == rhs.joint_name &&
+    lhs.effort == rhs.effort &&
+    lhs.start_time == rhs.start_time &&
+    lhs.duration == rhs.duration;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -83,12 +100,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -153,16 +164,16 @@ struct Definition< ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "\n"
-"string joint_name\n"
-"float64 effort\n"
-"time start_time\n"
-"\n"
-"duration duration\n"
-"\n"
-"\n"
-"\n"
-"\n"
+    return "# set urdf joint effort\n"
+"string joint_name           # joint to apply wrench (linear force and torque)\n"
+"float64 effort              # effort to apply\n"
+"time start_time             # optional wrench application start time (seconds)\n"
+"                            # if start_time < current time, start as soon as possible\n"
+"duration duration           # optional duration of wrench application time (seconds)\n"
+"                            # if duration < 0, apply wrench continuously without end\n"
+"                            # if duration = 0, do nothing\n"
+"                            # if duration < step size, assume step size and\n"
+"                            #               display warning in status_message\n"
 ;
   }
 
@@ -204,7 +215,7 @@ struct Printer< ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::ApplyJointEffortRequest_<ContainerAllocator>& v)
   {
     s << indent << "joint_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.joint_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.joint_name);
     s << indent << "effort: ";
     Printer<double>::stream(s, indent + "  ", v.effort);
     s << indent << "start_time: ";

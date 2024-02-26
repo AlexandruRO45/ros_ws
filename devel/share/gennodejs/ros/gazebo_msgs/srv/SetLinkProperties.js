@@ -168,19 +168,19 @@ class SetLinkPropertiesRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string link_name
-    
-    geometry_msgs/Pose com
-    
-    
-    bool gravity_mode
-    float64 mass
-    float64 ixx
-    float64 ixy
-    float64 ixz
-    float64 iyy
-    float64 iyz
-    float64 izz
+    string link_name          # name of link
+                              # link names are prefixed by model name, e.g. pr2::base_link
+    geometry_msgs/Pose com    # center of mass location in link frame
+                              # and orientation of the moment of inertias
+                              # relative to the link frame
+    bool gravity_mode         # set gravity mode on/off
+    float64 mass              # linear mass of link
+    float64 ixx               # moment of inertia
+    float64 ixy               # moment of inertia
+    float64 ixz               # moment of inertia
+    float64 iyy               # moment of inertia
+    float64 iyz               # moment of inertia
+    float64 izz               # moment of inertia
     
     ================================================================================
     MSG: geometry_msgs/Pose
@@ -349,8 +349,8 @@ class SetLinkPropertiesResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool success
-    string status_message
+    bool success              # return true if get info is successful
+    string status_message     # comments if available
     
     
     `;

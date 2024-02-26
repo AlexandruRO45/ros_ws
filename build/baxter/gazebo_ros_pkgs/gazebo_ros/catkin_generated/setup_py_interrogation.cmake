@@ -1,3 +1,4 @@
+set(gazebo_ros_SETUP_PY_SETUP_MODULE "distutils.core")
 set(gazebo_ros_SETUP_PY_VERSION "2.5.17")
 set(gazebo_ros_SETUP_PY_SCRIPTS "")
 set(gazebo_ros_SETUP_PY_PACKAGES "gazebo_ros")

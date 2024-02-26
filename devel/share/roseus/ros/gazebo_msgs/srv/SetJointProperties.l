@@ -133,8 +133,8 @@
 (setf (get gazebo_msgs::SetJointPropertiesRequest :md5sum-) "15a76e921b1410c698d82782ea5fa370")
 (setf (get gazebo_msgs::SetJointPropertiesRequest :datatype-) "gazebo_msgs/SetJointPropertiesRequest")
 (setf (get gazebo_msgs::SetJointPropertiesRequest :definition-)
-      "string joint_name
-gazebo_msgs/ODEJointProperties ode_joint_config
+      "string joint_name                               # name of joint
+gazebo_msgs/ODEJointProperties ode_joint_config # access to ODE joint dynamics properties
 
 ================================================================================
 MSG: gazebo_msgs/ODEJointProperties
@@ -150,16 +150,16 @@ float64[] fudge_factor        # joint fudge_factor applied at limits, see ODE ma
 float64[] fmax                # ode joint param fmax
 float64[] vel                 # ode joint param vel
 ---
-bool success
-string status_message
+bool success                                    # return true if get successful
+string status_message                           # comments if available
 
 ")
 
 (setf (get gazebo_msgs::SetJointPropertiesResponse :md5sum-) "15a76e921b1410c698d82782ea5fa370")
 (setf (get gazebo_msgs::SetJointPropertiesResponse :datatype-) "gazebo_msgs/SetJointPropertiesResponse")
 (setf (get gazebo_msgs::SetJointPropertiesResponse :definition-)
-      "string joint_name
-gazebo_msgs/ODEJointProperties ode_joint_config
+      "string joint_name                               # name of joint
+gazebo_msgs/ODEJointProperties ode_joint_config # access to ODE joint dynamics properties
 
 ================================================================================
 MSG: gazebo_msgs/ODEJointProperties
@@ -175,8 +175,8 @@ float64[] fudge_factor        # joint fudge_factor applied at limits, see ODE ma
 float64[] fmax                # ode joint param fmax
 float64[] vel                 # ode joint param vel
 ---
-bool success
-string status_message
+bool success                                    # return true if get successful
+string status_message                           # comments if available
 
 ")
 

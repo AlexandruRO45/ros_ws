@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_bumper.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_bumper.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_bumper.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_bumper.so"
 )
 
 # Per-language clean rules from dependency scanning.

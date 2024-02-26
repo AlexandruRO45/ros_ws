@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_common
+# Install script for directory: /home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_common
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,6 +38,6 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_common" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_common/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_common" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_common/package.xml")
 endif()
 

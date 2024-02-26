@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -49,22 +49,22 @@ struct GetModelPropertiesResponse_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _parent_model_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _parent_model_name_type;
   _parent_model_name_type parent_model_name;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _canonical_body_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _canonical_body_name_type;
   _canonical_body_name_type canonical_body_name;
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _body_names_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _body_names_type;
   _body_names_type body_names;
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _geom_names_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _geom_names_type;
   _geom_names_type geom_names;
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _joint_names_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _joint_names_type;
   _joint_names_type joint_names;
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _child_model_names_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _child_model_names_type;
   _child_model_names_type child_model_names;
 
    typedef uint8_t _is_static_type;
@@ -73,7 +73,7 @@ struct GetModelPropertiesResponse_
    typedef uint8_t _success_type;
   _success_type success;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _status_message_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _status_message_type;
   _status_message_type status_message;
 
 
@@ -101,6 +101,28 @@ ros::message_operations::Printer< ::gazebo_msgs::GetModelPropertiesResponse_<Con
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator1> & lhs, const ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator2> & rhs)
+{
+  return lhs.parent_model_name == rhs.parent_model_name &&
+    lhs.canonical_body_name == rhs.canonical_body_name &&
+    lhs.body_names == rhs.body_names &&
+    lhs.geom_names == rhs.geom_names &&
+    lhs.joint_names == rhs.joint_names &&
+    lhs.child_model_names == rhs.child_model_names &&
+    lhs.is_static == rhs.is_static &&
+    lhs.success == rhs.success &&
+    lhs.status_message == rhs.status_message;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator1> & lhs, const ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -108,12 +130,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -178,15 +194,15 @@ struct Definition< ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator
 {
   static const char* value()
   {
-    return "string parent_model_name\n"
-"string canonical_body_name\n"
-"string[] body_names\n"
-"string[] geom_names\n"
-"string[] joint_names\n"
-"string[] child_model_names\n"
-"bool is_static\n"
-"bool success\n"
-"string status_message\n"
+    return "string parent_model_name             # parent model\n"
+"string canonical_body_name           # name of canonical body, body names are prefixed by model name, e.g. pr2::base_link\n"
+"string[] body_names                  # list of bodies, body names are prefixed by model name, e.g. pr2::base_link\n"
+"string[] geom_names                  # list of geoms\n"
+"string[] joint_names                 # list of joints attached to the model\n"
+"string[] child_model_names           # list of child models\n"
+"bool is_static                       # returns true if model is static\n"
+"bool success                         # return true if get successful\n"
+"string status_message                # comments if available\n"
 "\n"
 ;
   }
@@ -234,39 +250,39 @@ struct Printer< ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::GetModelPropertiesResponse_<ContainerAllocator>& v)
   {
     s << indent << "parent_model_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.parent_model_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.parent_model_name);
     s << indent << "canonical_body_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.canonical_body_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.canonical_body_name);
     s << indent << "body_names[]" << std::endl;
     for (size_t i = 0; i < v.body_names.size(); ++i)
     {
       s << indent << "  body_names[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.body_names[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.body_names[i]);
     }
     s << indent << "geom_names[]" << std::endl;
     for (size_t i = 0; i < v.geom_names.size(); ++i)
     {
       s << indent << "  geom_names[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.geom_names[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.geom_names[i]);
     }
     s << indent << "joint_names[]" << std::endl;
     for (size_t i = 0; i < v.joint_names.size(); ++i)
     {
       s << indent << "  joint_names[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.joint_names[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.joint_names[i]);
     }
     s << indent << "child_model_names[]" << std::endl;
     for (size_t i = 0; i < v.child_model_names.size(); ++i)
     {
       s << indent << "  child_model_names[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.child_model_names[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.child_model_names[i]);
     }
     s << indent << "is_static: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.is_static);
     s << indent << "success: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.success);
     s << indent << "status_message: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.status_message);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.status_message);
   }
 };
 

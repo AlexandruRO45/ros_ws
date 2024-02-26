@@ -97,7 +97,7 @@
 (setf (get gazebo_msgs::BodyRequestRequest :md5sum-) "5eade9afe7f232d78005bd0cafeab755")
 (setf (get gazebo_msgs::BodyRequestRequest :datatype-) "gazebo_msgs/BodyRequestRequest")
 (setf (get gazebo_msgs::BodyRequestRequest :definition-)
-      "string body_name
+      "string body_name   # name of the body requested. body names are prefixed by model name, e.g. pr2::base_link
 ---
 
 ")
@@ -105,7 +105,7 @@
 (setf (get gazebo_msgs::BodyRequestResponse :md5sum-) "5eade9afe7f232d78005bd0cafeab755")
 (setf (get gazebo_msgs::BodyRequestResponse :datatype-) "gazebo_msgs/BodyRequestResponse")
 (setf (get gazebo_msgs::BodyRequestResponse :definition-)
-      "string body_name
+      "string body_name   # name of the body requested. body names are prefixed by model name, e.g. pr2::base_link
 ---
 
 ")

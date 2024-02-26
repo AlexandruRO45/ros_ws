@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::GetLightProperties > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::GetLightPropertiesRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::GetLightProperties > 
+// service_traits::MD5Sum< ::gazebo_msgs::GetLightPropertiesRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::GetLightProperties >
 template<>
 struct MD5Sum< ::gazebo_msgs::GetLightPropertiesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::GetLightPropertiesRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::GetLightPropertiesRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::GetLightProperties > 
+// service_traits::DataType< ::gazebo_msgs::GetLightPropertiesRequest> should match
+// service_traits::DataType< ::gazebo_msgs::GetLightProperties >
 template<>
 struct DataType< ::gazebo_msgs::GetLightPropertiesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::GetLightPropertiesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::GetLightPropertiesResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::GetLightProperties > 
+// service_traits::MD5Sum< ::gazebo_msgs::GetLightPropertiesResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::GetLightProperties >
 template<>
 struct MD5Sum< ::gazebo_msgs::GetLightPropertiesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::GetLightPropertiesResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::GetLightPropertiesResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::GetLightProperties > 
+// service_traits::DataType< ::gazebo_msgs::GetLightPropertiesResponse> should match
+// service_traits::DataType< ::gazebo_msgs::GetLightProperties >
 template<>
 struct DataType< ::gazebo_msgs::GetLightPropertiesResponse>
 {

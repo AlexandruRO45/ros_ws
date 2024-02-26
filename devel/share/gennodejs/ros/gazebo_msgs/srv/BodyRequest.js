@@ -68,7 +68,7 @@ class BodyRequestRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string body_name
+    string body_name   # name of the body requested. body names are prefixed by model name, e.g. pr2::base_link
     
     `;
   }

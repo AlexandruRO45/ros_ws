@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -42,6 +42,20 @@ struct DigitalIOState_
   _isInputOnly_type isInputOnly;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(OFF)
+  #undef OFF
+#endif
+#if defined(_WIN32) && defined(ON)
+  #undef ON
+#endif
+#if defined(_WIN32) && defined(PRESSED)
+  #undef PRESSED
+#endif
+#if defined(_WIN32) && defined(UNPRESSED)
+  #undef UNPRESSED
+#endif
 
   enum {
     OFF = 0,
@@ -80,6 +94,21 @@ ros::message_operations::Printer< ::baxter_core_msgs::DigitalIOState_<ContainerA
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::DigitalIOState_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::DigitalIOState_<ContainerAllocator2> & rhs)
+{
+  return lhs.state == rhs.state &&
+    lhs.isInputOnly == rhs.isInputOnly;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::DigitalIOState_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::DigitalIOState_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -87,12 +116,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

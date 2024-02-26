@@ -161,11 +161,11 @@
 (setf (get gazebo_msgs::SetPhysicsPropertiesRequest :md5sum-) "97e2057080558ce4730434b5fae75c91")
 (setf (get gazebo_msgs::SetPhysicsPropertiesRequest :datatype-) "gazebo_msgs/SetPhysicsPropertiesRequest")
 (setf (get gazebo_msgs::SetPhysicsPropertiesRequest :definition-)
-      "
-float64 time_step
-float64 max_update_rate
-geometry_msgs/Vector3 gravity
-gazebo_msgs/ODEPhysics ode_config
+      "# sets pose and twist of a link.  All children link poses/twists of the URDF tree will be updated accordingly
+float64 time_step                  # dt in seconds
+float64 max_update_rate            # throttle maximum physics update rate
+geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])
+gazebo_msgs/ODEPhysics ode_config  # configurations for ODE
 
 ================================================================================
 MSG: geometry_msgs/Vector3
@@ -192,19 +192,19 @@ float64 cfm                        # global constraint force mixing
 float64 erp                        # global error reduction parameter
 uint32 max_contacts                # maximum contact joints between two geoms
 ---
-bool success
-string status_message
+bool success                       # return true if set wrench successful
+string status_message              # comments if available
 
 ")
 
 (setf (get gazebo_msgs::SetPhysicsPropertiesResponse :md5sum-) "97e2057080558ce4730434b5fae75c91")
 (setf (get gazebo_msgs::SetPhysicsPropertiesResponse :datatype-) "gazebo_msgs/SetPhysicsPropertiesResponse")
 (setf (get gazebo_msgs::SetPhysicsPropertiesResponse :definition-)
-      "
-float64 time_step
-float64 max_update_rate
-geometry_msgs/Vector3 gravity
-gazebo_msgs/ODEPhysics ode_config
+      "# sets pose and twist of a link.  All children link poses/twists of the URDF tree will be updated accordingly
+float64 time_step                  # dt in seconds
+float64 max_update_rate            # throttle maximum physics update rate
+geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])
+gazebo_msgs/ODEPhysics ode_config  # configurations for ODE
 
 ================================================================================
 MSG: geometry_msgs/Vector3
@@ -231,8 +231,8 @@ float64 cfm                        # global constraint force mixing
 float64 erp                        # global error reduction parameter
 uint32 max_contacts                # maximum contact joints between two geoms
 ---
-bool success
-string status_message
+bool success                       # return true if set wrench successful
+string status_message              # comments if available
 
 ")
 

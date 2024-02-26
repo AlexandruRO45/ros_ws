@@ -61,10 +61,10 @@
   "7b30be900f50aa21efec4a0ec92d91c9")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetJointProperties-request>)))
   "Returns full string definition for message of type '<GetJointProperties-request>"
-  (cl:format cl:nil "string joint_name~%~%~%"))
+  (cl:format cl:nil "string joint_name                    # name of joint~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetJointProperties-request)))
   "Returns full string definition for message of type 'GetJointProperties-request"
-  (cl:format cl:nil "string joint_name~%~%~%"))
+  (cl:format cl:nil "string joint_name                    # name of joint~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetJointProperties-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'joint_name))
@@ -302,10 +302,10 @@
   "7b30be900f50aa21efec4a0ec92d91c9")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetJointProperties-response>)))
   "Returns full string definition for message of type '<GetJointProperties-response>"
-  (cl:format cl:nil "~%uint8 type~%uint8 REVOLUTE    = 0~%uint8 CONTINUOUS  = 1~%uint8 PRISMATIC   = 2~%uint8 FIXED       = 3~%uint8 BALL        = 4~%uint8 UNIVERSAL   = 5~%~%float64[] damping~%~%float64[] position~%float64[] rate~%~%bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "# joint type~%uint8 type~%uint8 REVOLUTE    = 0                # single DOF~%uint8 CONTINUOUS  = 1                # single DOF (revolute w/o joints)~%uint8 PRISMATIC   = 2                # single DOF~%uint8 FIXED       = 3                # 0 DOF~%uint8 BALL        = 4                # 3 DOF~%uint8 UNIVERSAL   = 5                # 2 DOF~%# dynamics properties~%float64[] damping~%# joint state~%float64[] position~%float64[] rate~%# service return status~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetJointProperties-response)))
   "Returns full string definition for message of type 'GetJointProperties-response"
-  (cl:format cl:nil "~%uint8 type~%uint8 REVOLUTE    = 0~%uint8 CONTINUOUS  = 1~%uint8 PRISMATIC   = 2~%uint8 FIXED       = 3~%uint8 BALL        = 4~%uint8 UNIVERSAL   = 5~%~%float64[] damping~%~%float64[] position~%float64[] rate~%~%bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "# joint type~%uint8 type~%uint8 REVOLUTE    = 0                # single DOF~%uint8 CONTINUOUS  = 1                # single DOF (revolute w/o joints)~%uint8 PRISMATIC   = 2                # single DOF~%uint8 FIXED       = 3                # 0 DOF~%uint8 BALL        = 4                # 3 DOF~%uint8 UNIVERSAL   = 5                # 2 DOF~%# dynamics properties~%float64[] damping~%# joint state~%float64[] position~%float64[] rate~%# service return status~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetJointProperties-response>))
   (cl:+ 0
      1

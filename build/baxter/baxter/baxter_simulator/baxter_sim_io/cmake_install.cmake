@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io
+# Install script for directory: /home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/catkin_generated/installspace/baxter_sim_io.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/catkin_generated/installspace/baxter_sim_io.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_io/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/catkin_generated/installspace/baxter_sim_ioConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/catkin_generated/installspace/baxter_sim_ioConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/catkin_generated/installspace/baxter_sim_ioConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/catkin_generated/installspace/baxter_sim_ioConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_io" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_io" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,7 +59,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_io/baxter_sim_io"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_io" TYPE EXECUTABLE FILES "/home/vagrant/ros_ws/devel/lib/baxter_sim_io/baxter_sim_io")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_io" TYPE EXECUTABLE FILES "/home/alex/ros_ws/devel/lib/baxter_sim_io/baxter_sim_io")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_io/baxter_sim_io" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_io/baxter_sim_io")
     file(RPATH_CHANGE
@@ -74,9 +74,9 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_io" TYPE DIRECTORY FILES
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/include"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/resources"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/ui"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/include"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/resources"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_io/ui"
     )
 endif()
 

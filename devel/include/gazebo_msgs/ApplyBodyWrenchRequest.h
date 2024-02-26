@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -45,10 +45,10 @@ struct ApplyBodyWrenchRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _body_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _body_name_type;
   _body_name_type body_name;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _reference_frame_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _reference_frame_type;
   _reference_frame_type reference_frame;
 
    typedef  ::geometry_msgs::Point_<ContainerAllocator>  _reference_point_type;
@@ -88,6 +88,25 @@ ros::message_operations::Printer< ::gazebo_msgs::ApplyBodyWrenchRequest_<Contain
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.body_name == rhs.body_name &&
+    lhs.reference_frame == rhs.reference_frame &&
+    lhs.reference_point == rhs.reference_point &&
+    lhs.wrench == rhs.wrench &&
+    lhs.start_time == rhs.start_time &&
+    lhs.duration == rhs.duration;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -95,12 +114,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -165,25 +178,25 @@ struct Definition< ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "\n"
-"\n"
-"\n"
-"string body_name\n"
-"\n"
-"\n"
-"string reference_frame\n"
-"\n"
-"\n"
-"geometry_msgs/Point  reference_point\n"
-"geometry_msgs/Wrench wrench\n"
-"time start_time\n"
-"\n"
-"\n"
-"duration duration\n"
-"\n"
-"\n"
-"\n"
-"\n"
+    return "# Apply Wrench to Gazebo Body.\n"
+"# via the callback mechanism\n"
+"# all Gazebo operations are made in world frame\n"
+"string body_name                          # Gazebo body to apply wrench (linear force and torque)\n"
+"                                          # wrench is applied in the gazebo world by default\n"
+"                                          # body names are prefixed by model name, e.g. pr2::base_link\n"
+"string reference_frame                    # wrench is defined in the reference frame of this entity\n"
+"                                          # use inertial frame if left empty\n"
+"                                          # frame names are bodies prefixed by model name, e.g. pr2::base_link\n"
+"geometry_msgs/Point  reference_point      # wrench is defined at this location in the reference frame\n"
+"geometry_msgs/Wrench wrench               # wrench applied to the origin of the body\n"
+"time start_time                           # (optional) wrench application start time (seconds)\n"
+"                                          # if start_time is not specified, or\n"
+"                                          # start_time < current time, start as soon as possible\n"
+"duration duration                         # optional duration of wrench application time (seconds)\n"
+"                                          # if duration < 0, apply wrench continuously without end\n"
+"                                          # if duration = 0, do nothing\n"
+"                                          # if duration < step size, apply wrench\n"
+"                                          # for one step size\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Point\n"
@@ -254,9 +267,9 @@ struct Printer< ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::ApplyBodyWrenchRequest_<ContainerAllocator>& v)
   {
     s << indent << "body_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.body_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.body_name);
     s << indent << "reference_frame: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.reference_frame);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.reference_frame);
     s << indent << "reference_point: ";
     s << std::endl;
     Printer< ::geometry_msgs::Point_<ContainerAllocator> >::stream(s, indent + "  ", v.reference_point);

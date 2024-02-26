@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -42,19 +42,19 @@ struct SpawnModelRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _model_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _model_name_type;
   _model_name_type model_name;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _model_xml_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _model_xml_type;
   _model_xml_type model_xml;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _robot_namespace_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _robot_namespace_type;
   _robot_namespace_type robot_namespace;
 
    typedef  ::geometry_msgs::Pose_<ContainerAllocator>  _initial_pose_type;
   _initial_pose_type initial_pose;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _reference_frame_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _reference_frame_type;
   _reference_frame_type reference_frame;
 
 
@@ -82,6 +82,24 @@ ros::message_operations::Printer< ::gazebo_msgs::SpawnModelRequest_<ContainerAll
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.model_name == rhs.model_name &&
+    lhs.model_xml == rhs.model_xml &&
+    lhs.robot_namespace == rhs.robot_namespace &&
+    lhs.initial_pose == rhs.initial_pose &&
+    lhs.reference_frame == rhs.reference_frame;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -89,12 +107,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -159,14 +171,14 @@ struct Definition< ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string model_name\n"
-"string model_xml\n"
-"string robot_namespace\n"
-"geometry_msgs/Pose initial_pose\n"
-"string reference_frame\n"
-"\n"
-"\n"
-"\n"
+    return "string model_name                 # name of the model to be spawn\n"
+"string model_xml                  # this should be an urdf or gazebo xml\n"
+"string robot_namespace            # spawn robot and all ROS interfaces under this namespace\n"
+"geometry_msgs/Pose initial_pose   # only applied to canonical body\n"
+"string reference_frame            # initial_pose is defined relative to the frame of this model/body\n"
+"                                  # if left empty or \"world\", then gazebo world frame is used\n"
+"                                  # if non-existent model/body is specified, an error is returned\n"
+"                                  #   and the model is not spawned\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Pose\n"
@@ -231,16 +243,16 @@ struct Printer< ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::SpawnModelRequest_<ContainerAllocator>& v)
   {
     s << indent << "model_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.model_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.model_name);
     s << indent << "model_xml: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.model_xml);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.model_xml);
     s << indent << "robot_namespace: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.robot_namespace);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.robot_namespace);
     s << indent << "initial_pose: ";
     s << std::endl;
     Printer< ::geometry_msgs::Pose_<ContainerAllocator> >::stream(s, indent + "  ", v.initial_pose);
     s << indent << "reference_frame: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.reference_frame);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.reference_frame);
   }
 };
 

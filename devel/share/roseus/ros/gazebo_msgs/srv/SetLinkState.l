@@ -173,8 +173,8 @@ MSG: geometry_msgs/Vector3
 float64 x
 float64 y
 ---
-bool success
-string status_message
+bool success                # return true if set wrench successful
+string status_message       # comments if available
 
 ")
 
@@ -232,8 +232,8 @@ MSG: geometry_msgs/Vector3
 float64 x
 float64 y
 ---
-bool success
-string status_message
+bool success                # return true if set wrench successful
+string status_message       # comments if available
 
 ")
 

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_api_plugin.dir/src/gazebo_ros_api_plugin.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_api_plugin.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_api_plugin.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_api_plugin.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_api_plugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

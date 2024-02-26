@@ -131,10 +131,10 @@
   "5b3ab0281d4f5445def017e3a2e4a07b")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetModelState-response>)))
   "Returns full string definition for message of type '<SetModelState-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                  # return true if setting state successful~%string status_message         # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetModelState-response)))
   "Returns full string definition for message of type 'SetModelState-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                  # return true if setting state successful~%string status_message         # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetModelState-response>))
   (cl:+ 0
      1

@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -42,6 +42,38 @@ struct CameraControl_
   _value_type value;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(CAMERA_CONTROL_EXPOSURE)
+  #undef CAMERA_CONTROL_EXPOSURE
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_GAIN)
+  #undef CAMERA_CONTROL_GAIN
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_WHITE_BALANCE_R)
+  #undef CAMERA_CONTROL_WHITE_BALANCE_R
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_WHITE_BALANCE_G)
+  #undef CAMERA_CONTROL_WHITE_BALANCE_G
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_WHITE_BALANCE_B)
+  #undef CAMERA_CONTROL_WHITE_BALANCE_B
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_WINDOW_X)
+  #undef CAMERA_CONTROL_WINDOW_X
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_WINDOW_Y)
+  #undef CAMERA_CONTROL_WINDOW_Y
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_FLIP)
+  #undef CAMERA_CONTROL_FLIP
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_MIRROR)
+  #undef CAMERA_CONTROL_MIRROR
+#endif
+#if defined(_WIN32) && defined(CAMERA_CONTROL_RESOLUTION_HALF)
+  #undef CAMERA_CONTROL_RESOLUTION_HALF
+#endif
 
   enum {
     CAMERA_CONTROL_EXPOSURE = 100,
@@ -98,6 +130,21 @@ ros::message_operations::Printer< ::baxter_core_msgs::CameraControl_<ContainerAl
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::CameraControl_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::CameraControl_<ContainerAllocator2> & rhs)
+{
+  return lhs.id == rhs.id &&
+    lhs.value == rhs.value;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::CameraControl_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::CameraControl_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -105,12 +152,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

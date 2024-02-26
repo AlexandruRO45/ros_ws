@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -39,16 +39,30 @@ struct SolvePositionIKRequest_
 
 
 
-   typedef std::vector< ::geometry_msgs::PoseStamped_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::geometry_msgs::PoseStamped_<ContainerAllocator> >::other >  _pose_stamp_type;
+   typedef std::vector< ::geometry_msgs::PoseStamped_<ContainerAllocator> , typename std::allocator_traits<ContainerAllocator>::template rebind_alloc< ::geometry_msgs::PoseStamped_<ContainerAllocator> >> _pose_stamp_type;
   _pose_stamp_type pose_stamp;
 
-   typedef std::vector< ::sensor_msgs::JointState_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::sensor_msgs::JointState_<ContainerAllocator> >::other >  _seed_angles_type;
+   typedef std::vector< ::sensor_msgs::JointState_<ContainerAllocator> , typename std::allocator_traits<ContainerAllocator>::template rebind_alloc< ::sensor_msgs::JointState_<ContainerAllocator> >> _seed_angles_type;
   _seed_angles_type seed_angles;
 
    typedef uint8_t _seed_mode_type;
   _seed_mode_type seed_mode;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(SEED_AUTO)
+  #undef SEED_AUTO
+#endif
+#if defined(_WIN32) && defined(SEED_USER)
+  #undef SEED_USER
+#endif
+#if defined(_WIN32) && defined(SEED_CURRENT)
+  #undef SEED_CURRENT
+#endif
+#if defined(_WIN32) && defined(SEED_NS_MAP)
+  #undef SEED_NS_MAP
+#endif
 
   enum {
     SEED_AUTO = 0u,
@@ -87,6 +101,22 @@ ros::message_operations::Printer< ::baxter_core_msgs::SolvePositionIKRequest_<Co
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::SolvePositionIKRequest_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::SolvePositionIKRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.pose_stamp == rhs.pose_stamp &&
+    lhs.seed_angles == rhs.seed_angles &&
+    lhs.seed_mode == rhs.seed_mode;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::SolvePositionIKRequest_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::SolvePositionIKRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -94,12 +124,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -164,18 +188,18 @@ struct Definition< ::baxter_core_msgs::SolvePositionIKRequest_<ContainerAllocato
 {
   static const char* value()
   {
-    return "\n"
+    return "# Endpoint Pose(s) to request Inverse-Kinematics joint solutions for.\n"
 "geometry_msgs/PoseStamped[] pose_stamp\n"
 "\n"
-"\n"
-"\n"
-"\n"
+"# (optional) Joint Angle Seed(s) for IK solver.\n"
+"# * specify a JointState seed for each pose_stamp, using name[] and position[]\n"
+"# * empty arrays or a non-default seed_mode will cause user seed to not be used\n"
 "sensor_msgs/JointState[] seed_angles\n"
 "\n"
-"\n"
-"\n"
-"\n"
-"\n"
+"# Seed Type Mode\n"
+"# * default (SEED_AUTO) mode: iterate through seed types until first valid\n"
+"#                             solution is found\n"
+"# * setting any other mode:   try only that seed type\n"
 "uint8 SEED_AUTO    = 0\n"
 "uint8 SEED_USER    = 1\n"
 "uint8 SEED_CURRENT = 2\n"

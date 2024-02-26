@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -35,10 +35,10 @@ struct GetModelStateRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _model_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _model_name_type;
   _model_name_type model_name;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _relative_entity_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _relative_entity_name_type;
   _relative_entity_name_type relative_entity_name;
 
 
@@ -66,6 +66,21 @@ ros::message_operations::Printer< ::gazebo_msgs::GetModelStateRequest_<Container
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.model_name == rhs.model_name &&
+    lhs.relative_entity_name == rhs.relative_entity_name;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -73,12 +88,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -143,11 +152,11 @@ struct Definition< ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "string model_name\n"
-"string relative_entity_name\n"
-"\n"
-"\n"
-"\n"
+    return "string model_name                    # name of Gazebo Model\n"
+"string relative_entity_name          # return pose and twist relative to this entity\n"
+"                                     # an entity can be a model, body, or geom\n"
+"                                     # be sure to use gazebo scoped naming notation (e.g. [model_name::body_name])\n"
+"                                     # leave empty or \"world\" will use inertial world frame\n"
 ;
   }
 
@@ -187,9 +196,9 @@ struct Printer< ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::GetModelStateRequest_<ContainerAllocator>& v)
   {
     s << indent << "model_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.model_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.model_name);
     s << indent << "relative_entity_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.relative_entity_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.relative_entity_name);
   }
 };
 

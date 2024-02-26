@@ -144,15 +144,15 @@
 (setf (get gazebo_msgs::GetLinkStateRequest :md5sum-) "09d6c98cce97b35f7ab9bd70300657ab")
 (setf (get gazebo_msgs::GetLinkStateRequest :datatype-) "gazebo_msgs/GetLinkStateRequest")
 (setf (get gazebo_msgs::GetLinkStateRequest :definition-)
-      "string link_name
-
-string reference_frame
-
-
+      "string link_name          # name of link
+                          # link names are prefixed by model name, e.g. pr2::base_link
+string reference_frame    # reference frame of returned information, must be a valid link
+                          # if empty, use inertial (gazebo world) frame
+                          # reference_frame names are prefixed by model name, e.g. pr2::base_link
 ---
 gazebo_msgs/LinkState link_state
-bool success
-string status_message
+bool success              # return true if get info is successful
+string status_message     # comments if available
 
 
 ================================================================================
@@ -208,15 +208,15 @@ float64 y
 (setf (get gazebo_msgs::GetLinkStateResponse :md5sum-) "09d6c98cce97b35f7ab9bd70300657ab")
 (setf (get gazebo_msgs::GetLinkStateResponse :datatype-) "gazebo_msgs/GetLinkStateResponse")
 (setf (get gazebo_msgs::GetLinkStateResponse :definition-)
-      "string link_name
-
-string reference_frame
-
-
+      "string link_name          # name of link
+                          # link names are prefixed by model name, e.g. pr2::base_link
+string reference_frame    # reference frame of returned information, must be a valid link
+                          # if empty, use inertial (gazebo world) frame
+                          # reference_frame names are prefixed by model name, e.g. pr2::base_link
 ---
 gazebo_msgs/LinkState link_state
-bool success
-string status_message
+bool success              # return true if get info is successful
+string status_message     # comments if available
 
 
 ================================================================================

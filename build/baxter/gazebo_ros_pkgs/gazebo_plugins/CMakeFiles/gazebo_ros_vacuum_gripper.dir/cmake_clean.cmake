@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_vacuum_gripper.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_vacuum_gripper.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_vacuum_gripper.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_vacuum_gripper.so"
 )
 
 # Per-language clean rules from dependency scanning.

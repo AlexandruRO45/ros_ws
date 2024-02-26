@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_dev
+# Install script for directory: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_dev
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/catkin_generated/installspace/gazebo_dev.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/catkin_generated/installspace/gazebo_dev.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_dev/cmake" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_dev/cmake/gazebo_dev-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_dev/cmake" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_dev/cmake/gazebo_dev-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_dev/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/catkin_generated/installspace/gazebo_devConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/catkin_generated/installspace/gazebo_devConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/catkin_generated/installspace/gazebo_devConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/catkin_generated/installspace/gazebo_devConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_dev" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_dev/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gazebo_dev" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_dev/package.xml")
 endif()
 

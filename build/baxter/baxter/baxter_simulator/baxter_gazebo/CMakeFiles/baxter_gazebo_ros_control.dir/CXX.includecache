@@ -6,12 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/AssemblyState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/AssemblyState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -22,12 +22,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/EndEffectorCommand.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/EndEffectorCommand.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -38,12 +38,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/HeadPanCommand.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/HeadPanCommand.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -54,12 +54,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/JointCommand.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/JointCommand.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -70,7 +70,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_gazebo/src/baxter_gazebo_ros_control_plugin.cpp
+/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_gazebo/src/baxter_gazebo_ros_control_plugin.cpp
 gazebo_ros_control/gazebo_ros_control_plugin.h
 -
 controller_manager_msgs/SwitchController.h
@@ -84,7 +84,7 @@ baxter_core_msgs/HeadPanCommand.h
 baxter_core_msgs/EndEffectorCommand.h
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_control/include/gazebo_ros_control/gazebo_ros_control_plugin.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_control/include/gazebo_ros_control/gazebo_ros_control_plugin.h
 boost/shared_ptr.hpp
 -
 boost/thread.hpp
@@ -108,7 +108,7 @@ controller_manager/controller_manager.h
 transmission_interface/transmission_parser.h
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_control/include/gazebo_ros_control/robot_hw_sim.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_control/include/gazebo_ros_control/robot_hw_sim.h
 gazebo/physics/physics.hh
 -
 ros/ros.h
@@ -237,11 +237,11 @@ controller_interface/controller_base.h
 /opt/ros/melodic/include/controller_manager/controller_manager.h
 controller_manager/controller_spec.h
 /opt/ros/melodic/include/controller_manager/controller_manager/controller_spec.h
-pthread.h
--
 cstdio
 -
 map
+-
+mutex
 -
 string
 -
@@ -267,10 +267,6 @@ controller_manager_msgs/UnloadController.h
 -
 controller_manager_msgs/SwitchController.h
 -
-boost/thread/condition.hpp
--
-boost/thread/recursive_mutex.hpp
--
 controller_manager/controller_loader_interface.h
 -
 
@@ -291,7 +287,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -309,7 +305,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -333,7 +329,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -349,7 +345,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -373,7 +369,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -389,7 +385,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -415,7 +411,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -431,7 +427,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -455,7 +451,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -471,7 +467,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -495,7 +491,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -511,7 +507,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -535,7 +531,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -551,7 +547,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -602,8 +598,6 @@ map
 string
 -
 vector
--
-boost/ptr_container/ptr_vector.hpp
 -
 ros/console.h
 -
@@ -1417,7 +1411,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1613,13 +1607,7 @@ string
 -
 vector
 -
-boost/version.hpp
--
 boost/uuid/sha1.hpp
--
-boost/uuid/detail/sha1.hpp
--
-boost/filesystem.hpp
 -
 iomanip
 -
@@ -1956,8 +1944,6 @@ list
 string
 -
 sdf/sdf.hh
--
-boost/filesystem.hpp
 -
 gazebo/common/CommonTypes.hh
 /usr/include/gazebo-9/gazebo/common/gazebo/common/CommonTypes.hh
@@ -13160,11 +13146,11 @@ uuid/uuid.h
 
 /usr/include/ignition/transport4/ignition/transport/detail/Export.hh
 
-/usr/include/sdformat-6.2/sdf/Assert.hh
+/usr/include/sdformat-6.0/sdf/Assert.hh
 sdf/Exception.hh
-/usr/include/sdformat-6.2/sdf/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/sdf/Exception.hh
 
-/usr/include/sdformat-6.2/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/Console.hh
 fstream
 -
 iostream
@@ -13174,9 +13160,9 @@ memory
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/Element.hh
 memory
 -
 string
@@ -13186,21 +13172,21 @@ utility
 vector
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/Error.hh
 iostream
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/Exception.hh
 cstdint
 -
 iostream
@@ -13212,24 +13198,22 @@ sstream
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Filesystem.hh
+/usr/include/sdformat-6.0/sdf/Filesystem.hh
 memory
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/Param.hh
 boost/any.hpp
 -
 boost/variant.hpp
 -
 algorithm
--
-cctype
 -
 cstdint
 -
@@ -13248,21 +13232,21 @@ vector
 ignition/math.hh
 -
 sdf/Console.hh
-/usr/include/sdformat-6.2/sdf/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/sdf/Console.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Root.hh
+/usr/include/sdformat-6.0/sdf/Root.hh
 string
 -
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/SDFImpl.hh
 functional
 -
 memory
@@ -13270,15 +13254,15 @@ memory
 string
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/Types.hh
 algorithm
 -
 cmath
@@ -13292,29 +13276,29 @@ string
 vector
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Error.hh
-/usr/include/sdformat-6.2/sdf/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/sdf/Error.hh
 
-/usr/include/sdformat-6.2/sdf/World.hh
+/usr/include/sdformat-6.0/sdf/World.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/parser.hh
+/usr/include/sdformat-6.0/sdf/parser.hh
 string
 -
 sdf/SDFImpl.hh
-/usr/include/sdformat-6.2/sdf/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/sdf/SDFImpl.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/sdf.hh
+/usr/include/sdformat-6.0/sdf/sdf.hh
 sdf/Assert.hh
 -
 sdf/Console.hh
@@ -13344,9 +13328,9 @@ sdf/World.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-6.2/sdf/sdf_config.h
+/usr/include/sdformat-6.0/sdf/sdf_config.h
 
-/usr/include/sdformat-6.2/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/system_util.hh
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
 bits/wordsize.h

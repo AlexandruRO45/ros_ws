@@ -150,11 +150,11 @@
 (setf (get gazebo_msgs::GetWorldPropertiesRequest :datatype-) "gazebo_msgs/GetWorldPropertiesRequest")
 (setf (get gazebo_msgs::GetWorldPropertiesRequest :definition-)
       "---
-float64 sim_time
-string[] model_names
-bool rendering_enabled
-bool success
-string status_message
+float64 sim_time                     # current sim time
+string[] model_names                 # list of models in the world
+bool rendering_enabled               # if X is used
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 ")
 
@@ -162,11 +162,11 @@ string status_message
 (setf (get gazebo_msgs::GetWorldPropertiesResponse :datatype-) "gazebo_msgs/GetWorldPropertiesResponse")
 (setf (get gazebo_msgs::GetWorldPropertiesResponse :definition-)
       "---
-float64 sim_time
-string[] model_names
-bool rendering_enabled
-bool success
-string status_message
+float64 sim_time                     # current sim time
+string[] model_names                 # list of models in the world
+bool rendering_enabled               # if X is used
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 ")
 

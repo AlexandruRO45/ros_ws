@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ApplyBodyWrench.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ApplyBodyWrench.h
 ros/service_traits.h
 -
 gazebo_msgs/ApplyBodyWrenchRequest.h
@@ -14,12 +14,12 @@ gazebo_msgs/ApplyBodyWrenchRequest.h
 gazebo_msgs/ApplyBodyWrenchResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ApplyBodyWrenchRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ApplyBodyWrenchRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -34,12 +34,12 @@ geometry_msgs/Point.h
 geometry_msgs/Wrench.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ApplyBodyWrenchResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ApplyBodyWrenchResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -50,7 +50,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ApplyJointEffort.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ApplyJointEffort.h
 ros/service_traits.h
 -
 gazebo_msgs/ApplyJointEffortRequest.h
@@ -58,12 +58,12 @@ gazebo_msgs/ApplyJointEffortRequest.h
 gazebo_msgs/ApplyJointEffortResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ApplyJointEffortRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ApplyJointEffortRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -74,12 +74,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ApplyJointEffortResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ApplyJointEffortResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -90,7 +90,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/BodyRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/BodyRequest.h
 ros/service_traits.h
 -
 gazebo_msgs/BodyRequestRequest.h
@@ -98,12 +98,12 @@ gazebo_msgs/BodyRequestRequest.h
 gazebo_msgs/BodyRequestResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/BodyRequestRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/BodyRequestRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -114,12 +114,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/BodyRequestResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/BodyRequestResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -130,7 +130,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/DeleteLight.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/DeleteLight.h
 ros/service_traits.h
 -
 gazebo_msgs/DeleteLightRequest.h
@@ -138,12 +138,12 @@ gazebo_msgs/DeleteLightRequest.h
 gazebo_msgs/DeleteLightResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/DeleteLightRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/DeleteLightRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -154,12 +154,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/DeleteLightResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/DeleteLightResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -170,7 +170,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/DeleteModel.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/DeleteModel.h
 ros/service_traits.h
 -
 gazebo_msgs/DeleteModelRequest.h
@@ -178,12 +178,12 @@ gazebo_msgs/DeleteModelRequest.h
 gazebo_msgs/DeleteModelResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/DeleteModelRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/DeleteModelRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -194,12 +194,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/DeleteModelResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/DeleteModelResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -210,7 +210,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetJointProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetJointProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetJointPropertiesRequest.h
@@ -218,12 +218,12 @@ gazebo_msgs/GetJointPropertiesRequest.h
 gazebo_msgs/GetJointPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetJointPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetJointPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -234,12 +234,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetJointPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetJointPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -250,7 +250,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLightProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLightProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetLightPropertiesRequest.h
@@ -258,12 +258,12 @@ gazebo_msgs/GetLightPropertiesRequest.h
 gazebo_msgs/GetLightPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLightPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLightPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -274,12 +274,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLightPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLightPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -292,7 +292,7 @@ ros/message_operations.h
 std_msgs/ColorRGBA.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetLinkPropertiesRequest.h
@@ -300,12 +300,12 @@ gazebo_msgs/GetLinkPropertiesRequest.h
 gazebo_msgs/GetLinkPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -316,12 +316,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -334,7 +334,7 @@ ros/message_operations.h
 geometry_msgs/Pose.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkState.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkState.h
 ros/service_traits.h
 -
 gazebo_msgs/GetLinkStateRequest.h
@@ -342,12 +342,12 @@ gazebo_msgs/GetLinkStateRequest.h
 gazebo_msgs/GetLinkStateResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkStateRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkStateRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -358,12 +358,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkStateResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkStateResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -376,7 +376,7 @@ ros/message_operations.h
 gazebo_msgs/LinkState.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetModelProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetModelProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetModelPropertiesRequest.h
@@ -384,12 +384,12 @@ gazebo_msgs/GetModelPropertiesRequest.h
 gazebo_msgs/GetModelPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetModelPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetModelPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -400,12 +400,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetModelPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetModelPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -416,7 +416,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetModelState.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetModelState.h
 ros/service_traits.h
 -
 gazebo_msgs/GetModelStateRequest.h
@@ -424,12 +424,12 @@ gazebo_msgs/GetModelStateRequest.h
 gazebo_msgs/GetModelStateResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetModelStateRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetModelStateRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -440,12 +440,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetModelStateResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetModelStateResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -462,7 +462,7 @@ geometry_msgs/Pose.h
 geometry_msgs/Twist.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetPhysicsProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetPhysicsProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetPhysicsPropertiesRequest.h
@@ -470,12 +470,12 @@ gazebo_msgs/GetPhysicsPropertiesRequest.h
 gazebo_msgs/GetPhysicsPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetPhysicsPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetPhysicsPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -486,12 +486,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetPhysicsPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetPhysicsPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -506,7 +506,7 @@ geometry_msgs/Vector3.h
 gazebo_msgs/ODEPhysics.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetWorldProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetWorldProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetWorldPropertiesRequest.h
@@ -514,12 +514,12 @@ gazebo_msgs/GetWorldPropertiesRequest.h
 gazebo_msgs/GetWorldPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetWorldPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetWorldPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -530,12 +530,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetWorldPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetWorldPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -546,7 +546,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/JointRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/JointRequest.h
 ros/service_traits.h
 -
 gazebo_msgs/JointRequestRequest.h
@@ -554,12 +554,12 @@ gazebo_msgs/JointRequestRequest.h
 gazebo_msgs/JointRequestResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/JointRequestRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/JointRequestRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -570,12 +570,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/JointRequestResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/JointRequestResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -586,32 +586,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/LinkState.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/LinkState.h
 string
 -
 vector
 -
-map
--
-ros/types.h
--
-ros/serialization.h
--
-ros/builtin_message_traits.h
--
-ros/message_operations.h
--
-geometry_msgs/Pose.h
--
-geometry_msgs/Twist.h
--
-
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/LinkStates.h
-string
--
-vector
--
-map
+memory
 -
 ros/types.h
 -
@@ -626,12 +606,12 @@ geometry_msgs/Pose.h
 geometry_msgs/Twist.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ModelState.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/LinkStates.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -646,12 +626,12 @@ geometry_msgs/Pose.h
 geometry_msgs/Twist.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ModelStates.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ModelState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -666,12 +646,32 @@ geometry_msgs/Pose.h
 geometry_msgs/Twist.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ODEJointProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ModelStates.h
 string
 -
 vector
 -
-map
+memory
+-
+ros/types.h
+-
+ros/serialization.h
+-
+ros/builtin_message_traits.h
+-
+ros/message_operations.h
+-
+geometry_msgs/Pose.h
+-
+geometry_msgs/Twist.h
+-
+
+/home/alex/ros_ws/devel/include/gazebo_msgs/ODEJointProperties.h
+string
+-
+vector
+-
+memory
 -
 ros/types.h
 -
@@ -682,12 +682,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/ODEPhysics.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/ODEPhysics.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -698,7 +698,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetJointProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetJointProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/SetJointPropertiesRequest.h
@@ -706,12 +706,12 @@ gazebo_msgs/SetJointPropertiesRequest.h
 gazebo_msgs/SetJointPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetJointPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetJointPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -724,12 +724,12 @@ ros/message_operations.h
 gazebo_msgs/ODEJointProperties.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetJointPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetJointPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -740,7 +740,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLightProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLightProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/SetLightPropertiesRequest.h
@@ -748,12 +748,12 @@ gazebo_msgs/SetLightPropertiesRequest.h
 gazebo_msgs/SetLightPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLightPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLightPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -766,12 +766,12 @@ ros/message_operations.h
 std_msgs/ColorRGBA.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLightPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLightPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -782,7 +782,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/SetLinkPropertiesRequest.h
@@ -790,12 +790,12 @@ gazebo_msgs/SetLinkPropertiesRequest.h
 gazebo_msgs/SetLinkPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -808,12 +808,12 @@ ros/message_operations.h
 geometry_msgs/Pose.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -824,7 +824,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkState.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkState.h
 ros/service_traits.h
 -
 gazebo_msgs/SetLinkStateRequest.h
@@ -832,12 +832,12 @@ gazebo_msgs/SetLinkStateRequest.h
 gazebo_msgs/SetLinkStateResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkStateRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkStateRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -850,12 +850,12 @@ ros/message_operations.h
 gazebo_msgs/LinkState.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkStateResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkStateResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -866,7 +866,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetModelConfiguration.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetModelConfiguration.h
 ros/service_traits.h
 -
 gazebo_msgs/SetModelConfigurationRequest.h
@@ -874,12 +874,12 @@ gazebo_msgs/SetModelConfigurationRequest.h
 gazebo_msgs/SetModelConfigurationResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetModelConfigurationRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetModelConfigurationRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -890,12 +890,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetModelConfigurationResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetModelConfigurationResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -906,7 +906,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetModelState.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetModelState.h
 ros/service_traits.h
 -
 gazebo_msgs/SetModelStateRequest.h
@@ -914,12 +914,12 @@ gazebo_msgs/SetModelStateRequest.h
 gazebo_msgs/SetModelStateResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetModelStateRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetModelStateRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -932,12 +932,12 @@ ros/message_operations.h
 gazebo_msgs/ModelState.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetModelStateResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetModelStateResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -948,7 +948,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetPhysicsProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetPhysicsProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/SetPhysicsPropertiesRequest.h
@@ -956,12 +956,12 @@ gazebo_msgs/SetPhysicsPropertiesRequest.h
 gazebo_msgs/SetPhysicsPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetPhysicsPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetPhysicsPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -976,12 +976,12 @@ geometry_msgs/Vector3.h
 gazebo_msgs/ODEPhysics.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetPhysicsPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetPhysicsPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -992,7 +992,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SpawnModel.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SpawnModel.h
 ros/service_traits.h
 -
 gazebo_msgs/SpawnModelRequest.h
@@ -1000,12 +1000,12 @@ gazebo_msgs/SpawnModelRequest.h
 gazebo_msgs/SpawnModelResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SpawnModelRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SpawnModelRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1018,12 +1018,12 @@ ros/message_operations.h
 geometry_msgs/Pose.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SpawnModelResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SpawnModelResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1034,7 +1034,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_ros/PhysicsConfig.h
+/home/alex/ros_ws/devel/include/gazebo_ros/PhysicsConfig.h
 dynamic_reconfigure/config_tools.h
 -
 limits
@@ -1052,7 +1052,7 @@ dynamic_reconfigure/config_init_mutex.h
 boost/any.hpp
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_ros_api_plugin.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_ros_api_plugin.h
 stdio.h
 -
 stdlib.h
@@ -1082,65 +1082,65 @@ ros/package.h
 rosgraph_msgs/Clock.h
 -
 std_srvs/Empty.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/std_srvs/Empty.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/std_srvs/Empty.h
 gazebo_msgs/JointRequest.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/JointRequest.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/JointRequest.h
 gazebo_msgs/BodyRequest.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/BodyRequest.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/BodyRequest.h
 gazebo_msgs/SpawnModel.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SpawnModel.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SpawnModel.h
 gazebo_msgs/DeleteModel.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/DeleteModel.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/DeleteModel.h
 gazebo_msgs/DeleteLight.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/DeleteLight.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/DeleteLight.h
 gazebo_msgs/ApplyBodyWrench.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ApplyBodyWrench.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ApplyBodyWrench.h
 gazebo_msgs/SetPhysicsProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetPhysicsProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetPhysicsProperties.h
 gazebo_msgs/GetPhysicsProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetPhysicsProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetPhysicsProperties.h
 gazebo_msgs/SetJointProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetJointProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetJointProperties.h
 gazebo_msgs/GetWorldProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetWorldProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetWorldProperties.h
 gazebo_msgs/GetModelProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetModelProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetModelProperties.h
 gazebo_msgs/GetModelState.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetModelState.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetModelState.h
 gazebo_msgs/SetModelState.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetModelState.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetModelState.h
 gazebo_msgs/GetJointProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetJointProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetJointProperties.h
 gazebo_msgs/ApplyJointEffort.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ApplyJointEffort.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ApplyJointEffort.h
 gazebo_msgs/GetLinkProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetLinkProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetLinkProperties.h
 gazebo_msgs/SetLinkProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetLinkProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetLinkProperties.h
 gazebo_msgs/SetLinkState.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetLinkState.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetLinkState.h
 gazebo_msgs/GetLinkState.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetLinkState.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetLinkState.h
 gazebo_msgs/GetLightProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetLightProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetLightProperties.h
 gazebo_msgs/SetLightProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetLightProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetLightProperties.h
 gazebo_msgs/ModelState.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ModelState.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ModelState.h
 gazebo_msgs/LinkState.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/LinkState.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/LinkState.h
 gazebo_msgs/ModelStates.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ModelStates.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/ModelStates.h
 gazebo_msgs/LinkStates.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/LinkStates.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/LinkStates.h
 geometry_msgs/Vector3.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Vector3.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Vector3.h
 geometry_msgs/Wrench.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Wrench.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Wrench.h
 geometry_msgs/Pose.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Pose.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Pose.h
 geometry_msgs/Twist.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Twist.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/geometry_msgs/Twist.h
 ros/ros.h
 -
 gazebo_msgs/SetModelConfiguration.h
@@ -1152,13 +1152,13 @@ dynamic_reconfigure/server.h
 gazebo_ros/PhysicsConfig.h
 -
 gazebo_msgs/SetPhysicsProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetPhysicsProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/SetPhysicsProperties.h
 gazebo_msgs/GetPhysicsProperties.h
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetPhysicsProperties.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include/gazebo_ros/gazebo_msgs/GetPhysicsProperties.h
 boost/algorithm/string.hpp
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_api_plugin.cpp
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_api_plugin.cpp
 gazebo/common/Events.hh
 -
 gazebo/gazebo_config.h
@@ -1166,72 +1166,12 @@ gazebo/gazebo_config.h
 gazebo_ros/gazebo_ros_api_plugin.h
 -
 
-/opt/ros/melodic/include/boost_161_condition_variable.h
-boost/thread/detail/platform.hpp
--
-boost/thread/win32/condition_variable.hpp
--
-boost_161_pthread_condition_variable.h
-/opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-
-/opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-boost_161_pthread_condition_variable_fwd.h
-/opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
-boost/thread/pthread/timespec.hpp
--
-boost/thread/pthread/pthread_mutex_scoped_lock.hpp
--
-boost/thread/pthread/thread_data.hpp
--
-boost/chrono/system_clocks.hpp
--
-boost/chrono/ceil.hpp
--
-boost/thread/detail/delete.hpp
--
-boost/config/abi_prefix.hpp
--
-boost/config/abi_suffix.hpp
--
-
-/opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
-boost/assert.hpp
--
-boost/throw_exception.hpp
--
-pthread.h
--
-boost/thread/cv_status.hpp
--
-boost/thread/mutex.hpp
--
-boost/thread/lock_types.hpp
--
-boost/thread/thread_time.hpp
--
-boost/thread/pthread/timespec.hpp
--
-boost/thread/xtime.hpp
--
-boost/chrono/system_clocks.hpp
--
-boost/chrono/ceil.hpp
--
-boost/thread/detail/delete.hpp
--
-boost/date_time/posix_time/posix_time_duration.hpp
--
-boost/config/abi_prefix.hpp
--
-boost/config/abi_suffix.hpp
--
-
 /opt/ros/melodic/include/dynamic_reconfigure/BoolParameter.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1247,7 +1187,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1273,7 +1213,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1297,7 +1237,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1313,7 +1253,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1331,7 +1271,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1347,7 +1287,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1363,7 +1303,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1387,7 +1327,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1405,7 +1345,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1423,7 +1363,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1467,7 +1407,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1483,7 +1423,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1503,7 +1443,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1519,7 +1459,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1539,7 +1479,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1555,7 +1495,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1607,16 +1547,10 @@ ros/time.h
 /opt/ros/melodic/include/ros/ros/time.h
 
 /opt/ros/melodic/include/ros/callback_queue.h
-boost/version.hpp
--
-boost_161_condition_variable.h
-/opt/ros/melodic/include/ros/boost_161_condition_variable.h
-boost/thread/condition_variable.hpp
--
-boost/thread/condition_variable.hpp
--
 ros/callback_queue_interface.h
 /opt/ros/melodic/include/ros/ros/callback_queue_interface.h
+ros/internal/condition_variable.h
+/opt/ros/melodic/include/ros/ros/internal/condition_variable.h
 ros/time.h
 /opt/ros/melodic/include/ros/ros/time.h
 common.h
@@ -1759,6 +1693,10 @@ ros/spinner.h
 /opt/ros/melodic/include/ros/ros/spinner.h
 common.h
 /opt/ros/melodic/include/ros/common.h
+
+/opt/ros/melodic/include/ros/internal/condition_variable.h
+boost/thread/condition_variable.hpp
+-
 
 /opt/ros/melodic/include/ros/macros.h
 
@@ -2267,7 +2205,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2283,7 +2221,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2299,7 +2237,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2323,7 +2261,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2339,7 +2277,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2453,13 +2391,7 @@ string
 -
 vector
 -
-boost/version.hpp
--
 boost/uuid/sha1.hpp
--
-boost/uuid/detail/sha1.hpp
--
-boost/filesystem.hpp
 -
 iomanip
 -
@@ -2796,8 +2728,6 @@ list
 string
 -
 sdf/sdf.hh
--
-boost/filesystem.hpp
 -
 gazebo/common/CommonTypes.hh
 /usr/include/gazebo-9/gazebo/common/gazebo/common/CommonTypes.hh
@@ -13976,11 +13906,11 @@ uuid/uuid.h
 
 /usr/include/ignition/transport4/ignition/transport/detail/Export.hh
 
-/usr/include/sdformat-6.2/sdf/Assert.hh
+/usr/include/sdformat-6.0/sdf/Assert.hh
 sdf/Exception.hh
-/usr/include/sdformat-6.2/sdf/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/sdf/Exception.hh
 
-/usr/include/sdformat-6.2/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/Console.hh
 fstream
 -
 iostream
@@ -13990,9 +13920,9 @@ memory
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/Element.hh
 memory
 -
 string
@@ -14002,21 +13932,21 @@ utility
 vector
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/Error.hh
 iostream
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/Exception.hh
 cstdint
 -
 iostream
@@ -14028,24 +13958,22 @@ sstream
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Filesystem.hh
+/usr/include/sdformat-6.0/sdf/Filesystem.hh
 memory
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/Param.hh
 boost/any.hpp
 -
 boost/variant.hpp
 -
 algorithm
--
-cctype
 -
 cstdint
 -
@@ -14064,21 +13992,21 @@ vector
 ignition/math.hh
 -
 sdf/Console.hh
-/usr/include/sdformat-6.2/sdf/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/sdf/Console.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Root.hh
+/usr/include/sdformat-6.0/sdf/Root.hh
 string
 -
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/SDFImpl.hh
 functional
 -
 memory
@@ -14086,15 +14014,15 @@ memory
 string
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/Types.hh
 algorithm
 -
 cmath
@@ -14108,29 +14036,29 @@ string
 vector
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Error.hh
-/usr/include/sdformat-6.2/sdf/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/sdf/Error.hh
 
-/usr/include/sdformat-6.2/sdf/World.hh
+/usr/include/sdformat-6.0/sdf/World.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/parser.hh
+/usr/include/sdformat-6.0/sdf/parser.hh
 string
 -
 sdf/SDFImpl.hh
-/usr/include/sdformat-6.2/sdf/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/sdf/SDFImpl.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/sdf.hh
+/usr/include/sdformat-6.0/sdf/sdf.hh
 sdf/Assert.hh
 -
 sdf/Console.hh
@@ -14160,9 +14088,9 @@ sdf/World.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-6.2/sdf/sdf_config.h
+/usr/include/sdformat-6.0/sdf/sdf_config.h
 
-/usr/include/sdformat-6.2/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/system_util.hh
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
 bits/wordsize.h

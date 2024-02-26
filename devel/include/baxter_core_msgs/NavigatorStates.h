@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -36,10 +36,10 @@ struct NavigatorStates_
 
 
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _names_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _names_type;
   _names_type names;
 
-   typedef std::vector< ::baxter_core_msgs::NavigatorState_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::baxter_core_msgs::NavigatorState_<ContainerAllocator> >::other >  _states_type;
+   typedef std::vector< ::baxter_core_msgs::NavigatorState_<ContainerAllocator> , typename std::allocator_traits<ContainerAllocator>::template rebind_alloc< ::baxter_core_msgs::NavigatorState_<ContainerAllocator> >> _states_type;
   _states_type states;
 
 
@@ -67,6 +67,21 @@ ros::message_operations::Printer< ::baxter_core_msgs::NavigatorStates_<Container
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::NavigatorStates_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::NavigatorStates_<ContainerAllocator2> & rhs)
+{
+  return lhs.names == rhs.names &&
+    lhs.states == rhs.states;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::NavigatorStates_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::NavigatorStates_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -74,12 +89,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -203,7 +212,7 @@ struct Printer< ::baxter_core_msgs::NavigatorStates_<ContainerAllocator> >
     for (size_t i = 0; i < v.names.size(); ++i)
     {
       s << indent << "  names[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.names[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.names[i]);
     }
     s << indent << "states[]" << std::endl;
     for (size_t i = 0; i < v.states.size(); ++i)

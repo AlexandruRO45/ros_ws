@@ -118,20 +118,20 @@
 (setf (get gazebo_msgs::DeleteModelRequest :md5sum-) "9ce56b4e9e54616de25d796dc972a262")
 (setf (get gazebo_msgs::DeleteModelRequest :datatype-) "gazebo_msgs/DeleteModelRequest")
 (setf (get gazebo_msgs::DeleteModelRequest :definition-)
-      "string model_name
+      "string model_name                 # name of the Gazebo Model to be deleted
 ---
-bool success
-string status_message
+bool success                      # return true if deletion is successful
+string status_message             # comments if available
 
 ")
 
 (setf (get gazebo_msgs::DeleteModelResponse :md5sum-) "9ce56b4e9e54616de25d796dc972a262")
 (setf (get gazebo_msgs::DeleteModelResponse :datatype-) "gazebo_msgs/DeleteModelResponse")
 (setf (get gazebo_msgs::DeleteModelResponse :definition-)
-      "string model_name
+      "string model_name                 # name of the Gazebo Model to be deleted
 ---
-bool success
-string status_message
+bool success                      # return true if deletion is successful
+string status_message             # comments if available
 
 ")
 

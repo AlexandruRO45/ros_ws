@@ -1,13 +1,13 @@
 file(REMOVE_RECURSE
   "CMakeFiles/baxter_maintenance_msgs_generate_messages_py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_TareEnable.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateStatus.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_TareData.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateSources.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_CalibrateArmData.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_CalibrateArmEnable.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateSource.py"
-  "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/__init__.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateSource.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_CalibrateArmData.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateSources.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_UpdateStatus.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_CalibrateArmEnable.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_TareEnable.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/_TareData.py"
+  "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_maintenance_msgs/msg/__init__.py"
 )
 
 # Per-language clean rules from dependency scanning.

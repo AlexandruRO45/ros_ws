@@ -69,7 +69,7 @@ namespace baxter_interface
         field(a_f)
       {}
 
-      T (PositionFFJointTrajectoryActionServerConfig::* field);
+      T PositionFFJointTrajectoryActionServerConfig::* field;
 
       virtual void clamp(PositionFFJointTrajectoryActionServerConfig &config, const PositionFFJointTrajectoryActionServerConfig &max, const PositionFFJointTrajectoryActionServerConfig &min) const
       {
@@ -216,7 +216,7 @@ namespace baxter_interface
         }
       }
 
-      T (PT::* field);
+      T PT::* field;
       std::vector<PositionFFJointTrajectoryActionServerConfig::AbstractGroupDescriptionConstPtr> groups;
     };
 

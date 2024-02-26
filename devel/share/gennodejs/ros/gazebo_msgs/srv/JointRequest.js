@@ -68,7 +68,7 @@ class JointRequestRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string joint_name
+    string joint_name   # name of the joint requested
     
     `;
   }

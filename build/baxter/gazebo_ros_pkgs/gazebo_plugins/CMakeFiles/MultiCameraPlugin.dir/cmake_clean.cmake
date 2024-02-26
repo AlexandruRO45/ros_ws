@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libMultiCameraPlugin.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libMultiCameraPlugin.so"
+  "/home/alex/ros_ws/devel/lib/libMultiCameraPlugin.pdb"
+  "/home/alex/ros_ws/devel/lib/libMultiCameraPlugin.so"
 )
 
 # Per-language clean rules from dependency scanning.

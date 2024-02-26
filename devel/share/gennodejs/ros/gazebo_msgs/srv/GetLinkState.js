@@ -81,11 +81,11 @@ class GetLinkStateRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string link_name
-    
-    string reference_frame
-    
-    
+    string link_name          # name of link
+                              # link names are prefixed by model name, e.g. pr2::base_link
+    string reference_frame    # reference frame of returned information, must be a valid link
+                              # if empty, use inertial (gazebo world) frame
+                              # reference_frame names are prefixed by model name, e.g. pr2::base_link
     
     `;
   }
@@ -189,8 +189,8 @@ class GetLinkStateResponse {
     // Returns full string definition for message
     return `
     gazebo_msgs/LinkState link_state
-    bool success
-    string status_message
+    bool success              # return true if get info is successful
+    string status_message     # comments if available
     
     
     ================================================================================

@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::ApplyBodyWrench > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrenchRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrench > 
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrenchRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrench >
 template<>
 struct MD5Sum< ::gazebo_msgs::ApplyBodyWrenchRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::ApplyBodyWrenchRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrenchRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrench > 
+// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrenchRequest> should match
+// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrench >
 template<>
 struct DataType< ::gazebo_msgs::ApplyBodyWrenchRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::ApplyBodyWrenchRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrenchResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrench > 
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrenchResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyBodyWrench >
 template<>
 struct MD5Sum< ::gazebo_msgs::ApplyBodyWrenchResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::ApplyBodyWrenchResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrenchResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrench > 
+// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrenchResponse> should match
+// service_traits::DataType< ::gazebo_msgs::ApplyBodyWrench >
 template<>
 struct DataType< ::gazebo_msgs::ApplyBodyWrenchResponse>
 {

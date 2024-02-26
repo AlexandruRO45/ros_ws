@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/include/gazebo_plugins/gazebo_ros_video.h
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/include/gazebo_plugins/gazebo_ros_video.h
 boost/thread/mutex.hpp
 -
 cv_bridge/cv_bridge.h
@@ -34,70 +34,10 @@ gazebo/rendering/rendering.hh
 gazebo/transport/TransportTypes.hh
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/src/gazebo_ros_video.cpp
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/src/gazebo_ros_video.cpp
 gazebo_plugins/gazebo_ros_video.h
 -
 boost/lexical_cast.hpp
--
-
-/opt/ros/melodic/include/boost_161_condition_variable.h
-boost/thread/detail/platform.hpp
--
-boost/thread/win32/condition_variable.hpp
--
-boost_161_pthread_condition_variable.h
-/opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-
-/opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-boost_161_pthread_condition_variable_fwd.h
-/opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
-boost/thread/pthread/timespec.hpp
--
-boost/thread/pthread/pthread_mutex_scoped_lock.hpp
--
-boost/thread/pthread/thread_data.hpp
--
-boost/chrono/system_clocks.hpp
--
-boost/chrono/ceil.hpp
--
-boost/thread/detail/delete.hpp
--
-boost/config/abi_prefix.hpp
--
-boost/config/abi_suffix.hpp
--
-
-/opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
-boost/assert.hpp
--
-boost/throw_exception.hpp
--
-pthread.h
--
-boost/thread/cv_status.hpp
--
-boost/thread/mutex.hpp
--
-boost/thread/lock_types.hpp
--
-boost/thread/thread_time.hpp
--
-boost/thread/pthread/timespec.hpp
--
-boost/thread/xtime.hpp
--
-boost/chrono/system_clocks.hpp
--
-boost/chrono/ceil.hpp
--
-boost/thread/detail/delete.hpp
--
-boost/date_time/posix_time/posix_time_duration.hpp
--
-boost/config/abi_prefix.hpp
--
-boost/config/abi_suffix.hpp
 -
 
 /opt/ros/melodic/include/cv_bridge/cv_bridge.h
@@ -227,16 +167,10 @@ ros/time.h
 /opt/ros/melodic/include/ros/ros/time.h
 
 /opt/ros/melodic/include/ros/callback_queue.h
-boost/version.hpp
--
-boost_161_condition_variable.h
-/opt/ros/melodic/include/ros/boost_161_condition_variable.h
-boost/thread/condition_variable.hpp
--
-boost/thread/condition_variable.hpp
--
 ros/callback_queue_interface.h
 /opt/ros/melodic/include/ros/ros/callback_queue_interface.h
+ros/internal/condition_variable.h
+/opt/ros/melodic/include/ros/ros/internal/condition_variable.h
 ros/time.h
 /opt/ros/melodic/include/ros/ros/time.h
 common.h
@@ -379,6 +313,10 @@ ros/spinner.h
 /opt/ros/melodic/include/ros/ros/spinner.h
 common.h
 /opt/ros/melodic/include/ros/common.h
+
+/opt/ros/melodic/include/ros/internal/condition_variable.h
+boost/thread/condition_variable.hpp
+-
 
 /opt/ros/melodic/include/ros/macros.h
 
@@ -877,7 +815,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -897,7 +835,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -915,7 +853,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -933,7 +871,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -957,7 +895,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1005,13 +943,7 @@ string
 -
 vector
 -
-boost/version.hpp
--
 boost/uuid/sha1.hpp
--
-boost/uuid/detail/sha1.hpp
--
-boost/filesystem.hpp
 -
 iomanip
 -
@@ -1174,8 +1106,6 @@ list
 string
 -
 sdf/sdf.hh
--
-boost/filesystem.hpp
 -
 gazebo/common/CommonTypes.hh
 /usr/include/gazebo-9/gazebo/common/gazebo/common/CommonTypes.hh
@@ -5575,8 +5505,6 @@ ignition/math/Angle.hh
 -
 ignition/math/Color.hh
 -
-ignition/math/Matrix4.hh
--
 ignition/math/Pose3.hh
 -
 ignition/math/Quaternion.hh
@@ -5597,14 +5525,12 @@ gazebo/common/PID.hh
 /usr/include/gazebo-9/gazebo/rendering/gazebo/common/PID.hh
 gazebo/common/Time.hh
 /usr/include/gazebo-9/gazebo/rendering/gazebo/common/Time.hh
-gazebo/rendering/Conversions.hh
-/usr/include/gazebo-9/gazebo/rendering/gazebo/rendering/Conversions.hh
 gazebo/rendering/ogre_gazebo.h
 /usr/include/gazebo-9/gazebo/rendering/gazebo/rendering/ogre_gazebo.h
-gazebo/rendering/RenderTypes.hh
-/usr/include/gazebo-9/gazebo/rendering/gazebo/rendering/RenderTypes.hh
 gazebo/msgs/MessageTypes.hh
 /usr/include/gazebo-9/gazebo/rendering/gazebo/msgs/MessageTypes.hh
+gazebo/rendering/RenderTypes.hh
+/usr/include/gazebo-9/gazebo/rendering/gazebo/rendering/RenderTypes.hh
 gazebo/util/system.hh
 /usr/include/gazebo-9/gazebo/rendering/gazebo/util/system.hh
 
@@ -5670,8 +5596,6 @@ gazebo/util/system.hh
 memory
 -
 ignition/math/Vector2.hh
--
-sdf/Element.hh
 -
 gazebo/rendering/RenderTypes.hh
 /usr/include/gazebo-9/gazebo/rendering/gazebo/rendering/RenderTypes.hh
@@ -6173,8 +6097,6 @@ string
 -
 utility
 -
-vector
--
 sdf/sdf.hh
 -
 gazebo/msgs/msgs.hh
@@ -6255,8 +6177,6 @@ OGRE/OgreSceneNode.h
 -
 OGRE/OgreVector3.h
 -
-OGRE/OgreMatrix4.h
--
 OGRE/OgreManualObject.h
 -
 OGRE/OgreMaterialManager.h
@@ -6314,10 +6234,6 @@ OGRE/RTShaderSystem/OgreShaderProgramSet.h
 OGRE/RTShaderSystem/OgreShaderGLSLProgramWriter.h
 -
 OGRE/RTShaderSystem/OgreShaderProgramWriterManager.h
--
-OGRE/RTShaderSystem/OgreShaderFunction.h
--
-OGRE/RTShaderSystem/OgreShaderProgram.h
 -
 OGRE/Overlay/OgreOverlayManager.h
 -
@@ -12190,11 +12106,11 @@ uuid/uuid.h
 
 /usr/include/ignition/transport4/ignition/transport/detail/Export.hh
 
-/usr/include/sdformat-6.2/sdf/Assert.hh
+/usr/include/sdformat-6.0/sdf/Assert.hh
 sdf/Exception.hh
-/usr/include/sdformat-6.2/sdf/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/sdf/Exception.hh
 
-/usr/include/sdformat-6.2/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/Console.hh
 fstream
 -
 iostream
@@ -12204,9 +12120,9 @@ memory
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/Element.hh
 memory
 -
 string
@@ -12216,21 +12132,21 @@ utility
 vector
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/Error.hh
 iostream
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Exception.hh
+/usr/include/sdformat-6.0/sdf/Exception.hh
 cstdint
 -
 iostream
@@ -12242,24 +12158,22 @@ sstream
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Filesystem.hh
+/usr/include/sdformat-6.0/sdf/Filesystem.hh
 memory
 -
 string
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/Param.hh
 boost/any.hpp
 -
 boost/variant.hpp
 -
 algorithm
--
-cctype
 -
 cstdint
 -
@@ -12278,21 +12192,21 @@ vector
 ignition/math.hh
 -
 sdf/Console.hh
-/usr/include/sdformat-6.2/sdf/sdf/Console.hh
+/usr/include/sdformat-6.0/sdf/sdf/Console.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Root.hh
+/usr/include/sdformat-6.0/sdf/Root.hh
 string
 -
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/SDFImpl.hh
 functional
 -
 memory
@@ -12300,15 +12214,15 @@ memory
 string
 -
 sdf/Param.hh
-/usr/include/sdformat-6.2/sdf/sdf/Param.hh
+/usr/include/sdformat-6.0/sdf/sdf/Param.hh
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 
-/usr/include/sdformat-6.2/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/Types.hh
 algorithm
 -
 cmath
@@ -12322,29 +12236,29 @@ string
 vector
 -
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 sdf/Error.hh
-/usr/include/sdformat-6.2/sdf/sdf/Error.hh
+/usr/include/sdformat-6.0/sdf/sdf/Error.hh
 
-/usr/include/sdformat-6.2/sdf/World.hh
+/usr/include/sdformat-6.0/sdf/World.hh
 string
 -
 sdf/Element.hh
-/usr/include/sdformat-6.2/sdf/sdf/Element.hh
+/usr/include/sdformat-6.0/sdf/sdf/Element.hh
 sdf/Types.hh
-/usr/include/sdformat-6.2/sdf/sdf/Types.hh
+/usr/include/sdformat-6.0/sdf/sdf/Types.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/parser.hh
+/usr/include/sdformat-6.0/sdf/parser.hh
 string
 -
 sdf/SDFImpl.hh
-/usr/include/sdformat-6.2/sdf/sdf/SDFImpl.hh
+/usr/include/sdformat-6.0/sdf/sdf/SDFImpl.hh
 sdf/system_util.hh
-/usr/include/sdformat-6.2/sdf/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/sdf/system_util.hh
 
-/usr/include/sdformat-6.2/sdf/sdf.hh
+/usr/include/sdformat-6.0/sdf/sdf.hh
 sdf/Assert.hh
 -
 sdf/Console.hh
@@ -12374,9 +12288,9 @@ sdf/World.hh
 sdf/sdf_config.h
 -
 
-/usr/include/sdformat-6.2/sdf/sdf_config.h
+/usr/include/sdformat-6.0/sdf/sdf_config.h
 
-/usr/include/sdformat-6.2/sdf/system_util.hh
+/usr/include/sdformat-6.0/sdf/system_util.hh
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
 bits/wordsize.h

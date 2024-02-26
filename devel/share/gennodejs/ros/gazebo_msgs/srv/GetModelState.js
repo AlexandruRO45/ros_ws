@@ -82,11 +82,11 @@ class GetModelStateRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string model_name
-    string relative_entity_name
-    
-    
-    
+    string model_name                    # name of Gazebo Model
+    string relative_entity_name          # return pose and twist relative to this entity
+                                         # an entity can be a model, body, or geom
+                                         # be sure to use gazebo scoped naming notation (e.g. [model_name::body_name])
+                                         # leave empty or "world" will use inertial world frame
     
     `;
   }
@@ -211,14 +211,14 @@ class GetModelStateResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    Header header
-    
-    
-    
-    geometry_msgs/Pose pose
-    geometry_msgs/Twist twist
-    bool success
-    string status_message
+    Header header                        # Standard metadata for higher-level stamped data types.
+                                         # * header.seq holds the number of requests since the plugin started
+                                         # * header.stamp timestamp related to the pose
+                                         # * header.frame_id not used but currently filled with the relative_entity_name
+    geometry_msgs/Pose pose              # pose of model in relative entity frame
+    geometry_msgs/Twist twist            # twist of model in relative entity frame
+    bool success                         # return true if get successful
+    string status_message                # comments if available
     
     
     ================================================================================

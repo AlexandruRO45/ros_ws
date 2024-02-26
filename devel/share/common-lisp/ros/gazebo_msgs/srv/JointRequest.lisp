@@ -61,10 +61,10 @@
   "0be1351618e1dc030eb7959d9a4902de")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<JointRequest-request>)))
   "Returns full string definition for message of type '<JointRequest-request>"
-  (cl:format cl:nil "string joint_name~%~%~%"))
+  (cl:format cl:nil "string joint_name   # name of the joint requested~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'JointRequest-request)))
   "Returns full string definition for message of type 'JointRequest-request"
-  (cl:format cl:nil "string joint_name~%~%~%"))
+  (cl:format cl:nil "string joint_name   # name of the joint requested~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <JointRequest-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'joint_name))

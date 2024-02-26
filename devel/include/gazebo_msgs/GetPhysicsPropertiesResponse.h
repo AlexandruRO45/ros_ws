@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -65,7 +65,7 @@ struct GetPhysicsPropertiesResponse_
    typedef uint8_t _success_type;
   _success_type success;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _status_message_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _status_message_type;
   _status_message_type status_message;
 
 
@@ -93,6 +93,26 @@ ros::message_operations::Printer< ::gazebo_msgs::GetPhysicsPropertiesResponse_<C
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::GetPhysicsPropertiesResponse_<ContainerAllocator1> & lhs, const ::gazebo_msgs::GetPhysicsPropertiesResponse_<ContainerAllocator2> & rhs)
+{
+  return lhs.time_step == rhs.time_step &&
+    lhs.pause == rhs.pause &&
+    lhs.max_update_rate == rhs.max_update_rate &&
+    lhs.gravity == rhs.gravity &&
+    lhs.ode_config == rhs.ode_config &&
+    lhs.success == rhs.success &&
+    lhs.status_message == rhs.status_message;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::GetPhysicsPropertiesResponse_<ContainerAllocator1> & lhs, const ::gazebo_msgs::GetPhysicsPropertiesResponse_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -100,12 +120,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -170,14 +184,14 @@ struct Definition< ::gazebo_msgs::GetPhysicsPropertiesResponse_<ContainerAllocat
 {
   static const char* value()
   {
-    return "\n"
-"float64 time_step\n"
-"bool pause\n"
-"float64 max_update_rate\n"
-"geometry_msgs/Vector3 gravity\n"
-"gazebo_msgs/ODEPhysics ode_config\n"
-"bool success\n"
-"string status_message\n"
+    return "# sets pose and twist of a link.  All children link poses/twists of the URDF tree will be updated accordingly\n"
+"float64 time_step                  # dt in seconds\n"
+"bool pause                         # true if physics engine is paused\n"
+"float64 max_update_rate            # throttle maximum physics update rate\n"
+"geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])\n"
+"gazebo_msgs/ODEPhysics ode_config  # contains physics configurations pertaining to ODE\n"
+"bool success                       # return true if set wrench successful\n"
+"string status_message              # comments if available\n"
 "\n"
 "\n"
 "================================================================================\n"
@@ -262,7 +276,7 @@ struct Printer< ::gazebo_msgs::GetPhysicsPropertiesResponse_<ContainerAllocator>
     s << indent << "success: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.success);
     s << indent << "status_message: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.status_message);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.status_message);
   }
 };
 

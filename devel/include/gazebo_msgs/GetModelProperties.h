@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::GetModelProperties > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::GetModelPropertiesRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::GetModelProperties > 
+// service_traits::MD5Sum< ::gazebo_msgs::GetModelPropertiesRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::GetModelProperties >
 template<>
 struct MD5Sum< ::gazebo_msgs::GetModelPropertiesRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::GetModelPropertiesRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::GetModelPropertiesRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::GetModelProperties > 
+// service_traits::DataType< ::gazebo_msgs::GetModelPropertiesRequest> should match
+// service_traits::DataType< ::gazebo_msgs::GetModelProperties >
 template<>
 struct DataType< ::gazebo_msgs::GetModelPropertiesRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::GetModelPropertiesRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::GetModelPropertiesResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::GetModelProperties > 
+// service_traits::MD5Sum< ::gazebo_msgs::GetModelPropertiesResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::GetModelProperties >
 template<>
 struct MD5Sum< ::gazebo_msgs::GetModelPropertiesResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::GetModelPropertiesResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::GetModelPropertiesResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::GetModelProperties > 
+// service_traits::DataType< ::gazebo_msgs::GetModelPropertiesResponse> should match
+// service_traits::DataType< ::gazebo_msgs::GetModelProperties >
 template<>
 struct DataType< ::gazebo_msgs::GetModelPropertiesResponse>
 {

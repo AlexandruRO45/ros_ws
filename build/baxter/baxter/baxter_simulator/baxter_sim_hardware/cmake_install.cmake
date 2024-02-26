@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware
+# Install script for directory: /home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,18 +38,18 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/catkin_generated/installspace/baxter_sim_hardware.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/catkin_generated/installspace/baxter_sim_hardware.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_hardware/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/catkin_generated/installspace/baxter_sim_hardwareConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/catkin_generated/installspace/baxter_sim_hardwareConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/catkin_generated/installspace/baxter_sim_hardwareConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/catkin_generated/installspace/baxter_sim_hardwareConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_hardware" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_hardware" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -59,12 +59,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware/baxter_emulator"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware" TYPE EXECUTABLE FILES "/home/vagrant/ros_ws/devel/lib/baxter_sim_hardware/baxter_emulator")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware" TYPE EXECUTABLE FILES "/home/alex/ros_ws/devel/lib/baxter_sim_hardware/baxter_emulator")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware/baxter_emulator" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware/baxter_emulator")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware/baxter_emulator"
-         OLD_RPATH "/opt/ros/melodic/lib:/home/vagrant/ros_ws/devel/lib:"
+         OLD_RPATH "/opt/ros/melodic/lib:/home/alex/ros_ws/devel/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/baxter_sim_hardware/baxter_emulator")
@@ -74,10 +74,10 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_sim_hardware" TYPE DIRECTORY FILES
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/config"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/images"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/include"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/launch"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/config"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/images"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/include"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/launch"
     )
 endif()
 

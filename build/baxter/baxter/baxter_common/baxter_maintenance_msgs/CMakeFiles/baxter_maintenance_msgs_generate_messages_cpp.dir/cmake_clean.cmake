@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
   "CMakeFiles/baxter_maintenance_msgs_generate_messages_cpp"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/TareEnable.h"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/UpdateStatus.h"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/TareData.h"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/UpdateSources.h"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/CalibrateArmData.h"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/CalibrateArmEnable.h"
-  "/home/vagrant/ros_ws/devel/include/baxter_maintenance_msgs/UpdateSource.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/UpdateSource.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/CalibrateArmData.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/UpdateSources.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/UpdateStatus.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/CalibrateArmEnable.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/TareEnable.h"
+  "/home/alex/ros_ws/devel/include/baxter_maintenance_msgs/TareData.h"
 )
 
 # Per-language clean rules from dependency scanning.

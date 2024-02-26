@@ -118,20 +118,20 @@
 (setf (get gazebo_msgs::DeleteLightRequest :md5sum-) "ae11ea8100d536d5b92c2b5917abf912")
 (setf (get gazebo_msgs::DeleteLightRequest :datatype-) "gazebo_msgs/DeleteLightRequest")
 (setf (get gazebo_msgs::DeleteLightRequest :definition-)
-      "string light_name
+      "string light_name                 # name of the light to be deleted
 ---
-bool success
-string status_message
+bool success                      # return true if deletion is successful
+string status_message             # comments if available
 
 ")
 
 (setf (get gazebo_msgs::DeleteLightResponse :md5sum-) "ae11ea8100d536d5b92c2b5917abf912")
 (setf (get gazebo_msgs::DeleteLightResponse :datatype-) "gazebo_msgs/DeleteLightResponse")
 (setf (get gazebo_msgs::DeleteLightResponse :definition-)
-      "string light_name
+      "string light_name                 # name of the light to be deleted
 ---
-bool success
-string status_message
+bool success                      # return true if deletion is successful
+string status_message             # comments if available
 
 ")
 

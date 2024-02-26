@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -51,34 +51,34 @@ struct ODEJointProperties_
 
 
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _damping_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _damping_type;
   _damping_type damping;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _hiStop_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _hiStop_type;
   _hiStop_type hiStop;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _loStop_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _loStop_type;
   _loStop_type loStop;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _erp_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _erp_type;
   _erp_type erp;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _cfm_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _cfm_type;
   _cfm_type cfm;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _stop_erp_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _stop_erp_type;
   _stop_erp_type stop_erp;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _stop_cfm_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _stop_cfm_type;
   _stop_cfm_type stop_cfm;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _fudge_factor_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _fudge_factor_type;
   _fudge_factor_type fudge_factor;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _fmax_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _fmax_type;
   _fmax_type fmax;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _vel_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _vel_type;
   _vel_type vel;
 
 
@@ -106,6 +106,29 @@ ros::message_operations::Printer< ::gazebo_msgs::ODEJointProperties_<ContainerAl
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::ODEJointProperties_<ContainerAllocator1> & lhs, const ::gazebo_msgs::ODEJointProperties_<ContainerAllocator2> & rhs)
+{
+  return lhs.damping == rhs.damping &&
+    lhs.hiStop == rhs.hiStop &&
+    lhs.loStop == rhs.loStop &&
+    lhs.erp == rhs.erp &&
+    lhs.cfm == rhs.cfm &&
+    lhs.stop_erp == rhs.stop_erp &&
+    lhs.stop_cfm == rhs.stop_cfm &&
+    lhs.fudge_factor == rhs.fudge_factor &&
+    lhs.fmax == rhs.fmax &&
+    lhs.vel == rhs.vel;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::ODEJointProperties_<ContainerAllocator1> & lhs, const ::gazebo_msgs::ODEJointProperties_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -113,12 +136,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

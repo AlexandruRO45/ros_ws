@@ -68,7 +68,7 @@ class DeleteLightRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string light_name
+    string light_name                 # name of the light to be deleted
     
     `;
   }
@@ -152,8 +152,8 @@ class DeleteLightResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool success
-    string status_message
+    bool success                      # return true if deletion is successful
+    string status_message             # comments if available
     
     
     `;

@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_block_laser.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_block_laser.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_block_laser.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_block_laser.so"
 )
 
 # Per-language clean rules from dependency scanning.

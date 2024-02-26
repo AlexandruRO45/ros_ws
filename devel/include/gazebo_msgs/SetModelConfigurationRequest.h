@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -39,16 +39,16 @@ struct SetModelConfigurationRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _model_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _model_name_type;
   _model_name_type model_name;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _urdf_param_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _urdf_param_name_type;
   _urdf_param_name_type urdf_param_name;
 
-   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > , typename ContainerAllocator::template rebind<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::other >  _joint_names_type;
+   typedef std::vector<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>> _joint_names_type;
   _joint_names_type joint_names;
 
-   typedef std::vector<double, typename ContainerAllocator::template rebind<double>::other >  _joint_positions_type;
+   typedef std::vector<double, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<double>> _joint_positions_type;
   _joint_positions_type joint_positions;
 
 
@@ -76,6 +76,23 @@ ros::message_operations::Printer< ::gazebo_msgs::SetModelConfigurationRequest_<C
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.model_name == rhs.model_name &&
+    lhs.urdf_param_name == rhs.urdf_param_name &&
+    lhs.joint_names == rhs.joint_names &&
+    lhs.joint_positions == rhs.joint_positions;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -83,12 +100,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -153,12 +164,12 @@ struct Definition< ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocat
 {
   static const char* value()
   {
-    return "\n"
-"string model_name\n"
-"string urdf_param_name\n"
+    return "# Set Gazebo Model pose and twist\n"
+"string model_name           # model to set state (pose and twist)\n"
+"string urdf_param_name      # parameter name that contains the urdf XML.\n"
 "\n"
-"string[] joint_names\n"
-"float64[] joint_positions\n"
+"string[] joint_names        # list of joints to set positions.  if joint is not listed here, preserve current position.\n"
+"float64[] joint_positions   # set to this position.\n"
 ;
   }
 
@@ -200,14 +211,14 @@ struct Printer< ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocator>
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::SetModelConfigurationRequest_<ContainerAllocator>& v)
   {
     s << indent << "model_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.model_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.model_name);
     s << indent << "urdf_param_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.urdf_param_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.urdf_param_name);
     s << indent << "joint_names[]" << std::endl;
     for (size_t i = 0; i < v.joint_names.size(); ++i)
     {
       s << indent << "  joint_names[" << i << "]: ";
-      Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.joint_names[i]);
+      Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.joint_names[i]);
     }
     s << indent << "joint_positions[]" << std::endl;
     for (size_t i = 0; i < v.joint_positions.size(); ++i)

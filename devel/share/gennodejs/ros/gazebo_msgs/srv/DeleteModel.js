@@ -68,7 +68,7 @@ class DeleteModelRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string model_name
+    string model_name                 # name of the Gazebo Model to be deleted
     
     `;
   }
@@ -152,8 +152,8 @@ class DeleteModelResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool success
-    string status_message
+    bool success                      # return true if deletion is successful
+    string status_message             # comments if available
     
     
     `;

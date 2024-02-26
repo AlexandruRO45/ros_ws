@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+/home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
 dynamic_reconfigure/config_tools.h
 -
 limits
@@ -24,7 +24,7 @@ dynamic_reconfigure/config_init_mutex.h
 boost/any.hpp
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/src/hokuyo_node.cpp
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/src/hokuyo_node.cpp
 dynamic_reconfigure/server.h
 -
 gazebo_plugins/HokuyoConfig.h
@@ -35,7 +35,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -51,7 +51,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -77,7 +77,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -101,7 +101,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -117,7 +117,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -135,7 +135,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -151,7 +151,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -167,7 +167,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -191,7 +191,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -209,7 +209,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -227,7 +227,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -

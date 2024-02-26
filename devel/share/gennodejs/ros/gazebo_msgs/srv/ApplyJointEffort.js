@@ -101,16 +101,16 @@ class ApplyJointEffortRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    
-    string joint_name
-    float64 effort
-    time start_time
-    
-    duration duration
-    
-    
-    
-    
+    # set urdf joint effort
+    string joint_name           # joint to apply wrench (linear force and torque)
+    float64 effort              # effort to apply
+    time start_time             # optional wrench application start time (seconds)
+                                # if start_time < current time, start as soon as possible
+    duration duration           # optional duration of wrench application time (seconds)
+                                # if duration < 0, apply wrench continuously without end
+                                # if duration = 0, do nothing
+                                # if duration < step size, assume step size and
+                                #               display warning in status_message
     
     `;
   }
@@ -215,8 +215,8 @@ class ApplyJointEffortResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool success
-    string status_message
+    bool success                # return true if effort application is successful
+    string status_message       # comments if available
     
     
     `;

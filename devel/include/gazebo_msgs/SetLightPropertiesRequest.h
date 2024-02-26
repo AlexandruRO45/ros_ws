@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -42,7 +42,7 @@ struct SetLightPropertiesRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _light_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _light_name_type;
   _light_name_type light_name;
 
    typedef  ::std_msgs::ColorRGBA_<ContainerAllocator>  _diffuse_type;
@@ -82,6 +82,24 @@ ros::message_operations::Printer< ::gazebo_msgs::SetLightPropertiesRequest_<Cont
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.light_name == rhs.light_name &&
+    lhs.diffuse == rhs.diffuse &&
+    lhs.attenuation_constant == rhs.attenuation_constant &&
+    lhs.attenuation_linear == rhs.attenuation_linear &&
+    lhs.attenuation_quadratic == rhs.attenuation_quadratic;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -89,12 +107,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -159,8 +171,8 @@ struct Definition< ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator>
 {
   static const char* value()
   {
-    return "string light_name\n"
-"std_msgs/ColorRGBA diffuse\n"
+    return "string light_name                    # name of Gazebo Light\n"
+"std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha\n"
 "float64 attenuation_constant\n"
 "float64 attenuation_linear\n"
 "float64 attenuation_quadratic\n"
@@ -213,7 +225,7 @@ struct Printer< ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::SetLightPropertiesRequest_<ContainerAllocator>& v)
   {
     s << indent << "light_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.light_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.light_name);
     s << indent << "diffuse: ";
     s << std::endl;
     Printer< ::std_msgs::ColorRGBA_<ContainerAllocator> >::stream(s, indent + "  ", v.diffuse);

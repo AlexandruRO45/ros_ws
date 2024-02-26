@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -41,7 +41,7 @@ struct CalibrateArmEnable_
    typedef uint8_t _isEnabled_type;
   _isEnabled_type isEnabled;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _uid_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _uid_type;
   _uid_type uid;
 
    typedef  ::baxter_maintenance_msgs::CalibrateArmData_<ContainerAllocator>  _data_type;
@@ -72,6 +72,22 @@ ros::message_operations::Printer< ::baxter_maintenance_msgs::CalibrateArmEnable_
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_maintenance_msgs::CalibrateArmEnable_<ContainerAllocator1> & lhs, const ::baxter_maintenance_msgs::CalibrateArmEnable_<ContainerAllocator2> & rhs)
+{
+  return lhs.isEnabled == rhs.isEnabled &&
+    lhs.uid == rhs.uid &&
+    lhs.data == rhs.data;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_maintenance_msgs::CalibrateArmEnable_<ContainerAllocator1> & lhs, const ::baxter_maintenance_msgs::CalibrateArmEnable_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_maintenance_msgs
 
 namespace ros
@@ -79,12 +95,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'baxter_maintenance_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_maintenance_msgs/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -198,7 +208,7 @@ struct Printer< ::baxter_maintenance_msgs::CalibrateArmEnable_<ContainerAllocato
     s << indent << "isEnabled: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.isEnabled);
     s << indent << "uid: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.uid);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.uid);
     s << indent << "data: ";
     s << std::endl;
     Printer< ::baxter_maintenance_msgs::CalibrateArmData_<ContainerAllocator> >::stream(s, indent + "  ", v.data);

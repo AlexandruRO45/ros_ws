@@ -178,20 +178,20 @@
 (setf (get gazebo_msgs::GetModelStateRequest :md5sum-) "4c515e936d3319c9610c559c60bfc3d4")
 (setf (get gazebo_msgs::GetModelStateRequest :datatype-) "gazebo_msgs/GetModelStateRequest")
 (setf (get gazebo_msgs::GetModelStateRequest :definition-)
-      "string model_name
-string relative_entity_name
-
-
-
+      "string model_name                    # name of Gazebo Model
+string relative_entity_name          # return pose and twist relative to this entity
+                                     # an entity can be a model, body, or geom
+                                     # be sure to use gazebo scoped naming notation (e.g. [model_name::body_name])
+                                     # leave empty or \"world\" will use inertial world frame
 ---
-Header header
-
-
-
-geometry_msgs/Pose pose
-geometry_msgs/Twist twist
-bool success
-string status_message
+Header header                        # Standard metadata for higher-level stamped data types.
+                                     # * header.seq holds the number of requests since the plugin started
+                                     # * header.stamp timestamp related to the pose
+                                     # * header.frame_id not used but currently filled with the relative_entity_name
+geometry_msgs/Pose pose              # pose of model in relative entity frame
+geometry_msgs/Twist twist            # twist of model in relative entity frame
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 
 ================================================================================
@@ -254,20 +254,20 @@ float64 y
 (setf (get gazebo_msgs::GetModelStateResponse :md5sum-) "4c515e936d3319c9610c559c60bfc3d4")
 (setf (get gazebo_msgs::GetModelStateResponse :datatype-) "gazebo_msgs/GetModelStateResponse")
 (setf (get gazebo_msgs::GetModelStateResponse :definition-)
-      "string model_name
-string relative_entity_name
-
-
-
+      "string model_name                    # name of Gazebo Model
+string relative_entity_name          # return pose and twist relative to this entity
+                                     # an entity can be a model, body, or geom
+                                     # be sure to use gazebo scoped naming notation (e.g. [model_name::body_name])
+                                     # leave empty or \"world\" will use inertial world frame
 ---
-Header header
-
-
-
-geometry_msgs/Pose pose
-geometry_msgs/Twist twist
-bool success
-string status_message
+Header header                        # Standard metadata for higher-level stamped data types.
+                                     # * header.seq holds the number of requests since the plugin started
+                                     # * header.stamp timestamp related to the pose
+                                     # * header.frame_id not used but currently filled with the relative_entity_name
+geometry_msgs/Pose pose              # pose of model in relative entity frame
+geometry_msgs/Twist twist            # twist of model in relative entity frame
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 
 ================================================================================

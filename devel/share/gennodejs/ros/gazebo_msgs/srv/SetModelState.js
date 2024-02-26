@@ -203,8 +203,8 @@ class SetModelStateResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool success
-    string status_message
+    bool success                  # return true if setting state successful
+    string status_message         # comments if available
     
     
     `;

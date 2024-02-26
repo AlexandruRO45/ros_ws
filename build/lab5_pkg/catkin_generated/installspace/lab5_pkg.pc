@@ -1,0 +1,8 @@
+prefix=/home/alex/ros_ws/install
+
+Name: lab5_pkg
+Description: Description of lab5_pkg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

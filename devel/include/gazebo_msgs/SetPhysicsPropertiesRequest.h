@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -78,6 +78,23 @@ ros::message_operations::Printer< ::gazebo_msgs::SetPhysicsPropertiesRequest_<Co
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::SetPhysicsPropertiesRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetPhysicsPropertiesRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.time_step == rhs.time_step &&
+    lhs.max_update_rate == rhs.max_update_rate &&
+    lhs.gravity == rhs.gravity &&
+    lhs.ode_config == rhs.ode_config;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::SetPhysicsPropertiesRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetPhysicsPropertiesRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -85,12 +102,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -155,11 +166,11 @@ struct Definition< ::gazebo_msgs::SetPhysicsPropertiesRequest_<ContainerAllocato
 {
   static const char* value()
   {
-    return "\n"
-"float64 time_step\n"
-"float64 max_update_rate\n"
-"geometry_msgs/Vector3 gravity\n"
-"gazebo_msgs/ODEPhysics ode_config\n"
+    return "# sets pose and twist of a link.  All children link poses/twists of the URDF tree will be updated accordingly\n"
+"float64 time_step                  # dt in seconds\n"
+"float64 max_update_rate            # throttle maximum physics update rate\n"
+"geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])\n"
+"gazebo_msgs/ODEPhysics ode_config  # configurations for ODE\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Vector3\n"

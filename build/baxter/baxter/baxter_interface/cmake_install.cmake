@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/baxter/baxter_interface
+# Install script for directory: /home/alex/ros_ws/src/baxter/baxter/baxter_interface
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,53 +38,53 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/safe_execute_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/vagrant/ros_ws/devel/include/baxter_interface/PositionJointTrajectoryActionServerConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/alex/ros_ws/devel/include/baxter_interface/PositionJointTrajectoryActionServerConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/vagrant/ros_ws/devel/include/baxter_interface/VelocityJointTrajectoryActionServerConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/alex/ros_ws/devel/include/baxter_interface/VelocityJointTrajectoryActionServerConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/vagrant/ros_ws/devel/include/baxter_interface/PositionFFJointTrajectoryActionServerConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/alex/ros_ws/devel/include/baxter_interface/PositionFFJointTrajectoryActionServerConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/vagrant/ros_ws/devel/include/baxter_interface/GripperActionServerConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/alex/ros_ws/devel/include/baxter_interface/GripperActionServerConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/vagrant/ros_ws/devel/include/baxter_interface/HeadActionServerConfig.h")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/baxter_interface" TYPE FILE FILES "/home/alex/ros_ws/devel/include/baxter_interface/HeadActionServerConfig.h")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_interface/cfg")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_interface/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/baxter_interface" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_interface/cfg")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages/baxter_interface" TYPE DIRECTORY FILES "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_interface/cfg")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/installspace/baxter_interface.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/installspace/baxter_interface.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_interface/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/installspace/baxter_interfaceConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/installspace/baxter_interfaceConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/installspace/baxter_interfaceConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_interface/catkin_generated/installspace/baxter_interfaceConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_interface" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_interface/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_interface" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_interface/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/baxter_interface" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_interface/scripts/" USE_SOURCE_PERMISSIONS)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/baxter_interface" TYPE DIRECTORY FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_interface/scripts/" USE_SOURCE_PERMISSIONS)
 endif()
 

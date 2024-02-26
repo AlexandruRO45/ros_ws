@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetJointTrajectory.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetJointTrajectory.h
 ros/service_traits.h
 -
 gazebo_msgs/SetJointTrajectoryRequest.h
@@ -14,12 +14,12 @@ gazebo_msgs/SetJointTrajectoryRequest.h
 gazebo_msgs/SetJointTrajectoryResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetJointTrajectoryRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetJointTrajectoryRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -34,12 +34,12 @@ trajectory_msgs/JointTrajectory.h
 geometry_msgs/Pose.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetJointTrajectoryResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetJointTrajectoryResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -50,7 +50,7 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/test/pub_joint_trajectory_test.cpp
+/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/test/pub_joint_trajectory_test.cpp
 ros/ros.h
 -
 trajectory_msgs/JointTrajectory.h
@@ -67,7 +67,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -83,7 +83,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -103,7 +103,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -765,7 +765,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -781,7 +781,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -801,7 +801,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -

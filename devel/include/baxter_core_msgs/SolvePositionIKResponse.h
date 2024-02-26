@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -38,16 +38,21 @@ struct SolvePositionIKResponse_
 
 
 
-   typedef std::vector< ::sensor_msgs::JointState_<ContainerAllocator> , typename ContainerAllocator::template rebind< ::sensor_msgs::JointState_<ContainerAllocator> >::other >  _joints_type;
+   typedef std::vector< ::sensor_msgs::JointState_<ContainerAllocator> , typename std::allocator_traits<ContainerAllocator>::template rebind_alloc< ::sensor_msgs::JointState_<ContainerAllocator> >> _joints_type;
   _joints_type joints;
 
-   typedef std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other >  _isValid_type;
+   typedef std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> _isValid_type;
   _isValid_type isValid;
 
-   typedef std::vector<uint8_t, typename ContainerAllocator::template rebind<uint8_t>::other >  _result_type_type;
+   typedef std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> _result_type_type;
   _result_type_type result_type;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(RESULT_INVALID)
+  #undef RESULT_INVALID
+#endif
 
   enum {
     RESULT_INVALID = 0u,
@@ -77,6 +82,22 @@ ros::message_operations::Printer< ::baxter_core_msgs::SolvePositionIKResponse_<C
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::SolvePositionIKResponse_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::SolvePositionIKResponse_<ContainerAllocator2> & rhs)
+{
+  return lhs.joints == rhs.joints &&
+    lhs.isValid == rhs.isValid &&
+    lhs.result_type == rhs.result_type;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::SolvePositionIKResponse_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::SolvePositionIKResponse_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -84,12 +105,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -154,14 +169,14 @@ struct Definition< ::baxter_core_msgs::SolvePositionIKResponse_<ContainerAllocat
 {
   static const char* value()
   {
-    return "\n"
+    return "# joints[i]      == joint angle solution for each pose_state[i]\n"
 "sensor_msgs/JointState[] joints\n"
 "\n"
-"\n"
+"# NOTE: isValid will be deprecated by result_type in future versions\n"
 "bool[] isValid\n"
 "\n"
-"\n"
-"\n"
+"# result_type[i] == seed type used to find valid solution, joints[i];\n"
+"# otherwise,     == RESULT_INVALID (no valid solution found).\n"
 "uint8 RESULT_INVALID = 0\n"
 "uint8[] result_type\n"
 "\n"

@@ -6,12 +6,12 @@
 
 #IncludeRegexTransform: 
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/AnalogIOState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/AnalogIOState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -22,12 +22,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/AssemblyState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/AssemblyState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -38,12 +38,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/DigitalIOState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/DigitalIOState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -54,12 +54,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/DigitalOutputCommand.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/DigitalOutputCommand.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -70,12 +70,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/EndEffectorProperties.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/EndEffectorProperties.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -86,12 +86,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/EndEffectorState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/EndEffectorState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -102,12 +102,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/HeadState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/HeadState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -118,12 +118,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/JointCommand.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/JointCommand.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -134,12 +134,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/baxter_core_msgs/SEAJointState.h
+/home/alex/ros_ws/devel/include/baxter_core_msgs/SEAJointState.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -152,7 +152,7 @@ ros/message_operations.h
 std_msgs/Header.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/GetLinkPropertiesRequest.h
@@ -160,12 +160,12 @@ gazebo_msgs/GetLinkPropertiesRequest.h
 gazebo_msgs/GetLinkPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -176,12 +176,12 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/GetLinkPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -194,7 +194,7 @@ ros/message_operations.h
 geometry_msgs/Pose.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkProperties.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkProperties.h
 ros/service_traits.h
 -
 gazebo_msgs/SetLinkPropertiesRequest.h
@@ -202,12 +202,12 @@ gazebo_msgs/SetLinkPropertiesRequest.h
 gazebo_msgs/SetLinkPropertiesResponse.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesRequest.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesRequest.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -220,12 +220,12 @@ ros/message_operations.h
 geometry_msgs/Pose.h
 -
 
-/home/vagrant/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesResponse.h
+/home/alex/ros_ws/devel/include/gazebo_msgs/SetLinkPropertiesResponse.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -236,9 +236,9 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
-/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/include/baxter_sim_hardware/baxter_emulator.h
+/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/include/baxter_sim_hardware/baxter_emulator.h
 ros/ros.h
-/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/include/baxter_sim_hardware/ros/ros.h
+/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/include/baxter_sim_hardware/ros/ros.h
 std_msgs/Bool.h
 -
 std_msgs/Empty.h
@@ -284,11 +284,11 @@ cmath
 map
 -
 
-/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/src/baxter_emulator.cpp
+/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_hardware/src/baxter_emulator.cpp
 baxter_sim_hardware/baxter_emulator.h
 -
 
-/home/vagrant/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_kinematics/include/baxter_sim_kinematics/arm_kinematics.h
+/home/alex/ros_ws/src/baxter/baxter/baxter_simulator/baxter_sim_kinematics/include/baxter_sim_kinematics/arm_kinematics.h
 cstring
 -
 ros/ros.h
@@ -328,66 +328,6 @@ gazebo_msgs/GetLinkProperties.h
 algorithm
 -
 
-/opt/ros/melodic/include/boost_161_condition_variable.h
-boost/thread/detail/platform.hpp
--
-boost/thread/win32/condition_variable.hpp
--
-boost_161_pthread_condition_variable.h
-/opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-
-/opt/ros/melodic/include/boost_161_pthread_condition_variable.h
-boost_161_pthread_condition_variable_fwd.h
-/opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
-boost/thread/pthread/timespec.hpp
--
-boost/thread/pthread/pthread_mutex_scoped_lock.hpp
--
-boost/thread/pthread/thread_data.hpp
--
-boost/chrono/system_clocks.hpp
--
-boost/chrono/ceil.hpp
--
-boost/thread/detail/delete.hpp
--
-boost/config/abi_prefix.hpp
--
-boost/config/abi_suffix.hpp
--
-
-/opt/ros/melodic/include/boost_161_pthread_condition_variable_fwd.h
-boost/assert.hpp
--
-boost/throw_exception.hpp
--
-pthread.h
--
-boost/thread/cv_status.hpp
--
-boost/thread/mutex.hpp
--
-boost/thread/lock_types.hpp
--
-boost/thread/thread_time.hpp
--
-boost/thread/pthread/timespec.hpp
--
-boost/thread/xtime.hpp
--
-boost/chrono/system_clocks.hpp
--
-boost/chrono/ceil.hpp
--
-boost/thread/detail/delete.hpp
--
-boost/date_time/posix_time/posix_time_duration.hpp
--
-boost/config/abi_prefix.hpp
--
-boost/config/abi_suffix.hpp
--
-
 /opt/ros/melodic/include/cv_bridge/cv_bridge.h
 sensor_msgs/Image.h
 -
@@ -411,7 +351,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -427,7 +367,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -443,7 +383,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -463,7 +403,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -483,7 +423,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -503,7 +443,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -519,7 +459,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -539,7 +479,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -559,7 +499,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -579,7 +519,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -599,7 +539,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -619,7 +559,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -635,7 +575,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -655,7 +595,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -993,6 +933,8 @@ geometry_msgs/Vector3.h
 -
 geometry_msgs/Wrench.h
 -
+ros/macros.h
+-
 
 /opt/ros/melodic/include/kdl_parser/kdl_parser.hpp
 kdl/tree.hpp
@@ -1047,16 +989,10 @@ ros/time.h
 /opt/ros/melodic/include/ros/ros/time.h
 
 /opt/ros/melodic/include/ros/callback_queue.h
-boost/version.hpp
--
-boost_161_condition_variable.h
-/opt/ros/melodic/include/ros/boost_161_condition_variable.h
-boost/thread/condition_variable.hpp
--
-boost/thread/condition_variable.hpp
--
 ros/callback_queue_interface.h
 /opt/ros/melodic/include/ros/ros/callback_queue_interface.h
+ros/internal/condition_variable.h
+/opt/ros/melodic/include/ros/ros/internal/condition_variable.h
 ros/time.h
 /opt/ros/melodic/include/ros/ros/time.h
 common.h
@@ -1199,6 +1135,10 @@ ros/spinner.h
 /opt/ros/melodic/include/ros/ros/spinner.h
 common.h
 /opt/ros/melodic/include/ros/common.h
+
+/opt/ros/melodic/include/ros/internal/condition_variable.h
+boost/thread/condition_variable.hpp
+-
 
 /opt/ros/melodic/include/ros/macros.h
 
@@ -1697,7 +1637,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1717,7 +1657,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1733,7 +1673,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1751,7 +1691,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1769,7 +1709,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1787,7 +1727,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1805,7 +1745,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1827,7 +1767,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1845,7 +1785,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1869,7 +1809,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1885,7 +1825,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1901,7 +1841,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1917,7 +1857,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1941,7 +1881,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1957,7 +1897,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -1973,6 +1913,8 @@ Vector3.h
 /opt/ros/melodic/include/tf/LinearMath/Vector3.h
 Quaternion.h
 /opt/ros/melodic/include/tf/LinearMath/Quaternion.h
+ros/macros.h
+-
 
 /opt/ros/melodic/include/tf/LinearMath/MinMax.h
 
@@ -1989,6 +1931,8 @@ Vector3.h
 /opt/ros/melodic/include/tf/LinearMath/Vector3.h
 QuadWord.h
 /opt/ros/melodic/include/tf/LinearMath/QuadWord.h
+ros/macros.h
+-
 
 /opt/ros/melodic/include/tf/LinearMath/Scalar.h
 math.h
@@ -2055,13 +1999,15 @@ geometry_msgs/TwistStamped.h
 /opt/ros/melodic/include/tf/geometry_msgs/TwistStamped.h
 tf2_ros/buffer.h
 -
+ros/macros.h
+-
 
 /opt/ros/melodic/include/tf/tfMessage.h
 string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2121,6 +2067,8 @@ ros/ros.h
 /opt/ros/melodic/include/tf/ros/ros.h
 ros/callback_queue.h
 /opt/ros/melodic/include/tf/ros/callback_queue.h
+ros/macros.h
+/opt/ros/melodic/include/tf/ros/macros.h
 tf/FrameGraph.h
 /opt/ros/melodic/include/tf/tf/FrameGraph.h
 boost/thread.hpp
@@ -2209,7 +2157,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2225,7 +2173,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2241,7 +2189,7 @@ string
 -
 vector
 -
-map
+memory
 -
 ros/types.h
 -
@@ -2304,6 +2252,8 @@ kdl/frames.hpp
 geometry_msgs/Pose.h
 -
 geometry_msgs/Twist.h
+-
+ros/macros.h
 -
 
 /opt/ros/melodic/include/urdf/model.h

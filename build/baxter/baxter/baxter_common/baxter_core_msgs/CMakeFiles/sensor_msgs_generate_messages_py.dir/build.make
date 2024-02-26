@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 # Utility rule file for sensor_msgs_generate_messages_py.
 
@@ -63,10 +63,10 @@ baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_mes
 .PHONY : baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
 
 baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
-	cd /home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake
+	cd /home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs && $(CMAKE_COMMAND) -P CMakeFiles/sensor_msgs_generate_messages_py.dir/cmake_clean.cmake
 .PHONY : baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 
 baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vagrant/ros_ws/src /home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs /home/vagrant/ros_ws/build /home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs /home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/ros_ws/src /home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs /home/alex/ros_ws/build /home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs /home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
 

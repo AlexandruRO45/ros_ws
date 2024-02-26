@@ -81,8 +81,8 @@ class SetJointPropertiesRequest {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    string joint_name
-    gazebo_msgs/ODEJointProperties ode_joint_config
+    string joint_name                               # name of joint
+    gazebo_msgs/ODEJointProperties ode_joint_config # access to ODE joint dynamics properties
     
     ================================================================================
     MSG: gazebo_msgs/ODEJointProperties
@@ -187,8 +187,8 @@ class SetJointPropertiesResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    bool success
-    string status_message
+    bool success                                    # return true if get successful
+    string status_message                           # comments if available
     
     
     `;

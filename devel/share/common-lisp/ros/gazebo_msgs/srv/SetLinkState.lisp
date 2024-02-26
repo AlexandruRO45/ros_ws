@@ -131,10 +131,10 @@
   "8a5146eb66ae4d26b0860b08f3f271be")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetLinkState-response>)))
   "Returns full string definition for message of type '<SetLinkState-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                # return true if set wrench successful~%string status_message       # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetLinkState-response)))
   "Returns full string definition for message of type 'SetLinkState-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                # return true if set wrench successful~%string status_message       # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetLinkState-response>))
   (cl:+ 0
      1

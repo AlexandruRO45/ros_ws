@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -52,7 +52,7 @@ struct SetLinkPropertiesRequest_
 
 
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _link_name_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _link_name_type;
   _link_name_type link_name;
 
    typedef  ::geometry_msgs::Pose_<ContainerAllocator>  _com_type;
@@ -107,6 +107,29 @@ ros::message_operations::Printer< ::gazebo_msgs::SetLinkPropertiesRequest_<Conta
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator2> & rhs)
+{
+  return lhs.link_name == rhs.link_name &&
+    lhs.com == rhs.com &&
+    lhs.gravity_mode == rhs.gravity_mode &&
+    lhs.mass == rhs.mass &&
+    lhs.ixx == rhs.ixx &&
+    lhs.ixy == rhs.ixy &&
+    lhs.ixz == rhs.ixz &&
+    lhs.iyy == rhs.iyy &&
+    lhs.iyz == rhs.iyz &&
+    lhs.izz == rhs.izz;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator1> & lhs, const ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace gazebo_msgs
 
 namespace ros
@@ -114,12 +137,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'trajectory_msgs': ['/opt/ros/melodic/share/trajectory_msgs/cmake/../msg'], 'gazebo_msgs': ['/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_msgs/msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -184,19 +201,19 @@ struct Definition< ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator> 
 {
   static const char* value()
   {
-    return "string link_name\n"
-"\n"
-"geometry_msgs/Pose com\n"
-"\n"
-"\n"
-"bool gravity_mode\n"
-"float64 mass\n"
-"float64 ixx\n"
-"float64 ixy\n"
-"float64 ixz\n"
-"float64 iyy\n"
-"float64 iyz\n"
-"float64 izz\n"
+    return "string link_name          # name of link\n"
+"                          # link names are prefixed by model name, e.g. pr2::base_link\n"
+"geometry_msgs/Pose com    # center of mass location in link frame\n"
+"                          # and orientation of the moment of inertias\n"
+"                          # relative to the link frame\n"
+"bool gravity_mode         # set gravity mode on/off\n"
+"float64 mass              # linear mass of link\n"
+"float64 ixx               # moment of inertia\n"
+"float64 ixy               # moment of inertia\n"
+"float64 ixz               # moment of inertia\n"
+"float64 iyy               # moment of inertia\n"
+"float64 iyz               # moment of inertia\n"
+"float64 izz               # moment of inertia\n"
 "\n"
 "================================================================================\n"
 "MSG: geometry_msgs/Pose\n"
@@ -266,7 +283,7 @@ struct Printer< ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator> >
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::gazebo_msgs::SetLinkPropertiesRequest_<ContainerAllocator>& v)
   {
     s << indent << "link_name: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.link_name);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.link_name);
     s << indent << "com: ";
     s << std::endl;
     Printer< ::geometry_msgs::Pose_<ContainerAllocator> >::stream(s, indent + "  ", v.com);

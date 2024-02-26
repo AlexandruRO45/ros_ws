@@ -168,14 +168,14 @@
 (setf (get gazebo_msgs::GetLightPropertiesRequest :md5sum-) "df2cef87e13e2e6990e81e8aaa454c19")
 (setf (get gazebo_msgs::GetLightPropertiesRequest :datatype-) "gazebo_msgs/GetLightPropertiesRequest")
 (setf (get gazebo_msgs::GetLightPropertiesRequest :definition-)
-      "string light_name
+      "string light_name                    # name of Gazebo Light
 ---
-std_msgs/ColorRGBA diffuse
+std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha
 float64 attenuation_constant
 float64 attenuation_linear
 float64 attenuation_quadratic
-bool success
-string status_message
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 
 ================================================================================
@@ -189,14 +189,14 @@ float32 a
 (setf (get gazebo_msgs::GetLightPropertiesResponse :md5sum-) "df2cef87e13e2e6990e81e8aaa454c19")
 (setf (get gazebo_msgs::GetLightPropertiesResponse :datatype-) "gazebo_msgs/GetLightPropertiesResponse")
 (setf (get gazebo_msgs::GetLightPropertiesResponse :definition-)
-      "string light_name
+      "string light_name                    # name of Gazebo Light
 ---
-std_msgs/ColorRGBA diffuse
+std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha
 float64 attenuation_constant
 float64 attenuation_linear
 float64 attenuation_quadratic
-bool success
-string status_message
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 
 ================================================================================

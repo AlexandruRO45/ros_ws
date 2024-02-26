@@ -160,10 +160,10 @@
   "cd58c48ac21e5165abf13bcaa9c079b4")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetLightProperties-request>)))
   "Returns full string definition for message of type '<SetLightProperties-request>"
-  (cl:format cl:nil "string light_name~%std_msgs/ColorRGBA diffuse~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
+  (cl:format cl:nil "string light_name                    # name of Gazebo Light~%std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetLightProperties-request)))
   "Returns full string definition for message of type 'SetLightProperties-request"
-  (cl:format cl:nil "string light_name~%std_msgs/ColorRGBA diffuse~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
+  (cl:format cl:nil "string light_name                    # name of Gazebo Light~%std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetLightProperties-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'light_name))
@@ -250,10 +250,10 @@
   "cd58c48ac21e5165abf13bcaa9c079b4")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetLightProperties-response>)))
   "Returns full string definition for message of type '<SetLightProperties-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetLightProperties-response)))
   "Returns full string definition for message of type 'SetLightProperties-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetLightProperties-response>))
   (cl:+ 0
      1

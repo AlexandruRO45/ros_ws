@@ -57,8 +57,8 @@ struct DataType< ::baxter_core_msgs::OpenCamera > {
 };
 
 
-// service_traits::MD5Sum< ::baxter_core_msgs::OpenCameraRequest> should match 
-// service_traits::MD5Sum< ::baxter_core_msgs::OpenCamera > 
+// service_traits::MD5Sum< ::baxter_core_msgs::OpenCameraRequest> should match
+// service_traits::MD5Sum< ::baxter_core_msgs::OpenCamera >
 template<>
 struct MD5Sum< ::baxter_core_msgs::OpenCameraRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::baxter_core_msgs::OpenCameraRequest>
   }
 };
 
-// service_traits::DataType< ::baxter_core_msgs::OpenCameraRequest> should match 
-// service_traits::DataType< ::baxter_core_msgs::OpenCamera > 
+// service_traits::DataType< ::baxter_core_msgs::OpenCameraRequest> should match
+// service_traits::DataType< ::baxter_core_msgs::OpenCamera >
 template<>
 struct DataType< ::baxter_core_msgs::OpenCameraRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::baxter_core_msgs::OpenCameraRequest>
   }
 };
 
-// service_traits::MD5Sum< ::baxter_core_msgs::OpenCameraResponse> should match 
-// service_traits::MD5Sum< ::baxter_core_msgs::OpenCamera > 
+// service_traits::MD5Sum< ::baxter_core_msgs::OpenCameraResponse> should match
+// service_traits::MD5Sum< ::baxter_core_msgs::OpenCamera >
 template<>
 struct MD5Sum< ::baxter_core_msgs::OpenCameraResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::baxter_core_msgs::OpenCameraResponse>
   }
 };
 
-// service_traits::DataType< ::baxter_core_msgs::OpenCameraResponse> should match 
-// service_traits::DataType< ::baxter_core_msgs::OpenCamera > 
+// service_traits::DataType< ::baxter_core_msgs::OpenCameraResponse> should match
+// service_traits::DataType< ::baxter_core_msgs::OpenCamera >
 template<>
 struct DataType< ::baxter_core_msgs::OpenCameraResponse>
 {

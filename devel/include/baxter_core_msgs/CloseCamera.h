@@ -57,8 +57,8 @@ struct DataType< ::baxter_core_msgs::CloseCamera > {
 };
 
 
-// service_traits::MD5Sum< ::baxter_core_msgs::CloseCameraRequest> should match 
-// service_traits::MD5Sum< ::baxter_core_msgs::CloseCamera > 
+// service_traits::MD5Sum< ::baxter_core_msgs::CloseCameraRequest> should match
+// service_traits::MD5Sum< ::baxter_core_msgs::CloseCamera >
 template<>
 struct MD5Sum< ::baxter_core_msgs::CloseCameraRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::baxter_core_msgs::CloseCameraRequest>
   }
 };
 
-// service_traits::DataType< ::baxter_core_msgs::CloseCameraRequest> should match 
-// service_traits::DataType< ::baxter_core_msgs::CloseCamera > 
+// service_traits::DataType< ::baxter_core_msgs::CloseCameraRequest> should match
+// service_traits::DataType< ::baxter_core_msgs::CloseCamera >
 template<>
 struct DataType< ::baxter_core_msgs::CloseCameraRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::baxter_core_msgs::CloseCameraRequest>
   }
 };
 
-// service_traits::MD5Sum< ::baxter_core_msgs::CloseCameraResponse> should match 
-// service_traits::MD5Sum< ::baxter_core_msgs::CloseCamera > 
+// service_traits::MD5Sum< ::baxter_core_msgs::CloseCameraResponse> should match
+// service_traits::MD5Sum< ::baxter_core_msgs::CloseCamera >
 template<>
 struct MD5Sum< ::baxter_core_msgs::CloseCameraResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::baxter_core_msgs::CloseCameraResponse>
   }
 };
 
-// service_traits::DataType< ::baxter_core_msgs::CloseCameraResponse> should match 
-// service_traits::DataType< ::baxter_core_msgs::CloseCamera > 
+// service_traits::DataType< ::baxter_core_msgs::CloseCameraResponse> should match
+// service_traits::DataType< ::baxter_core_msgs::CloseCamera >
 template<>
 struct DataType< ::baxter_core_msgs::CloseCameraResponse>
 {

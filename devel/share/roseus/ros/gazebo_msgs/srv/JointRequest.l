@@ -97,7 +97,7 @@
 (setf (get gazebo_msgs::JointRequestRequest :md5sum-) "0be1351618e1dc030eb7959d9a4902de")
 (setf (get gazebo_msgs::JointRequestRequest :datatype-) "gazebo_msgs/JointRequestRequest")
 (setf (get gazebo_msgs::JointRequestRequest :definition-)
-      "string joint_name
+      "string joint_name   # name of the joint requested
 ---
 
 
@@ -106,7 +106,7 @@
 (setf (get gazebo_msgs::JointRequestResponse :md5sum-) "0be1351618e1dc030eb7959d9a4902de")
 (setf (get gazebo_msgs::JointRequestResponse :datatype-) "gazebo_msgs/JointRequestResponse")
 (setf (get gazebo_msgs::JointRequestResponse :definition-)
-      "string joint_name
+      "string joint_name   # name of the joint requested
 ---
 
 

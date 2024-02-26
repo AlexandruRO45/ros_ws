@@ -69,7 +69,7 @@ namespace baxter_interface
         field(a_f)
       {}
 
-      T (HeadActionServerConfig::* field);
+      T HeadActionServerConfig::* field;
 
       virtual void clamp(HeadActionServerConfig &config, const HeadActionServerConfig &max, const HeadActionServerConfig &min) const
       {
@@ -216,7 +216,7 @@ namespace baxter_interface
         }
       }
 
-      T (PT::* field);
+      T PT::* field;
       std::vector<HeadActionServerConfig::AbstractGroupDescriptionConstPtr> groups;
     };
 

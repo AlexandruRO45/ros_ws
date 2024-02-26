@@ -223,19 +223,19 @@
 (setf (get gazebo_msgs::SetLinkPropertiesRequest :md5sum-) "d534ce1b36ee99de0ffa806c3a6348f0")
 (setf (get gazebo_msgs::SetLinkPropertiesRequest :datatype-) "gazebo_msgs/SetLinkPropertiesRequest")
 (setf (get gazebo_msgs::SetLinkPropertiesRequest :definition-)
-      "string link_name
-
-geometry_msgs/Pose com
-
-
-bool gravity_mode
-float64 mass
-float64 ixx
-float64 ixy
-float64 ixz
-float64 iyy
-float64 iyz
-float64 izz
+      "string link_name          # name of link
+                          # link names are prefixed by model name, e.g. pr2::base_link
+geometry_msgs/Pose com    # center of mass location in link frame
+                          # and orientation of the moment of inertias
+                          # relative to the link frame
+bool gravity_mode         # set gravity mode on/off
+float64 mass              # linear mass of link
+float64 ixx               # moment of inertia
+float64 ixy               # moment of inertia
+float64 ixz               # moment of inertia
+float64 iyy               # moment of inertia
+float64 iyz               # moment of inertia
+float64 izz               # moment of inertia
 
 ================================================================================
 MSG: geometry_msgs/Pose
@@ -259,27 +259,27 @@ float64 y
 float64 z
 float64 w
 ---
-bool success
-string status_message
+bool success              # return true if get info is successful
+string status_message     # comments if available
 
 ")
 
 (setf (get gazebo_msgs::SetLinkPropertiesResponse :md5sum-) "d534ce1b36ee99de0ffa806c3a6348f0")
 (setf (get gazebo_msgs::SetLinkPropertiesResponse :datatype-) "gazebo_msgs/SetLinkPropertiesResponse")
 (setf (get gazebo_msgs::SetLinkPropertiesResponse :definition-)
-      "string link_name
-
-geometry_msgs/Pose com
-
-
-bool gravity_mode
-float64 mass
-float64 ixx
-float64 ixy
-float64 ixz
-float64 iyy
-float64 iyz
-float64 izz
+      "string link_name          # name of link
+                          # link names are prefixed by model name, e.g. pr2::base_link
+geometry_msgs/Pose com    # center of mass location in link frame
+                          # and orientation of the moment of inertias
+                          # relative to the link frame
+bool gravity_mode         # set gravity mode on/off
+float64 mass              # linear mass of link
+float64 ixx               # moment of inertia
+float64 ixy               # moment of inertia
+float64 ixz               # moment of inertia
+float64 iyy               # moment of inertia
+float64 iyz               # moment of inertia
+float64 izz               # moment of inertia
 
 ================================================================================
 MSG: geometry_msgs/Pose
@@ -303,8 +303,8 @@ float64 y
 float64 z
 float64 w
 ---
-bool success
-string status_message
+bool success              # return true if get info is successful
+string status_message     # comments if available
 
 ")
 

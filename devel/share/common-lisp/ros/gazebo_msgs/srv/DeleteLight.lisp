@@ -61,10 +61,10 @@
   "ae11ea8100d536d5b92c2b5917abf912")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DeleteLight-request>)))
   "Returns full string definition for message of type '<DeleteLight-request>"
-  (cl:format cl:nil "string light_name~%~%~%"))
+  (cl:format cl:nil "string light_name                 # name of the light to be deleted~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DeleteLight-request)))
   "Returns full string definition for message of type 'DeleteLight-request"
-  (cl:format cl:nil "string light_name~%~%~%"))
+  (cl:format cl:nil "string light_name                 # name of the light to be deleted~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DeleteLight-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'light_name))
@@ -143,10 +143,10 @@
   "ae11ea8100d536d5b92c2b5917abf912")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<DeleteLight-response>)))
   "Returns full string definition for message of type '<DeleteLight-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                      # return true if deletion is successful~%string status_message             # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'DeleteLight-response)))
   "Returns full string definition for message of type 'DeleteLight-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                      # return true if deletion is successful~%string status_message             # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <DeleteLight-response>))
   (cl:+ 0
      1

@@ -12,8 +12,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/baxter_sim_io.dir/include/baxter_sim_io/moc_baxter_io.cpp.o"
   "CMakeFiles/baxter_sim_io.dir/include/baxter_sim_io/moc_qnode.cpp.o"
   "CMakeFiles/baxter_sim_io.dir/baxter_sim_io_autogen/mocs_compilation.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/baxter_sim_io/baxter_sim_io.pdb"
-  "/home/vagrant/ros_ws/devel/lib/baxter_sim_io/baxter_sim_io"
+  "/home/alex/ros_ws/devel/lib/baxter_sim_io/baxter_sim_io.pdb"
+  "/home/alex/ros_ws/devel/lib/baxter_sim_io/baxter_sim_io"
 )
 
 # Per-language clean rules from dependency scanning.

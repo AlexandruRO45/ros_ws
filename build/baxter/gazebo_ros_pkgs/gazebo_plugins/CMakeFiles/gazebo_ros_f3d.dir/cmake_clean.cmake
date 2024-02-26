@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_f3d.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_f3d.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_f3d.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_f3d.so"
 )
 
 # Per-language clean rules from dependency scanning.

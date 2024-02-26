@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/moveit_robots/r2_moveit_generated
+# Install script for directory: /home/alex/ros_ws/src/baxter/moveit_robots/r2_moveit_generated
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/catkin_generated/installspace/r2_moveit_generated.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/catkin_generated/installspace/r2_moveit_generated.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/catkin_generated/installspace/r2_moveit_generatedConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/catkin_generated/installspace/r2_moveit_generatedConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/catkin_generated/installspace/r2_moveit_generatedConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/catkin_generated/installspace/r2_moveit_generatedConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/moveit_robots/r2_moveit_generated/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/moveit_robots/r2_moveit_generated/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/src/baxter/moveit_robots/r2_moveit_generated/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated" TYPE DIRECTORY FILES "/home/alex/ros_ws/src/baxter/moveit_robots/r2_moveit_generated/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/src/baxter/moveit_robots/r2_moveit_generated/config")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/r2_moveit_generated" TYPE DIRECTORY FILES "/home/alex/ros_ws/src/baxter/moveit_robots/r2_moveit_generated/config")
 endif()
 

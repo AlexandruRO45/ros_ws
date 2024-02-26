@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 # Utility rule file for controller_manager_msgs_generate_messages_nodejs.
 
@@ -63,10 +63,10 @@ baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_gen
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/build
 
 baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/clean:
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control && $(CMAKE_COMMAND) -P CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control && $(CMAKE_COMMAND) -P CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/clean
 
 baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vagrant/ros_ws/src /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_control /home/vagrant/ros_ws/build /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/ros_ws/src /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros_control /home/alex/ros_ws/build /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_ros_control/CMakeFiles/controller_manager_msgs_generate_messages_nodejs.dir/depend
 

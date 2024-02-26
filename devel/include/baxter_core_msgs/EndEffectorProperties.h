@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -71,22 +71,22 @@ struct EndEffectorProperties_
    typedef uint8_t _ui_type_type;
   _ui_type_type ui_type;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _manufacturer_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _manufacturer_type;
   _manufacturer_type manufacturer;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _product_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _product_type;
   _product_type product;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _serial_number_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _serial_number_type;
   _serial_number_type serial_number;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _hardware_rev_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _hardware_rev_type;
   _hardware_rev_type hardware_rev;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _firmware_rev_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _firmware_rev_type;
   _firmware_rev_type firmware_rev;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _firmware_date_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _firmware_date_type;
   _firmware_date_type firmware_date;
 
    typedef uint8_t _has_calibration_type;
@@ -113,10 +113,24 @@ struct EndEffectorProperties_
    typedef uint8_t _senses_position_type;
   _senses_position_type senses_position;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _properties_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _properties_type;
   _properties_type properties;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(NO_GRIPPER)
+  #undef NO_GRIPPER
+#endif
+#if defined(_WIN32) && defined(SUCTION_CUP_GRIPPER)
+  #undef SUCTION_CUP_GRIPPER
+#endif
+#if defined(_WIN32) && defined(ELECTRIC_GRIPPER)
+  #undef ELECTRIC_GRIPPER
+#endif
+#if defined(_WIN32) && defined(PASSIVE_GRIPPER)
+  #undef PASSIVE_GRIPPER
+#endif
 
   enum {
     NO_GRIPPER = 0u,
@@ -155,6 +169,36 @@ ros::message_operations::Printer< ::baxter_core_msgs::EndEffectorProperties_<Con
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::EndEffectorProperties_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::EndEffectorProperties_<ContainerAllocator2> & rhs)
+{
+  return lhs.id == rhs.id &&
+    lhs.ui_type == rhs.ui_type &&
+    lhs.manufacturer == rhs.manufacturer &&
+    lhs.product == rhs.product &&
+    lhs.serial_number == rhs.serial_number &&
+    lhs.hardware_rev == rhs.hardware_rev &&
+    lhs.firmware_rev == rhs.firmware_rev &&
+    lhs.firmware_date == rhs.firmware_date &&
+    lhs.has_calibration == rhs.has_calibration &&
+    lhs.controls_grip == rhs.controls_grip &&
+    lhs.senses_grip == rhs.senses_grip &&
+    lhs.reverses_grip == rhs.reverses_grip &&
+    lhs.controls_force == rhs.controls_force &&
+    lhs.senses_force == rhs.senses_force &&
+    lhs.controls_position == rhs.controls_position &&
+    lhs.senses_position == rhs.senses_position &&
+    lhs.properties == rhs.properties;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::EndEffectorProperties_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::EndEffectorProperties_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -162,12 +206,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -317,17 +355,17 @@ struct Printer< ::baxter_core_msgs::EndEffectorProperties_<ContainerAllocator> >
     s << indent << "ui_type: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.ui_type);
     s << indent << "manufacturer: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.manufacturer);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.manufacturer);
     s << indent << "product: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.product);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.product);
     s << indent << "serial_number: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.serial_number);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.serial_number);
     s << indent << "hardware_rev: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.hardware_rev);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.hardware_rev);
     s << indent << "firmware_rev: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.firmware_rev);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.firmware_rev);
     s << indent << "firmware_date: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.firmware_date);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.firmware_date);
     s << indent << "has_calibration: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.has_calibration);
     s << indent << "controls_grip: ";
@@ -345,7 +383,7 @@ struct Printer< ::baxter_core_msgs::EndEffectorProperties_<ContainerAllocator> >
     s << indent << "senses_position: ";
     Printer<uint8_t>::stream(s, indent + "  ", v.senses_position);
     s << indent << "properties: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.properties);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.properties);
   }
 };
 

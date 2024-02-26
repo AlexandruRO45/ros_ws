@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/baxter_sim_kinematics.dir/src/arm_kinematics.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libbaxter_sim_kinematics.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libbaxter_sim_kinematics.so"
+  "/home/alex/ros_ws/devel/lib/libbaxter_sim_kinematics.pdb"
+  "/home/alex/ros_ws/devel/lib/libbaxter_sim_kinematics.so"
 )
 
 # Per-language clean rules from dependency scanning.

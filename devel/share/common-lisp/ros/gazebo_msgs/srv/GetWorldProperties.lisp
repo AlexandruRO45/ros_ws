@@ -197,10 +197,10 @@
   "36bb0f2eccf4d8be971410c22818ba3f")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetWorldProperties-response>)))
   "Returns full string definition for message of type '<GetWorldProperties-response>"
-  (cl:format cl:nil "float64 sim_time~%string[] model_names~%bool rendering_enabled~%bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "float64 sim_time                     # current sim time~%string[] model_names                 # list of models in the world~%bool rendering_enabled               # if X is used~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetWorldProperties-response)))
   "Returns full string definition for message of type 'GetWorldProperties-response"
-  (cl:format cl:nil "float64 sim_time~%string[] model_names~%bool rendering_enabled~%bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "float64 sim_time                     # current sim time~%string[] model_names                 # list of models in the world~%bool rendering_enabled               # if X is used~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetWorldProperties-response>))
   (cl:+ 0
      8

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 # Utility rule file for clean_test_results_gazebo_plugins.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
 include baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/progress.make
 
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins:
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/vagrant/ros_ws/build/test_results/gazebo_plugins
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && /usr/bin/python2 /opt/ros/melodic/share/catkin/cmake/test/remove_test_results.py /home/alex/ros_ws/build/test_results/gazebo_plugins
 
 clean_test_results_gazebo_plugins: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins
 clean_test_results_gazebo_plugins: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/build.make
@@ -67,10 +67,10 @@ baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugi
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/build
 
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/clean:
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_gazebo_plugins.dir/cmake_clean.cmake
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && $(CMAKE_COMMAND) -P CMakeFiles/clean_test_results_gazebo_plugins.dir/cmake_clean.cmake
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/clean
 
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vagrant/ros_ws/src /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins /home/vagrant/ros_ws/build /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/ros_ws/src /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins /home/alex/ros_ws/build /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/depend
 

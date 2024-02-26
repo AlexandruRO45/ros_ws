@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src
+# Install script for directory: /home/alex/ros_ws/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,118 +49,124 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vagrant/ros_ws/install/_setup_util.py")
+   "/home/alex/ros_ws/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/vagrant/ros_ws/install" TYPE PROGRAM FILES "/home/vagrant/ros_ws/build/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/home/alex/ros_ws/install" TYPE PROGRAM FILES "/home/alex/ros_ws/build/catkin_generated/installspace/_setup_util.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vagrant/ros_ws/install/env.sh")
+   "/home/alex/ros_ws/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/vagrant/ros_ws/install" TYPE PROGRAM FILES "/home/vagrant/ros_ws/build/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/home/alex/ros_ws/install" TYPE PROGRAM FILES "/home/alex/ros_ws/build/catkin_generated/installspace/env.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vagrant/ros_ws/install/setup.bash;/home/vagrant/ros_ws/install/local_setup.bash")
+   "/home/alex/ros_ws/install/setup.bash;/home/alex/ros_ws/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/vagrant/ros_ws/install" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/catkin_generated/installspace/setup.bash"
-    "/home/vagrant/ros_ws/build/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/home/alex/ros_ws/install" TYPE FILE FILES
+    "/home/alex/ros_ws/build/catkin_generated/installspace/setup.bash"
+    "/home/alex/ros_ws/build/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vagrant/ros_ws/install/setup.sh;/home/vagrant/ros_ws/install/local_setup.sh")
+   "/home/alex/ros_ws/install/setup.sh;/home/alex/ros_ws/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/vagrant/ros_ws/install" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/catkin_generated/installspace/setup.sh"
-    "/home/vagrant/ros_ws/build/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/home/alex/ros_ws/install" TYPE FILE FILES
+    "/home/alex/ros_ws/build/catkin_generated/installspace/setup.sh"
+    "/home/alex/ros_ws/build/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vagrant/ros_ws/install/setup.zsh;/home/vagrant/ros_ws/install/local_setup.zsh")
+   "/home/alex/ros_ws/install/setup.zsh;/home/alex/ros_ws/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/vagrant/ros_ws/install" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/catkin_generated/installspace/setup.zsh"
-    "/home/vagrant/ros_ws/build/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/home/alex/ros_ws/install" TYPE FILE FILES
+    "/home/alex/ros_ws/build/catkin_generated/installspace/setup.zsh"
+    "/home/alex/ros_ws/build/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/vagrant/ros_ws/install/.rosinstall")
+   "/home/alex/ros_ws/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/home/vagrant/ros_ws/install" TYPE FILE FILES "/home/vagrant/ros_ws/build/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/home/alex/ros_ws/install" TYPE FILE FILES "/home/alex/ros_ws/build/catkin_generated/installspace/.rosinstall")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/vagrant/ros_ws/build/gtest/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/atlas_moveit_config/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_common/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_description/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter/baxter_sdk/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_simulator/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_pkgs/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/iri_wam_moveit_config/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/moveit_robots/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/baxter/baxter_moveit_config/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/pysdf/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_interface/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_tools/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_msgs/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_controllers/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_gazebo/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_kinematics/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_examples/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/baxter/baxter_ikfast_left_arm_plugin/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/baxter/baxter_ikfast_right_arm_plugin/cmake_install.cmake")
-  include("/home/vagrant/ros_ws/build/baxter/moveit_robots/atlas_v3_moveit_config/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/gtest/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/atlas_moveit_config/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_common/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_description/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter/baxter_sdk/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_simulator/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_dev/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_pkgs/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/iri_wam_moveit_config/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/moveit_robots/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/r2_moveit_generated/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/baxter/baxter_moveit_config/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/lab2_pkg/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/pysdf/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_interface/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter_chess/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_io/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_tools/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_msgs/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/lab1_pkg/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/lab3_pkg/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/lab4_pkg/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/lab5_pkg/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros_control/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_gazebo/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_kinematics/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_hardware/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_examples/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/baxter/baxter_ikfast_left_arm_plugin/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/baxter/baxter_ikfast_right_arm_plugin/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/moveit_robots/atlas_v3_moveit_config/cmake_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/baxter/baxter_simulator/baxter_sim_controllers/cmake_install.cmake")
 
 endif()
 
@@ -172,5 +178,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/vagrant/ros_ws/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/alex/ros_ws/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

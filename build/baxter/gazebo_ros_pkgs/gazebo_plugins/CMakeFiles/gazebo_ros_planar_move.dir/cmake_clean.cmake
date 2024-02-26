@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_planar_move.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_planar_move.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_planar_move.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_planar_move.so"
 )
 
 # Per-language clean rules from dependency scanning.

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 # Utility rule file for baxter_maintenance_msgs_gencpp.
 
@@ -63,10 +63,10 @@ baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenanc
 .PHONY : baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/build
 
 baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/clean:
-	cd /home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs && $(CMAKE_COMMAND) -P CMakeFiles/baxter_maintenance_msgs_gencpp.dir/cmake_clean.cmake
+	cd /home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs && $(CMAKE_COMMAND) -P CMakeFiles/baxter_maintenance_msgs_gencpp.dir/cmake_clean.cmake
 .PHONY : baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/clean
 
 baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vagrant/ros_ws/src /home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_maintenance_msgs /home/vagrant/ros_ws/build /home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs /home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/ros_ws/src /home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_maintenance_msgs /home/alex/ros_ws/build /home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs /home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : baxter/baxter/baxter_common/baxter_maintenance_msgs/CMakeFiles/baxter_maintenance_msgs_gencpp.dir/depend
 

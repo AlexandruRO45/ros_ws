@@ -188,14 +188,14 @@ class GetPhysicsPropertiesResponse {
   static messageDefinition() {
     // Returns full string definition for message
     return `
-    
-    float64 time_step
-    bool pause
-    float64 max_update_rate
-    geometry_msgs/Vector3 gravity
-    gazebo_msgs/ODEPhysics ode_config
-    bool success
-    string status_message
+    # sets pose and twist of a link.  All children link poses/twists of the URDF tree will be updated accordingly
+    float64 time_step                  # dt in seconds
+    bool pause                         # true if physics engine is paused
+    float64 max_update_rate            # throttle maximum physics update rate
+    geometry_msgs/Vector3 gravity      # gravity vector (e.g. earth ~[0,0,-9.81])
+    gazebo_msgs/ODEPhysics ode_config  # contains physics configurations pertaining to ODE
+    bool success                       # return true if set wrench successful
+    string status_message              # comments if available
     
     
     ================================================================================

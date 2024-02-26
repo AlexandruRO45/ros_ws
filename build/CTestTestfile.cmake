@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/vagrant/ros_ws/src
-# Build directory: /home/vagrant/ros_ws/build
+# Source directory: /home/alex/ros_ws/src
+# Build directory: /home/alex/ros_ws/build
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.
@@ -18,14 +18,19 @@ subdirs("baxter/moveit_robots/r2_moveit_generated")
 subdirs("baxter/baxter/baxter_common/rethink_ee_description")
 subdirs("baxter/moveit_robots/baxter/baxter_moveit_config")
 subdirs("baxter/baxter/baxter_common/baxter_maintenance_msgs")
+subdirs("lab2_pkg")
 subdirs("baxter/pysdf")
 subdirs("baxter/baxter/baxter_common/baxter_core_msgs")
 subdirs("baxter/baxter/baxter_interface")
+subdirs("baxter_chess")
 subdirs("baxter/baxter/baxter_simulator/baxter_sim_io")
 subdirs("baxter/baxter/baxter_tools")
 subdirs("baxter/gazebo_ros_pkgs/gazebo_msgs")
+subdirs("lab1_pkg")
+subdirs("lab3_pkg")
+subdirs("lab4_pkg")
 subdirs("baxter/gazebo_ros_pkgs/gazebo_ros")
-subdirs("baxter/baxter/baxter_simulator/baxter_sim_controllers")
+subdirs("lab5_pkg")
 subdirs("baxter/gazebo_ros_pkgs/gazebo_plugins")
 subdirs("baxter/gazebo_ros_pkgs/gazebo_ros_control")
 subdirs("baxter/baxter/baxter_simulator/baxter_gazebo")
@@ -35,3 +40,4 @@ subdirs("baxter/baxter/baxter_simulator/baxter_sim_examples")
 subdirs("baxter/moveit_robots/baxter/baxter_ikfast_left_arm_plugin")
 subdirs("baxter/moveit_robots/baxter/baxter_ikfast_right_arm_plugin")
 subdirs("baxter/moveit_robots/atlas_v3_moveit_config")
+subdirs("baxter/baxter/baxter_simulator/baxter_sim_controllers")

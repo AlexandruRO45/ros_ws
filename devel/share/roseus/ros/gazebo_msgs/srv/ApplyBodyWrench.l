@@ -183,25 +183,25 @@
 (setf (get gazebo_msgs::ApplyBodyWrenchRequest :md5sum-) "585b9f9618aa0581b207e2f2d90866bc")
 (setf (get gazebo_msgs::ApplyBodyWrenchRequest :datatype-) "gazebo_msgs/ApplyBodyWrenchRequest")
 (setf (get gazebo_msgs::ApplyBodyWrenchRequest :definition-)
-      "
-
-
-string body_name
-
-
-string reference_frame
-
-
-geometry_msgs/Point  reference_point
-geometry_msgs/Wrench wrench
-time start_time
-
-
-duration duration
-
-
-
-
+      "# Apply Wrench to Gazebo Body.
+# via the callback mechanism
+# all Gazebo operations are made in world frame
+string body_name                          # Gazebo body to apply wrench (linear force and torque)
+                                          # wrench is applied in the gazebo world by default
+                                          # body names are prefixed by model name, e.g. pr2::base_link
+string reference_frame                    # wrench is defined in the reference frame of this entity
+                                          # use inertial frame if left empty
+                                          # frame names are bodies prefixed by model name, e.g. pr2::base_link
+geometry_msgs/Point  reference_point      # wrench is defined at this location in the reference frame
+geometry_msgs/Wrench wrench               # wrench applied to the origin of the body
+time start_time                           # (optional) wrench application start time (seconds)
+                                          # if start_time is not specified, or
+                                          # start_time < current time, start as soon as possible
+duration duration                         # optional duration of wrench application time (seconds)
+                                          # if duration < 0, apply wrench continuously without end
+                                          # if duration = 0, do nothing
+                                          # if duration < step size, apply wrench
+                                          # for one step size
 
 ================================================================================
 MSG: geometry_msgs/Point
@@ -229,33 +229,33 @@ MSG: geometry_msgs/Vector3
 float64 x
 float64 y
 ---
-bool success
-string status_message
+bool success                              # return true if set wrench successful
+string status_message                     # comments if available
 
 ")
 
 (setf (get gazebo_msgs::ApplyBodyWrenchResponse :md5sum-) "585b9f9618aa0581b207e2f2d90866bc")
 (setf (get gazebo_msgs::ApplyBodyWrenchResponse :datatype-) "gazebo_msgs/ApplyBodyWrenchResponse")
 (setf (get gazebo_msgs::ApplyBodyWrenchResponse :definition-)
-      "
-
-
-string body_name
-
-
-string reference_frame
-
-
-geometry_msgs/Point  reference_point
-geometry_msgs/Wrench wrench
-time start_time
-
-
-duration duration
-
-
-
-
+      "# Apply Wrench to Gazebo Body.
+# via the callback mechanism
+# all Gazebo operations are made in world frame
+string body_name                          # Gazebo body to apply wrench (linear force and torque)
+                                          # wrench is applied in the gazebo world by default
+                                          # body names are prefixed by model name, e.g. pr2::base_link
+string reference_frame                    # wrench is defined in the reference frame of this entity
+                                          # use inertial frame if left empty
+                                          # frame names are bodies prefixed by model name, e.g. pr2::base_link
+geometry_msgs/Point  reference_point      # wrench is defined at this location in the reference frame
+geometry_msgs/Wrench wrench               # wrench applied to the origin of the body
+time start_time                           # (optional) wrench application start time (seconds)
+                                          # if start_time is not specified, or
+                                          # start_time < current time, start as soon as possible
+duration duration                         # optional duration of wrench application time (seconds)
+                                          # if duration < 0, apply wrench continuously without end
+                                          # if duration = 0, do nothing
+                                          # if duration < step size, apply wrench
+                                          # for one step size
 
 ================================================================================
 MSG: geometry_msgs/Point
@@ -283,8 +283,8 @@ MSG: geometry_msgs/Vector3
 float64 x
 float64 y
 ---
-bool success
-string status_message
+bool success                              # return true if set wrench successful
+string status_message                     # comments if available
 
 ")
 

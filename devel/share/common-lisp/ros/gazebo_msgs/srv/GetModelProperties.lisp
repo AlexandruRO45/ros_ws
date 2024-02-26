@@ -61,10 +61,10 @@
   "5717f7bd34ed990fa80e28b3015027a3")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetModelProperties-request>)))
   "Returns full string definition for message of type '<GetModelProperties-request>"
-  (cl:format cl:nil "string model_name~%~%~%"))
+  (cl:format cl:nil "string model_name                    # name of Gazebo Model~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetModelProperties-request)))
   "Returns full string definition for message of type 'GetModelProperties-request"
-  (cl:format cl:nil "string model_name~%~%~%"))
+  (cl:format cl:nil "string model_name                    # name of Gazebo Model~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetModelProperties-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'model_name))
@@ -355,10 +355,10 @@
   "5717f7bd34ed990fa80e28b3015027a3")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetModelProperties-response>)))
   "Returns full string definition for message of type '<GetModelProperties-response>"
-  (cl:format cl:nil "string parent_model_name~%string canonical_body_name~%string[] body_names~%string[] geom_names~%string[] joint_names~%string[] child_model_names~%bool is_static~%bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "string parent_model_name             # parent model~%string canonical_body_name           # name of canonical body, body names are prefixed by model name, e.g. pr2::base_link~%string[] body_names                  # list of bodies, body names are prefixed by model name, e.g. pr2::base_link~%string[] geom_names                  # list of geoms~%string[] joint_names                 # list of joints attached to the model~%string[] child_model_names           # list of child models~%bool is_static                       # returns true if model is static~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetModelProperties-response)))
   "Returns full string definition for message of type 'GetModelProperties-response"
-  (cl:format cl:nil "string parent_model_name~%string canonical_body_name~%string[] body_names~%string[] geom_names~%string[] joint_names~%string[] child_model_names~%bool is_static~%bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "string parent_model_name             # parent model~%string canonical_body_name           # name of canonical body, body names are prefixed by model name, e.g. pr2::base_link~%string[] body_names                  # list of bodies, body names are prefixed by model name, e.g. pr2::base_link~%string[] geom_names                  # list of geoms~%string[] joint_names                 # list of joints attached to the model~%string[] child_model_names           # list of child models~%bool is_static                       # returns true if model is static~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetModelProperties-response>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'parent_model_name))

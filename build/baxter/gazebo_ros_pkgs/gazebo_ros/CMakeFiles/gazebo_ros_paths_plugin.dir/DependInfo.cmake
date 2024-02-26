@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp" "/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o"
+  "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/src/gazebo_ros_paths_plugin.cpp" "/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_paths_plugin.dir/src/gazebo_ros_paths_plugin.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,14 +19,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/vagrant/ros_ws/devel/include"
-  "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include"
+  "/home/alex/ros_ws/devel/include"
+  "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_ros/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/gazebo-9"
   "/usr/include/bullet"
   "/usr/include/simbody"
-  "/usr/include/sdformat-6.2"
+  "/usr/include/sdformat-6.0"
   "/usr/include/ignition/math4"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"

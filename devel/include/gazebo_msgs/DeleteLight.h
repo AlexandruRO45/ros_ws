@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::DeleteLight > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::DeleteLightRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::DeleteLight > 
+// service_traits::MD5Sum< ::gazebo_msgs::DeleteLightRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::DeleteLight >
 template<>
 struct MD5Sum< ::gazebo_msgs::DeleteLightRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::DeleteLightRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::DeleteLightRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::DeleteLight > 
+// service_traits::DataType< ::gazebo_msgs::DeleteLightRequest> should match
+// service_traits::DataType< ::gazebo_msgs::DeleteLight >
 template<>
 struct DataType< ::gazebo_msgs::DeleteLightRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::DeleteLightRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::DeleteLightResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::DeleteLight > 
+// service_traits::MD5Sum< ::gazebo_msgs::DeleteLightResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::DeleteLight >
 template<>
 struct MD5Sum< ::gazebo_msgs::DeleteLightResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::DeleteLightResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::DeleteLightResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::DeleteLight > 
+// service_traits::DataType< ::gazebo_msgs::DeleteLightResponse> should match
+// service_traits::DataType< ::gazebo_msgs::DeleteLight >
 template<>
 struct DataType< ::gazebo_msgs::DeleteLightResponse>
 {

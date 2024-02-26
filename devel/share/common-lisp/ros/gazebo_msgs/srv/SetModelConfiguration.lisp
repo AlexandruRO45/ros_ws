@@ -166,10 +166,10 @@
   "10e3139d3b669c40afc057d38956fff7")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetModelConfiguration-request>)))
   "Returns full string definition for message of type '<SetModelConfiguration-request>"
-  (cl:format cl:nil "~%string model_name~%string urdf_param_name~%~%string[] joint_names~%float64[] joint_positions~%~%~%"))
+  (cl:format cl:nil "# Set Gazebo Model pose and twist~%string model_name           # model to set state (pose and twist)~%string urdf_param_name      # parameter name that contains the urdf XML.~%~%string[] joint_names        # list of joints to set positions.  if joint is not listed here, preserve current position.~%float64[] joint_positions   # set to this position.~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetModelConfiguration-request)))
   "Returns full string definition for message of type 'SetModelConfiguration-request"
-  (cl:format cl:nil "~%string model_name~%string urdf_param_name~%~%string[] joint_names~%float64[] joint_positions~%~%~%"))
+  (cl:format cl:nil "# Set Gazebo Model pose and twist~%string model_name           # model to set state (pose and twist)~%string urdf_param_name      # parameter name that contains the urdf XML.~%~%string[] joint_names        # list of joints to set positions.  if joint is not listed here, preserve current position.~%float64[] joint_positions   # set to this position.~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetModelConfiguration-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'model_name))
@@ -254,10 +254,10 @@
   "10e3139d3b669c40afc057d38956fff7")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<SetModelConfiguration-response>)))
   "Returns full string definition for message of type '<SetModelConfiguration-response>"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                # return true if setting state successful~%string status_message       # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'SetModelConfiguration-response)))
   "Returns full string definition for message of type 'SetModelConfiguration-response"
-  (cl:format cl:nil "bool success~%string status_message~%~%~%~%"))
+  (cl:format cl:nil "bool success                # return true if setting state successful~%string status_message       # comments if available~%~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <SetModelConfiguration-response>))
   (cl:+ 0
      1

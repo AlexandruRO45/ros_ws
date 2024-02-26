@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -63,6 +63,35 @@ struct AssemblyState_
 
 
 
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(ESTOP_BUTTON_UNPRESSED)
+  #undef ESTOP_BUTTON_UNPRESSED
+#endif
+#if defined(_WIN32) && defined(ESTOP_BUTTON_PRESSED)
+  #undef ESTOP_BUTTON_PRESSED
+#endif
+#if defined(_WIN32) && defined(ESTOP_BUTTON_UNKNOWN)
+  #undef ESTOP_BUTTON_UNKNOWN
+#endif
+#if defined(_WIN32) && defined(ESTOP_BUTTON_RELEASED)
+  #undef ESTOP_BUTTON_RELEASED
+#endif
+#if defined(_WIN32) && defined(ESTOP_SOURCE_NONE)
+  #undef ESTOP_SOURCE_NONE
+#endif
+#if defined(_WIN32) && defined(ESTOP_SOURCE_USER)
+  #undef ESTOP_SOURCE_USER
+#endif
+#if defined(_WIN32) && defined(ESTOP_SOURCE_UNKNOWN)
+  #undef ESTOP_SOURCE_UNKNOWN
+#endif
+#if defined(_WIN32) && defined(ESTOP_SOURCE_FAULT)
+  #undef ESTOP_SOURCE_FAULT
+#endif
+#if defined(_WIN32) && defined(ESTOP_SOURCE_BRAIN)
+  #undef ESTOP_SOURCE_BRAIN
+#endif
+
   enum {
     ESTOP_BUTTON_UNPRESSED = 0u,
     ESTOP_BUTTON_PRESSED = 1u,
@@ -115,6 +144,25 @@ ros::message_operations::Printer< ::baxter_core_msgs::AssemblyState_<ContainerAl
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::AssemblyState_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::AssemblyState_<ContainerAllocator2> & rhs)
+{
+  return lhs.ready == rhs.ready &&
+    lhs.enabled == rhs.enabled &&
+    lhs.stopped == rhs.stopped &&
+    lhs.error == rhs.error &&
+    lhs.estop_button == rhs.estop_button &&
+    lhs.estop_source == rhs.estop_source;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::AssemblyState_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::AssemblyState_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -122,12 +170,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': True, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 

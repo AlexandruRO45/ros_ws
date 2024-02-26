@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_depth_camera.pdb"
-  "/home/vagrant/ros_ws/devel/lib/libgazebo_ros_depth_camera.so"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_depth_camera.pdb"
+  "/home/alex/ros_ws/devel/lib/libgazebo_ros_depth_camera.so"
 )
 
 # Per-language clean rules from dependency scanning.

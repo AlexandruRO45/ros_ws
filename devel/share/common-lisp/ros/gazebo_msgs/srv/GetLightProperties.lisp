@@ -61,10 +61,10 @@
   "df2cef87e13e2e6990e81e8aaa454c19")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetLightProperties-request>)))
   "Returns full string definition for message of type '<GetLightProperties-request>"
-  (cl:format cl:nil "string light_name~%~%~%"))
+  (cl:format cl:nil "string light_name                    # name of Gazebo Light~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetLightProperties-request)))
   "Returns full string definition for message of type 'GetLightProperties-request"
-  (cl:format cl:nil "string light_name~%~%~%"))
+  (cl:format cl:nil "string light_name                    # name of Gazebo Light~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetLightProperties-request>))
   (cl:+ 0
      4 (cl:length (cl:slot-value msg 'light_name))
@@ -242,10 +242,10 @@
   "df2cef87e13e2e6990e81e8aaa454c19")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<GetLightProperties-response>)))
   "Returns full string definition for message of type '<GetLightProperties-response>"
-  (cl:format cl:nil "std_msgs/ColorRGBA diffuse~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%bool success~%string status_message~%~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
+  (cl:format cl:nil "std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'GetLightProperties-response)))
   "Returns full string definition for message of type 'GetLightProperties-response"
-  (cl:format cl:nil "std_msgs/ColorRGBA diffuse~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%bool success~%string status_message~%~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
+  (cl:format cl:nil "std_msgs/ColorRGBA diffuse           # diffuse color as red, green, blue, alpha~%float64 attenuation_constant~%float64 attenuation_linear~%float64 attenuation_quadratic~%bool success                         # return true if get successful~%string status_message                # comments if available~%~%~%================================================================================~%MSG: std_msgs/ColorRGBA~%float32 r~%float32 g~%float32 b~%float32 a~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <GetLightProperties-response>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'diffuse))

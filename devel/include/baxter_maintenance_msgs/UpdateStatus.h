@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -43,10 +43,45 @@ struct UpdateStatus_
    typedef float _progress_type;
   _progress_type progress;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _long_description_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _long_description_type;
   _long_description_type long_description;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(STS_IDLE)
+  #undef STS_IDLE
+#endif
+#if defined(_WIN32) && defined(STS_INVALID)
+  #undef STS_INVALID
+#endif
+#if defined(_WIN32) && defined(STS_BUSY)
+  #undef STS_BUSY
+#endif
+#if defined(_WIN32) && defined(STS_CANCELLED)
+  #undef STS_CANCELLED
+#endif
+#if defined(_WIN32) && defined(STS_ERR)
+  #undef STS_ERR
+#endif
+#if defined(_WIN32) && defined(STS_MOUNT_UPDATE)
+  #undef STS_MOUNT_UPDATE
+#endif
+#if defined(_WIN32) && defined(STS_VERIFY_UPDATE)
+  #undef STS_VERIFY_UPDATE
+#endif
+#if defined(_WIN32) && defined(STS_PREP_STAGING)
+  #undef STS_PREP_STAGING
+#endif
+#if defined(_WIN32) && defined(STS_MOUNT_STAGING)
+  #undef STS_MOUNT_STAGING
+#endif
+#if defined(_WIN32) && defined(STS_EXTRACT_UPDATE)
+  #undef STS_EXTRACT_UPDATE
+#endif
+#if defined(_WIN32) && defined(STS_LOAD_KEXEC)
+  #undef STS_LOAD_KEXEC
+#endif
 
   enum {
     STS_IDLE = 0u,
@@ -106,6 +141,22 @@ ros::message_operations::Printer< ::baxter_maintenance_msgs::UpdateStatus_<Conta
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_maintenance_msgs::UpdateStatus_<ContainerAllocator1> & lhs, const ::baxter_maintenance_msgs::UpdateStatus_<ContainerAllocator2> & rhs)
+{
+  return lhs.status == rhs.status &&
+    lhs.progress == rhs.progress &&
+    lhs.long_description == rhs.long_description;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_maintenance_msgs::UpdateStatus_<ContainerAllocator1> & lhs, const ::baxter_maintenance_msgs::UpdateStatus_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_maintenance_msgs
 
 namespace ros
@@ -113,12 +164,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'baxter_maintenance_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_maintenance_msgs/msg'], 'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -247,7 +292,7 @@ struct Printer< ::baxter_maintenance_msgs::UpdateStatus_<ContainerAllocator> >
     s << indent << "progress: ";
     Printer<float>::stream(s, indent + "  ", v.progress);
     s << indent << "long_description: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.long_description);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.long_description);
   }
 };
 

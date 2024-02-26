@@ -8,7 +8,7 @@
 
 #include <string>
 #include <vector>
-#include <map>
+#include <memory>
 
 #include <ros/types.h>
 #include <ros/serialization.h>
@@ -99,19 +99,42 @@ struct EndEffectorState_
    typedef float _force_type;
   _force_type force;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _state_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _state_type;
   _state_type state;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _command_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _command_type;
   _command_type command;
 
-   typedef std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other >  _command_sender_type;
+   typedef std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>> _command_sender_type;
   _command_sender_type command_sender;
 
    typedef uint32_t _command_sequence_type;
   _command_sequence_type command_sequence;
 
 
+
+// reducing the odds to have name collisions with Windows.h 
+#if defined(_WIN32) && defined(STATE_FALSE)
+  #undef STATE_FALSE
+#endif
+#if defined(_WIN32) && defined(STATE_TRUE)
+  #undef STATE_TRUE
+#endif
+#if defined(_WIN32) && defined(STATE_UNKNOWN)
+  #undef STATE_UNKNOWN
+#endif
+#if defined(_WIN32) && defined(POSITION_CLOSED)
+  #undef POSITION_CLOSED
+#endif
+#if defined(_WIN32) && defined(POSITION_OPEN)
+  #undef POSITION_OPEN
+#endif
+#if defined(_WIN32) && defined(FORCE_MIN)
+  #undef FORCE_MIN
+#endif
+#if defined(_WIN32) && defined(FORCE_MAX)
+  #undef FORCE_MAX
+#endif
 
   enum {
     STATE_FALSE = 0u,
@@ -187,6 +210,35 @@ ros::message_operations::Printer< ::baxter_core_msgs::EndEffectorState_<Containe
 return s;
 }
 
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator==(const ::baxter_core_msgs::EndEffectorState_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::EndEffectorState_<ContainerAllocator2> & rhs)
+{
+  return lhs.timestamp == rhs.timestamp &&
+    lhs.id == rhs.id &&
+    lhs.enabled == rhs.enabled &&
+    lhs.calibrated == rhs.calibrated &&
+    lhs.ready == rhs.ready &&
+    lhs.moving == rhs.moving &&
+    lhs.gripping == rhs.gripping &&
+    lhs.missed == rhs.missed &&
+    lhs.error == rhs.error &&
+    lhs.reverse == rhs.reverse &&
+    lhs.position == rhs.position &&
+    lhs.force == rhs.force &&
+    lhs.state == rhs.state &&
+    lhs.command == rhs.command &&
+    lhs.command_sender == rhs.command_sender &&
+    lhs.command_sequence == rhs.command_sequence;
+}
+
+template<typename ContainerAllocator1, typename ContainerAllocator2>
+bool operator!=(const ::baxter_core_msgs::EndEffectorState_<ContainerAllocator1> & lhs, const ::baxter_core_msgs::EndEffectorState_<ContainerAllocator2> & rhs)
+{
+  return !(lhs == rhs);
+}
+
+
 } // namespace baxter_core_msgs
 
 namespace ros
@@ -194,12 +246,6 @@ namespace ros
 namespace message_traits
 {
 
-
-
-// BOOLTRAITS {'IsFixedSize': False, 'IsMessage': True, 'HasHeader': False}
-// {'std_msgs': ['/opt/ros/melodic/share/std_msgs/cmake/../msg'], 'sensor_msgs': ['/opt/ros/melodic/share/sensor_msgs/cmake/../msg'], 'geometry_msgs': ['/opt/ros/melodic/share/geometry_msgs/cmake/../msg'], 'baxter_core_msgs': ['/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg']}
-
-// !!!!!!!!!!! ['__class__', '__delattr__', '__dict__', '__doc__', '__eq__', '__format__', '__getattribute__', '__hash__', '__init__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_parsed_fields', 'constants', 'fields', 'full_name', 'has_header', 'header_present', 'names', 'package', 'parsed_fields', 'short_name', 'text', 'types']
 
 
 
@@ -375,11 +421,11 @@ struct Printer< ::baxter_core_msgs::EndEffectorState_<ContainerAllocator> >
     s << indent << "force: ";
     Printer<float>::stream(s, indent + "  ", v.force);
     s << indent << "state: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.state);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.state);
     s << indent << "command: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.command);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.command);
     s << indent << "command_sender: ";
-    Printer<std::basic_string<char, std::char_traits<char>, typename ContainerAllocator::template rebind<char>::other > >::stream(s, indent + "  ", v.command_sender);
+    Printer<std::basic_string<char, std::char_traits<char>, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<char>>>::stream(s, indent + "  ", v.command_sender);
     s << indent << "command_sequence: ";
     Printer<uint32_t>::stream(s, indent + "  ", v.command_sequence);
   }

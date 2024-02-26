@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/src/hokuyo_node.cpp" "/home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.o"
+  "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/src/hokuyo_node.cpp" "/home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,14 +19,14 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "/home/vagrant/ros_ws/devel/include"
-  "/home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/include"
+  "/home/alex/ros_ws/devel/include"
+  "/home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/include"
   "/opt/ros/melodic/include"
   "/opt/ros/melodic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp"
   "/usr/include/gazebo-9"
   "/usr/include/bullet"
   "/usr/include/simbody"
-  "/usr/include/sdformat-6.2"
+  "/usr/include/sdformat-6.0"
   "/usr/include/ignition/math4"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
@@ -36,7 +36,6 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ignition/common1"
   "/usr/include/ignition/fuel_tools1"
   "/usr/include/opencv"
-  "/usr/src/googletest/googletest/include"
   "/usr/include/uuid"
   "/usr/include/x86_64-linux-gnu"
   )

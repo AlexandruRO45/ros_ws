@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::BodyRequest > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::BodyRequestRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::BodyRequest > 
+// service_traits::MD5Sum< ::gazebo_msgs::BodyRequestRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::BodyRequest >
 template<>
 struct MD5Sum< ::gazebo_msgs::BodyRequestRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::BodyRequestRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::BodyRequestRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::BodyRequest > 
+// service_traits::DataType< ::gazebo_msgs::BodyRequestRequest> should match
+// service_traits::DataType< ::gazebo_msgs::BodyRequest >
 template<>
 struct DataType< ::gazebo_msgs::BodyRequestRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::BodyRequestRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::BodyRequestResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::BodyRequest > 
+// service_traits::MD5Sum< ::gazebo_msgs::BodyRequestResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::BodyRequest >
 template<>
 struct MD5Sum< ::gazebo_msgs::BodyRequestResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::BodyRequestResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::BodyRequestResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::BodyRequest > 
+// service_traits::DataType< ::gazebo_msgs::BodyRequestResponse> should match
+// service_traits::DataType< ::gazebo_msgs::BodyRequest >
 template<>
 struct DataType< ::gazebo_msgs::BodyRequestResponse>
 {

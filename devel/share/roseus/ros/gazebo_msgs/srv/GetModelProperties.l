@@ -227,34 +227,34 @@
 (setf (get gazebo_msgs::GetModelPropertiesRequest :md5sum-) "5717f7bd34ed990fa80e28b3015027a3")
 (setf (get gazebo_msgs::GetModelPropertiesRequest :datatype-) "gazebo_msgs/GetModelPropertiesRequest")
 (setf (get gazebo_msgs::GetModelPropertiesRequest :definition-)
-      "string model_name
+      "string model_name                    # name of Gazebo Model
 ---
-string parent_model_name
-string canonical_body_name
-string[] body_names
-string[] geom_names
-string[] joint_names
-string[] child_model_names
-bool is_static
-bool success
-string status_message
+string parent_model_name             # parent model
+string canonical_body_name           # name of canonical body, body names are prefixed by model name, e.g. pr2::base_link
+string[] body_names                  # list of bodies, body names are prefixed by model name, e.g. pr2::base_link
+string[] geom_names                  # list of geoms
+string[] joint_names                 # list of joints attached to the model
+string[] child_model_names           # list of child models
+bool is_static                       # returns true if model is static
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 ")
 
 (setf (get gazebo_msgs::GetModelPropertiesResponse :md5sum-) "5717f7bd34ed990fa80e28b3015027a3")
 (setf (get gazebo_msgs::GetModelPropertiesResponse :datatype-) "gazebo_msgs/GetModelPropertiesResponse")
 (setf (get gazebo_msgs::GetModelPropertiesResponse :definition-)
-      "string model_name
+      "string model_name                    # name of Gazebo Model
 ---
-string parent_model_name
-string canonical_body_name
-string[] body_names
-string[] geom_names
-string[] joint_names
-string[] child_model_names
-bool is_static
-bool success
-string status_message
+string parent_model_name             # parent model
+string canonical_body_name           # name of canonical body, body names are prefixed by model name, e.g. pr2::base_link
+string[] body_names                  # list of bodies, body names are prefixed by model name, e.g. pr2::base_link
+string[] geom_names                  # list of geoms
+string[] joint_names                 # list of joints attached to the model
+string[] child_model_names           # list of child models
+bool is_static                       # returns true if model is static
+bool success                         # return true if get successful
+string status_message                # comments if available
 
 ")
 

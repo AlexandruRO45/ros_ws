@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description
+# Install script for directory: /home/alex/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,25 +38,25 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/catkin_generated/installspace/rethink_ee_description.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/catkin_generated/installspace/rethink_ee_description.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/catkin_generated/installspace/rethink_ee_descriptionConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/catkin_generated/installspace/rethink_ee_descriptionConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/catkin_generated/installspace/rethink_ee_descriptionConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_common/rethink_ee_description/catkin_generated/installspace/rethink_ee_descriptionConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description/package.xml")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description/meshes" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description/meshes/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description/meshes" TYPE DIRECTORY FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description/meshes/")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description/urdf" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description/urdf/")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/rethink_ee_description/urdf" TYPE DIRECTORY FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_common/rethink_ee_description/urdf/")
 endif()
 

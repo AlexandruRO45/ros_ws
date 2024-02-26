@@ -57,8 +57,8 @@ struct DataType< ::gazebo_msgs::ApplyJointEffort > {
 };
 
 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffortRequest> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffort > 
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffortRequest> should match
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffort >
 template<>
 struct MD5Sum< ::gazebo_msgs::ApplyJointEffortRequest>
 {
@@ -72,8 +72,8 @@ struct MD5Sum< ::gazebo_msgs::ApplyJointEffortRequest>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::ApplyJointEffortRequest> should match 
-// service_traits::DataType< ::gazebo_msgs::ApplyJointEffort > 
+// service_traits::DataType< ::gazebo_msgs::ApplyJointEffortRequest> should match
+// service_traits::DataType< ::gazebo_msgs::ApplyJointEffort >
 template<>
 struct DataType< ::gazebo_msgs::ApplyJointEffortRequest>
 {
@@ -87,8 +87,8 @@ struct DataType< ::gazebo_msgs::ApplyJointEffortRequest>
   }
 };
 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffortResponse> should match 
-// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffort > 
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffortResponse> should match
+// service_traits::MD5Sum< ::gazebo_msgs::ApplyJointEffort >
 template<>
 struct MD5Sum< ::gazebo_msgs::ApplyJointEffortResponse>
 {
@@ -102,8 +102,8 @@ struct MD5Sum< ::gazebo_msgs::ApplyJointEffortResponse>
   }
 };
 
-// service_traits::DataType< ::gazebo_msgs::ApplyJointEffortResponse> should match 
-// service_traits::DataType< ::gazebo_msgs::ApplyJointEffort > 
+// service_traits::DataType< ::gazebo_msgs::ApplyJointEffortResponse> should match
+// service_traits::DataType< ::gazebo_msgs::ApplyJointEffort >
 template<>
 struct DataType< ::gazebo_msgs::ApplyJointEffortResponse>
 {

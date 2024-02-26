@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/pysdf
+# Install script for directory: /home/alex/ros_ws/src/baxter/pysdf
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,21 +38,21 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/vagrant/ros_ws/build/baxter/pysdf/catkin_generated/safe_execute_install.cmake")
+  include("/home/alex/ros_ws/build/baxter/pysdf/catkin_generated/safe_execute_install.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/pysdf/catkin_generated/installspace/pysdf.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/pysdf/catkin_generated/installspace/pysdf.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pysdf/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/pysdf/catkin_generated/installspace/pysdfConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/pysdf/catkin_generated/installspace/pysdfConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/pysdf/catkin_generated/installspace/pysdfConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/pysdf/catkin_generated/installspace/pysdfConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pysdf" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/pysdf/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/pysdf" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/pysdf/package.xml")
 endif()
 

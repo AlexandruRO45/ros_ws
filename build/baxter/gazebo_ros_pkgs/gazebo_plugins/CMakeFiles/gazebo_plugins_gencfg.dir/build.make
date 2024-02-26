@@ -43,119 +43,119 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 # Utility rule file for gazebo_plugins_gencfg.
 
 # Include the progress variables for this target.
 include baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/progress.make
 
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
-baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py
 
 
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/CameraSynchronizer.cfg
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vagrant/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating dynamic reconfigure files from cfg/CameraSynchronizer.cfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/CameraSynchronizer.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/vagrant/ros_ws/devel/share/gazebo_plugins /home/vagrant/ros_ws/devel/include/gazebo_plugins /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
+/home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/CameraSynchronizer.cfg
+/home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
+/home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating dynamic reconfigure files from cfg/CameraSynchronizer.cfg: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py"
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/CameraSynchronizer.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/alex/ros_ws/devel/share/gazebo_plugins /home/alex/ros_ws/devel/include/gazebo_plugins /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.dox
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig-usage.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig-usage.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig-usage.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig-usage.dox
 
-/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py
+/home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.wikidoc: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.wikidoc
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.wikidoc: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.wikidoc
 
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosCamera.cfg
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vagrant/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating dynamic reconfigure files from cfg/GazeboRosCamera.cfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosCamera.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/vagrant/ros_ws/devel/share/gazebo_plugins /home/vagrant/ros_ws/devel/include/gazebo_plugins /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
+/home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosCamera.cfg
+/home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
+/home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating dynamic reconfigure files from cfg/GazeboRosCamera.cfg: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py"
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosCamera.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/alex/ros_ws/devel/share/gazebo_plugins /home/alex/ros_ws/devel/include/gazebo_plugins /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.dox
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig-usage.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig-usage.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig-usage.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig-usage.dox
 
-/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py
+/home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.wikidoc: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.wikidoc
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.wikidoc: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.wikidoc
 
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosOpenniKinect.cfg
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vagrant/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating dynamic reconfigure files from cfg/GazeboRosOpenniKinect.cfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosOpenniKinect.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/vagrant/ros_ws/devel/share/gazebo_plugins /home/vagrant/ros_ws/devel/include/gazebo_plugins /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
+/home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosOpenniKinect.cfg
+/home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
+/home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating dynamic reconfigure files from cfg/GazeboRosOpenniKinect.cfg: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py"
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/GazeboRosOpenniKinect.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/alex/ros_ws/devel/share/gazebo_plugins /home/alex/ros_ws/devel/include/gazebo_plugins /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.dox
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig-usage.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig-usage.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig-usage.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig-usage.dox
 
-/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py
+/home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.wikidoc: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.wikidoc
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.wikidoc: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.wikidoc
 
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h: /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/Hokuyo.cfg
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
-/home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/vagrant/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating dynamic reconfigure files from cfg/Hokuyo.cfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py"
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/Hokuyo.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/vagrant/ros_ws/devel/share/gazebo_plugins /home/vagrant/ros_ws/devel/include/gazebo_plugins /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
+/home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h: /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/Hokuyo.cfg
+/home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.py.template
+/home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h: /opt/ros/melodic/share/dynamic_reconfigure/templates/ConfigType.h.template
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alex/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Generating dynamic reconfigure files from cfg/Hokuyo.cfg: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py"
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && ../../../catkin_generated/env_cached.sh /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/setup_custom_pythonpath.sh /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins/cfg/Hokuyo.cfg /opt/ros/melodic/share/dynamic_reconfigure/cmake/.. /home/alex/ros_ws/devel/share/gazebo_plugins /home/alex/ros_ws/devel/include/gazebo_plugins /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.dox
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig-usage.dox: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig-usage.dox
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig-usage.dox: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig-usage.dox
 
-/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py
+/home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py
 
-/home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.wikidoc: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
-	@$(CMAKE_COMMAND) -E touch_nocreate /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.wikidoc
+/home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.wikidoc: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+	@$(CMAKE_COMMAND) -E touch_nocreate /home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.wikidoc
 
 gazebo_plugins_gencfg: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig-usage.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.wikidoc
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig-usage.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.wikidoc
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig-usage.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.wikidoc
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig-usage.dox
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py
-gazebo_plugins_gencfg: /home/vagrant/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.wikidoc
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/CameraSynchronizerConfig.h
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig-usage.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/CameraSynchronizerConfig.py
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/CameraSynchronizerConfig.wikidoc
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosCameraConfig.h
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig-usage.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosCameraConfig.py
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosCameraConfig.wikidoc
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig-usage.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/GazeboRosOpenniKinectConfig.py
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/GazeboRosOpenniKinectConfig.wikidoc
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig-usage.dox
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/lib/python2.7/dist-packages/gazebo_plugins/cfg/HokuyoConfig.py
+gazebo_plugins_gencfg: /home/alex/ros_ws/devel/share/gazebo_plugins/docs/HokuyoConfig.wikidoc
 gazebo_plugins_gencfg: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build.make
 
 .PHONY : gazebo_plugins_gencfg
@@ -166,10 +166,10 @@ baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build
 
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/clean:
-	cd /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_plugins_gencfg.dir/cmake_clean.cmake
+	cd /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins && $(CMAKE_COMMAND) -P CMakeFiles/gazebo_plugins_gencfg.dir/cmake_clean.cmake
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/clean
 
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/vagrant/ros_ws/src /home/vagrant/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins /home/vagrant/ros_ws/build /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alex/ros_ws/src /home/alex/ros_ws/src/baxter/gazebo_ros_pkgs/gazebo_plugins /home/alex/ros_ws/build /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/depend
 

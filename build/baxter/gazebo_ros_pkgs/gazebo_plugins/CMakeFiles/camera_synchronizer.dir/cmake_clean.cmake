@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.o"
-  "/home/vagrant/ros_ws/devel/lib/gazebo_plugins/camera_synchronizer.pdb"
-  "/home/vagrant/ros_ws/devel/lib/gazebo_plugins/camera_synchronizer"
+  "/home/alex/ros_ws/devel/lib/gazebo_plugins/camera_synchronizer.pdb"
+  "/home/alex/ros_ws/devel/lib/gazebo_plugins/camera_synchronizer"
 )
 
 # Per-language clean rules from dependency scanning.

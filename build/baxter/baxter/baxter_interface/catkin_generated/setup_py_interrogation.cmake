@@ -1,3 +1,4 @@
+set(baxter_interface_SETUP_PY_SETUP_MODULE "distutils.core")
 set(baxter_interface_SETUP_PY_VERSION "1.2.0")
 set(baxter_interface_SETUP_PY_SCRIPTS "")
 set(baxter_interface_SETUP_PY_PACKAGES "baxter_interface;baxter_control;baxter_dataflow;joint_trajectory_action;gripper_action;head_action")

@@ -1,8 +1,8 @@
-# Install script for directory: /home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs
+# Install script for directory: /home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/vagrant/ros_ws/install")
+  set(CMAKE_INSTALL_PREFIX "/home/alex/ros_ws/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,87 +39,87 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/msg" TYPE FILE FILES
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AnalogIOState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AnalogIOStates.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AnalogOutputCommand.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AssemblyState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AssemblyStates.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CameraControl.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CameraSettings.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CollisionAvoidanceState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CollisionDetectionState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/DigitalIOState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/DigitalIOStates.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/DigitalOutputCommand.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndEffectorCommand.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndEffectorProperties.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndEffectorState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndpointState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndpointStates.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/HeadPanCommand.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/HeadState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/JointCommand.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/NavigatorState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/NavigatorStates.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/RobustControllerStatus.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/SEAJointState.msg"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/URDFConfiguration.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AnalogIOState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AnalogIOStates.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AnalogOutputCommand.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AssemblyState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/AssemblyStates.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CameraControl.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CameraSettings.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CollisionAvoidanceState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/CollisionDetectionState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/DigitalIOState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/DigitalIOStates.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/DigitalOutputCommand.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndEffectorCommand.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndEffectorProperties.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndEffectorState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndpointState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/EndpointStates.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/HeadPanCommand.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/HeadState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/JointCommand.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/NavigatorState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/NavigatorStates.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/RobustControllerStatus.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/SEAJointState.msg"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/msg/URDFConfiguration.msg"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/srv" TYPE FILE FILES
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/CloseCamera.srv"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/ListCameras.srv"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/OpenCamera.srv"
-    "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/SolvePositionIK.srv"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/CloseCamera.srv"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/ListCameras.srv"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/OpenCamera.srv"
+    "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/srv/SolvePositionIK.srv"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/cmake" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgs-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/cmake" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgs-msg-paths.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/devel/include/baxter_core_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/alex/ros_ws/devel/include/baxter_core_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/devel/share/roseus/ros/baxter_core_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/alex/ros_ws/devel/share/roseus/ros/baxter_core_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/alex/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/devel/share/gennodejs/ros/baxter_core_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/alex/ros_ws/devel/share/gennodejs/ros/baxter_core_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs")
+  execute_process(COMMAND "/usr/bin/python2" -m compileall "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/alex/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgs.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgs.pc")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/cmake" TYPE FILE FILES "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgs-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/cmake" TYPE FILE FILES "/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgs-msg-extras.cmake")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs/cmake" TYPE FILE FILES
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgsConfig.cmake"
-    "/home/vagrant/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgsConfig-version.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgsConfig.cmake"
+    "/home/alex/ros_ws/build/baxter/baxter/baxter_common/baxter_core_msgs/catkin_generated/installspace/baxter_core_msgsConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs" TYPE FILE FILES "/home/vagrant/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/baxter_core_msgs" TYPE FILE FILES "/home/alex/ros_ws/src/baxter/baxter/baxter_common/baxter_core_msgs/package.xml")
 endif()
 

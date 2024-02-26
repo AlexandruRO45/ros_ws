@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/vagrant/ros_ws/src
+CMAKE_SOURCE_DIR = /home/alex/ros_ws/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/vagrant/ros_ws/build
+CMAKE_BINARY_DIR = /home/alex/ros_ws/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/ros_ws/build/CMakeFiles /home/vagrant/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/progress.marks
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/vagrant/ros_ws/build/CMakeFiles 0
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/alex/ros_ws/build/CMakeFiles /home/alex/ros_ws/build/baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/progress.marks
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alex/ros_ws/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/clean
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/preinstall
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/preinstall
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ gazebo_ros_elevator: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros
 
 # fast build rule for target.
 gazebo_ros_elevator/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build
 .PHONY : gazebo_ros_elevator/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ gazebo_ros_camera: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_c
 
 # fast build rule for target.
 gazebo_ros_camera/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build
 .PHONY : gazebo_ros_camera/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ gazebo_ros_vacuum_gripper: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gaze
 
 # fast build rule for target.
 gazebo_ros_vacuum_gripper/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build
 .PHONY : gazebo_ros_vacuum_gripper/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/rule
 
 # Convenience name for target.
@@ -224,12 +224,12 @@ gazebo_ros_camera_utils: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo
 
 # fast build rule for target.
 gazebo_ros_camera_utils/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build
 .PHONY : gazebo_ros_camera_utils/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -239,12 +239,12 @@ diagnostic_msgs_generate_messages_cpp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMa
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_cpp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_cpp.dir/build
 .PHONY : diagnostic_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/rule
 
 # Convenience name for target.
@@ -254,12 +254,12 @@ gazebo_ros_prosilica: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ro
 
 # fast build rule for target.
 gazebo_ros_prosilica/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build
 .PHONY : gazebo_ros_prosilica/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/rule
 
 # Convenience name for target.
@@ -269,12 +269,12 @@ gazebo_ros_utils: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ut
 
 # fast build rule for target.
 gazebo_ros_utils/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build
 .PHONY : gazebo_ros_utils/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/rule
 
 # Convenience name for target.
@@ -284,12 +284,12 @@ vision_reconfigure: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reco
 
 # fast build rule for target.
 vision_reconfigure/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build
 .PHONY : vision_reconfigure/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -299,12 +299,12 @@ polled_camera_generate_messages_cpp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMake
 
 # fast build rule for target.
 polled_camera_generate_messages_cpp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_cpp.dir/build
 .PHONY : polled_camera_generate_messages_cpp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/rule
 
 # Convenience name for target.
@@ -314,12 +314,12 @@ camera_synchronizer: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_syn
 
 # fast build rule for target.
 camera_synchronizer/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build
 .PHONY : camera_synchronizer/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/rule
 
 # Convenience name for target.
@@ -329,12 +329,12 @@ gazebo_ros_planar_move: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_
 
 # fast build rule for target.
 gazebo_ros_planar_move/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build
 .PHONY : gazebo_ros_planar_move/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/rule
 
 # Convenience name for target.
@@ -344,12 +344,12 @@ hokuyo_node: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/ru
 
 # fast build rule for target.
 hokuyo_node/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build
 .PHONY : hokuyo_node/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/rule
 
 # Convenience name for target.
@@ -359,12 +359,12 @@ gazebo_ros_projector: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ro
 
 # fast build rule for target.
 gazebo_ros_projector/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build
 .PHONY : gazebo_ros_projector/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/rule
 
 # Convenience name for target.
@@ -374,12 +374,12 @@ gazebo_plugins_gencfg: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_p
 
 # fast build rule for target.
 gazebo_plugins_gencfg/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_plugins_gencfg.dir/build
 .PHONY : gazebo_plugins_gencfg/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -389,12 +389,12 @@ diagnostic_msgs_generate_messages_py: baxter/gazebo_ros_pkgs/gazebo_plugins/CMak
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_py/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_py.dir/build
 .PHONY : diagnostic_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -404,12 +404,12 @@ nodelet_generate_messages_eus: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/
 
 # fast build rule for target.
 nodelet_generate_messages_eus/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_eus.dir/build
 .PHONY : nodelet_generate_messages_eus/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -419,12 +419,12 @@ diagnostic_msgs_generate_messages_lisp: baxter/gazebo_ros_pkgs/gazebo_plugins/CM
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_lisp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_lisp.dir/build
 .PHONY : diagnostic_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -434,12 +434,12 @@ polled_camera_generate_messages_py: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeF
 
 # fast build rule for target.
 polled_camera_generate_messages_py/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_py.dir/build
 .PHONY : polled_camera_generate_messages_py/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -449,12 +449,12 @@ polled_camera_generate_messages_eus: baxter/gazebo_ros_pkgs/gazebo_plugins/CMake
 
 # fast build rule for target.
 polled_camera_generate_messages_eus/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_eus.dir/build
 .PHONY : polled_camera_generate_messages_eus/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -464,12 +464,12 @@ polled_camera_generate_messages_nodejs: baxter/gazebo_ros_pkgs/gazebo_plugins/CM
 
 # fast build rule for target.
 polled_camera_generate_messages_nodejs/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_nodejs.dir/build
 .PHONY : polled_camera_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/rule
 
 # Convenience name for target.
@@ -479,12 +479,12 @@ pub_joint_trajectory_test: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_
 
 # fast build rule for target.
 pub_joint_trajectory_test/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build
 .PHONY : pub_joint_trajectory_test/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -494,12 +494,12 @@ nodelet_generate_messages_nodejs: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFil
 
 # fast build rule for target.
 nodelet_generate_messages_nodejs/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_nodejs.dir/build
 .PHONY : nodelet_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -509,12 +509,12 @@ nodelet_generate_messages_cpp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/
 
 # fast build rule for target.
 nodelet_generate_messages_cpp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_cpp.dir/build
 .PHONY : nodelet_generate_messages_cpp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -524,12 +524,12 @@ bond_generate_messages_py: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond
 
 # fast build rule for target.
 bond_generate_messages_py/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_py.dir/build
 .PHONY : bond_generate_messages_py/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/rule
 
 # Convenience name for target.
@@ -539,12 +539,12 @@ MultiCameraPlugin: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraP
 
 # fast build rule for target.
 MultiCameraPlugin/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build
 .PHONY : MultiCameraPlugin/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -554,12 +554,12 @@ bond_generate_messages_eus: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bon
 
 # fast build rule for target.
 bond_generate_messages_eus/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_eus.dir/build
 .PHONY : bond_generate_messages_eus/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule
 
 # Convenience name for target.
@@ -569,12 +569,12 @@ _run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test
 
 # fast build rule for target.
 _run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build
 .PHONY : _run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -584,12 +584,12 @@ diagnostic_msgs_generate_messages_eus: baxter/gazebo_ros_pkgs/gazebo_plugins/CMa
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_eus/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_eus.dir/build
 .PHONY : diagnostic_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/rule
 
 # Convenience name for target.
@@ -599,12 +599,12 @@ gazebo_ros_tricycle_drive: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gaze
 
 # fast build rule for target.
 gazebo_ros_tricycle_drive/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build
 .PHONY : gazebo_ros_tricycle_drive/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -614,12 +614,12 @@ bond_generate_messages_cpp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bon
 
 # fast build rule for target.
 bond_generate_messages_cpp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_cpp.dir/build
 .PHONY : bond_generate_messages_cpp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/rule
 
 # Convenience name for target.
@@ -629,12 +629,12 @@ gazebo_ros_video: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vi
 
 # fast build rule for target.
 gazebo_ros_video/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build
 .PHONY : gazebo_ros_video/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -644,12 +644,12 @@ bond_generate_messages_lisp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bo
 
 # fast build rule for target.
 bond_generate_messages_lisp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_lisp.dir/build
 .PHONY : bond_generate_messages_lisp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
@@ -659,12 +659,12 @@ nav_msgs_generate_messages_cpp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles
 
 # fast build rule for target.
 nav_msgs_generate_messages_cpp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_cpp.dir/build
 .PHONY : nav_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/rule
 
 # Convenience name for target.
@@ -674,12 +674,12 @@ gazebo_ros_diff_drive: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_r
 
 # fast build rule for target.
 gazebo_ros_diff_drive/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build
 .PHONY : gazebo_ros_diff_drive/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -689,12 +689,12 @@ polled_camera_generate_messages_lisp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMak
 
 # fast build rule for target.
 polled_camera_generate_messages_lisp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/polled_camera_generate_messages_lisp.dir/build
 .PHONY : polled_camera_generate_messages_lisp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -704,12 +704,12 @@ nav_msgs_generate_messages_py: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/
 
 # fast build rule for target.
 nav_msgs_generate_messages_py/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_py.dir/build
 .PHONY : nav_msgs_generate_messages_py/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/rule
 
 # Convenience name for target.
@@ -719,12 +719,12 @@ gazebo_ros_openni_kinect: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazeb
 
 # fast build rule for target.
 gazebo_ros_openni_kinect/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build
 .PHONY : gazebo_ros_openni_kinect/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/rule
 
 # Convenience name for target.
@@ -734,12 +734,12 @@ gazebo_ros_p3d: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.
 
 # fast build rule for target.
 gazebo_ros_p3d/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build
 .PHONY : gazebo_ros_p3d/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/rule
 
 # Convenience name for target.
@@ -749,12 +749,12 @@ gazebo_ros_triggered_camera: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/ga
 
 # fast build rule for target.
 gazebo_ros_triggered_camera/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build
 .PHONY : gazebo_ros_triggered_camera/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -764,12 +764,12 @@ bond_generate_messages_nodejs: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/
 
 # fast build rule for target.
 bond_generate_messages_nodejs/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/bond_generate_messages_nodejs.dir/build
 .PHONY : bond_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/rule
 
 # Convenience name for target.
@@ -779,12 +779,12 @@ gazebo_ros_triggered_multicamera: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFil
 
 # fast build rule for target.
 gazebo_ros_triggered_multicamera/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build
 .PHONY : gazebo_ros_triggered_multicamera/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/rule
 
 # Convenience name for target.
@@ -794,12 +794,12 @@ gazebo_ros_depth_camera: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo
 
 # fast build rule for target.
 gazebo_ros_depth_camera/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build
 .PHONY : gazebo_ros_depth_camera/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
@@ -809,12 +809,12 @@ nav_msgs_generate_messages_eus: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles
 
 # fast build rule for target.
 nav_msgs_generate_messages_eus/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_eus.dir/build
 .PHONY : nav_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/rule
 
 # Convenience name for target.
@@ -824,12 +824,12 @@ gazebo_ros_gpu_laser: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ro
 
 # fast build rule for target.
 gazebo_ros_gpu_laser/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build
 .PHONY : gazebo_ros_gpu_laser/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/rule
 
 # Convenience name for target.
@@ -839,12 +839,12 @@ gazebo_ros_harness: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_
 
 # fast build rule for target.
 gazebo_ros_harness/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build
 .PHONY : gazebo_ros_harness/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/rule
 
 # Convenience name for target.
@@ -854,12 +854,12 @@ gazebo_ros_joint_pose_trajectory: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFil
 
 # fast build rule for target.
 gazebo_ros_joint_pose_trajectory/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build
 .PHONY : gazebo_ros_joint_pose_trajectory/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -869,12 +869,12 @@ diagnostic_msgs_generate_messages_nodejs: baxter/gazebo_ros_pkgs/gazebo_plugins/
 
 # fast build rule for target.
 diagnostic_msgs_generate_messages_nodejs/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/diagnostic_msgs_generate_messages_nodejs.dir/build
 .PHONY : diagnostic_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/rule
 
 # Convenience name for target.
@@ -884,12 +884,12 @@ gazebo_ros_laser: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_la
 
 # fast build rule for target.
 gazebo_ros_laser/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build
 .PHONY : gazebo_ros_laser/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/rule
 
 # Convenience name for target.
@@ -899,12 +899,12 @@ gazebo_ros_block_laser: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_
 
 # fast build rule for target.
 gazebo_ros_block_laser/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build
 .PHONY : gazebo_ros_block_laser/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/rule
 
 # Convenience name for target.
@@ -914,12 +914,12 @@ gazebo_ros_multicamera: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_
 
 # fast build rule for target.
 gazebo_ros_multicamera/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build
 .PHONY : gazebo_ros_multicamera/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/rule
 
 # Convenience name for target.
@@ -929,12 +929,12 @@ gazebo_ros_f3d: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.
 
 # fast build rule for target.
 gazebo_ros_f3d/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build
 .PHONY : gazebo_ros_f3d/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/rule
 
 # Convenience name for target.
@@ -944,12 +944,12 @@ gazebo_ros_range: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ra
 
 # fast build rule for target.
 gazebo_ros_range/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build
 .PHONY : gazebo_ros_range/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/rule
 
 # Convenience name for target.
@@ -959,12 +959,12 @@ nodelet_generate_messages_py: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/n
 
 # fast build rule for target.
 nodelet_generate_messages_py/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_py.dir/build
 .PHONY : nodelet_generate_messages_py/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/rule
 
 # Convenience name for target.
@@ -974,12 +974,12 @@ gazebo_ros_imu_sensor: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_r
 
 # fast build rule for target.
 gazebo_ros_imu_sensor/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build
 .PHONY : gazebo_ros_imu_sensor/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/rule
 
 # Convenience name for target.
@@ -989,12 +989,12 @@ gazebo_ros_bumper: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_b
 
 # fast build rule for target.
 gazebo_ros_bumper/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build
 .PHONY : gazebo_ros_bumper/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
@@ -1004,12 +1004,12 @@ nav_msgs_generate_messages_nodejs: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFi
 
 # fast build rule for target.
 nav_msgs_generate_messages_nodejs/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_nodejs.dir/build
 .PHONY : nav_msgs_generate_messages_nodejs/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/rule
 
 # Convenience name for target.
@@ -1019,12 +1019,12 @@ gazebo_ros_imu: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.
 
 # fast build rule for target.
 gazebo_ros_imu/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build
 .PHONY : gazebo_ros_imu/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/rule
 
 # Convenience name for target.
@@ -1034,12 +1034,12 @@ gazebo_ros_force: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_fo
 
 # fast build rule for target.
 gazebo_ros_force/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build
 .PHONY : gazebo_ros_force/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/rule
 
 # Convenience name for target.
@@ -1049,12 +1049,12 @@ gazebo_ros_joint_trajectory: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/ga
 
 # fast build rule for target.
 gazebo_ros_joint_trajectory/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build
 .PHONY : gazebo_ros_joint_trajectory/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/rule
 
 # Convenience name for target.
@@ -1064,12 +1064,12 @@ gazebo_ros_template: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros
 
 # fast build rule for target.
 gazebo_ros_template/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build
 .PHONY : gazebo_ros_template/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1079,12 +1079,12 @@ nodelet_generate_messages_lisp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles
 
 # fast build rule for target.
 nodelet_generate_messages_lisp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nodelet_generate_messages_lisp.dir/build
 .PHONY : nodelet_generate_messages_lisp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/rule
 
 # Convenience name for target.
@@ -1094,12 +1094,12 @@ _run_tests_gazebo_plugins: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run
 
 # fast build rule for target.
 _run_tests_gazebo_plugins/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins.dir/build
 .PHONY : _run_tests_gazebo_plugins/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/rule
 
 # Convenience name for target.
@@ -1109,12 +1109,12 @@ gazebo_ros_hand_of_god: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_
 
 # fast build rule for target.
 gazebo_ros_hand_of_god/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build
 .PHONY : gazebo_ros_hand_of_god/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/rule
 
 # Convenience name for target.
@@ -1124,12 +1124,12 @@ gazebo_ros_joint_state_publisher: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFil
 
 # fast build rule for target.
 gazebo_ros_joint_state_publisher/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build
 .PHONY : gazebo_ros_joint_state_publisher/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/rule
 
 # Convenience name for target.
@@ -1139,12 +1139,12 @@ gazebo_ros_skid_steer_drive: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/ga
 
 # fast build rule for target.
 gazebo_ros_skid_steer_drive/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build
 .PHONY : gazebo_ros_skid_steer_drive/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/rule
 
 # Convenience name for target.
@@ -1154,12 +1154,12 @@ gazebo_ros_ft_sensor: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ro
 
 # fast build rule for target.
 gazebo_ros_ft_sensor/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build
 .PHONY : gazebo_ros_ft_sensor/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/rule
 
 # Convenience name for target.
@@ -1169,12 +1169,12 @@ _run_tests_gazebo_plugins_rostest: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFi
 
 # fast build rule for target.
 _run_tests_gazebo_plugins_rostest/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest.dir/build
 .PHONY : _run_tests_gazebo_plugins_rostest/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
@@ -1184,12 +1184,12 @@ nav_msgs_generate_messages_lisp: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFile
 
 # fast build rule for target.
 nav_msgs_generate_messages_lisp/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/nav_msgs_generate_messages_lisp.dir/build
 .PHONY : nav_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/rule
 
 # Convenience name for target.
@@ -1199,12 +1199,12 @@ set_model_state-test: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model
 
 # fast build rule for target.
 set_model_state-test/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build
 .PHONY : set_model_state-test/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/rule
 
 # Convenience name for target.
@@ -1214,12 +1214,12 @@ clean_test_results_gazebo_plugins: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFi
 
 # fast build rule for target.
 clean_test_results_gazebo_plugins/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/clean_test_results_gazebo_plugins.dir/build
 .PHONY : clean_test_results_gazebo_plugins/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/rule
 
 # Convenience name for target.
@@ -1229,12 +1229,12 @@ run_tests_gazebo_plugins: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_t
 
 # fast build rule for target.
 run_tests_gazebo_plugins/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins.dir/build
 .PHONY : run_tests_gazebo_plugins/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/rule
 
 # Convenience name for target.
@@ -1244,12 +1244,12 @@ run_tests_gazebo_plugins_rostest: baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFil
 
 # fast build rule for target.
 run_tests_gazebo_plugins_rostest/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest.dir/build
 .PHONY : run_tests_gazebo_plugins_rostest/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/rule
 
 # Convenience name for target.
@@ -1259,12 +1259,12 @@ run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.
 
 # fast build rule for target.
 run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test.dir/build
 .PHONY : run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule
 
 # Convenience name for target.
@@ -1274,12 +1274,12 @@ run_tests_gazebo_plugins_rostest_test_range_range_plugin.test: baxter/gazebo_ros
 
 # fast build rule for target.
 run_tests_gazebo_plugins_rostest_test_range_range_plugin.test/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build
 .PHONY : run_tests_gazebo_plugins_rostest_test_range_range_plugin.test/fast
 
 # Convenience name for target.
 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule
+	cd /home/alex/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule
 .PHONY : baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/rule
 
 # Convenience name for target.
@@ -1289,7 +1289,7 @@ _run_tests_gazebo_plugins_rostest_test_range_range_plugin.test: baxter/gazebo_ro
 
 # fast build rule for target.
 _run_tests_gazebo_plugins_rostest_test_range_range_plugin.test/fast:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/_run_tests_gazebo_plugins_rostest_test_range_range_plugin.test.dir/build
 .PHONY : _run_tests_gazebo_plugins_rostest_test_range_range_plugin.test/fast
 
 src/MultiCameraPlugin.o: src/MultiCameraPlugin.cpp.o
@@ -1298,7 +1298,7 @@ src/MultiCameraPlugin.o: src/MultiCameraPlugin.cpp.o
 
 # target to build an object file
 src/MultiCameraPlugin.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.o
 .PHONY : src/MultiCameraPlugin.cpp.o
 
 src/MultiCameraPlugin.i: src/MultiCameraPlugin.cpp.i
@@ -1307,7 +1307,7 @@ src/MultiCameraPlugin.i: src/MultiCameraPlugin.cpp.i
 
 # target to preprocess a source file
 src/MultiCameraPlugin.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.i
 .PHONY : src/MultiCameraPlugin.cpp.i
 
 src/MultiCameraPlugin.s: src/MultiCameraPlugin.cpp.s
@@ -1316,7 +1316,7 @@ src/MultiCameraPlugin.s: src/MultiCameraPlugin.cpp.s
 
 # target to generate assembly for a file
 src/MultiCameraPlugin.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/MultiCameraPlugin.dir/src/MultiCameraPlugin.cpp.s
 .PHONY : src/MultiCameraPlugin.cpp.s
 
 src/camera_synchronizer.o: src/camera_synchronizer.cpp.o
@@ -1325,7 +1325,7 @@ src/camera_synchronizer.o: src/camera_synchronizer.cpp.o
 
 # target to build an object file
 src/camera_synchronizer.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.o
 .PHONY : src/camera_synchronizer.cpp.o
 
 src/camera_synchronizer.i: src/camera_synchronizer.cpp.i
@@ -1334,7 +1334,7 @@ src/camera_synchronizer.i: src/camera_synchronizer.cpp.i
 
 # target to preprocess a source file
 src/camera_synchronizer.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.i
 .PHONY : src/camera_synchronizer.cpp.i
 
 src/camera_synchronizer.s: src/camera_synchronizer.cpp.s
@@ -1343,7 +1343,7 @@ src/camera_synchronizer.s: src/camera_synchronizer.cpp.s
 
 # target to generate assembly for a file
 src/camera_synchronizer.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/camera_synchronizer.dir/src/camera_synchronizer.cpp.s
 .PHONY : src/camera_synchronizer.cpp.s
 
 src/gazebo_ros_block_laser.o: src/gazebo_ros_block_laser.cpp.o
@@ -1352,7 +1352,7 @@ src/gazebo_ros_block_laser.o: src/gazebo_ros_block_laser.cpp.o
 
 # target to build an object file
 src/gazebo_ros_block_laser.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.o
 .PHONY : src/gazebo_ros_block_laser.cpp.o
 
 src/gazebo_ros_block_laser.i: src/gazebo_ros_block_laser.cpp.i
@@ -1361,7 +1361,7 @@ src/gazebo_ros_block_laser.i: src/gazebo_ros_block_laser.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_block_laser.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.i
 .PHONY : src/gazebo_ros_block_laser.cpp.i
 
 src/gazebo_ros_block_laser.s: src/gazebo_ros_block_laser.cpp.s
@@ -1370,7 +1370,7 @@ src/gazebo_ros_block_laser.s: src/gazebo_ros_block_laser.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_block_laser.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_block_laser.dir/src/gazebo_ros_block_laser.cpp.s
 .PHONY : src/gazebo_ros_block_laser.cpp.s
 
 src/gazebo_ros_bumper.o: src/gazebo_ros_bumper.cpp.o
@@ -1379,7 +1379,7 @@ src/gazebo_ros_bumper.o: src/gazebo_ros_bumper.cpp.o
 
 # target to build an object file
 src/gazebo_ros_bumper.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.o
 .PHONY : src/gazebo_ros_bumper.cpp.o
 
 src/gazebo_ros_bumper.i: src/gazebo_ros_bumper.cpp.i
@@ -1388,7 +1388,7 @@ src/gazebo_ros_bumper.i: src/gazebo_ros_bumper.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_bumper.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.i
 .PHONY : src/gazebo_ros_bumper.cpp.i
 
 src/gazebo_ros_bumper.s: src/gazebo_ros_bumper.cpp.s
@@ -1397,7 +1397,7 @@ src/gazebo_ros_bumper.s: src/gazebo_ros_bumper.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_bumper.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_bumper.dir/src/gazebo_ros_bumper.cpp.s
 .PHONY : src/gazebo_ros_bumper.cpp.s
 
 src/gazebo_ros_camera.o: src/gazebo_ros_camera.cpp.o
@@ -1406,7 +1406,7 @@ src/gazebo_ros_camera.o: src/gazebo_ros_camera.cpp.o
 
 # target to build an object file
 src/gazebo_ros_camera.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/src/gazebo_ros_camera.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/src/gazebo_ros_camera.cpp.o
 .PHONY : src/gazebo_ros_camera.cpp.o
 
 src/gazebo_ros_camera.i: src/gazebo_ros_camera.cpp.i
@@ -1415,7 +1415,7 @@ src/gazebo_ros_camera.i: src/gazebo_ros_camera.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_camera.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/src/gazebo_ros_camera.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/src/gazebo_ros_camera.cpp.i
 .PHONY : src/gazebo_ros_camera.cpp.i
 
 src/gazebo_ros_camera.s: src/gazebo_ros_camera.cpp.s
@@ -1424,7 +1424,7 @@ src/gazebo_ros_camera.s: src/gazebo_ros_camera.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_camera.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/src/gazebo_ros_camera.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera.dir/src/gazebo_ros_camera.cpp.s
 .PHONY : src/gazebo_ros_camera.cpp.s
 
 src/gazebo_ros_camera_utils.o: src/gazebo_ros_camera_utils.cpp.o
@@ -1433,7 +1433,7 @@ src/gazebo_ros_camera_utils.o: src/gazebo_ros_camera_utils.cpp.o
 
 # target to build an object file
 src/gazebo_ros_camera_utils.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/src/gazebo_ros_camera_utils.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/src/gazebo_ros_camera_utils.cpp.o
 .PHONY : src/gazebo_ros_camera_utils.cpp.o
 
 src/gazebo_ros_camera_utils.i: src/gazebo_ros_camera_utils.cpp.i
@@ -1442,7 +1442,7 @@ src/gazebo_ros_camera_utils.i: src/gazebo_ros_camera_utils.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_camera_utils.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/src/gazebo_ros_camera_utils.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/src/gazebo_ros_camera_utils.cpp.i
 .PHONY : src/gazebo_ros_camera_utils.cpp.i
 
 src/gazebo_ros_camera_utils.s: src/gazebo_ros_camera_utils.cpp.s
@@ -1451,7 +1451,7 @@ src/gazebo_ros_camera_utils.s: src/gazebo_ros_camera_utils.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_camera_utils.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/src/gazebo_ros_camera_utils.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_camera_utils.dir/src/gazebo_ros_camera_utils.cpp.s
 .PHONY : src/gazebo_ros_camera_utils.cpp.s
 
 src/gazebo_ros_depth_camera.o: src/gazebo_ros_depth_camera.cpp.o
@@ -1460,7 +1460,7 @@ src/gazebo_ros_depth_camera.o: src/gazebo_ros_depth_camera.cpp.o
 
 # target to build an object file
 src/gazebo_ros_depth_camera.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.o
 .PHONY : src/gazebo_ros_depth_camera.cpp.o
 
 src/gazebo_ros_depth_camera.i: src/gazebo_ros_depth_camera.cpp.i
@@ -1469,7 +1469,7 @@ src/gazebo_ros_depth_camera.i: src/gazebo_ros_depth_camera.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_depth_camera.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.i
 .PHONY : src/gazebo_ros_depth_camera.cpp.i
 
 src/gazebo_ros_depth_camera.s: src/gazebo_ros_depth_camera.cpp.s
@@ -1478,7 +1478,7 @@ src/gazebo_ros_depth_camera.s: src/gazebo_ros_depth_camera.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_depth_camera.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_depth_camera.dir/src/gazebo_ros_depth_camera.cpp.s
 .PHONY : src/gazebo_ros_depth_camera.cpp.s
 
 src/gazebo_ros_diff_drive.o: src/gazebo_ros_diff_drive.cpp.o
@@ -1487,7 +1487,7 @@ src/gazebo_ros_diff_drive.o: src/gazebo_ros_diff_drive.cpp.o
 
 # target to build an object file
 src/gazebo_ros_diff_drive.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/src/gazebo_ros_diff_drive.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/src/gazebo_ros_diff_drive.cpp.o
 .PHONY : src/gazebo_ros_diff_drive.cpp.o
 
 src/gazebo_ros_diff_drive.i: src/gazebo_ros_diff_drive.cpp.i
@@ -1496,7 +1496,7 @@ src/gazebo_ros_diff_drive.i: src/gazebo_ros_diff_drive.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_diff_drive.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/src/gazebo_ros_diff_drive.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/src/gazebo_ros_diff_drive.cpp.i
 .PHONY : src/gazebo_ros_diff_drive.cpp.i
 
 src/gazebo_ros_diff_drive.s: src/gazebo_ros_diff_drive.cpp.s
@@ -1505,7 +1505,7 @@ src/gazebo_ros_diff_drive.s: src/gazebo_ros_diff_drive.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_diff_drive.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/src/gazebo_ros_diff_drive.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_diff_drive.dir/src/gazebo_ros_diff_drive.cpp.s
 .PHONY : src/gazebo_ros_diff_drive.cpp.s
 
 src/gazebo_ros_elevator.o: src/gazebo_ros_elevator.cpp.o
@@ -1514,7 +1514,7 @@ src/gazebo_ros_elevator.o: src/gazebo_ros_elevator.cpp.o
 
 # target to build an object file
 src/gazebo_ros_elevator.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/src/gazebo_ros_elevator.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/src/gazebo_ros_elevator.cpp.o
 .PHONY : src/gazebo_ros_elevator.cpp.o
 
 src/gazebo_ros_elevator.i: src/gazebo_ros_elevator.cpp.i
@@ -1523,7 +1523,7 @@ src/gazebo_ros_elevator.i: src/gazebo_ros_elevator.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_elevator.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/src/gazebo_ros_elevator.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/src/gazebo_ros_elevator.cpp.i
 .PHONY : src/gazebo_ros_elevator.cpp.i
 
 src/gazebo_ros_elevator.s: src/gazebo_ros_elevator.cpp.s
@@ -1532,7 +1532,7 @@ src/gazebo_ros_elevator.s: src/gazebo_ros_elevator.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_elevator.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/src/gazebo_ros_elevator.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_elevator.dir/src/gazebo_ros_elevator.cpp.s
 .PHONY : src/gazebo_ros_elevator.cpp.s
 
 src/gazebo_ros_f3d.o: src/gazebo_ros_f3d.cpp.o
@@ -1541,7 +1541,7 @@ src/gazebo_ros_f3d.o: src/gazebo_ros_f3d.cpp.o
 
 # target to build an object file
 src/gazebo_ros_f3d.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.o
 .PHONY : src/gazebo_ros_f3d.cpp.o
 
 src/gazebo_ros_f3d.i: src/gazebo_ros_f3d.cpp.i
@@ -1550,7 +1550,7 @@ src/gazebo_ros_f3d.i: src/gazebo_ros_f3d.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_f3d.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.i
 .PHONY : src/gazebo_ros_f3d.cpp.i
 
 src/gazebo_ros_f3d.s: src/gazebo_ros_f3d.cpp.s
@@ -1559,7 +1559,7 @@ src/gazebo_ros_f3d.s: src/gazebo_ros_f3d.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_f3d.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_f3d.dir/src/gazebo_ros_f3d.cpp.s
 .PHONY : src/gazebo_ros_f3d.cpp.s
 
 src/gazebo_ros_force.o: src/gazebo_ros_force.cpp.o
@@ -1568,7 +1568,7 @@ src/gazebo_ros_force.o: src/gazebo_ros_force.cpp.o
 
 # target to build an object file
 src/gazebo_ros_force.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/src/gazebo_ros_force.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/src/gazebo_ros_force.cpp.o
 .PHONY : src/gazebo_ros_force.cpp.o
 
 src/gazebo_ros_force.i: src/gazebo_ros_force.cpp.i
@@ -1577,7 +1577,7 @@ src/gazebo_ros_force.i: src/gazebo_ros_force.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_force.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/src/gazebo_ros_force.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/src/gazebo_ros_force.cpp.i
 .PHONY : src/gazebo_ros_force.cpp.i
 
 src/gazebo_ros_force.s: src/gazebo_ros_force.cpp.s
@@ -1586,7 +1586,7 @@ src/gazebo_ros_force.s: src/gazebo_ros_force.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_force.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/src/gazebo_ros_force.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_force.dir/src/gazebo_ros_force.cpp.s
 .PHONY : src/gazebo_ros_force.cpp.s
 
 src/gazebo_ros_ft_sensor.o: src/gazebo_ros_ft_sensor.cpp.o
@@ -1595,7 +1595,7 @@ src/gazebo_ros_ft_sensor.o: src/gazebo_ros_ft_sensor.cpp.o
 
 # target to build an object file
 src/gazebo_ros_ft_sensor.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/src/gazebo_ros_ft_sensor.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/src/gazebo_ros_ft_sensor.cpp.o
 .PHONY : src/gazebo_ros_ft_sensor.cpp.o
 
 src/gazebo_ros_ft_sensor.i: src/gazebo_ros_ft_sensor.cpp.i
@@ -1604,7 +1604,7 @@ src/gazebo_ros_ft_sensor.i: src/gazebo_ros_ft_sensor.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_ft_sensor.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/src/gazebo_ros_ft_sensor.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/src/gazebo_ros_ft_sensor.cpp.i
 .PHONY : src/gazebo_ros_ft_sensor.cpp.i
 
 src/gazebo_ros_ft_sensor.s: src/gazebo_ros_ft_sensor.cpp.s
@@ -1613,7 +1613,7 @@ src/gazebo_ros_ft_sensor.s: src/gazebo_ros_ft_sensor.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_ft_sensor.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/src/gazebo_ros_ft_sensor.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_ft_sensor.dir/src/gazebo_ros_ft_sensor.cpp.s
 .PHONY : src/gazebo_ros_ft_sensor.cpp.s
 
 src/gazebo_ros_gpu_laser.o: src/gazebo_ros_gpu_laser.cpp.o
@@ -1622,7 +1622,7 @@ src/gazebo_ros_gpu_laser.o: src/gazebo_ros_gpu_laser.cpp.o
 
 # target to build an object file
 src/gazebo_ros_gpu_laser.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/src/gazebo_ros_gpu_laser.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/src/gazebo_ros_gpu_laser.cpp.o
 .PHONY : src/gazebo_ros_gpu_laser.cpp.o
 
 src/gazebo_ros_gpu_laser.i: src/gazebo_ros_gpu_laser.cpp.i
@@ -1631,7 +1631,7 @@ src/gazebo_ros_gpu_laser.i: src/gazebo_ros_gpu_laser.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_gpu_laser.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/src/gazebo_ros_gpu_laser.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/src/gazebo_ros_gpu_laser.cpp.i
 .PHONY : src/gazebo_ros_gpu_laser.cpp.i
 
 src/gazebo_ros_gpu_laser.s: src/gazebo_ros_gpu_laser.cpp.s
@@ -1640,7 +1640,7 @@ src/gazebo_ros_gpu_laser.s: src/gazebo_ros_gpu_laser.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_gpu_laser.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/src/gazebo_ros_gpu_laser.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_gpu_laser.dir/src/gazebo_ros_gpu_laser.cpp.s
 .PHONY : src/gazebo_ros_gpu_laser.cpp.s
 
 src/gazebo_ros_hand_of_god.o: src/gazebo_ros_hand_of_god.cpp.o
@@ -1649,7 +1649,7 @@ src/gazebo_ros_hand_of_god.o: src/gazebo_ros_hand_of_god.cpp.o
 
 # target to build an object file
 src/gazebo_ros_hand_of_god.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.o
 .PHONY : src/gazebo_ros_hand_of_god.cpp.o
 
 src/gazebo_ros_hand_of_god.i: src/gazebo_ros_hand_of_god.cpp.i
@@ -1658,7 +1658,7 @@ src/gazebo_ros_hand_of_god.i: src/gazebo_ros_hand_of_god.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_hand_of_god.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.i
 .PHONY : src/gazebo_ros_hand_of_god.cpp.i
 
 src/gazebo_ros_hand_of_god.s: src/gazebo_ros_hand_of_god.cpp.s
@@ -1667,7 +1667,7 @@ src/gazebo_ros_hand_of_god.s: src/gazebo_ros_hand_of_god.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_hand_of_god.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_hand_of_god.dir/src/gazebo_ros_hand_of_god.cpp.s
 .PHONY : src/gazebo_ros_hand_of_god.cpp.s
 
 src/gazebo_ros_harness.o: src/gazebo_ros_harness.cpp.o
@@ -1676,7 +1676,7 @@ src/gazebo_ros_harness.o: src/gazebo_ros_harness.cpp.o
 
 # target to build an object file
 src/gazebo_ros_harness.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.o
 .PHONY : src/gazebo_ros_harness.cpp.o
 
 src/gazebo_ros_harness.i: src/gazebo_ros_harness.cpp.i
@@ -1685,7 +1685,7 @@ src/gazebo_ros_harness.i: src/gazebo_ros_harness.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_harness.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.i
 .PHONY : src/gazebo_ros_harness.cpp.i
 
 src/gazebo_ros_harness.s: src/gazebo_ros_harness.cpp.s
@@ -1694,7 +1694,7 @@ src/gazebo_ros_harness.s: src/gazebo_ros_harness.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_harness.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_harness.dir/src/gazebo_ros_harness.cpp.s
 .PHONY : src/gazebo_ros_harness.cpp.s
 
 src/gazebo_ros_imu.o: src/gazebo_ros_imu.cpp.o
@@ -1703,7 +1703,7 @@ src/gazebo_ros_imu.o: src/gazebo_ros_imu.cpp.o
 
 # target to build an object file
 src/gazebo_ros_imu.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.o
 .PHONY : src/gazebo_ros_imu.cpp.o
 
 src/gazebo_ros_imu.i: src/gazebo_ros_imu.cpp.i
@@ -1712,7 +1712,7 @@ src/gazebo_ros_imu.i: src/gazebo_ros_imu.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_imu.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.i
 .PHONY : src/gazebo_ros_imu.cpp.i
 
 src/gazebo_ros_imu.s: src/gazebo_ros_imu.cpp.s
@@ -1721,7 +1721,7 @@ src/gazebo_ros_imu.s: src/gazebo_ros_imu.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_imu.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu.dir/src/gazebo_ros_imu.cpp.s
 .PHONY : src/gazebo_ros_imu.cpp.s
 
 src/gazebo_ros_imu_sensor.o: src/gazebo_ros_imu_sensor.cpp.o
@@ -1730,7 +1730,7 @@ src/gazebo_ros_imu_sensor.o: src/gazebo_ros_imu_sensor.cpp.o
 
 # target to build an object file
 src/gazebo_ros_imu_sensor.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/src/gazebo_ros_imu_sensor.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/src/gazebo_ros_imu_sensor.cpp.o
 .PHONY : src/gazebo_ros_imu_sensor.cpp.o
 
 src/gazebo_ros_imu_sensor.i: src/gazebo_ros_imu_sensor.cpp.i
@@ -1739,7 +1739,7 @@ src/gazebo_ros_imu_sensor.i: src/gazebo_ros_imu_sensor.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_imu_sensor.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/src/gazebo_ros_imu_sensor.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/src/gazebo_ros_imu_sensor.cpp.i
 .PHONY : src/gazebo_ros_imu_sensor.cpp.i
 
 src/gazebo_ros_imu_sensor.s: src/gazebo_ros_imu_sensor.cpp.s
@@ -1748,7 +1748,7 @@ src/gazebo_ros_imu_sensor.s: src/gazebo_ros_imu_sensor.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_imu_sensor.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/src/gazebo_ros_imu_sensor.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_imu_sensor.dir/src/gazebo_ros_imu_sensor.cpp.s
 .PHONY : src/gazebo_ros_imu_sensor.cpp.s
 
 src/gazebo_ros_joint_pose_trajectory.o: src/gazebo_ros_joint_pose_trajectory.cpp.o
@@ -1757,7 +1757,7 @@ src/gazebo_ros_joint_pose_trajectory.o: src/gazebo_ros_joint_pose_trajectory.cpp
 
 # target to build an object file
 src/gazebo_ros_joint_pose_trajectory.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/src/gazebo_ros_joint_pose_trajectory.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/src/gazebo_ros_joint_pose_trajectory.cpp.o
 .PHONY : src/gazebo_ros_joint_pose_trajectory.cpp.o
 
 src/gazebo_ros_joint_pose_trajectory.i: src/gazebo_ros_joint_pose_trajectory.cpp.i
@@ -1766,7 +1766,7 @@ src/gazebo_ros_joint_pose_trajectory.i: src/gazebo_ros_joint_pose_trajectory.cpp
 
 # target to preprocess a source file
 src/gazebo_ros_joint_pose_trajectory.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/src/gazebo_ros_joint_pose_trajectory.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/src/gazebo_ros_joint_pose_trajectory.cpp.i
 .PHONY : src/gazebo_ros_joint_pose_trajectory.cpp.i
 
 src/gazebo_ros_joint_pose_trajectory.s: src/gazebo_ros_joint_pose_trajectory.cpp.s
@@ -1775,7 +1775,7 @@ src/gazebo_ros_joint_pose_trajectory.s: src/gazebo_ros_joint_pose_trajectory.cpp
 
 # target to generate assembly for a file
 src/gazebo_ros_joint_pose_trajectory.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/src/gazebo_ros_joint_pose_trajectory.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_pose_trajectory.dir/src/gazebo_ros_joint_pose_trajectory.cpp.s
 .PHONY : src/gazebo_ros_joint_pose_trajectory.cpp.s
 
 src/gazebo_ros_joint_state_publisher.o: src/gazebo_ros_joint_state_publisher.cpp.o
@@ -1784,7 +1784,7 @@ src/gazebo_ros_joint_state_publisher.o: src/gazebo_ros_joint_state_publisher.cpp
 
 # target to build an object file
 src/gazebo_ros_joint_state_publisher.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/src/gazebo_ros_joint_state_publisher.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/src/gazebo_ros_joint_state_publisher.cpp.o
 .PHONY : src/gazebo_ros_joint_state_publisher.cpp.o
 
 src/gazebo_ros_joint_state_publisher.i: src/gazebo_ros_joint_state_publisher.cpp.i
@@ -1793,7 +1793,7 @@ src/gazebo_ros_joint_state_publisher.i: src/gazebo_ros_joint_state_publisher.cpp
 
 # target to preprocess a source file
 src/gazebo_ros_joint_state_publisher.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/src/gazebo_ros_joint_state_publisher.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/src/gazebo_ros_joint_state_publisher.cpp.i
 .PHONY : src/gazebo_ros_joint_state_publisher.cpp.i
 
 src/gazebo_ros_joint_state_publisher.s: src/gazebo_ros_joint_state_publisher.cpp.s
@@ -1802,7 +1802,7 @@ src/gazebo_ros_joint_state_publisher.s: src/gazebo_ros_joint_state_publisher.cpp
 
 # target to generate assembly for a file
 src/gazebo_ros_joint_state_publisher.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/src/gazebo_ros_joint_state_publisher.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_state_publisher.dir/src/gazebo_ros_joint_state_publisher.cpp.s
 .PHONY : src/gazebo_ros_joint_state_publisher.cpp.s
 
 src/gazebo_ros_joint_trajectory.o: src/gazebo_ros_joint_trajectory.cpp.o
@@ -1811,7 +1811,7 @@ src/gazebo_ros_joint_trajectory.o: src/gazebo_ros_joint_trajectory.cpp.o
 
 # target to build an object file
 src/gazebo_ros_joint_trajectory.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/src/gazebo_ros_joint_trajectory.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/src/gazebo_ros_joint_trajectory.cpp.o
 .PHONY : src/gazebo_ros_joint_trajectory.cpp.o
 
 src/gazebo_ros_joint_trajectory.i: src/gazebo_ros_joint_trajectory.cpp.i
@@ -1820,7 +1820,7 @@ src/gazebo_ros_joint_trajectory.i: src/gazebo_ros_joint_trajectory.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_joint_trajectory.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/src/gazebo_ros_joint_trajectory.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/src/gazebo_ros_joint_trajectory.cpp.i
 .PHONY : src/gazebo_ros_joint_trajectory.cpp.i
 
 src/gazebo_ros_joint_trajectory.s: src/gazebo_ros_joint_trajectory.cpp.s
@@ -1829,7 +1829,7 @@ src/gazebo_ros_joint_trajectory.s: src/gazebo_ros_joint_trajectory.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_joint_trajectory.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/src/gazebo_ros_joint_trajectory.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_joint_trajectory.dir/src/gazebo_ros_joint_trajectory.cpp.s
 .PHONY : src/gazebo_ros_joint_trajectory.cpp.s
 
 src/gazebo_ros_laser.o: src/gazebo_ros_laser.cpp.o
@@ -1838,7 +1838,7 @@ src/gazebo_ros_laser.o: src/gazebo_ros_laser.cpp.o
 
 # target to build an object file
 src/gazebo_ros_laser.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/src/gazebo_ros_laser.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/src/gazebo_ros_laser.cpp.o
 .PHONY : src/gazebo_ros_laser.cpp.o
 
 src/gazebo_ros_laser.i: src/gazebo_ros_laser.cpp.i
@@ -1847,7 +1847,7 @@ src/gazebo_ros_laser.i: src/gazebo_ros_laser.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_laser.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/src/gazebo_ros_laser.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/src/gazebo_ros_laser.cpp.i
 .PHONY : src/gazebo_ros_laser.cpp.i
 
 src/gazebo_ros_laser.s: src/gazebo_ros_laser.cpp.s
@@ -1856,7 +1856,7 @@ src/gazebo_ros_laser.s: src/gazebo_ros_laser.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_laser.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/src/gazebo_ros_laser.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_laser.dir/src/gazebo_ros_laser.cpp.s
 .PHONY : src/gazebo_ros_laser.cpp.s
 
 src/gazebo_ros_multicamera.o: src/gazebo_ros_multicamera.cpp.o
@@ -1865,7 +1865,7 @@ src/gazebo_ros_multicamera.o: src/gazebo_ros_multicamera.cpp.o
 
 # target to build an object file
 src/gazebo_ros_multicamera.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/src/gazebo_ros_multicamera.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/src/gazebo_ros_multicamera.cpp.o
 .PHONY : src/gazebo_ros_multicamera.cpp.o
 
 src/gazebo_ros_multicamera.i: src/gazebo_ros_multicamera.cpp.i
@@ -1874,7 +1874,7 @@ src/gazebo_ros_multicamera.i: src/gazebo_ros_multicamera.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_multicamera.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/src/gazebo_ros_multicamera.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/src/gazebo_ros_multicamera.cpp.i
 .PHONY : src/gazebo_ros_multicamera.cpp.i
 
 src/gazebo_ros_multicamera.s: src/gazebo_ros_multicamera.cpp.s
@@ -1883,7 +1883,7 @@ src/gazebo_ros_multicamera.s: src/gazebo_ros_multicamera.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_multicamera.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/src/gazebo_ros_multicamera.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_multicamera.dir/src/gazebo_ros_multicamera.cpp.s
 .PHONY : src/gazebo_ros_multicamera.cpp.s
 
 src/gazebo_ros_openni_kinect.o: src/gazebo_ros_openni_kinect.cpp.o
@@ -1892,7 +1892,7 @@ src/gazebo_ros_openni_kinect.o: src/gazebo_ros_openni_kinect.cpp.o
 
 # target to build an object file
 src/gazebo_ros_openni_kinect.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/src/gazebo_ros_openni_kinect.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/src/gazebo_ros_openni_kinect.cpp.o
 .PHONY : src/gazebo_ros_openni_kinect.cpp.o
 
 src/gazebo_ros_openni_kinect.i: src/gazebo_ros_openni_kinect.cpp.i
@@ -1901,7 +1901,7 @@ src/gazebo_ros_openni_kinect.i: src/gazebo_ros_openni_kinect.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_openni_kinect.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/src/gazebo_ros_openni_kinect.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/src/gazebo_ros_openni_kinect.cpp.i
 .PHONY : src/gazebo_ros_openni_kinect.cpp.i
 
 src/gazebo_ros_openni_kinect.s: src/gazebo_ros_openni_kinect.cpp.s
@@ -1910,7 +1910,7 @@ src/gazebo_ros_openni_kinect.s: src/gazebo_ros_openni_kinect.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_openni_kinect.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/src/gazebo_ros_openni_kinect.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_openni_kinect.dir/src/gazebo_ros_openni_kinect.cpp.s
 .PHONY : src/gazebo_ros_openni_kinect.cpp.s
 
 src/gazebo_ros_p3d.o: src/gazebo_ros_p3d.cpp.o
@@ -1919,7 +1919,7 @@ src/gazebo_ros_p3d.o: src/gazebo_ros_p3d.cpp.o
 
 # target to build an object file
 src/gazebo_ros_p3d.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/src/gazebo_ros_p3d.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/src/gazebo_ros_p3d.cpp.o
 .PHONY : src/gazebo_ros_p3d.cpp.o
 
 src/gazebo_ros_p3d.i: src/gazebo_ros_p3d.cpp.i
@@ -1928,7 +1928,7 @@ src/gazebo_ros_p3d.i: src/gazebo_ros_p3d.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_p3d.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/src/gazebo_ros_p3d.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/src/gazebo_ros_p3d.cpp.i
 .PHONY : src/gazebo_ros_p3d.cpp.i
 
 src/gazebo_ros_p3d.s: src/gazebo_ros_p3d.cpp.s
@@ -1937,7 +1937,7 @@ src/gazebo_ros_p3d.s: src/gazebo_ros_p3d.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_p3d.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/src/gazebo_ros_p3d.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_p3d.dir/src/gazebo_ros_p3d.cpp.s
 .PHONY : src/gazebo_ros_p3d.cpp.s
 
 src/gazebo_ros_planar_move.o: src/gazebo_ros_planar_move.cpp.o
@@ -1946,7 +1946,7 @@ src/gazebo_ros_planar_move.o: src/gazebo_ros_planar_move.cpp.o
 
 # target to build an object file
 src/gazebo_ros_planar_move.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.o
 .PHONY : src/gazebo_ros_planar_move.cpp.o
 
 src/gazebo_ros_planar_move.i: src/gazebo_ros_planar_move.cpp.i
@@ -1955,7 +1955,7 @@ src/gazebo_ros_planar_move.i: src/gazebo_ros_planar_move.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_planar_move.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.i
 .PHONY : src/gazebo_ros_planar_move.cpp.i
 
 src/gazebo_ros_planar_move.s: src/gazebo_ros_planar_move.cpp.s
@@ -1964,7 +1964,7 @@ src/gazebo_ros_planar_move.s: src/gazebo_ros_planar_move.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_planar_move.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_planar_move.dir/src/gazebo_ros_planar_move.cpp.s
 .PHONY : src/gazebo_ros_planar_move.cpp.s
 
 src/gazebo_ros_projector.o: src/gazebo_ros_projector.cpp.o
@@ -1973,7 +1973,7 @@ src/gazebo_ros_projector.o: src/gazebo_ros_projector.cpp.o
 
 # target to build an object file
 src/gazebo_ros_projector.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/src/gazebo_ros_projector.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/src/gazebo_ros_projector.cpp.o
 .PHONY : src/gazebo_ros_projector.cpp.o
 
 src/gazebo_ros_projector.i: src/gazebo_ros_projector.cpp.i
@@ -1982,7 +1982,7 @@ src/gazebo_ros_projector.i: src/gazebo_ros_projector.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_projector.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/src/gazebo_ros_projector.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/src/gazebo_ros_projector.cpp.i
 .PHONY : src/gazebo_ros_projector.cpp.i
 
 src/gazebo_ros_projector.s: src/gazebo_ros_projector.cpp.s
@@ -1991,7 +1991,7 @@ src/gazebo_ros_projector.s: src/gazebo_ros_projector.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_projector.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/src/gazebo_ros_projector.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_projector.dir/src/gazebo_ros_projector.cpp.s
 .PHONY : src/gazebo_ros_projector.cpp.s
 
 src/gazebo_ros_prosilica.o: src/gazebo_ros_prosilica.cpp.o
@@ -2000,7 +2000,7 @@ src/gazebo_ros_prosilica.o: src/gazebo_ros_prosilica.cpp.o
 
 # target to build an object file
 src/gazebo_ros_prosilica.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/src/gazebo_ros_prosilica.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/src/gazebo_ros_prosilica.cpp.o
 .PHONY : src/gazebo_ros_prosilica.cpp.o
 
 src/gazebo_ros_prosilica.i: src/gazebo_ros_prosilica.cpp.i
@@ -2009,7 +2009,7 @@ src/gazebo_ros_prosilica.i: src/gazebo_ros_prosilica.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_prosilica.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/src/gazebo_ros_prosilica.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/src/gazebo_ros_prosilica.cpp.i
 .PHONY : src/gazebo_ros_prosilica.cpp.i
 
 src/gazebo_ros_prosilica.s: src/gazebo_ros_prosilica.cpp.s
@@ -2018,7 +2018,7 @@ src/gazebo_ros_prosilica.s: src/gazebo_ros_prosilica.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_prosilica.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/src/gazebo_ros_prosilica.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_prosilica.dir/src/gazebo_ros_prosilica.cpp.s
 .PHONY : src/gazebo_ros_prosilica.cpp.s
 
 src/gazebo_ros_range.o: src/gazebo_ros_range.cpp.o
@@ -2027,7 +2027,7 @@ src/gazebo_ros_range.o: src/gazebo_ros_range.cpp.o
 
 # target to build an object file
 src/gazebo_ros_range.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/src/gazebo_ros_range.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/src/gazebo_ros_range.cpp.o
 .PHONY : src/gazebo_ros_range.cpp.o
 
 src/gazebo_ros_range.i: src/gazebo_ros_range.cpp.i
@@ -2036,7 +2036,7 @@ src/gazebo_ros_range.i: src/gazebo_ros_range.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_range.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/src/gazebo_ros_range.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/src/gazebo_ros_range.cpp.i
 .PHONY : src/gazebo_ros_range.cpp.i
 
 src/gazebo_ros_range.s: src/gazebo_ros_range.cpp.s
@@ -2045,7 +2045,7 @@ src/gazebo_ros_range.s: src/gazebo_ros_range.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_range.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/src/gazebo_ros_range.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_range.dir/src/gazebo_ros_range.cpp.s
 .PHONY : src/gazebo_ros_range.cpp.s
 
 src/gazebo_ros_skid_steer_drive.o: src/gazebo_ros_skid_steer_drive.cpp.o
@@ -2054,7 +2054,7 @@ src/gazebo_ros_skid_steer_drive.o: src/gazebo_ros_skid_steer_drive.cpp.o
 
 # target to build an object file
 src/gazebo_ros_skid_steer_drive.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/src/gazebo_ros_skid_steer_drive.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/src/gazebo_ros_skid_steer_drive.cpp.o
 .PHONY : src/gazebo_ros_skid_steer_drive.cpp.o
 
 src/gazebo_ros_skid_steer_drive.i: src/gazebo_ros_skid_steer_drive.cpp.i
@@ -2063,7 +2063,7 @@ src/gazebo_ros_skid_steer_drive.i: src/gazebo_ros_skid_steer_drive.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_skid_steer_drive.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/src/gazebo_ros_skid_steer_drive.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/src/gazebo_ros_skid_steer_drive.cpp.i
 .PHONY : src/gazebo_ros_skid_steer_drive.cpp.i
 
 src/gazebo_ros_skid_steer_drive.s: src/gazebo_ros_skid_steer_drive.cpp.s
@@ -2072,7 +2072,7 @@ src/gazebo_ros_skid_steer_drive.s: src/gazebo_ros_skid_steer_drive.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_skid_steer_drive.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/src/gazebo_ros_skid_steer_drive.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_skid_steer_drive.dir/src/gazebo_ros_skid_steer_drive.cpp.s
 .PHONY : src/gazebo_ros_skid_steer_drive.cpp.s
 
 src/gazebo_ros_template.o: src/gazebo_ros_template.cpp.o
@@ -2081,7 +2081,7 @@ src/gazebo_ros_template.o: src/gazebo_ros_template.cpp.o
 
 # target to build an object file
 src/gazebo_ros_template.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/src/gazebo_ros_template.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/src/gazebo_ros_template.cpp.o
 .PHONY : src/gazebo_ros_template.cpp.o
 
 src/gazebo_ros_template.i: src/gazebo_ros_template.cpp.i
@@ -2090,7 +2090,7 @@ src/gazebo_ros_template.i: src/gazebo_ros_template.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_template.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/src/gazebo_ros_template.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/src/gazebo_ros_template.cpp.i
 .PHONY : src/gazebo_ros_template.cpp.i
 
 src/gazebo_ros_template.s: src/gazebo_ros_template.cpp.s
@@ -2099,7 +2099,7 @@ src/gazebo_ros_template.s: src/gazebo_ros_template.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_template.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/src/gazebo_ros_template.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_template.dir/src/gazebo_ros_template.cpp.s
 .PHONY : src/gazebo_ros_template.cpp.s
 
 src/gazebo_ros_tricycle_drive.o: src/gazebo_ros_tricycle_drive.cpp.o
@@ -2108,7 +2108,7 @@ src/gazebo_ros_tricycle_drive.o: src/gazebo_ros_tricycle_drive.cpp.o
 
 # target to build an object file
 src/gazebo_ros_tricycle_drive.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/src/gazebo_ros_tricycle_drive.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/src/gazebo_ros_tricycle_drive.cpp.o
 .PHONY : src/gazebo_ros_tricycle_drive.cpp.o
 
 src/gazebo_ros_tricycle_drive.i: src/gazebo_ros_tricycle_drive.cpp.i
@@ -2117,7 +2117,7 @@ src/gazebo_ros_tricycle_drive.i: src/gazebo_ros_tricycle_drive.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_tricycle_drive.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/src/gazebo_ros_tricycle_drive.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/src/gazebo_ros_tricycle_drive.cpp.i
 .PHONY : src/gazebo_ros_tricycle_drive.cpp.i
 
 src/gazebo_ros_tricycle_drive.s: src/gazebo_ros_tricycle_drive.cpp.s
@@ -2126,7 +2126,7 @@ src/gazebo_ros_tricycle_drive.s: src/gazebo_ros_tricycle_drive.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_tricycle_drive.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/src/gazebo_ros_tricycle_drive.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_tricycle_drive.dir/src/gazebo_ros_tricycle_drive.cpp.s
 .PHONY : src/gazebo_ros_tricycle_drive.cpp.s
 
 src/gazebo_ros_triggered_camera.o: src/gazebo_ros_triggered_camera.cpp.o
@@ -2135,7 +2135,7 @@ src/gazebo_ros_triggered_camera.o: src/gazebo_ros_triggered_camera.cpp.o
 
 # target to build an object file
 src/gazebo_ros_triggered_camera.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/src/gazebo_ros_triggered_camera.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/src/gazebo_ros_triggered_camera.cpp.o
 .PHONY : src/gazebo_ros_triggered_camera.cpp.o
 
 src/gazebo_ros_triggered_camera.i: src/gazebo_ros_triggered_camera.cpp.i
@@ -2144,7 +2144,7 @@ src/gazebo_ros_triggered_camera.i: src/gazebo_ros_triggered_camera.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_triggered_camera.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/src/gazebo_ros_triggered_camera.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/src/gazebo_ros_triggered_camera.cpp.i
 .PHONY : src/gazebo_ros_triggered_camera.cpp.i
 
 src/gazebo_ros_triggered_camera.s: src/gazebo_ros_triggered_camera.cpp.s
@@ -2153,7 +2153,7 @@ src/gazebo_ros_triggered_camera.s: src/gazebo_ros_triggered_camera.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_triggered_camera.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/src/gazebo_ros_triggered_camera.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_camera.dir/src/gazebo_ros_triggered_camera.cpp.s
 .PHONY : src/gazebo_ros_triggered_camera.cpp.s
 
 src/gazebo_ros_triggered_multicamera.o: src/gazebo_ros_triggered_multicamera.cpp.o
@@ -2162,7 +2162,7 @@ src/gazebo_ros_triggered_multicamera.o: src/gazebo_ros_triggered_multicamera.cpp
 
 # target to build an object file
 src/gazebo_ros_triggered_multicamera.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/src/gazebo_ros_triggered_multicamera.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/src/gazebo_ros_triggered_multicamera.cpp.o
 .PHONY : src/gazebo_ros_triggered_multicamera.cpp.o
 
 src/gazebo_ros_triggered_multicamera.i: src/gazebo_ros_triggered_multicamera.cpp.i
@@ -2171,7 +2171,7 @@ src/gazebo_ros_triggered_multicamera.i: src/gazebo_ros_triggered_multicamera.cpp
 
 # target to preprocess a source file
 src/gazebo_ros_triggered_multicamera.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/src/gazebo_ros_triggered_multicamera.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/src/gazebo_ros_triggered_multicamera.cpp.i
 .PHONY : src/gazebo_ros_triggered_multicamera.cpp.i
 
 src/gazebo_ros_triggered_multicamera.s: src/gazebo_ros_triggered_multicamera.cpp.s
@@ -2180,7 +2180,7 @@ src/gazebo_ros_triggered_multicamera.s: src/gazebo_ros_triggered_multicamera.cpp
 
 # target to generate assembly for a file
 src/gazebo_ros_triggered_multicamera.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/src/gazebo_ros_triggered_multicamera.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_triggered_multicamera.dir/src/gazebo_ros_triggered_multicamera.cpp.s
 .PHONY : src/gazebo_ros_triggered_multicamera.cpp.s
 
 src/gazebo_ros_utils.o: src/gazebo_ros_utils.cpp.o
@@ -2189,7 +2189,7 @@ src/gazebo_ros_utils.o: src/gazebo_ros_utils.cpp.o
 
 # target to build an object file
 src/gazebo_ros_utils.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/src/gazebo_ros_utils.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/src/gazebo_ros_utils.cpp.o
 .PHONY : src/gazebo_ros_utils.cpp.o
 
 src/gazebo_ros_utils.i: src/gazebo_ros_utils.cpp.i
@@ -2198,7 +2198,7 @@ src/gazebo_ros_utils.i: src/gazebo_ros_utils.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_utils.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/src/gazebo_ros_utils.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/src/gazebo_ros_utils.cpp.i
 .PHONY : src/gazebo_ros_utils.cpp.i
 
 src/gazebo_ros_utils.s: src/gazebo_ros_utils.cpp.s
@@ -2207,7 +2207,7 @@ src/gazebo_ros_utils.s: src/gazebo_ros_utils.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_utils.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/src/gazebo_ros_utils.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_utils.dir/src/gazebo_ros_utils.cpp.s
 .PHONY : src/gazebo_ros_utils.cpp.s
 
 src/gazebo_ros_vacuum_gripper.o: src/gazebo_ros_vacuum_gripper.cpp.o
@@ -2216,7 +2216,7 @@ src/gazebo_ros_vacuum_gripper.o: src/gazebo_ros_vacuum_gripper.cpp.o
 
 # target to build an object file
 src/gazebo_ros_vacuum_gripper.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.o
 .PHONY : src/gazebo_ros_vacuum_gripper.cpp.o
 
 src/gazebo_ros_vacuum_gripper.i: src/gazebo_ros_vacuum_gripper.cpp.i
@@ -2225,7 +2225,7 @@ src/gazebo_ros_vacuum_gripper.i: src/gazebo_ros_vacuum_gripper.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_vacuum_gripper.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.i
 .PHONY : src/gazebo_ros_vacuum_gripper.cpp.i
 
 src/gazebo_ros_vacuum_gripper.s: src/gazebo_ros_vacuum_gripper.cpp.s
@@ -2234,7 +2234,7 @@ src/gazebo_ros_vacuum_gripper.s: src/gazebo_ros_vacuum_gripper.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_vacuum_gripper.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_vacuum_gripper.dir/src/gazebo_ros_vacuum_gripper.cpp.s
 .PHONY : src/gazebo_ros_vacuum_gripper.cpp.s
 
 src/gazebo_ros_video.o: src/gazebo_ros_video.cpp.o
@@ -2243,7 +2243,7 @@ src/gazebo_ros_video.o: src/gazebo_ros_video.cpp.o
 
 # target to build an object file
 src/gazebo_ros_video.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/src/gazebo_ros_video.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/src/gazebo_ros_video.cpp.o
 .PHONY : src/gazebo_ros_video.cpp.o
 
 src/gazebo_ros_video.i: src/gazebo_ros_video.cpp.i
@@ -2252,7 +2252,7 @@ src/gazebo_ros_video.i: src/gazebo_ros_video.cpp.i
 
 # target to preprocess a source file
 src/gazebo_ros_video.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/src/gazebo_ros_video.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/src/gazebo_ros_video.cpp.i
 .PHONY : src/gazebo_ros_video.cpp.i
 
 src/gazebo_ros_video.s: src/gazebo_ros_video.cpp.s
@@ -2261,7 +2261,7 @@ src/gazebo_ros_video.s: src/gazebo_ros_video.cpp.s
 
 # target to generate assembly for a file
 src/gazebo_ros_video.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/src/gazebo_ros_video.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/gazebo_ros_video.dir/src/gazebo_ros_video.cpp.s
 .PHONY : src/gazebo_ros_video.cpp.s
 
 src/hokuyo_node.o: src/hokuyo_node.cpp.o
@@ -2270,7 +2270,7 @@ src/hokuyo_node.o: src/hokuyo_node.cpp.o
 
 # target to build an object file
 src/hokuyo_node.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.o
 .PHONY : src/hokuyo_node.cpp.o
 
 src/hokuyo_node.i: src/hokuyo_node.cpp.i
@@ -2279,7 +2279,7 @@ src/hokuyo_node.i: src/hokuyo_node.cpp.i
 
 # target to preprocess a source file
 src/hokuyo_node.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.i
 .PHONY : src/hokuyo_node.cpp.i
 
 src/hokuyo_node.s: src/hokuyo_node.cpp.s
@@ -2288,7 +2288,7 @@ src/hokuyo_node.s: src/hokuyo_node.cpp.s
 
 # target to generate assembly for a file
 src/hokuyo_node.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/hokuyo_node.dir/src/hokuyo_node.cpp.s
 .PHONY : src/hokuyo_node.cpp.s
 
 src/vision_reconfigure.o: src/vision_reconfigure.cpp.o
@@ -2297,7 +2297,7 @@ src/vision_reconfigure.o: src/vision_reconfigure.cpp.o
 
 # target to build an object file
 src/vision_reconfigure.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/src/vision_reconfigure.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/src/vision_reconfigure.cpp.o
 .PHONY : src/vision_reconfigure.cpp.o
 
 src/vision_reconfigure.i: src/vision_reconfigure.cpp.i
@@ -2306,7 +2306,7 @@ src/vision_reconfigure.i: src/vision_reconfigure.cpp.i
 
 # target to preprocess a source file
 src/vision_reconfigure.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/src/vision_reconfigure.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/src/vision_reconfigure.cpp.i
 .PHONY : src/vision_reconfigure.cpp.i
 
 src/vision_reconfigure.s: src/vision_reconfigure.cpp.s
@@ -2315,7 +2315,7 @@ src/vision_reconfigure.s: src/vision_reconfigure.cpp.s
 
 # target to generate assembly for a file
 src/vision_reconfigure.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/src/vision_reconfigure.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/vision_reconfigure.dir/src/vision_reconfigure.cpp.s
 .PHONY : src/vision_reconfigure.cpp.s
 
 test/pub_joint_trajectory_test.o: test/pub_joint_trajectory_test.cpp.o
@@ -2324,7 +2324,7 @@ test/pub_joint_trajectory_test.o: test/pub_joint_trajectory_test.cpp.o
 
 # target to build an object file
 test/pub_joint_trajectory_test.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.o
 .PHONY : test/pub_joint_trajectory_test.cpp.o
 
 test/pub_joint_trajectory_test.i: test/pub_joint_trajectory_test.cpp.i
@@ -2333,7 +2333,7 @@ test/pub_joint_trajectory_test.i: test/pub_joint_trajectory_test.cpp.i
 
 # target to preprocess a source file
 test/pub_joint_trajectory_test.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.i
 .PHONY : test/pub_joint_trajectory_test.cpp.i
 
 test/pub_joint_trajectory_test.s: test/pub_joint_trajectory_test.cpp.s
@@ -2342,7 +2342,7 @@ test/pub_joint_trajectory_test.s: test/pub_joint_trajectory_test.cpp.s
 
 # target to generate assembly for a file
 test/pub_joint_trajectory_test.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/pub_joint_trajectory_test.dir/test/pub_joint_trajectory_test.cpp.s
 .PHONY : test/pub_joint_trajectory_test.cpp.s
 
 test/set_model_state_test/set_model_state_test.o: test/set_model_state_test/set_model_state_test.cpp.o
@@ -2351,7 +2351,7 @@ test/set_model_state_test/set_model_state_test.o: test/set_model_state_test/set_
 
 # target to build an object file
 test/set_model_state_test/set_model_state_test.cpp.o:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.o
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.o
 .PHONY : test/set_model_state_test/set_model_state_test.cpp.o
 
 test/set_model_state_test/set_model_state_test.i: test/set_model_state_test/set_model_state_test.cpp.i
@@ -2360,7 +2360,7 @@ test/set_model_state_test/set_model_state_test.i: test/set_model_state_test/set_
 
 # target to preprocess a source file
 test/set_model_state_test/set_model_state_test.cpp.i:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.i
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.i
 .PHONY : test/set_model_state_test/set_model_state_test.cpp.i
 
 test/set_model_state_test/set_model_state_test.s: test/set_model_state_test/set_model_state_test.cpp.s
@@ -2369,7 +2369,7 @@ test/set_model_state_test/set_model_state_test.s: test/set_model_state_test/set_
 
 # target to generate assembly for a file
 test/set_model_state_test/set_model_state_test.cpp.s:
-	cd /home/vagrant/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.s
+	cd /home/alex/ros_ws/build && $(MAKE) -f baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/build.make baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/set_model_state-test.dir/test/set_model_state_test/set_model_state_test.cpp.s
 .PHONY : test/set_model_state_test/set_model_state_test.cpp.s
 
 # Help Target
@@ -2591,6 +2591,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/vagrant/ros_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alex/ros_ws/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
