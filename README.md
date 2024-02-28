@@ -16,18 +16,11 @@ The workspace contains the following packages:
 
 ## Installation
 
-To install the workspace, clone it into your catkin workspace:
+To install the workspace, clone it to your designated workspace. Then, build the workspace:
 
 ```
-cd ~/catkin_ws/src
-git clone https://github.com/AlexandruRO45/ros_ws.git
-```
-
-Then, build the workspace:
-
-```
-cd ~/catkin_ws
-catkin_make
+cd ~/ros_ws
+catkin_make & catkin_make install
 ```
 
 ## Usage
@@ -35,14 +28,58 @@ catkin_make
 To use the packages in the workspace, source the setup file:
 
 ```
-source ~/catkin_ws/devel/setup.bash
+source ~/ros_ws/devel/setup.bash
 ```
 
-Then, you can use the packages as usual. For example, to launch the camera calibration tool, run:
+It's always a good practice to set the setup files inside the ~/.bashrc to avoid sourcing all the time:
+
 
 ```
-roslaunch camera_calibration camera_calibration.launch
+source /opt/ros/melodic/setup.bash
+PATH="${HOME}/.local/bin:$PATH"
+source ~/ros_ws/devel/setup.bash
 ```
+
+The can be included at the end if the file by using (nano or any other editing tool):
+
+
+```
+nano ~/.bashrc
+```
+
+Then, you can use the packages as usual. For example, to launch the chess pick and place game, run:
+
+Terminal 1:
+```
+roslaunch baxter_gazebo baxter_world.launch
+```
+Terminal 2:
+```
+rosrun baxter_tools enable_robot.py -e
+rosrun baxter_interface joint_trajectory_action_server.py
+```
+Terminal 3:
+```
+roslaunch baxter_moveit_config baxter_grippers.launch
+```
+Terminal 4:
+```
+rosrun chess_baxter spawn_chessboard.py
+```
+Terminal 5:
+```
+rosrun chess_baxter pick_and_plave_moveit.py
+```
+Terminal 6:
+```
+rosrun chess_baxter gazebo2tfframe.py
+```
+
+In order to delete the chessboard and its components, run the command:
+```
+rosrun chess_baxter delete_chessgame.py
+```
+
 
 ## Contributing
 
