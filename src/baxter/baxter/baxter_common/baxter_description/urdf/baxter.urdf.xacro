@@ -21,4 +21,6 @@
   <!-- Right End Effector -->
   <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
   
+  <!-- Coffe Table -->
+  <xacro:include filename="$(find lab4_pkg)/src/cafe_table.xacro" />
 </robot>
