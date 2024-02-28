@@ -1,8 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="baxter" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:arg name="gazebo" default="false"/>
+  <xacro:arg name="gazebo" default="true"/>
   <xacro:arg name="pedestal" default="true"/>
+  <xacro:arg name="coffe_table" default="true"/>
   <!-- Baxter Base URDF -->
   <xacro:include filename="$(find baxter_description)/urdf/baxter_base/baxter_base.urdf.xacro">
     <xacro:arg name="gazebo" value="${gazebo}"/>
@@ -22,5 +23,13 @@
   <xacro:include filename="$(find baxter_description)/urdf/right_end_effector.urdf.xacro" />
   
   <!-- Coffe Table -->
-  <xacro:include filename="$(find lab4_pkg)/src/cafe_table.xacro" />
+  <xacro:include filename="$(find baxter_sim_examples)/models/cafe_table/model.xacro" />
+  
+  <!-- Kinect Sensor -->
+  <xacro:if value="$(arg gazebo)">
+    <xacro:include filename="$(find baxter_description)/urdf/depth_sensor.urdf.xacro" />
+    <sensor_kinect parent="base" location="1.0 -0.0125 2.0" orientation="0 1.57 0.0"/>
+  </xacro:if>
+
+
 </robot>
