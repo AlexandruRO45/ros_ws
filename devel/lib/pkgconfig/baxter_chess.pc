@@ -1,8 +1,0 @@
-prefix=/home/alex/ros_ws/devel
-
-Name: baxter_chess
-Description: Description of baxter_chess
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
