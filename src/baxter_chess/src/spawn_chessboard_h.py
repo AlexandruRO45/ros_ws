@@ -30,7 +30,7 @@ if __name__ == '__main__':
     orient = Quaternion(*tf.transformations.quaternion_from_euler(0, 0, 0))
     board_pose = Pose(Point(0.3,0.55,0.78), orient)
     frame_dist = 0.025
-    model_path = rospkg.RosPack().get_path('chess_baxter')+"/models/"
+    model_path = rospkg.RosPack().get_path('baxter_chess')+"/models/"
     
     with open(model_path + "chessboard/model.sdf", "r") as f:
         board_xml = f.read().replace('\n', '')
