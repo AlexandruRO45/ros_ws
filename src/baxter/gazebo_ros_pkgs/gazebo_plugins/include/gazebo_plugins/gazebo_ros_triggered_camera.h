@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 #ifndef GAZEBO_ROS_TRIGGERED_CAMERA_HH
 #define GAZEBO_ROS_TRIGGERED_CAMERA_HH
@@ -33,45 +33,56 @@ namespace gazebo
   {
     /// \brief Constructor
     /// \param parent The parent entity, must be a Model or a Sensor
-    public: GazeboRosTriggeredCamera();
+  public:
+    GazeboRosTriggeredCamera();
 
     /// \brief Destructor
-    public: ~GazeboRosTriggeredCamera();
+  public:
+    ~GazeboRosTriggeredCamera();
 
     /// \brief Load the plugin
     /// \param take in SDF root element
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+  public:
+    void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// \brief Load the plugin.
     /// \param[in] _parent Take in SDF root element.
     /// \param[in] _sdf SDF values.
     /// \param[in] _camera_name_suffix Suffix of the camera name.
     /// \param[in] _hack_baseline Multiple camera baseline.
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf,
-                      const std::string &_camera_name_suffix,
-                      double _hack_baseline);
+  public:
+    void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf,
+              const std::string &_camera_name_suffix,
+              double _hack_baseline);
 
     /// \brief Update the controller
-    protected: virtual void OnNewFrame(const unsigned char *_image,
-                   unsigned int _width, unsigned int _height,
-                   unsigned int _depth, const std::string &_format);
+  protected:
+    virtual void OnNewFrame(const unsigned char *_image,
+                            unsigned int _width, unsigned int _height,
+                            unsigned int _depth, const std::string &_format);
 
-    protected: virtual void TriggerCamera();
+  protected:
+    virtual void TriggerCamera();
 
-    protected: virtual bool CanTriggerCamera();
+  protected:
+    virtual bool CanTriggerCamera();
 
-    protected: event::ConnectionPtr preRenderConnection_;
+  protected:
+    event::ConnectionPtr preRenderConnection_;
 
-    public: void SetCameraEnabled(const bool _enabled);
+  public:
+    void SetCameraEnabled(const bool _enabled);
 
-    protected: void PreRender();
+  protected:
+    void PreRender();
 
-    protected: int triggered = 0;
+  protected:
+    int triggered = 0;
 
-    protected: std::mutex mutex;
+  protected:
+    std::mutex mutex;
 
     friend class GazeboRosTriggeredMultiCamera;
   };
 }
 #endif
-

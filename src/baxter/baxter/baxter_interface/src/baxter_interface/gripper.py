@@ -53,6 +53,7 @@ class Gripper(object):
     """
     Interface class for a gripper on the Baxter Research Robot.
     """
+
     def __init__(self, gripper, versioned=False):
         """
         Version-checking capable constructor.
@@ -73,11 +74,11 @@ class Gripper(object):
         and will check. This behavior can be overridden by setting
         L{baxter_interface.CHECK_VERSION} to False.
         """
-        self.name = gripper + '_gripper'
-        self._cmd_sender = rospy.get_name() + '_%s'
+        self.name = gripper + "_gripper"
+        self._cmd_sender = rospy.get_name() + "_%s"
         self._cmd_sequence = 0
 
-        ns = 'robot/end_effector/' + self.name + "/"
+        ns = "robot/end_effector/" + self.name + "/"
 
         self._state = None
         self._prop = EndEffectorProperties(id=-1)  # initialize w/unused value
@@ -87,48 +88,41 @@ class Gripper(object):
 
         self._parameters = dict()
 
-        self._cmd_pub = rospy.Publisher(ns + 'command', EndEffectorCommand,
-            queue_size=10)
+        self._cmd_pub = rospy.Publisher(
+            ns + "command", EndEffectorCommand, queue_size=10
+        )
 
-        self._prop_pub = rospy.Publisher(ns + 'rsdk/set_properties',
-                                         EndEffectorProperties,
-                                         latch=True,
-                                         queue_size=10
-                                         )
+        self._prop_pub = rospy.Publisher(
+            ns + "rsdk/set_properties", EndEffectorProperties, latch=True, queue_size=10
+        )
 
-        self._state_pub = rospy.Publisher(ns + 'rsdk/set_state',
-                                          EndEffectorState,
-                                          latch=True,
-                                          queue_size=10
-                                          )
+        self._state_pub = rospy.Publisher(
+            ns + "rsdk/set_state", EndEffectorState, latch=True, queue_size=10
+        )
 
-        self._state_sub = rospy.Subscriber(ns + 'state',
-                                           EndEffectorState,
-                                           self._on_gripper_state
-                                           )
+        self._state_sub = rospy.Subscriber(
+            ns + "state", EndEffectorState, self._on_gripper_state
+        )
 
-        self._prop_sub = rospy.Subscriber(ns + 'properties',
-                                          EndEffectorProperties,
-                                          self._on_gripper_prop
-                                          )
+        self._prop_sub = rospy.Subscriber(
+            ns + "properties", EndEffectorProperties, self._on_gripper_prop
+        )
 
         # Wait for the gripper state message to be populated
         baxter_dataflow.wait_for(
-                          lambda: not self._state is None,
-                          timeout=5.0,
-                          timeout_msg=("Failed to get state from %s" %
-                                       (ns + 'state',))
-                          )
+            lambda: not self._state is None,
+            timeout=5.0,
+            timeout_msg=("Failed to get state from %s" % (ns + "state",)),
+        )
 
         # Wait for the gripper type to be populated
         baxter_dataflow.wait_for(
-                          lambda: not self.type() is None,
-                          timeout=5.0,
-                          timeout_msg=("Failed to get properties from %s" %
-                                       (ns + 'properties',))
-                          )
+            lambda: not self.type() is None,
+            timeout=5.0,
+            timeout_msg=("Failed to get properties from %s" % (ns + "properties",)),
+        )
 
-        if versioned and self.type() == 'electric':
+        if versioned and self.type() == "electric":
             if not self.version_check():
                 sys.exit(1)
 
@@ -146,11 +140,13 @@ class Gripper(object):
         old_prop = self._prop
         self._prop = deepcopy(properties)
         if old_prop.ui_type != self._prop.ui_type and old_prop.id != -1:
-            self.on_type_changed({
-                EndEffectorProperties.SUCTION_CUP_GRIPPER: 'suction',
-                EndEffectorProperties.ELECTRIC_GRIPPER: 'electric',
-                EndEffectorProperties.PASSIVE_GRIPPER: 'custom',
-                                 }.get(properties.ui_type, None))
+            self.on_type_changed(
+                {
+                    EndEffectorProperties.SUCTION_CUP_GRIPPER: "suction",
+                    EndEffectorProperties.ELECTRIC_GRIPPER: "electric",
+                    EndEffectorProperties.PASSIVE_GRIPPER: "custom",
+                }.get(properties.ui_type, None)
+            )
 
     def _inc_cmd_sequence(self):
         # manage roll over with safe value (maxint)
@@ -161,8 +157,7 @@ class Gripper(object):
         return max(min(val, 100.0), 0.0)
 
     def _capablity_warning(self, cmd):
-        msg = ("%s %s - not capable of '%s' command" %
-               (self.name, self.type(), cmd))
+        msg = "%s %s - not capable of '%s' command" % (self.name, self.type(), cmd)
         rospy.logwarn(msg)
 
     def _version_str_to_time(self, version_str, version_type):
@@ -171,17 +166,23 @@ class Gripper(object):
         # strptime errors when all zeros are given,
         # so instead, return the initialized value
         # of float_time
-        if version_str != '0000/0/0 0:0:00':
+        if version_str != "0000/0/0 0:0:00":
             try:
-                float_time = time.mktime(time.strptime(version_str,
-                                                       time_format))
+                float_time = time.mktime(time.strptime(version_str, time_format))
             except ValueError:
-                rospy.logerr(("%s %s - The Gripper's %s "
-                              "timestamp does not meet python time formating "
-                              "requirements: %s does not map "
-                              "to '%s'"),
-                              self.name, self.type(), version_type,
-                              version_str, time_format)
+                rospy.logerr(
+                    (
+                        "%s %s - The Gripper's %s "
+                        "timestamp does not meet python time formating "
+                        "requirements: %s does not map "
+                        "to '%s'"
+                    ),
+                    self.name,
+                    self.type(),
+                    version_type,
+                    version_str,
+                    time_format,
+                )
                 sys.exit(1)
         return float_time
 
@@ -198,60 +199,78 @@ class Gripper(object):
         """
         sdk_version = settings.SDK_VERSION
         firmware_date_str = self.firmware_build_date()
-        if self.type() != 'electric':
-            rospy.logwarn("%s %s (%s): Version Check not needed",
-                          self.name, self.type(), firmware_date_str)
+        if self.type() != "electric":
+            rospy.logwarn(
+                "%s %s (%s): Version Check not needed",
+                self.name,
+                self.type(),
+                firmware_date_str,
+            )
             return True
         if not firmware_date_str:
-            rospy.logerr("%s %s: Failed to retrieve version string during"
-                          " Version Check.", self.name, self.type())
+            rospy.logerr(
+                "%s %s: Failed to retrieve version string during" " Version Check.",
+                self.name,
+                self.type(),
+            )
             return False
-        firmware_time = self._version_str_to_time(
-                         firmware_date_str,
-                         "current firmware")
+        firmware_time = self._version_str_to_time(firmware_date_str, "current firmware")
         warn_time = self._version_str_to_time(
-                         settings.VERSIONS_SDK2GRIPPER[sdk_version]['warn'],
-                         "baxter_interface settings.py firmware 'warn'")
+            settings.VERSIONS_SDK2GRIPPER[sdk_version]["warn"],
+            "baxter_interface settings.py firmware 'warn'",
+        )
         fail_time = self._version_str_to_time(
-                         settings.VERSIONS_SDK2GRIPPER[sdk_version]['fail'],
-                         "baxter_interface settings.py firmware 'fail'")
+            settings.VERSIONS_SDK2GRIPPER[sdk_version]["fail"],
+            "baxter_interface settings.py firmware 'fail'",
+        )
         if firmware_time > warn_time:
             return True
         elif firmware_time <= warn_time and firmware_time > fail_time:
-            rospy.logwarn("%s %s: Gripper Firmware version built on date (%s) "
-                          "is not up-to-date for SDK Version (%s). Please use "
-                          "the Robot's Field-Service-Menu to Upgrade your "
-                          "Gripper Firmware.",
-                          self.name, self.type(),
-                          firmware_date_str, sdk_version)
+            rospy.logwarn(
+                "%s %s: Gripper Firmware version built on date (%s) "
+                "is not up-to-date for SDK Version (%s). Please use "
+                "the Robot's Field-Service-Menu to Upgrade your "
+                "Gripper Firmware.",
+                self.name,
+                self.type(),
+                firmware_date_str,
+                sdk_version,
+            )
             return True
         elif firmware_time <= fail_time and firmware_time > 0.0:
-            rospy.logerr("%s %s: Gripper Firmware version built on date (%s) "
-                         "is *incompatible* with SDK Version (%s). Please use "
-                         "the Robot's Field-Service-Menu to Upgrade your "
-                         "Gripper Firmware.",
-                         self.name, self.type(),
-                         firmware_date_str, sdk_version)
+            rospy.logerr(
+                "%s %s: Gripper Firmware version built on date (%s) "
+                "is *incompatible* with SDK Version (%s). Please use "
+                "the Robot's Field-Service-Menu to Upgrade your "
+                "Gripper Firmware.",
+                self.name,
+                self.type(),
+                firmware_date_str,
+                sdk_version,
+            )
             return False
         else:
-            legacy_str = '1.1.242'
-            if self.firmware_version()[0:len(legacy_str)] == legacy_str:
+            legacy_str = "1.1.242"
+            if self.firmware_version()[0 : len(legacy_str)] == legacy_str:
                 # Legacy Gripper version 1.1.242 cannot be updated
-                # This must have a Legacy Gripper build date of 0.0, 
+                # This must have a Legacy Gripper build date of 0.0,
                 # so it passes
                 return True
             else:
-                rospy.logerr("%s %s: Gripper Firmware version built on " 
-                          "date (%s) does not fall within any known Gripper "
-                          "Firmware Version dates for SDK (%s). Use the "
-                          "Robot's Field-Service-Menu to Upgrade your Gripper " 
-                          "Firmware.",
-                          self.name, self.type(),
-                          firmware_date_str, sdk_version)
+                rospy.logerr(
+                    "%s %s: Gripper Firmware version built on "
+                    "date (%s) does not fall within any known Gripper "
+                    "Firmware Version dates for SDK (%s). Use the "
+                    "Robot's Field-Service-Menu to Upgrade your Gripper "
+                    "Firmware.",
+                    self.name,
+                    self.type(),
+                    firmware_date_str,
+                    sdk_version,
+                )
                 return False
 
-    def command(self, cmd, block=False, test=lambda: True,
-                 timeout=0.0, args=None):
+    def command(self, cmd, block=False, test=lambda: True, timeout=0.0, args=None):
         """
         Raw command call to directly control gripper.
 
@@ -271,32 +290,37 @@ class Gripper(object):
         ee_cmd.command = cmd
         ee_cmd.sender = self._cmd_sender % (cmd,)
         ee_cmd.sequence = self._inc_cmd_sequence()
-        ee_cmd.args = ''
+        ee_cmd.args = ""
         if args != None:
             ee_cmd.args = JSONEncoder().encode(args)
-        seq_test = lambda: (self._state.command_sender == ee_cmd.sender and
-                            (self._state.command_sequence == ee_cmd.sequence
-                             or self._state.command_sequence == 0))
+        seq_test = lambda: (
+            self._state.command_sender == ee_cmd.sender
+            and (
+                self._state.command_sequence == ee_cmd.sequence
+                or self._state.command_sequence == 0
+            )
+        )
         self._cmd_pub.publish(ee_cmd)
         if block:
             finish_time = rospy.get_time() + timeout
             cmd_seq = baxter_dataflow.wait_for(
-                          test=seq_test,
-                          timeout=timeout,
-                          raise_on_error=False,
-                          body=lambda: self._cmd_pub.publish(ee_cmd)
-                      )
+                test=seq_test,
+                timeout=timeout,
+                raise_on_error=False,
+                body=lambda: self._cmd_pub.publish(ee_cmd),
+            )
             if not cmd_seq:
-                seq_msg = (("Timed out on gripper command acknowledgement for"
-                           " %s:%s") % (self.name, ee_cmd.command))
+                seq_msg = (
+                    "Timed out on gripper command acknowledgement for" " %s:%s"
+                ) % (self.name, ee_cmd.command)
                 rospy.logdebug(seq_msg)
             time_remain = max(0.5, finish_time - rospy.get_time())
             return baxter_dataflow.wait_for(
-                       test=test,
-                       timeout=time_remain,
-                       raise_on_error=False,
-                       body=lambda: self._cmd_pub.publish(ee_cmd)
-                   )
+                test=test,
+                timeout=time_remain,
+                raise_on_error=False,
+                body=lambda: self._cmd_pub.publish(ee_cmd),
+            )
         else:
             return True
 
@@ -308,7 +332,7 @@ class Gripper(object):
         @return: Human readable block of text describing parameters.
         Good for help text.
         """
-        if self.type() == 'electric':
+        if self.type() == "electric":
             return """Valid gripper parameters for the electric gripper are
             PARAMETERS:
             velocity - Velocity at which a position move will execute
@@ -317,7 +341,7 @@ class Gripper(object):
             dead_zone - Position deadband within move considered successful
             ALL PARAMETERS (0-100)
             """
-        elif self.type() == 'suction':
+        elif self.type() == "suction":
             return """Valid gripper parameters for the suction gripper are
             PARAMETERS:
             vacuum_sensor_threshold - Measured suction threshold denoting grasp
@@ -336,16 +360,22 @@ class Gripper(object):
         Use this version in your programs.
         """
         valid = dict()
-        if self.type() == 'electric':
-            valid = dict({'velocity': 50.0,
-                         'moving_force': 40.0,
-                         'holding_force': 30.0,
-                         'dead_zone': 5.0,
-                         })
-        elif self.type() == 'suction':
-            valid = dict({'vacuum_sensor_threshold': 18.0,
-                          'blow_off_seconds': 0.4,
-                          })
+        if self.type() == "electric":
+            valid = dict(
+                {
+                    "velocity": 50.0,
+                    "moving_force": 40.0,
+                    "holding_force": 30.0,
+                    "dead_zone": 5.0,
+                }
+            )
+        elif self.type() == "suction":
+            valid = dict(
+                {
+                    "vacuum_sensor_threshold": 18.0,
+                    "blow_off_seconds": 0.4,
+                }
+            )
         return valid
 
     def set_parameters(self, parameters=None, defaults=False):
@@ -366,8 +396,10 @@ class Gripper(object):
             if key in valid_parameters.keys():
                 self._parameters[key] = parameters[key]
             else:
-                msg = ("Invalid parameter: %s provided. %s" %
-                       (key, self.valid_parameters_text(),))
+                msg = "Invalid parameter: %s provided. %s" % (
+                    key,
+                    self.valid_parameters_text(),
+                )
                 rospy.logwarn(msg)
         cmd = EndEffectorCommand.CMD_CONFIGURE
         self.command(cmd, args=self._parameters)
@@ -381,32 +413,33 @@ class Gripper(object):
         """
         default_id = 131073
         default_ui_type = EndEffectorProperties.PASSIVE_GRIPPER
-        default_manufacturer = 'Rethink Research Robot'
-        default_product = 'SDK End Effector'
+        default_manufacturer = "Rethink Research Robot"
+        default_product = "SDK End Effector"
         # Create default properties message
         prop_msg = EndEffectorProperties(
-                                         id=default_id,
-                                         ui_type=default_ui_type,
-                                         manufacturer=default_manufacturer,
-                                         product=default_product,
-                                         )
+            id=default_id,
+            ui_type=default_ui_type,
+            manufacturer=default_manufacturer,
+            product=default_product,
+        )
         for idx, attr in enumerate(prop_msg.__slots__):
-            if prop_msg._slot_types[idx] == 'bool':
+            if prop_msg._slot_types[idx] == "bool":
                 setattr(prop_msg, attr, True)
         self._prop_pub.publish(prop_msg)
 
         # Verify properties reset successfully
-        test = lambda: (self._prop.id == default_id and
-                        self._prop.ui_type == default_ui_type and
-                        self._prop.manufacturer == default_manufacturer and
-                        self._prop.product == default_product
-                        )
+        test = lambda: (
+            self._prop.id == default_id
+            and self._prop.ui_type == default_ui_type
+            and self._prop.manufacturer == default_manufacturer
+            and self._prop.product == default_product
+        )
         return baxter_dataflow.wait_for(
-                   test=test,
-                   timeout=timeout,
-                   raise_on_error=False,
-                   body=lambda: self._prop_pub.publish(prop_msg)
-               )
+            test=test,
+            timeout=timeout,
+            raise_on_error=False,
+            body=lambda: self._prop_pub.publish(prop_msg),
+        )
 
     def reset_custom_state(self, timeout=2.0):
         """
@@ -420,23 +453,24 @@ class Gripper(object):
         # Create default state message
         state_msg = EndEffectorState()
         for idx, attr in enumerate(state_msg.__slots__):
-            if 'int' in state_msg._slot_types[idx]:
+            if "int" in state_msg._slot_types[idx]:
                 setattr(state_msg, attr, state_unknown)
-        setattr(state_msg, 'enabled', state_true)
+        setattr(state_msg, "enabled", state_true)
         self._state_pub.publish(state_msg)
 
         # Verify state reset successfully
-        test = lambda: (self._state.enabled == state_true and
-                        self._state.calibrated == state_unknown and
-                        self._state.ready == state_unknown and
-                        self._state.position == 0.0
-                        )
+        test = lambda: (
+            self._state.enabled == state_true
+            and self._state.calibrated == state_unknown
+            and self._state.ready == state_unknown
+            and self._state.position == 0.0
+        )
         return baxter_dataflow.wait_for(
-                   test=test,
-                   timeout=timeout,
-                   raise_on_error=False,
-                   body=lambda: self._state_pub.publish(state_msg)
-               )
+            test=test,
+            timeout=timeout,
+            raise_on_error=False,
+            body=lambda: self._state_pub.publish(state_msg),
+        )
 
     def reset(self, block=True, timeout=2.0):
         """
@@ -447,17 +481,16 @@ class Gripper(object):
         @type block: bool
         @param block: command is blocking or non-blocking [False]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('reset')
+        if self.type() != "electric":
+            return self._capablity_warning("reset")
 
         cmd = EndEffectorCommand.CMD_RESET
         return self.command(
-                            cmd,
-                            block,
-                            test=lambda: (self._state.error == False and
-                                          self._state.ready == True),
-                            timeout=timeout,
-                            )
+            cmd,
+            block,
+            test=lambda: (self._state.error == False and self._state.ready == True),
+            timeout=timeout,
+        )
 
     def _cmd_reboot(self, block=True, timeout=5.0):
         """
@@ -472,16 +505,15 @@ class Gripper(object):
         @type block: bool
         @param block: command is blocking or non-blocking [False]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('reboot')
+        if self.type() != "electric":
+            return self._capablity_warning("reboot")
 
         cmd = EndEffectorCommand.CMD_REBOOT
         success = self.command(
-                      cmd,
-                      block,
-                      test=lambda: (self._state.enabled == True and
-                                    self._state.ready == True),
-                      timeout=timeout
+            cmd,
+            block,
+            test=lambda: (self._state.enabled == True and self._state.ready == True),
+            timeout=timeout,
         )
         rospy.sleep(1.0)  # Allow extra time for reboot to complete
         self.set_parameters(defaults=True)
@@ -503,8 +535,8 @@ class Gripper(object):
         @type delay_check: float
         @param delay_check: seconds after reboot before error check
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('reboot')
+        if self.type() != "electric":
+            return self._capablity_warning("reboot")
 
         self._cmd_reboot(block=True, timeout=timeout)
         rospy.sleep(delay_check)
@@ -526,16 +558,17 @@ class Gripper(object):
         @type block: bool
         @param block: command is blocking or non-blocking [False]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('clear_calibration')
+        if self.type() != "electric":
+            return self._capablity_warning("clear_calibration")
 
         cmd = EndEffectorCommand.CMD_CLEAR_CALIBRATION
         return self.command(
-                   cmd,
-                   block,
-                   test=lambda: (self._state.calibrated == False and
-                                 self._state.ready == True),
-                   timeout=timeout
+            cmd,
+            block,
+            test=lambda: (
+                self._state.calibrated == False and self._state.ready == True
+            ),
+            timeout=timeout,
         )
 
     def calibrate(self, block=True, timeout=5.0):
@@ -549,8 +582,8 @@ class Gripper(object):
         @rtype: bool
         @return: Returns True if calibration succeeds.
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('calibrate')
+        if self.type() != "electric":
+            return self._capablity_warning("calibrate")
 
         # clear any previous calibration and any current errors
         if self.calibrated():
@@ -560,12 +593,11 @@ class Gripper(object):
 
         cmd = EndEffectorCommand.CMD_CALIBRATE
         success = self.command(
-                      cmd,
-                      block,
-                      test=lambda: (self._state.calibrated == True and
-                                    self._state.ready == True),
-                      timeout=timeout
-                      )
+            cmd,
+            block,
+            test=lambda: (self._state.calibrated == True and self._state.ready == True),
+            timeout=timeout,
+        )
         self.set_parameters(defaults=True)
         return success
 
@@ -578,22 +610,22 @@ class Gripper(object):
         @type block: bool
         @param block: command is blocking or non-blocking [False]
         """
-        if self.type() == 'custom':
-            return self._capablity_warning('stop')
+        if self.type() == "custom":
+            return self._capablity_warning("stop")
 
-        if self.type() == 'electric':
+        if self.type() == "electric":
             cmd = EndEffectorCommand.CMD_STOP
             stop_test = lambda: self._state.moving == False
-        elif self.type() == 'suction':
-            timeout = max(self._parameters['blow_off_seconds'], timeout)
+        elif self.type() == "suction":
+            timeout = max(self._parameters["blow_off_seconds"], timeout)
             cmd = EndEffectorCommand.CMD_RELEASE
             stop_test = lambda: (not self.sucking() and not self.blowing())
         return self.command(
-                            cmd,
-                            block,
-                            test=stop_test,
-                            timeout=timeout,
-                            )
+            cmd,
+            block,
+            test=stop_test,
+            timeout=timeout,
+        )
 
     def command_position(self, position, block=False, timeout=5.0):
         """
@@ -604,8 +636,8 @@ class Gripper(object):
 
         From minimum/closed (0.0) to maximum/open (100.0)
         """
-        if self.type() == 'custom':
-            return self._capablity_warning('command_position')
+        if self.type() == "custom":
+            return self._capablity_warning("command_position")
 
         if self._state.calibrated != True:
             msg = "Unable to command %s position until calibrated" % self.name
@@ -614,18 +646,15 @@ class Gripper(object):
 
         cmd = EndEffectorCommand.CMD_GO
         arguments = {"position": self._clip(position)}
-        if self.type() == 'electric':
-            cmd_test = lambda: ((fabs(self._state.position - position)
-                                  < self._parameters['dead_zone'])
-                                 or self._state.gripping == True)
+        if self.type() == "electric":
+            cmd_test = lambda: (
+                (fabs(self._state.position - position) < self._parameters["dead_zone"])
+                or self._state.gripping == True
+            )
             return self.command(
-                                cmd,
-                                block,
-                                test=cmd_test,
-                                timeout=timeout,
-                                args=arguments
-                                )
-        elif arguments['position'] < 100.0:
+                cmd, block, test=cmd_test, timeout=timeout, args=arguments
+            )
+        elif arguments["position"] < 100.0:
             return self.close(block=block, timeout=timeout)
         else:
             return self.open(block=block, timeout=timeout)
@@ -642,18 +671,18 @@ class Gripper(object):
         @type block: bool
         @param block: command is blocking or non-blocking [False]
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('command_suction')
+        if self.type() != "suction":
+            return self._capablity_warning("command_suction")
 
         cmd = EndEffectorCommand.CMD_GO
         arguments = {"grip_attempt_seconds": timeout}
         return self.command(
-                            cmd,
-                            block,
-                            test=self.vacuum,
-                            timeout=timeout,
-                            args=arguments,
-                            )
+            cmd,
+            block,
+            test=self.vacuum,
+            timeout=timeout,
+            args=arguments,
+        )
 
     def set_velocity(self, velocity):
         """
@@ -662,8 +691,8 @@ class Gripper(object):
         @type velocity: float
         @param velocity: in % 0=stop 100=max [50.0]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('set_velocity')
+        if self.type() != "electric":
+            return self._capablity_warning("set_velocity")
 
         velocity_param = dict(velocity=self._clip(velocity))
         self.set_parameters(parameters=velocity_param, defaults=False)
@@ -678,8 +707,8 @@ class Gripper(object):
         @type force: float
         @param force: in % 0=none 100=max [30.0]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('set_moving_force')
+        if self.type() != "electric":
+            return self._capablity_warning("set_moving_force")
 
         moving = dict(moving_force=self._clip(force))
         self.set_parameters(parameters=moving, defaults=False)
@@ -695,8 +724,8 @@ class Gripper(object):
         @type force: float
         @param force: in % 0=none 100=max [30.0]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('set_holding_force')
+        if self.type() != "electric":
+            return self._capablity_warning("set_holding_force")
 
         holding = dict(holding_force=self._clip(force))
         self.set_parameters(parameters=holding, defaults=False)
@@ -711,8 +740,8 @@ class Gripper(object):
         @type dead_band: float
         @param dead_band: in % of full position [5.0]
         """
-        if self.type() != 'electric':
-            return self._capablity_warning('set_dead_band')
+        if self.type() != "electric":
+            return self._capablity_warning("set_dead_band")
 
         dead_band_param = dict(dead_zone=self._clip(dead_band))
         self.set_parameters(parameters=dead_band_param, defaults=False)
@@ -728,8 +757,8 @@ class Gripper(object):
         @type threshold: float
         @param threshold: in % of measured vacuum range [18.0]
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('set_vacuum_threshold')
+        if self.type() != "suction":
+            return self._capablity_warning("set_vacuum_threshold")
 
         threshold_param = dict(vacuum_sensor_threshold=self._clip(threshold))
         self.set_parameters(parameters=threshold_param, defaults=False)
@@ -748,8 +777,8 @@ class Gripper(object):
         @type blow_off: float
         @param blow_off: Time in seconds to blow air on release [0.4]
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('set_blow_off')
+        if self.type() != "suction":
+            return self._capablity_warning("set_blow_off")
 
         blow_off_param = dict(blow_off_seconds=blow_off)
         self.set_parameters(parameters=blow_off_param, defaults=False)
@@ -763,12 +792,11 @@ class Gripper(object):
         @type timeout: float
         @param timeout: timeout in seconds for open command success
         """
-        if self.type() == 'custom':
-            return self._capablity_warning('open')
-        elif self.type() == 'electric':
-            return self.command_position(position=100.0, block=block,
-                                         timeout=timeout)
-        elif self.type() == 'suction':
+        if self.type() == "custom":
+            return self._capablity_warning("open")
+        elif self.type() == "electric":
+            return self.command_position(position=100.0, block=block, timeout=timeout)
+        elif self.type() == "suction":
             return self.stop(block=block, timeout=timeout)
 
     def close(self, block=False, timeout=5.0):
@@ -780,12 +808,11 @@ class Gripper(object):
         @type timeout: float
         @param timeout: timeout in seconds for close command success
         """
-        if self.type() == 'custom':
-            return self._capablity_warning('close')
-        elif self.type() == 'electric':
-            return self.command_position(position=0.0, block=block,
-                                         timeout=timeout)
-        elif self.type() == 'suction':
+        if self.type() == "custom":
+            return self._capablity_warning("close")
+        elif self.type() == "electric":
+            return self.command_position(position=0.0, block=block, timeout=timeout)
+        elif self.type() == "suction":
             return self.command_suction(block=block, timeout=timeout)
 
     def parameters(self):
@@ -889,9 +916,9 @@ class Gripper(object):
 
         @rtype: float
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('vacuum_sensor')
-        sensor = JSONDecoder().decode(self._state.state)['vacuum sensor']
+        if self.type() != "suction":
+            return self._capablity_warning("vacuum_sensor")
+        sensor = JSONDecoder().decode(self._state.state)["vacuum sensor"]
         return (sensor / 255.0) * 100.0
 
     def vacuum(self):
@@ -901,9 +928,9 @@ class Gripper(object):
 
         @rtype: bool
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('vacuum')
-        return JSONDecoder().decode(self._state.state)['vacuum']
+        if self.type() != "suction":
+            return self._capablity_warning("vacuum")
+        return JSONDecoder().decode(self._state.state)["vacuum"]
 
     def blowing(self):
         """
@@ -911,9 +938,9 @@ class Gripper(object):
 
         @rtype: bool
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('blowing')
-        return JSONDecoder().decode(self._state.state)['blowing']
+        if self.type() != "suction":
+            return self._capablity_warning("blowing")
+        return JSONDecoder().decode(self._state.state)["blowing"]
 
     def sucking(self):
         """
@@ -921,9 +948,9 @@ class Gripper(object):
 
         @rtype: bool
         """
-        if self.type() != 'suction':
-            return self._capablity_warning('sucking')
-        return JSONDecoder().decode(self._state.state)['sucking']
+        if self.type() != "suction":
+            return self._capablity_warning("sucking")
+        return JSONDecoder().decode(self._state.state)["sucking"]
 
     def has_force(self):
         """
@@ -951,9 +978,9 @@ class Gripper(object):
         @rtype: str
         """
         return {
-        EndEffectorProperties.SUCTION_CUP_GRIPPER: 'suction',
-        EndEffectorProperties.ELECTRIC_GRIPPER: 'electric',
-        EndEffectorProperties.PASSIVE_GRIPPER: 'custom',
+            EndEffectorProperties.SUCTION_CUP_GRIPPER: "suction",
+            EndEffectorProperties.ELECTRIC_GRIPPER: "electric",
+            EndEffectorProperties.PASSIVE_GRIPPER: "custom",
         }.get(self._prop.ui_type, None)
 
     def hardware_id(self):

@@ -48,6 +48,7 @@ class AnalogIO(object):
       - set new output state
       - read current output state
     """
+
     def __init__(self, component_id):
         """
         Constructor.
@@ -55,45 +56,42 @@ class AnalogIO(object):
         @param component_id: unique id of analog component
         """
         self._id = component_id
-        self._component_type = 'analog_io'
+        self._component_type = "analog_io"
         self._is_output = False
 
         self._state = dict()
 
-        type_ns = '/robot/' + self._component_type
-        topic_base = type_ns + '/' + self._id
+        type_ns = "/robot/" + self._component_type
+        topic_base = type_ns + "/" + self._id
 
         self._sub_state = rospy.Subscriber(
-            topic_base + '/state',
-            AnalogIOState,
-            self._on_io_state)
+            topic_base + "/state", AnalogIOState, self._on_io_state
+        )
 
         baxter_dataflow.wait_for(
             lambda: len(self._state.keys()) != 0,
             timeout=2.0,
-            timeout_msg="Failed to get current analog_io state from %s" \
-            % (topic_base,),
-            )
+            timeout_msg="Failed to get current analog_io state from %s" % (topic_base,),
+        )
 
         # check if output-capable before creating publisher
         if self._is_output:
             self._pub_output = rospy.Publisher(
-                type_ns + '/command',
-                AnalogOutputCommand,
-                queue_size=10)
+                type_ns + "/command", AnalogOutputCommand, queue_size=10
+            )
 
     def _on_io_state(self, msg):
         """
         Updates the internally stored state of the Analog Input/Output.
         """
         self._is_output = not msg.isInputOnly
-        self._state['value'] = msg.value
+        self._state["value"] = msg.value
 
     def state(self):
         """
         Return the latest value of the Analog Input/Output.
         """
-        return self._state['value']
+        return self._state["value"]
 
     def is_output(self):
         """
@@ -112,8 +110,11 @@ class AnalogIO(object):
                         If 0, just command once and return. [0]
         """
         if not self._is_output:
-            raise IOError(errno.EACCES, "Component is not an output [%s: %s]" %
-                (self._component_type, self._id))
+            raise IOError(
+                errno.EACCES,
+                "Component is not an output [%s: %s]"
+                % (self._component_type, self._id),
+            )
         cmd = AnalogOutputCommand()
         cmd.name = self._id
         cmd.value = value
@@ -125,5 +126,5 @@ class AnalogIO(object):
                 timeout=timeout,
                 rate=100,
                 timeout_msg=("Failed to command analog io to: %d" % (value,)),
-                body=lambda: self._pub_output.publish(cmd)
-                )
+                body=lambda: self._pub_output.publish(cmd),
+            )

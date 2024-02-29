@@ -7,7 +7,7 @@ TEST_F(CameraTest, cameraSubscribeTest)
   subscribeTest();
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
   ros::init(argc, argv, "gazebo_camera_test");
   testing::InitGoogleTest(&argc, argv);

@@ -48,7 +48,8 @@
 #include <transmission_interface/transmission_info.h>
 #include <urdf/model.h>
 
-namespace gazebo_ros_control {
+namespace gazebo_ros_control
+{
 
   // Struct for passing loaded joint data
   struct JointData
@@ -56,10 +57,10 @@ namespace gazebo_ros_control {
     std::string name_;
     std::string hardware_interface_;
 
-    JointData(const std::string& name, const std::string& hardware_interface) :
-      name_(name),
-      hardware_interface_(hardware_interface)
-    {}
+    JointData(const std::string &name, const std::string &hardware_interface) : name_(name),
+                                                                                hardware_interface_(hardware_interface)
+    {
+    }
   };
 
   /// \brief Gazebo plugin version of RobotHW
@@ -68,8 +69,7 @@ namespace gazebo_ros_control {
   class RobotHWSim : public hardware_interface::RobotHW
   {
   public:
-
-    virtual ~RobotHWSim() { }
+    virtual ~RobotHWSim() {}
 
     /// \brief Initialize the simulated robot hardware
     ///
@@ -83,7 +83,7 @@ namespace gazebo_ros_control {
     ///
     /// \return  \c true if the simulated robot hardware is initialized successfully, \c false if not.
     virtual bool initSim(
-        const std::string& robot_namespace,
+        const std::string &robot_namespace,
         ros::NodeHandle model_nh,
         gazebo::physics::ModelPtr parent_model,
         const urdf::Model *const urdf_model,
@@ -111,7 +111,6 @@ namespace gazebo_ros_control {
     ///
     /// \param active  \c true if the emergency stop is active, \c false if not.
     virtual void eStopActive(const bool active) {}
-
   };
 
 }

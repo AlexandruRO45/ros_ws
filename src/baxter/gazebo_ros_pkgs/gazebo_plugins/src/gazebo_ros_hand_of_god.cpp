@@ -50,12 +50,11 @@ namespace gazebo
 
   ////////////////////////////////////////////////////////////////////////////////
   // Constructor
-  GazeboRosHandOfGod::GazeboRosHandOfGod() :
-    ModelPlugin(),
-    robot_namespace_(""),
-    frame_id_("hog"),
-    kl_(200),
-    ka_(200)
+  GazeboRosHandOfGod::GazeboRosHandOfGod() : ModelPlugin(),
+                                             robot_namespace_(""),
+                                             frame_id_("hog"),
+                                             kl_(200),
+                                             ka_(200)
   {
   }
 
@@ -67,34 +66,42 @@ namespace gazebo
 
   ////////////////////////////////////////////////////////////////////////////////
   // Load the controller
-  void GazeboRosHandOfGod::Load( physics::ModelPtr _parent, sdf::ElementPtr _sdf )
+  void GazeboRosHandOfGod::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   {
     // Make sure the ROS node for Gazebo has already been initalized
-    if (!ros::isInitialized()) {
+    if (!ros::isInitialized())
+    {
       ROS_FATAL_STREAM_NAMED("hand_of_god", "A ROS node for Gazebo has not been initialized, unable to load plugin. "
-                       << "Load the Gazebo system plugin 'libgazebo_ros_api_plugin.so' in the gazebo_ros package)");
+                                                << "Load the Gazebo system plugin 'libgazebo_ros_api_plugin.so' in the gazebo_ros package)");
       return;
     }
 
     // Get sdf parameters
-    if(_sdf->HasElement("robotNamespace")) {
+    if (_sdf->HasElement("robotNamespace"))
+    {
       this->robot_namespace_ = _sdf->Get<std::string>("robotNamespace") + "/";
     }
 
-    if(_sdf->HasElement("frameId")) {
+    if (_sdf->HasElement("frameId"))
+    {
       this->frame_id_ = _sdf->Get<std::string>("frameId");
     }
 
-    if(_sdf->HasElement("kl")) {
+    if (_sdf->HasElement("kl"))
+    {
       this->kl_ = _sdf->Get<double>("kl");
     }
-    if(_sdf->HasElement("ka")) {
+    if (_sdf->HasElement("ka"))
+    {
       this->ka_ = _sdf->Get<double>("ka");
     }
 
-    if(_sdf->HasElement("linkName")) {
+    if (_sdf->HasElement("linkName"))
+    {
       this->link_name_ = _sdf->Get<std::string>("linkName");
-    } else {
+    }
+    else
+    {
       ROS_FATAL_STREAM_NAMED("hand_of_god", "The hand-of-god plugin requires a `linkName` parameter tag");
       return;
     }
@@ -106,21 +113,23 @@ namespace gazebo
     floating_link_ = model_->GetLink(link_name_);
     // Disable gravity for the hog
     floating_link_->SetGravityMode(false);
-    if(!floating_link_) {
+    if (!floating_link_)
+    {
       ROS_ERROR_NAMED("hand_of_god", "Floating link not found");
       const std::vector<physics::LinkPtr> &links = model_->GetLinks();
-      for(unsigned i=0; i < links.size(); i++) {
-        ROS_ERROR_STREAM_NAMED("hand_of_god", " -- Link "<<i<<": "<<links[i]->GetName());
+      for (unsigned i = 0; i < links.size(); i++)
+      {
+        ROS_ERROR_STREAM_NAMED("hand_of_god", " -- Link " << i << ": " << links[i]->GetName());
       }
       return;
     }
 
 #if GAZEBO_MAJOR_VERSION >= 8
-    cl_ = 2.0 * sqrt(kl_*floating_link_->GetInertial()->Mass());
-    ca_ = 2.0 * sqrt(ka_*floating_link_->GetInertial()->IXX());
+    cl_ = 2.0 * sqrt(kl_ * floating_link_->GetInertial()->Mass());
+    ca_ = 2.0 * sqrt(ka_ * floating_link_->GetInertial()->IXX());
 #else
-    cl_ = 2.0 * sqrt(kl_*floating_link_->GetInertial()->GetMass());
-    ca_ = 2.0 * sqrt(ka_*floating_link_->GetInertial()->GetIXX());
+    cl_ = 2.0 * sqrt(kl_ * floating_link_->GetInertial()->GetMass());
+    ca_ = 2.0 * sqrt(ka_ * floating_link_->GetInertial()->GetIXX());
 #endif
 
     // Create the TF listener for the desired position of the hog
@@ -140,12 +149,16 @@ namespace gazebo
     // Get TF transform relative to the /world link
     geometry_msgs::TransformStamped hog_desired_tform;
     static bool errored = false;
-    try{
-      hog_desired_tform = tf_buffer_->lookupTransform("world", frame_id_+"_desired", ros::Time(0));
+    try
+    {
+      hog_desired_tform = tf_buffer_->lookupTransform("world", frame_id_ + "_desired", ros::Time(0));
       errored = false;
-    } catch (tf2::TransformException ex){
-      if(!errored) {
-        ROS_ERROR_NAMED("hand_of_god", "%s",ex.what());
+    }
+    catch (tf2::TransformException ex)
+    {
+      if (!errored)
+      {
+        ROS_ERROR_NAMED("hand_of_god", "%s", ex.what());
         errored = true;
       }
       return;
@@ -170,16 +183,14 @@ namespace gazebo
 #endif
     ignition::math::Vector3d err_pos = hog_desired.Pos() - world_pose.Pos();
     // Get exponential coordinates for rotation
-    ignition::math::Quaterniond err_rot =  (ignition::math::Matrix4d(world_pose.Rot()).Inverse()
-                                          * ignition::math::Matrix4d(hog_desired.Rot())).Rotation();
+    ignition::math::Quaterniond err_rot = (ignition::math::Matrix4d(world_pose.Rot()).Inverse() * ignition::math::Matrix4d(hog_desired.Rot())).Rotation();
     ignition::math::Quaterniond not_a_quaternion = err_rot.Log();
 
     floating_link_->AddForce(
         kl_ * err_pos - cl_ * worldLinearVel);
 
     floating_link_->AddRelativeTorque(
-        ka_ * ignition::math::Vector3d(not_a_quaternion.X(), not_a_quaternion.Y(), not_a_quaternion.Z())
-      - ca_ * relativeAngularVel);
+        ka_ * ignition::math::Vector3d(not_a_quaternion.X(), not_a_quaternion.Y(), not_a_quaternion.Z()) - ca_ * relativeAngularVel);
 
     // Convert actual pose to TransformStamped message
     geometry_msgs::TransformStamped hog_actual_tform;
