@@ -31,7 +31,15 @@ if __name__ == '__main__':
     board_pose = Pose(Point(0.3,0.55,0.78), orient)
     frame_dist = 0.025
     model_path = rospkg.RosPack().get_path('baxter_chess')+"/models/"
+
+    # Spawned Piece Pose
+    spawned_piece_pose = Pose(Point(x=0.3, y=0.55, z=0.78))
+    spawned_piece = rospy.Publisher('spawned_piece', Pose, queue_size=10)
+
+    # Spawn the spawned piece into the simulation
+    print srv_call("spawned_piece", "", "", spawned_piece_pose, "world")
     
+    # Load chessboard model
     with open(model_path + "chessboard/model.sdf", "r") as f:
         board_xml = f.read().replace('\n', '')
 
@@ -47,11 +55,15 @@ if __name__ == '__main__':
         with open(model_path + each+".sdf", "r") as f:
             pieces_xml[each] = f.read().replace('\n', '')
 
-    # board_setup = ['rnbqkbnr', 'pppppppp', '', '', '', '', 'PPPPPPPP', 'RNBQKBNR']
+    # Board setup (Standard chess game)
+    #board_setup = ['rnbqkbnr', 'pppppppp', '', '', '', '', 'PPPPPPPP', 'RNBQKBNR']
+    
+    # Board setup (Simplified chess game)
     board_setup = ['r******r', '', '**k*****', '', '', '******K*', '', 'R******R']
 
     piece_positionmap = dict()
     piece_names = []
+
     for row, each in enumerate(board_setup):
         # print row
         for col, piece in enumerate(each):
@@ -62,7 +74,14 @@ if __name__ == '__main__':
             piece_positionmap[str(row)+str(col)] = [pose.position.x, pose.position.y, pose.position.z-0.93] #0.93 to compensate Gazebo RViz origin difference
             if piece in list_pieces:
                 piece_names.append("%s%d" % (piece,col))
-
+                print srv_call("%s%d" % (piece,col), pieces_xml[piece], "", spawned_piece_pose, "world")
+                spawned_piece.publish(pose)
+                print(rospy.get_time())
+                rospy.sleep(0.1)
+            elif piece == '*':
+                print('Error: No piece in this position: %s%d' % (piece,col))
+    
+    # Publish parameters to the ROS parameter server
     rospy.set_param('board_setup', board_setup) # Board setup
     rospy.set_param('list_pieces', list_pieces) # List of unique pieces
     rospy.set_param('piece_target_position_map', piece_positionmap) # 3D positions for each square in the chessboard
