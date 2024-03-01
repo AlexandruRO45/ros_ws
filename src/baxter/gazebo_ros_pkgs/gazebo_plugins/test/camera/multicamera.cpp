@@ -30,11 +30,10 @@ protected:
   //     > MySyncPolicy;
   // message_filters::Synchronizer< MySyncPolicy > sync_;
 
-
 public:
   void imageCallback(
-      const sensor_msgs::ImageConstPtr& left_msg,
-      const sensor_msgs::ImageConstPtr& right_msg)
+      const sensor_msgs::ImageConstPtr &left_msg,
+      const sensor_msgs::ImageConstPtr &right_msg)
   {
     image_left_stamp_ = left_msg->header.stamp;
     image_right_stamp_ = right_msg->header.stamp;
@@ -56,7 +55,7 @@ TEST_F(MultiCameraTest, cameraSubscribeTest)
   message_filters::TimeSynchronizer<sensor_msgs::Image, sensor_msgs::Image> sync(
       cam_left_sub_, cam_right_sub_, 4);
   sync.registerCallback(boost::bind(&MultiCameraTest::imageCallback,
-      dynamic_cast<MultiCameraTest*>(this), _1, _2));
+                                    dynamic_cast<MultiCameraTest *>(this), _1, _2));
 #if 0
   // wait for gazebo to start publishing
   // TODO(lucasw) this isn't really necessary since this test
@@ -108,7 +107,7 @@ TEST_F(MultiCameraTest, cameraSubscribeTest)
   }
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
   ros::init(argc, argv, "gazebo_multicamera_test");
   testing::InitGoogleTest(&argc, argv);

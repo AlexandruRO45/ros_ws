@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 #ifndef _GAZEBO_MULTI_CAMERA_PLUGIN_HH_
 #define _GAZEBO_MULTI_CAMERA_PLUGIN_HH_
 
@@ -29,28 +29,40 @@ namespace gazebo
 {
   class MultiCameraPlugin : public SensorPlugin
   {
-    public: MultiCameraPlugin();
+  public:
+    MultiCameraPlugin();
 
     /// \brief Destructor
-    public: virtual ~MultiCameraPlugin();
+  public:
+    virtual ~MultiCameraPlugin();
 
-    public: virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
+  public:
+    virtual void Load(sensors::SensorPtr _sensor, sdf::ElementPtr _sdf);
 
-    public: virtual void OnNewFrameLeft(const unsigned char *_image,
-                              unsigned int _width, unsigned int _height,
-                              unsigned int _depth, const std::string &_format);
-    public: virtual void OnNewFrameRight(const unsigned char *_image,
-                              unsigned int _width, unsigned int _height,
-                              unsigned int _depth, const std::string &_format);
+  public:
+    virtual void OnNewFrameLeft(const unsigned char *_image,
+                                unsigned int _width, unsigned int _height,
+                                unsigned int _depth, const std::string &_format);
 
-    protected: sensors::MultiCameraSensorPtr parentSensor;
+  public:
+    virtual void OnNewFrameRight(const unsigned char *_image,
+                                 unsigned int _width, unsigned int _height,
+                                 unsigned int _depth, const std::string &_format);
 
-    protected: std::vector<unsigned int> width, height, depth;
-    protected: std::vector<std::string> format;
+  protected:
+    sensors::MultiCameraSensorPtr parentSensor;
 
-    protected: std::vector<rendering::CameraPtr> camera;
+  protected:
+    std::vector<unsigned int> width, height, depth;
 
-    private: std::vector<event::ConnectionPtr> newFrameConnection;
+  protected:
+    std::vector<std::string> format;
+
+  protected:
+    std::vector<rendering::CameraPtr> camera;
+
+  private:
+    std::vector<event::ConnectionPtr> newFrameConnection;
   };
 }
 #endif

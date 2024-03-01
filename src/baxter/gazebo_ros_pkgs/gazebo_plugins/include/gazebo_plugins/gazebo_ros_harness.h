@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 #ifndef GAZEBO_ROS_HARNESS_H
 #define GAZEBO_ROS_HARNESS_H
 
@@ -29,52 +29,66 @@
 
 namespace gazebo
 {
-/// \brief See the Gazebo documentation about the HarnessPlugin. This ROS
-/// wrapper exposes two topics:
-///
-///  1. /<plugin_model_name>/harness/velocity
-///      - Message Type: std_msgs::Float32
-///      - Purpose: Set target winch velocity
-///
-///  2. /<plugin_model_name>/harness/detach
-///      - Message Type: std_msgs::Bool
-///      - Purpose: Detach the <detach> joint.
-class GazeboRosHarness : public HarnessPlugin
-{
-    /// \brief Constructor
-    public: GazeboRosHarness();
+    /// \brief See the Gazebo documentation about the HarnessPlugin. This ROS
+    /// wrapper exposes two topics:
+    ///
+    ///  1. /<plugin_model_name>/harness/velocity
+    ///      - Message Type: std_msgs::Float32
+    ///      - Purpose: Set target winch velocity
+    ///
+    ///  2. /<plugin_model_name>/harness/detach
+    ///      - Message Type: std_msgs::Bool
+    ///      - Purpose: Detach the <detach> joint.
+    class GazeboRosHarness : public HarnessPlugin
+    {
+        /// \brief Constructor
+    public:
+        GazeboRosHarness();
 
-    /// \brief Destructor
-    public: virtual ~GazeboRosHarness();
+        /// \brief Destructor
+    public:
+        virtual ~GazeboRosHarness();
 
-    /// \brief Load the plugin
-    public: virtual void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf);
+        /// \brief Load the plugin
+    public:
+        virtual void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf);
 
-    /// \brief Receive winch velocity control messages.
-    /// \param[in] msg Float message that is the target winch velocity.
-    private: virtual void OnVelocity(const std_msgs::Float32::ConstPtr &msg);
+        /// \brief Receive winch velocity control messages.
+        /// \param[in] msg Float message that is the target winch velocity.
+    private:
+        virtual void OnVelocity(const std_msgs::Float32::ConstPtr &msg);
 
-    /// \brief Receive detach messages
-    /// \param[in] msg Boolean detach message. Detach joints if data is
-    /// true.
-    private: virtual void OnDetach(const std_msgs::Bool::ConstPtr &msg);
+        /// \brief Receive detach messages
+        /// \param[in] msg Boolean detach message. Detach joints if data is
+        /// true.
+    private:
+        virtual void OnDetach(const std_msgs::Bool::ConstPtr &msg);
 
-    /// \brief Custom callback queue thread
-    private: void QueueThread();
+        /// \brief Custom callback queue thread
+    private:
+        void QueueThread();
 
-    /// \brief pointer to ros node
-    private: ros::NodeHandle *rosnode_;
+        /// \brief pointer to ros node
+    private:
+        ros::NodeHandle *rosnode_;
 
-    /// \brief Subscriber to velocity control messages.
-    private: ros::Subscriber velocitySub_;
+        /// \brief Subscriber to velocity control messages.
+    private:
+        ros::Subscriber velocitySub_;
 
-    /// \brief Subscriber to detach control messages.
-    private: ros::Subscriber detachSub_;
+        /// \brief Subscriber to detach control messages.
+    private:
+        ros::Subscriber detachSub_;
 
-    /// \brief for setting ROS name space
-    private: std::string robotNamespace_;
-    private: ros::CallbackQueue queue_;
-    private: boost::thread callbackQueueThread_;
-};
+        /// \brief for setting ROS name space
+    private:
+        std::string robotNamespace_;
+
+    private:
+        ros::CallbackQueue queue_;
+
+    private:
+        boost::thread callbackQueueThread_;
+    };
 }
 #endif

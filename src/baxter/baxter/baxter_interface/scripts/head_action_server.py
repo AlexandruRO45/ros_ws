@@ -36,9 +36,7 @@ import rospy
 
 from dynamic_reconfigure.server import Server
 
-from baxter_interface.cfg import (
-    HeadActionServerConfig
-)
+from baxter_interface.cfg import HeadActionServerConfig
 from head_action.head_action import (
     HeadActionServer,
 )
@@ -49,15 +47,16 @@ def start_server():
     rospy.init_node("rsdk_head_action_server")
     print("Initializing head action server...")
 
-    dynamic_cfg_srv = Server(HeadActionServerConfig,
-                             lambda config, level: config)
+    dynamic_cfg_srv = Server(HeadActionServerConfig, lambda config, level: config)
 
     HeadActionServer(dynamic_cfg_srv)
     print("Running. Ctrl-c to quit")
     rospy.spin()
 
+
 def main():
     start_server()
+
 
 if __name__ == "__main__":
     main()

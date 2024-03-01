@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 #include <gazebo/sensors/DepthCameraSensor.hh>
 #include <gazebo/sensors/CameraSensor.hh>
 #include <gazebo_plugins/MultiCameraPlugin.h>
@@ -36,14 +36,14 @@ MultiCameraPlugin::~MultiCameraPlugin()
 
 /////////////////////////////////////////////////
 void MultiCameraPlugin::Load(sensors::SensorPtr _sensor,
-  sdf::ElementPtr /*_sdf*/)
+                             sdf::ElementPtr /*_sdf*/)
 {
   if (!_sensor)
     gzerr << "Invalid sensor pointer.\n";
 
   GAZEBO_SENSORS_USING_DYNAMIC_POINTER_CAST;
   this->parentSensor =
-    dynamic_pointer_cast<sensors::MultiCameraSensor>(_sensor);
+      dynamic_pointer_cast<sensors::MultiCameraSensor>(_sensor);
 
   if (!this->parentSensor)
   {
@@ -77,14 +77,14 @@ void MultiCameraPlugin::Load(sensors::SensorPtr _sensor,
     if (cameraName.find("left") != std::string::npos)
     {
       this->newFrameConnection.push_back(this->camera[i]->ConnectNewImageFrame(
-        boost::bind(&MultiCameraPlugin::OnNewFrameLeft,
-        this, _1, _2, _3, _4, _5)));
+          boost::bind(&MultiCameraPlugin::OnNewFrameLeft,
+                      this, _1, _2, _3, _4, _5)));
     }
     else if (cameraName.find("right") != std::string::npos)
     {
       this->newFrameConnection.push_back(this->camera[i]->ConnectNewImageFrame(
-        boost::bind(&MultiCameraPlugin::OnNewFrameRight,
-        this, _1, _2, _3, _4, _5)));
+          boost::bind(&MultiCameraPlugin::OnNewFrameRight,
+                      this, _1, _2, _3, _4, _5)));
     }
   }
 
@@ -93,10 +93,10 @@ void MultiCameraPlugin::Load(sensors::SensorPtr _sensor,
 
 /////////////////////////////////////////////////
 void MultiCameraPlugin::OnNewFrameLeft(const unsigned char * /*_image*/,
-                              unsigned int /*_width*/,
-                              unsigned int /*_height*/,
-                              unsigned int /*_depth*/,
-                              const std::string &/*_format*/)
+                                       unsigned int /*_width*/,
+                                       unsigned int /*_height*/,
+                                       unsigned int /*_depth*/,
+                                       const std::string & /*_format*/)
 {
   /*rendering::Camera::SaveFrame(_image, this->width,
     this->height, this->depth, this->format,
@@ -106,10 +106,10 @@ void MultiCameraPlugin::OnNewFrameLeft(const unsigned char * /*_image*/,
 
 /////////////////////////////////////////////////
 void MultiCameraPlugin::OnNewFrameRight(const unsigned char * /*_image*/,
-                              unsigned int /*_width*/,
-                              unsigned int /*_height*/,
-                              unsigned int /*_depth*/,
-                              const std::string &/*_format*/)
+                                        unsigned int /*_width*/,
+                                        unsigned int /*_height*/,
+                                        unsigned int /*_depth*/,
+                                        const std::string & /*_format*/)
 {
   /*rendering::Camera::SaveFrame(_image, this->width,
     this->height, this->depth, this->format,

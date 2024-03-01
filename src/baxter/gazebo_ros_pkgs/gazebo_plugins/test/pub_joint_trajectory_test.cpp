@@ -4,12 +4,12 @@
 #include <ignition/math/Quaternion.hh>
 #include <math.h>
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
 
   ros::init(argc, argv, "pub_joint_trajectory_test");
   ros::NodeHandle rosnode;
-  ros::Publisher pub_ = rosnode.advertise<trajectory_msgs::JointTrajectory>("set_joint_trajectory",100);
+  ros::Publisher pub_ = rosnode.advertise<trajectory_msgs::JointTrajectory>("set_joint_trajectory", 100);
   ros::ServiceClient srv_ = rosnode.serviceClient<gazebo_msgs::SetJointTrajectory>("set_joint_trajectory");
 
   trajectory_msgs::JointTrajectory jt;
@@ -36,9 +36,9 @@ int main(int argc, char** argv)
   jt.points.resize(n);
   for (int i = 0; i < n; i++)
   {
-    double theta = rps*2.0*M_PI*i*dt;
-    double x1 = -0.5*sin(2*theta);
-    double x2 =  0.5*sin(1*theta);
+    double theta = rps * 2.0 * M_PI * i * dt;
+    double x1 = -0.5 * sin(2 * theta);
+    double x2 = 0.5 * sin(1 * theta);
     jt.points[i].positions.push_back(x1);
     jt.points[i].positions.push_back(x2);
     jt.points[i].positions.push_back(3.14);
@@ -53,7 +53,7 @@ int main(int argc, char** argv)
     jt.points[i].positions.push_back(-0.2);
     // set duration
     jt.points[i].time_from_start = ros::Duration(dt);
-    ROS_INFO_NAMED("joint_trajectory_test", "test: angles[%d][%f, %f]",n,x1,x2);
+    ROS_INFO_NAMED("joint_trajectory_test", "test: angles[%d][%f, %f]", n, x1, x2);
   }
 
   // pub_.publish(jt); // use publisher
