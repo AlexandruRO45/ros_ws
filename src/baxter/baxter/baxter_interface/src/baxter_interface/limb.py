@@ -31,9 +31,7 @@ from copy import deepcopy
 
 import rospy
 
-from sensor_msgs.msg import (
-    JointState
-)
+from sensor_msgs.msg import JointState
 from std_msgs.msg import (
     Float64,
 )
@@ -53,8 +51,8 @@ class Limb(object):
     """
 
     # Containers
-    Point = collections.namedtuple('Point', ['x', 'y', 'z'])
-    Quaternion = collections.namedtuple('Quaternion', ['x', 'y', 'z', 'w'])
+    Point = collections.namedtuple("Point", ["x", "y", "z"])
+    Quaternion = collections.namedtuple("Quaternion", ["x", "y", "z", "w"])
 
     def __init__(self, limb):
         """
@@ -72,57 +70,73 @@ class Limb(object):
         self._cartesian_effort = dict()
 
         self._joint_names = {
-            'left': ['left_s0', 'left_s1', 'left_e0', 'left_e1',
-                     'left_w0', 'left_w1', 'left_w2'],
-            'right': ['right_s0', 'right_s1', 'right_e0', 'right_e1',
-                      'right_w0', 'right_w1', 'right_w2']
-            }
+            "left": [
+                "left_s0",
+                "left_s1",
+                "left_e0",
+                "left_e1",
+                "left_w0",
+                "left_w1",
+                "left_w2",
+            ],
+            "right": [
+                "right_s0",
+                "right_s1",
+                "right_e0",
+                "right_e1",
+                "right_w0",
+                "right_w1",
+                "right_w2",
+            ],
+        }
 
-        ns = '/robot/limb/' + limb + '/'
+        ns = "/robot/limb/" + limb + "/"
 
         self._command_msg = JointCommand()
 
         self._pub_speed_ratio = rospy.Publisher(
-            ns + 'set_speed_ratio',
-            Float64,
-            latch=True,
-            queue_size=10)
+            ns + "set_speed_ratio", Float64, latch=True, queue_size=10
+        )
 
         self._pub_joint_cmd = rospy.Publisher(
-            ns + 'joint_command',
-            JointCommand,
-            tcp_nodelay=True,
-            queue_size=1)
+            ns + "joint_command", JointCommand, tcp_nodelay=True, queue_size=1
+        )
 
         self._pub_joint_cmd_timeout = rospy.Publisher(
-            ns + 'joint_command_timeout',
-            Float64,
-            latch=True,
-            queue_size=10)
+            ns + "joint_command_timeout", Float64, latch=True, queue_size=10
+        )
 
         _cartesian_state_sub = rospy.Subscriber(
-            ns + 'endpoint_state',
+            ns + "endpoint_state",
             EndpointState,
             self._on_endpoint_states,
             queue_size=1,
-            tcp_nodelay=True)
+            tcp_nodelay=True,
+        )
 
-        joint_state_topic = 'robot/joint_states'
+        joint_state_topic = "robot/joint_states"
         _joint_state_sub = rospy.Subscriber(
             joint_state_topic,
             JointState,
             self._on_joint_states,
             queue_size=1,
-            tcp_nodelay=True)
+            tcp_nodelay=True,
+        )
 
-        err_msg = ("%s limb init failed to get current joint_states "
-                   "from %s") % (self.name.capitalize(), joint_state_topic)
-        baxter_dataflow.wait_for(lambda: len(self._joint_angle.keys()) > 0,
-                                 timeout_msg=err_msg)
-        err_msg = ("%s limb init failed to get current endpoint_state "
-                   "from %s") % (self.name.capitalize(), ns + 'endpoint_state')
-        baxter_dataflow.wait_for(lambda: len(self._cartesian_pose.keys()) > 0,
-                                 timeout_msg=err_msg)
+        err_msg = ("%s limb init failed to get current joint_states " "from %s") % (
+            self.name.capitalize(),
+            joint_state_topic,
+        )
+        baxter_dataflow.wait_for(
+            lambda: len(self._joint_angle.keys()) > 0, timeout_msg=err_msg
+        )
+        err_msg = ("%s limb init failed to get current endpoint_state " "from %s") % (
+            self.name.capitalize(),
+            ns + "endpoint_state",
+        )
+        baxter_dataflow.wait_for(
+            lambda: len(self._cartesian_pose.keys()) > 0, timeout_msg=err_msg
+        )
 
     def _on_joint_states(self, msg):
         for idx, name in enumerate(msg.name):
@@ -135,12 +149,12 @@ class Limb(object):
         # Comments in this private method are for documentation purposes.
         # _pose = {'position': (x, y, z), 'orientation': (x, y, z, w)}
         self._cartesian_pose = {
-            'position': self.Point(
+            "position": self.Point(
                 msg.pose.position.x,
                 msg.pose.position.y,
                 msg.pose.position.z,
             ),
-            'orientation': self.Quaternion(
+            "orientation": self.Quaternion(
                 msg.pose.orientation.x,
                 msg.pose.orientation.y,
                 msg.pose.orientation.z,
@@ -149,12 +163,12 @@ class Limb(object):
         }
         # _twist = {'linear': (x, y, z), 'angular': (x, y, z)}
         self._cartesian_velocity = {
-            'linear': self.Point(
+            "linear": self.Point(
                 msg.twist.linear.x,
                 msg.twist.linear.y,
                 msg.twist.linear.z,
             ),
-            'angular': self.Point(
+            "angular": self.Point(
                 msg.twist.angular.x,
                 msg.twist.angular.y,
                 msg.twist.angular.z,
@@ -162,12 +176,12 @@ class Limb(object):
         }
         # _wrench = {'force': (x, y, z), 'torque': (x, y, z)}
         self._cartesian_effort = {
-            'force': self.Point(
+            "force": self.Point(
                 msg.wrench.force.x,
                 msg.wrench.force.y,
                 msg.wrench.force.z,
             ),
-            'torque': self.Point(
+            "torque": self.Point(
                 msg.wrench.torque.x,
                 msg.wrench.torque.y,
                 msg.wrench.torque.z,
@@ -398,13 +412,16 @@ class Limb(object):
         @type timeout: float
         @param timeout: seconds to wait for move to finish [15]
         """
-        angles = dict(zip(self.joint_names(),
-                          [0.0, -0.55, 0.0, 0.75, 0.0, 1.26, 0.0]))
+        angles = dict(zip(self.joint_names(), [0.0, -0.55, 0.0, 0.75, 0.0, 1.26, 0.0]))
         return self.move_to_joint_positions(angles, timeout)
 
-    def move_to_joint_positions(self, positions, timeout=15.0,
-                                threshold=settings.JOINT_ANGLE_TOLERANCE,
-                                test=None):
+    def move_to_joint_positions(
+        self,
+        positions,
+        timeout=15.0,
+        threshold=settings.JOINT_ANGLE_TOLERANCE,
+        test=None,
+    ):
         """
         (Blocking) Commands the limb to the provided positions.
 
@@ -432,19 +449,22 @@ class Limb(object):
         def genf(joint, angle):
             def joint_diff():
                 return abs(angle - self._joint_angle[joint])
+
             return joint_diff
 
-        diffs = [genf(j, a) for j, a in positions.items() if
-                 j in self._joint_angle]
+        diffs = [genf(j, a) for j, a in positions.items() if j in self._joint_angle]
 
         self.set_joint_positions(filtered_cmd())
         baxter_dataflow.wait_for(
-            test=lambda: callable(test) and test() == True or \
-                         (all(diff() < threshold for diff in diffs)),
+            test=lambda: callable(test)
+            and test() == True
+            or (all(diff() < threshold for diff in diffs)),
             timeout=timeout,
-            timeout_msg=("%s limb failed to reach commanded joint positions" %
-                         (self.name.capitalize(),)),
+            timeout_msg=(
+                "%s limb failed to reach commanded joint positions"
+                % (self.name.capitalize(),)
+            ),
             rate=100,
             raise_on_error=False,
-            body=lambda: self.set_joint_positions(filtered_cmd())
-            )
+            body=lambda: self.set_joint_positions(filtered_cmd()),
+        )

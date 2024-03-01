@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 /*
  * Desc: Video plugin for displaying ROS image topics on Ogre textures
@@ -29,8 +29,7 @@ namespace gazebo
 
   VideoVisual::VideoVisual(
       const std::string &name, rendering::VisualPtr parent,
-      int height, int width) :
-      rendering::Visual(name, parent), height_(height), width_(width)
+      int height, int width) : rendering::Visual(name, parent), height_(height), width_(width)
   {
 
     texture_ = Ogre::TextureManager::getSingleton().createManual(
@@ -43,8 +42,8 @@ namespace gazebo
         Ogre::TU_DYNAMIC_WRITE_ONLY_DISCARDABLE);
 
     Ogre::MaterialPtr material =
-      Ogre::MaterialManager::getSingleton().create(
-          name + "__VideoMaterial__", "General");
+        Ogre::MaterialManager::getSingleton().create(
+            name + "__VideoMaterial__", "General");
     material->getTechnique(0)->getPass(0)->createTextureUnitState(
         name + "__VideoTexture__");
     material->setReceiveShadows(false);
@@ -53,7 +52,7 @@ namespace gazebo
 
     Ogre::ManualObject mo(name + "__VideoObject__");
     mo.begin(name + "__VideoMaterial__",
-        Ogre::RenderOperation::OT_TRIANGLE_LIST);
+             Ogre::RenderOperation::OT_TRIANGLE_LIST);
 
     mo.position(-factor / 2, factor / 2, 0.51);
     mo.textureCoord(0, 0);
@@ -73,21 +72,23 @@ namespace gazebo
 
     mo.convertToMesh(name + "__VideoMesh__");
 
-    Ogre::MovableObject *obj = (Ogre::MovableObject*)
-      GetSceneNode()->getCreator()->createEntity(
-          name + "__VideoEntity__",
-          name + "__VideoMesh__");
+    Ogre::MovableObject *obj = (Ogre::MovableObject *)
+                                   GetSceneNode()
+                                       ->getCreator()
+                                       ->createEntity(
+                                           name + "__VideoEntity__",
+                                           name + "__VideoMesh__");
     obj->setCastShadows(false);
     AttachObject(obj);
   }
 
   VideoVisual::~VideoVisual() {}
 
-  void VideoVisual::render(const cv::Mat& image)
+  void VideoVisual::render(const cv::Mat &image)
   {
 
     // Fix image size if necessary
-    const cv::Mat* image_ptr = &image;
+    const cv::Mat *image_ptr = &image;
     cv::Mat converted_image;
     if (image_ptr->rows != height_ || image_ptr->cols != width_)
     {
@@ -97,12 +98,12 @@ namespace gazebo
 
     // Get the pixel buffer
     Ogre::HardwarePixelBufferSharedPtr pixelBuffer =
-      texture_->getBuffer();
+        texture_->getBuffer();
 
     // Lock the pixel buffer and get a pixel box
     pixelBuffer->lock(Ogre::HardwareBuffer::HBL_DISCARD);
-    const Ogre::PixelBox& pixelBox = pixelBuffer->getCurrentLock();
-    uint8_t* pDest = static_cast<uint8_t*>(pixelBox.data);
+    const Ogre::PixelBox &pixelBox = pixelBuffer->getCurrentLock();
+    uint8_t *pDest = static_cast<uint8_t *>(pixelBox.data);
 
     memcpy(pDest, image_ptr->data, height_ * width_ * 4);
 
@@ -114,7 +115,8 @@ namespace gazebo
   GazeboRosVideo::GazeboRosVideo() {}
 
   // Destructor
-  GazeboRosVideo::~GazeboRosVideo() {
+  GazeboRosVideo::~GazeboRosVideo()
+  {
     update_connection_.reset();
 
     // Custom Callback Queue
@@ -146,19 +148,21 @@ namespace gazebo
     if (!p_sdf->HasElement("robotNamespace"))
     {
       ROS_WARN_NAMED("video", "GazeboRosVideo plugin missing <robotNamespace>, "
-          "defaults to \"%s\".", robot_namespace_.c_str());
+                              "defaults to \"%s\".",
+                     robot_namespace_.c_str());
     }
     else
     {
       robot_namespace_ =
-        p_sdf->GetElement("robotNamespace")->Get<std::string>();
+          p_sdf->GetElement("robotNamespace")->Get<std::string>();
     }
 
     topic_name_ = "image_raw";
     if (!p_sdf->HasElement("topicName"))
     {
       ROS_WARN_NAMED("video", "GazeboRosVideo Plugin (ns = %s) missing <topicName>, "
-          "defaults to \"%s\".", robot_namespace_.c_str(), topic_name_.c_str());
+                              "defaults to \"%s\".",
+                     robot_namespace_.c_str(), topic_name_.c_str());
     }
     else
     {
@@ -166,9 +170,11 @@ namespace gazebo
     }
 
     int height = 240;
-    if (!p_sdf->HasElement("height")) {
+    if (!p_sdf->HasElement("height"))
+    {
       ROS_WARN_NAMED("video", "GazeboRosVideo Plugin (ns = %s) missing <height>, "
-          "defaults to %i.", robot_namespace_.c_str(), height);
+                              "defaults to %i.",
+                     robot_namespace_.c_str(), height);
     }
     else
     {
@@ -176,9 +182,11 @@ namespace gazebo
     }
 
     int width = 320;
-    if (!p_sdf->HasElement("width")) {
+    if (!p_sdf->HasElement("width"))
+    {
       ROS_WARN_NAMED("video", "GazeboRosVideo Plugin (ns = %s) missing <width>, "
-          "defaults to %i", robot_namespace_.c_str(), width);
+                              "defaults to %i",
+                     robot_namespace_.c_str(), width);
     }
     else
     {
@@ -193,32 +201,32 @@ namespace gazebo
     if (!ros::isInitialized())
     {
       int argc = 0;
-      char** argv = NULL;
+      char **argv = NULL;
       ros::init(argc, argv, "gazebo_client",
-          ros::init_options::NoSigintHandler);
+                ros::init_options::NoSigintHandler);
     }
     std::string gazebo_source =
-      (ros::this_node::getName() == "/gazebo_client") ? "gzclient" : "gzserver";
+        (ros::this_node::getName() == "/gazebo_client") ? "gzclient" : "gzserver";
     rosnode_ = new ros::NodeHandle(robot_namespace_);
 
     // Subscribe to the image topic
     ros::SubscribeOptions so =
-      ros::SubscribeOptions::create<sensor_msgs::Image>(topic_name_, 1,
-          boost::bind(&GazeboRosVideo::processImage, this, _1),
-          ros::VoidPtr(), &queue_);
+        ros::SubscribeOptions::create<sensor_msgs::Image>(topic_name_, 1,
+                                                          boost::bind(&GazeboRosVideo::processImage, this, _1),
+                                                          ros::VoidPtr(), &queue_);
     camera_subscriber_ = rosnode_->subscribe(so);
 
     new_image_available_ = false;
 
     callback_queue_thread_ =
-      boost::thread(boost::bind(&GazeboRosVideo::QueueThread, this));
+        boost::thread(boost::bind(&GazeboRosVideo::QueueThread, this));
 
     update_connection_ =
-      event::Events::ConnectPreRender(
-          boost::bind(&GazeboRosVideo::UpdateChild, this));
+        event::Events::ConnectPreRender(
+            boost::bind(&GazeboRosVideo::UpdateChild, this));
 
     ROS_INFO_NAMED("video", "GazeboRosVideo (%s, ns = %s) has started",
-        gazebo_source.c_str(), robot_namespace_.c_str());
+                   gazebo_source.c_str(), robot_namespace_.c_str());
   }
 
   // Update the controller

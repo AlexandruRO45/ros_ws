@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 /*
  * Desc: Simple model controller that uses a twist message to move a robot on
@@ -42,57 +42,58 @@
 #include <tf/transform_broadcaster.h>
 #include <tf/transform_listener.h>
 
-namespace gazebo {
+namespace gazebo
+{
 
-  class GazeboRosPlanarMove : public ModelPlugin {
+  class GazeboRosPlanarMove : public ModelPlugin
+  {
 
-    public:
-      GazeboRosPlanarMove();
-      ~GazeboRosPlanarMove();
-      void Load(physics::ModelPtr parent, sdf::ElementPtr sdf);
+  public:
+    GazeboRosPlanarMove();
+    ~GazeboRosPlanarMove();
+    void Load(physics::ModelPtr parent, sdf::ElementPtr sdf);
 
-    protected:
-      virtual void UpdateChild();
-      virtual void FiniChild();
+  protected:
+    virtual void UpdateChild();
+    virtual void FiniChild();
 
-    private:
-      void publishOdometry(double step_time);
+  private:
+    void publishOdometry(double step_time);
 
-      physics::ModelPtr parent_;
-      event::ConnectionPtr update_connection_;
+    physics::ModelPtr parent_;
+    event::ConnectionPtr update_connection_;
 
-      boost::shared_ptr<ros::NodeHandle> rosnode_;
-      ros::Publisher odometry_pub_;
-      ros::Subscriber vel_sub_;
-      boost::shared_ptr<tf::TransformBroadcaster> transform_broadcaster_;
-      nav_msgs::Odometry odom_;
-      std::string tf_prefix_;
+    boost::shared_ptr<ros::NodeHandle> rosnode_;
+    ros::Publisher odometry_pub_;
+    ros::Subscriber vel_sub_;
+    boost::shared_ptr<tf::TransformBroadcaster> transform_broadcaster_;
+    nav_msgs::Odometry odom_;
+    std::string tf_prefix_;
 
-      boost::mutex lock;
+    boost::mutex lock;
 
-      std::string robot_namespace_;
-      std::string command_topic_;
-      std::string odometry_topic_;
-      std::string odometry_frame_;
-      std::string robot_base_frame_;
-      double odometry_rate_;
+    std::string robot_namespace_;
+    std::string command_topic_;
+    std::string odometry_topic_;
+    std::string odometry_frame_;
+    std::string robot_base_frame_;
+    double odometry_rate_;
 
-      // Custom Callback Queue
-      ros::CallbackQueue queue_;
-      boost::thread callback_queue_thread_;
-      void QueueThread();
+    // Custom Callback Queue
+    ros::CallbackQueue queue_;
+    boost::thread callback_queue_thread_;
+    void QueueThread();
 
-      // command velocity callback
-      void cmdVelCallback(const geometry_msgs::Twist::ConstPtr& cmd_msg);
+    // command velocity callback
+    void cmdVelCallback(const geometry_msgs::Twist::ConstPtr &cmd_msg);
 
-      double x_;
-      double y_;
-      double rot_;
-      bool alive_;
-      bool enable_y_axis_; ///< Enable Y-axis movement.
-      common::Time last_odom_publish_time_;
-      ignition::math::Pose3d last_odom_pose_;
-
+    double x_;
+    double y_;
+    double rot_;
+    bool alive_;
+    bool enable_y_axis_; ///< Enable Y-axis movement.
+    common::Time last_odom_publish_time_;
+    ignition::math::Pose3d last_odom_pose_;
   };
 
 }

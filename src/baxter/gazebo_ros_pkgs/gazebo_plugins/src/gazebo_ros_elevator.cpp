@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 #include "gazebo_plugins/gazebo_ros_elevator.h"
 
 using namespace gazebo;
@@ -44,15 +44,17 @@ void GazeboRosElevator::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   if (_sdf->HasElement("robotNamespace"))
   {
     this->robotNamespace_ = _sdf->GetElement(
-        "robotNamespace")->Get<std::string>() + "/";
+                                    "robotNamespace")
+                                ->Get<std::string>() +
+                            "/";
   }
 
   // Make sure the ROS node for Gazebo has already been initialized
   if (!ros::isInitialized())
   {
     ROS_FATAL_STREAM_NAMED("elevator", "A ROS node for Gazebo has not been initialized,"
-        << "unable to load plugin. Load the Gazebo system plugin "
-        << "'libgazebo_ros_api_plugin.so' in the gazebo_ros package)");
+                                           << "unable to load plugin. Load the Gazebo system plugin "
+                                           << "'libgazebo_ros_api_plugin.so' in the gazebo_ros package)");
     return;
   }
 
@@ -65,15 +67,15 @@ void GazeboRosElevator::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
   this->rosnode_ = new ros::NodeHandle(this->robotNamespace_);
 
   ros::SubscribeOptions so =
-    ros::SubscribeOptions::create<std_msgs::String>(topic, 1,
-        boost::bind(&GazeboRosElevator::OnElevator, this, _1),
-        ros::VoidPtr(), &this->queue_);
+      ros::SubscribeOptions::create<std_msgs::String>(topic, 1,
+                                                      boost::bind(&GazeboRosElevator::OnElevator, this, _1),
+                                                      ros::VoidPtr(), &this->queue_);
 
   this->elevatorSub_ = this->rosnode_->subscribe(so);
 
   // start custom queue for elevator
   this->callbackQueueThread_ =
-    boost::thread(boost::bind(&GazeboRosElevator::QueueThread, this));
+      boost::thread(boost::bind(&GazeboRosElevator::QueueThread, this));
 }
 
 /////////////////////////////////////////////////

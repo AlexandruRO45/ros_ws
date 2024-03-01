@@ -35,47 +35,63 @@ using namespace gazebo;
 GazeboRosJointStatePublisher::GazeboRosJointStatePublisher() {}
 
 // Destructor
-GazeboRosJointStatePublisher::~GazeboRosJointStatePublisher() {
+GazeboRosJointStatePublisher::~GazeboRosJointStatePublisher()
+{
     rosnode_->shutdown();
 }
 
-void GazeboRosJointStatePublisher::Load ( physics::ModelPtr _parent, sdf::ElementPtr _sdf ) {
+void GazeboRosJointStatePublisher::Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf)
+{
     // Store the pointer to the model
     this->parent_ = _parent;
     this->world_ = _parent->GetWorld();
 
-    this->robot_namespace_ = parent_->GetName ();
-    if ( !_sdf->HasElement ( "robotNamespace" ) ) {
+    this->robot_namespace_ = parent_->GetName();
+    if (!_sdf->HasElement("robotNamespace"))
+    {
         ROS_INFO_NAMED("joint_state_publisher", "GazeboRosJointStatePublisher Plugin missing <robotNamespace>, defaults to \"%s\"",
-                   this->robot_namespace_.c_str() );
-    } else {
-        this->robot_namespace_ = _sdf->GetElement ( "robotNamespace" )->Get<std::string>();
-        if ( this->robot_namespace_.empty() ) this->robot_namespace_ = parent_->GetName ();
+                       this->robot_namespace_.c_str());
     }
-    if ( !robot_namespace_.empty() ) this->robot_namespace_ += "/";
-    rosnode_ = boost::shared_ptr<ros::NodeHandle> ( new ros::NodeHandle ( this->robot_namespace_ ) );
+    else
+    {
+        this->robot_namespace_ = _sdf->GetElement("robotNamespace")->Get<std::string>();
+        if (this->robot_namespace_.empty())
+            this->robot_namespace_ = parent_->GetName();
+    }
+    if (!robot_namespace_.empty())
+        this->robot_namespace_ += "/";
+    rosnode_ = boost::shared_ptr<ros::NodeHandle>(new ros::NodeHandle(this->robot_namespace_));
 
-    if ( !_sdf->HasElement ( "jointName" ) ) {
-        ROS_ASSERT ( "GazeboRosJointStatePublisher Plugin missing jointNames" );
-    } else {
-        sdf::ElementPtr element = _sdf->GetElement ( "jointName" ) ;
+    if (!_sdf->HasElement("jointName"))
+    {
+        ROS_ASSERT("GazeboRosJointStatePublisher Plugin missing jointNames");
+    }
+    else
+    {
+        sdf::ElementPtr element = _sdf->GetElement("jointName");
         std::string joint_names = element->Get<std::string>();
-        boost::erase_all ( joint_names, " " );
-        boost::split ( joint_names_, joint_names, boost::is_any_of ( "," ) );
+        boost::erase_all(joint_names, " ");
+        boost::split(joint_names_, joint_names, boost::is_any_of(","));
     }
 
     this->update_rate_ = 100.0;
-    if ( !_sdf->HasElement ( "updateRate" ) ) {
+    if (!_sdf->HasElement("updateRate"))
+    {
         ROS_WARN_NAMED("joint_state_publisher", "GazeboRosJointStatePublisher Plugin (ns = %s) missing <updateRate>, defaults to %f",
-                   this->robot_namespace_.c_str(), this->update_rate_ );
-    } else {
-        this->update_rate_ = _sdf->GetElement ( "updateRate" )->Get<double>();
+                       this->robot_namespace_.c_str(), this->update_rate_);
+    }
+    else
+    {
+        this->update_rate_ = _sdf->GetElement("updateRate")->Get<double>();
     }
 
     // Initialize update rate stuff
-    if ( this->update_rate_ > 0.0 ) {
+    if (this->update_rate_ > 0.0)
+    {
         this->update_period_ = 1.0 / this->update_rate_;
-    } else {
+    }
+    else
+    {
         this->update_period_ = 0.0;
     }
 #if GAZEBO_MAJOR_VERSION >= 8
@@ -84,15 +100,16 @@ void GazeboRosJointStatePublisher::Load ( physics::ModelPtr _parent, sdf::Elemen
     last_update_time_ = this->world_->GetSimTime();
 #endif
 
-    for ( unsigned int i = 0; i< joint_names_.size(); i++ ) {
-        joints_.push_back ( this->parent_->GetJoint ( joint_names_[i] ) );
-        ROS_INFO_NAMED("joint_state_publisher", "GazeboRosJointStatePublisher is going to publish joint: %s", joint_names_[i].c_str() );
+    for (unsigned int i = 0; i < joint_names_.size(); i++)
+    {
+        joints_.push_back(this->parent_->GetJoint(joint_names_[i]));
+        ROS_INFO_NAMED("joint_state_publisher", "GazeboRosJointStatePublisher is going to publish joint: %s", joint_names_[i].c_str());
     }
 
-    ROS_INFO_NAMED("joint_state_publisher", "Starting GazeboRosJointStatePublisher Plugin (ns = %s)!, parent name: %s", this->robot_namespace_.c_str(), parent_->GetName ().c_str() );
+    ROS_INFO_NAMED("joint_state_publisher", "Starting GazeboRosJointStatePublisher Plugin (ns = %s)!, parent name: %s", this->robot_namespace_.c_str(), parent_->GetName().c_str());
 
-    tf_prefix_ = tf::getPrefixParam ( *rosnode_ );
-    joint_state_publisher_ = rosnode_->advertise<sensor_msgs::JointState> ( "joint_states",1000 );
+    tf_prefix_ = tf::getPrefixParam(*rosnode_);
+    joint_state_publisher_ = rosnode_->advertise<sensor_msgs::JointState>("joint_states", 1000);
 
 #if GAZEBO_MAJOR_VERSION >= 8
     last_update_time_ = this->world_->SimTime();
@@ -101,11 +118,12 @@ void GazeboRosJointStatePublisher::Load ( physics::ModelPtr _parent, sdf::Elemen
 #endif
     // Listen to the update event. This event is broadcast every
     // simulation iteration.
-    this->updateConnection = event::Events::ConnectWorldUpdateBegin (
-                                 boost::bind ( &GazeboRosJointStatePublisher::OnUpdate, this, _1 ) );
+    this->updateConnection = event::Events::ConnectWorldUpdateBegin(
+        boost::bind(&GazeboRosJointStatePublisher::OnUpdate, this, _1));
 }
 
-void GazeboRosJointStatePublisher::OnUpdate ( const common::UpdateInfo & _info ) {
+void GazeboRosJointStatePublisher::OnUpdate(const common::UpdateInfo &_info)
+{
     // Apply a small linear velocity to the model.
 #if GAZEBO_MAJOR_VERSION >= 8
     common::Time current_time = this->world_->SimTime();
@@ -118,37 +136,38 @@ void GazeboRosJointStatePublisher::OnUpdate ( const common::UpdateInfo & _info )
         last_update_time_ = current_time;
     }
 
-    double seconds_since_last_update = ( current_time - last_update_time_ ).Double();
+    double seconds_since_last_update = (current_time - last_update_time_).Double();
 
-    if ( seconds_since_last_update > update_period_ ) {
+    if (seconds_since_last_update > update_period_)
+    {
 
         publishJointStates();
 
-        last_update_time_+= common::Time ( update_period_ );
-
+        last_update_time_ += common::Time(update_period_);
     }
-
 }
 
-void GazeboRosJointStatePublisher::publishJointStates() {
+void GazeboRosJointStatePublisher::publishJointStates()
+{
     ros::Time current_time = ros::Time::now();
 
     joint_state_.header.stamp = current_time;
-    joint_state_.name.resize ( joints_.size() );
-    joint_state_.position.resize ( joints_.size() );
-    joint_state_.velocity.resize ( joints_.size() );
+    joint_state_.name.resize(joints_.size());
+    joint_state_.position.resize(joints_.size());
+    joint_state_.velocity.resize(joints_.size());
 
-    for ( int i = 0; i < joints_.size(); i++ ) {
+    for (int i = 0; i < joints_.size(); i++)
+    {
         physics::JointPtr joint = joints_[i];
-        double velocity = joint->GetVelocity( 0 );
+        double velocity = joint->GetVelocity(0);
 #if GAZEBO_MAJOR_VERSION >= 8
-        double position = joint->Position ( 0 );
+        double position = joint->Position(0);
 #else
-        double position = joint->GetAngle ( 0 ).Radian();
+        double position = joint->GetAngle(0).Radian();
 #endif
         joint_state_.name[i] = joint->GetName();
         joint_state_.position[i] = position;
         joint_state_.velocity[i] = velocity;
     }
-    joint_state_publisher_.publish ( joint_state_ );
+    joint_state_publisher_.publish(joint_state_);
 }

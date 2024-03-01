@@ -4924,4 +4924,3 @@
     <plugin filename="libSandiaHandPlugin.so" name="sandia_hand_plugin"/>
   </gazebo>
 </robot>
-

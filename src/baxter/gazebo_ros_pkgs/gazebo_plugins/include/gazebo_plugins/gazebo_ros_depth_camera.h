@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 /*
  * Desc: A dynamic controller plugin that publishes ROS image_raw camera_info topic for generic camera sensor.
  * Author: John Hsu
@@ -61,91 +61,139 @@ namespace gazebo
   {
     /// \brief Constructor
     /// \param parent The parent entity, must be a Model or a Sensor
-    public: GazeboRosDepthCamera();
+  public:
+    GazeboRosDepthCamera();
 
     /// \brief Destructor
-    public: ~GazeboRosDepthCamera();
+  public:
+    ~GazeboRosDepthCamera();
 
     /// \brief Load the plugin
     /// \param take in SDF root element
-    public: virtual void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+  public:
+    virtual void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// \brief Advertise point cloud and depth image
-    public: virtual void Advertise();
+  public:
+    virtual void Advertise();
 
     /// \brief Update the controller
-    protected: virtual void OnNewDepthFrame(const float *_image,
-                   unsigned int _width, unsigned int _height,
-                   unsigned int _depth, const std::string &_format);
+  protected:
+    virtual void OnNewDepthFrame(const float *_image,
+                                 unsigned int _width, unsigned int _height,
+                                 unsigned int _depth, const std::string &_format);
 
     /// \brief Update the controller
-    protected: virtual void OnNewRGBPointCloud(const float *_pcd,
-                    unsigned int _width, unsigned int _height,
-                    unsigned int _depth, const std::string &_format);
+  protected:
+    virtual void OnNewRGBPointCloud(const float *_pcd,
+                                    unsigned int _width, unsigned int _height,
+                                    unsigned int _depth, const std::string &_format);
 
     /// \brief Update the controller
-    protected: virtual void OnNewImageFrame(const unsigned char *_image,
-                   unsigned int _width, unsigned int _height,
-                   unsigned int _depth, const std::string &_format);
+  protected:
+    virtual void OnNewImageFrame(const unsigned char *_image,
+                                 unsigned int _width, unsigned int _height,
+                                 unsigned int _depth, const std::string &_format);
 
     /// \brief Put camera data to the ROS topic
-    private: void FillPointdCloud(const float *_src);
+  private:
+    void FillPointdCloud(const float *_src);
 
     /// \brief push depth image data into ros topic
-    private: void FillDepthImage(const float *_src);
+  private:
+    void FillDepthImage(const float *_src);
 
     /// \brief Keep track of number of connctions for point clouds
-    private: int point_cloud_connect_count_;
-    private: void PointCloudConnect();
-    private: void PointCloudDisconnect();
+  private:
+    int point_cloud_connect_count_;
+
+  private:
+    void PointCloudConnect();
+
+  private:
+    void PointCloudDisconnect();
 
     /// \brief Keep track of number of connctions for point clouds
-    private: int depth_image_connect_count_;
-    private: void DepthImageConnect();
-    private: void DepthImageDisconnect();
-    private: common::Time last_depth_image_camera_info_update_time_;
+  private:
+    int depth_image_connect_count_;
 
-    private: bool FillPointCloudHelper(sensor_msgs::PointCloud2 &point_cloud_msg,
-                                  uint32_t rows_arg, uint32_t cols_arg,
-                                  uint32_t step_arg, void* data_arg);
+  private:
+    void DepthImageConnect();
 
-    private: bool FillDepthImageHelper( sensor_msgs::Image& image_msg,
-                                  uint32_t rows_arg, uint32_t cols_arg,
-                                  uint32_t step_arg, void* data_arg);
+  private:
+    void DepthImageDisconnect();
+
+  private:
+    common::Time last_depth_image_camera_info_update_time_;
+
+  private:
+    bool FillPointCloudHelper(sensor_msgs::PointCloud2 &point_cloud_msg,
+                              uint32_t rows_arg, uint32_t cols_arg,
+                              uint32_t step_arg, void *data_arg);
+
+  private:
+    bool FillDepthImageHelper(sensor_msgs::Image &image_msg,
+                              uint32_t rows_arg, uint32_t cols_arg,
+                              uint32_t step_arg, void *data_arg);
 
     /// \brief A pointer to the ROS node.  A node will be instantiated if it does not exist.
-    private: ros::Publisher point_cloud_pub_;
-    private: ros::Publisher depth_image_pub_;
+  private:
+    ros::Publisher point_cloud_pub_;
+
+  private:
+    ros::Publisher depth_image_pub_;
 
     /// \brief PointCloud2 point cloud message
-    private: sensor_msgs::PointCloud2 point_cloud_msg_;
-    private: sensor_msgs::Image depth_image_msg_;
+  private:
+    sensor_msgs::PointCloud2 point_cloud_msg_;
 
-    private: double point_cloud_cutoff_;
+  private:
+    sensor_msgs::Image depth_image_msg_;
+
+  private:
+    double point_cloud_cutoff_;
 
     /// \brief ROS image topic name
-    private: std::string point_cloud_topic_name_;
+  private:
+    std::string point_cloud_topic_name_;
 
-    private: void InfoConnect();
-    private: void InfoDisconnect();
+  private:
+    void InfoConnect();
+
+  private:
+    void InfoDisconnect();
 
     using GazeboRosCameraUtils::PublishCameraInfo;
-    protected: virtual void PublishCameraInfo();
+
+  protected:
+    virtual void PublishCameraInfo();
 
     /// \brief image where each pixel contains the depth information
-    private: std::string depth_image_topic_name_;
-    private: std::string depth_image_camera_info_topic_name_;
-    private: int depth_info_connect_count_;
-    private: void DepthInfoConnect();
-    private: void DepthInfoDisconnect();
+  private:
+    std::string depth_image_topic_name_;
+
+  private:
+    std::string depth_image_camera_info_topic_name_;
+
+  private:
+    int depth_info_connect_count_;
+
+  private:
+    void DepthInfoConnect();
+
+  private:
+    void DepthInfoDisconnect();
 
     // overload with our own
-    private: common::Time depth_sensor_update_time_;
-    protected: ros::Publisher depth_image_camera_info_pub_;
+  private:
+    common::Time depth_sensor_update_time_;
 
-    private: event::ConnectionPtr load_connection_;
+  protected:
+    ros::Publisher depth_image_camera_info_pub_;
+
+  private:
+    event::ConnectionPtr load_connection_;
   };
 
 }
 #endif
-

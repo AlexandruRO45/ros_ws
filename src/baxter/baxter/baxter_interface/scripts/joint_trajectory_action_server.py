@@ -54,27 +54,39 @@ from trajectory_msgs.msg import (
 
 def start_server(limb, rate, mode, interpolation):
     print("Initializing node... ")
-    rospy.init_node("rsdk_%s_joint_trajectory_action_server%s" %
-                    (mode, "" if limb == 'both' else "_" + limb,))
+    rospy.init_node(
+        "rsdk_%s_joint_trajectory_action_server%s"
+        % (
+            mode,
+            "" if limb == "both" else "_" + limb,
+        )
+    )
     print("Initializing joint trajectory action server...")
 
-    if mode == 'velocity':
-        dyn_cfg_srv = Server(VelocityJointTrajectoryActionServerConfig,
-                             lambda config, level: config)
-    elif mode == 'position':
-        dyn_cfg_srv = Server(PositionJointTrajectoryActionServerConfig,
-                             lambda config, level: config)
+    if mode == "velocity":
+        dyn_cfg_srv = Server(
+            VelocityJointTrajectoryActionServerConfig, lambda config, level: config
+        )
+    elif mode == "position":
+        dyn_cfg_srv = Server(
+            PositionJointTrajectoryActionServerConfig, lambda config, level: config
+        )
     else:
-        dyn_cfg_srv = Server(PositionFFJointTrajectoryActionServerConfig,
-                             lambda config, level: config)
+        dyn_cfg_srv = Server(
+            PositionFFJointTrajectoryActionServerConfig, lambda config, level: config
+        )
     jtas = []
-    if limb == 'both':
-        jtas.append(JointTrajectoryActionServer('right', dyn_cfg_srv,
-                                                rate, mode, interpolation))
-        jtas.append(JointTrajectoryActionServer('left', dyn_cfg_srv,
-                                                rate, mode, interpolation))
+    if limb == "both":
+        jtas.append(
+            JointTrajectoryActionServer("right", dyn_cfg_srv, rate, mode, interpolation)
+        )
+        jtas.append(
+            JointTrajectoryActionServer("left", dyn_cfg_srv, rate, mode, interpolation)
+        )
     else:
-        jtas.append(JointTrajectoryActionServer(limb, dyn_cfg_srv, rate, mode, interpolation))
+        jtas.append(
+            JointTrajectoryActionServer(limb, dyn_cfg_srv, rate, mode, interpolation)
+        )
 
     def cleanup():
         for j in jtas:
@@ -89,23 +101,34 @@ def main():
     arg_fmt = argparse.ArgumentDefaultsHelpFormatter
     parser = argparse.ArgumentParser(formatter_class=arg_fmt)
     parser.add_argument(
-        "-l", "--limb", dest="limb", default="both",
-        choices=['both', 'left', 'right'],
-        help="joint trajectory action server limb"
+        "-l",
+        "--limb",
+        dest="limb",
+        default="both",
+        choices=["both", "left", "right"],
+        help="joint trajectory action server limb",
     )
     parser.add_argument(
-        "-r", "--rate", dest="rate", default=100.0,
-        type=float, help="trajectory control rate (Hz)"
+        "-r",
+        "--rate",
+        dest="rate",
+        default=100.0,
+        type=float,
+        help="trajectory control rate (Hz)",
     )
     parser.add_argument(
-        "-m", "--mode", default='position_w_id',
-        choices=['position_w_id', 'position', 'velocity'],
-        help="control mode for trajectory execution"
+        "-m",
+        "--mode",
+        default="position_w_id",
+        choices=["position_w_id", "position", "velocity"],
+        help="control mode for trajectory execution",
     )
     parser.add_argument(
-        "-i", "--interpolation", default='bezier',
-        choices=['bezier', 'minjerk'],
-        help="interpolation method for trajectory generation"
+        "-i",
+        "--interpolation",
+        default="bezier",
+        choices=["bezier", "minjerk"],
+        help="interpolation method for trajectory generation",
     )
     args = parser.parse_args(rospy.myargv()[1:])
     start_server(args.limb, args.rate, args.mode, args.interpolation)

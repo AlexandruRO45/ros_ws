@@ -37,19 +37,19 @@ import actionlib
 from control_msgs.msg import (
     SingleJointPositionAction,
     SingleJointPositionFeedback,
-    SingleJointPositionResult, 
+    SingleJointPositionResult,
 )
 
 import baxter_interface
 from baxter_core_msgs.msg import (
-   HeadPanCommand,
+    HeadPanCommand,
 )
 
 
 class HeadActionServer(object):
     def __init__(self, reconfig_server):
         self._dyn = reconfig_server
-        self._ns = 'robot/head/head_action'
+        self._ns = "robot/head/head_action"
         self._head = baxter_interface.Head()
 
         # Action Server
@@ -57,7 +57,8 @@ class HeadActionServer(object):
             self._ns,
             SingleJointPositionAction,
             execute_cb=self._on_head_action,
-            auto_start=False)
+            auto_start=False,
+        )
         self._action_name = rospy.get_name()
         self._server.start()
 
@@ -66,12 +67,12 @@ class HeadActionServer(object):
         self._result = SingleJointPositionResult()
 
         # Initialize Parameters
-        self._prm = {"dead_zone" : baxter_interface.settings.HEAD_PAN_ANGLE_TOLERANCE}
+        self._prm = {"dead_zone": baxter_interface.settings.HEAD_PAN_ANGLE_TOLERANCE}
         self._timeout = 5.0
 
     def _get_head_parameters(self):
-        self._timeout = self._dyn.config['timeout']
-        self._prm['dead_zone'] = self._dyn.config['goal']
+        self._timeout = self._dyn.config["timeout"]
+        self._prm["dead_zone"] = self._dyn.config["goal"]
 
     def _update_feedback(self):
         self._fdbk.position = self._head.pan()
@@ -82,8 +83,7 @@ class HeadActionServer(object):
         self._head.set_pan(position, speed, timeout=self._timeout)
 
     def _check_state(self, position):
-        return (fabs(self._head.pan() - position) <
-                self._prm['dead_zone'])
+        return fabs(self._head.pan() - position) < self._prm["dead_zone"]
 
     def _on_head_action(self, goal):
         position = goal.position
@@ -108,11 +108,11 @@ class HeadActionServer(object):
             return rospy.get_time() - start
 
         # Continue commanding goal until success or timeout
-        while ((now_from_start(start_time) < self._timeout or
-               self._timeout < 0.0) and not rospy.is_shutdown()):
+        while (
+            now_from_start(start_time) < self._timeout or self._timeout < 0.0
+        ) and not rospy.is_shutdown():
             if self._server.is_preempt_requested():
-                rospy.loginfo("%s: Head Action Can't Preempted" %
-                              (self._action_name,))
+                rospy.loginfo("%s: Head Action Can't Preempted" % (self._action_name,))
                 self._server.set_preempted(self._result)
                 return
             self._update_feedback()
@@ -123,7 +123,8 @@ class HeadActionServer(object):
             control_rate.sleep()
 
         if not rospy.is_shutdown():
-            rospy.logerr("%s: Head Command Not Achieved in Allotted Time" %
-                         (self._action_name,))
+            rospy.logerr(
+                "%s: Head Command Not Achieved in Allotted Time" % (self._action_name,)
+            )
         self._update_feedback()
         self._server.set_aborted(self._result)

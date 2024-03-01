@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 /*
  * Desc: Video plugin for displaying ROS image topics on Ogre textures
@@ -44,55 +44,53 @@ namespace gazebo
 
   class VideoVisual : public rendering::Visual
   {
-    public:
-      VideoVisual(
-          const std::string &name, rendering::VisualPtr parent,
-          int height, int width);
-      virtual ~VideoVisual();
-      void render(const cv::Mat& image);
-    private:
-      Ogre::TexturePtr texture_;
-      int height_;
-      int width_;
+  public:
+    VideoVisual(
+        const std::string &name, rendering::VisualPtr parent,
+        int height, int width);
+    virtual ~VideoVisual();
+    void render(const cv::Mat &image);
+
+  private:
+    Ogre::TexturePtr texture_;
+    int height_;
+    int width_;
   };
 
   class GazeboRosVideo : public VisualPlugin
   {
-    public:
+  public:
+    GazeboRosVideo();
+    virtual ~GazeboRosVideo();
 
-      GazeboRosVideo();
-      virtual ~GazeboRosVideo();
+    void Load(rendering::VisualPtr parent, sdf::ElementPtr sdf);
+    void processImage(const sensor_msgs::ImageConstPtr &msg);
 
-      void Load(rendering::VisualPtr parent, sdf::ElementPtr sdf);
-      void processImage(const sensor_msgs::ImageConstPtr &msg);
+  protected:
+    virtual void UpdateChild();
 
-    protected:
+    // Pointer to the model
+    rendering::VisualPtr model_;
+    // Pointer to the update event connection
+    event::ConnectionPtr update_connection_;
 
-      virtual void UpdateChild();
+    boost::shared_ptr<VideoVisual> video_visual_;
 
-      // Pointer to the model
-      rendering::VisualPtr model_;
-      // Pointer to the update event connection
-      event::ConnectionPtr update_connection_;
+    cv_bridge::CvImagePtr image_;
+    boost::mutex m_image_;
+    bool new_image_available_;
 
-      boost::shared_ptr<VideoVisual> video_visual_;
+    /// \brief A pointer to the ROS node.  A node will be instantiated if it does not exist.
+    ros::NodeHandle *rosnode_;
 
-      cv_bridge::CvImagePtr image_;
-      boost::mutex m_image_;
-      bool new_image_available_;
+    // ROS Stuff
+    ros::Subscriber camera_subscriber_;
+    std::string robot_namespace_;
+    std::string topic_name_;
 
-      /// \brief A pointer to the ROS node.  A node will be instantiated if it does not exist.
-      ros::NodeHandle* rosnode_;
-
-      // ROS Stuff
-      ros::Subscriber camera_subscriber_;
-      std::string robot_namespace_;
-      std::string topic_name_;
-
-      ros::CallbackQueue queue_;
-      boost::thread callback_queue_thread_;
-      void QueueThread();
-
+    ros::CallbackQueue queue_;
+    boost::thread callback_queue_thread_;
+    void QueueThread();
   };
 
 }

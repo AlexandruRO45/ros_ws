@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 #ifndef GAZEBO_ROS_BUMPER_HH
 #define GAZEBO_ROS_BUMPER_HH
@@ -51,43 +51,60 @@ namespace gazebo
   class GazeboRosBumper : public SensorPlugin
   {
     /// Constructor
-    public: GazeboRosBumper();
+  public:
+    GazeboRosBumper();
 
     /// Destructor
-    public: ~GazeboRosBumper();
+  public:
+    ~GazeboRosBumper();
 
     /// \brief Load the plugin
     /// \param take in SDF root element
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+  public:
+    void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// Update the controller
-    private: void OnContact();
+  private:
+    void OnContact();
 
     /// \brief pointer to ros node
-    private: ros::NodeHandle* rosnode_;
-    private: ros::Publisher contact_pub_;
+  private:
+    ros::NodeHandle *rosnode_;
 
-    private: sensors::ContactSensorPtr parentSensor;
+  private:
+    ros::Publisher contact_pub_;
+
+  private:
+    sensors::ContactSensorPtr parentSensor;
 
     /// \brief set topic name of broadcast
-    private: std::string bumper_topic_name_;
+  private:
+    std::string bumper_topic_name_;
 
-    private: std::string frame_name_;
+  private:
+    std::string frame_name_;
 
     /// \brief broadcast some string for now.
-    private: gazebo_msgs::ContactsState contact_state_msg_;
+  private:
+    gazebo_msgs::ContactsState contact_state_msg_;
 
     /// \brief for setting ROS name space
-    private: std::string robot_namespace_;
+  private:
+    std::string robot_namespace_;
 
-    private: ros::CallbackQueue contact_queue_;
-    private: void ContactQueueThread();
-    private: boost::thread callback_queue_thread_;
+  private:
+    ros::CallbackQueue contact_queue_;
+
+  private:
+    void ContactQueueThread();
+
+  private:
+    boost::thread callback_queue_thread_;
 
     // Pointer to the update event connection
-    private: event::ConnectionPtr update_connection_;
+  private:
+    event::ConnectionPtr update_connection_;
   };
 }
 
 #endif
-

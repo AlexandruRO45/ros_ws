@@ -77,6 +77,7 @@ ac9c53b177ba6350ee001b5c70e4b9c2 /home/vagrant/ros_ws/devel/include/gazebo_plugi
 16a2792f68142eb6c1a9bbe7361ad80e /home/vagrant/ros_ws/devel/include/gazebo_plugins/GazeboRosOpenniKinectConfig.h
 7a568b69d5aed4820053a94bb27249c6 /home/vagrant/ros_ws/devel/include/gazebo_plugins/HokuyoConfig.h
 56db9cd7022e528a47fbdfbbe0f28f06 /home/vagrant/ros_ws/devel/include/gazebo_ros/PhysicsConfig.h
+30641a369ea35847a4680f53234a0e48 /home/vagrant/ros_ws/devel/include/lab5_pkg/capture.h
 60819736be0648551693b932311194a0 /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs/msg/_AnalogIOState.py
 783f294b1ac7fd98d09c2c489447f1dd /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs/msg/_AnalogIOStates.py
 4b511ab6150e584e21fb3adca72b4633 /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/baxter_core_msgs/msg/_AnalogOutputCommand.py
@@ -150,6 +151,8 @@ b7813adb1708f09d900f2749355143a7 /home/vagrant/ros_ws/devel/lib/python2.7/dist-p
 ff048c37c9a7a36493647fc1320d93fa /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_msgs/srv/_SetPhysicsProperties.py
 07fcc1badc7295a1b8dd599584917235 /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_msgs/srv/_SpawnModel.py
 32569bccdef6b62676120b2e52b58423 /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/gazebo_msgs/srv/__init__.py
+a0d7f3afc7261e36a316221a9517cfef /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/lab5_pkg/srv/__init__.py
+0a8217dd068077c666aa930ad3d72166 /home/vagrant/ros_ws/devel/lib/python2.7/dist-packages/lab5_pkg/srv/_capture.py
 af7805562a8a15337ebb1c5d8f6f5b79 /home/vagrant/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs/msg/AnalogIOState.lisp
 fe01fa4e89e92ae1788ed63e59046c50 /home/vagrant/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs/msg/AnalogIOStates.lisp
 85198ccfd82a9c47a6d924e07aba79ea /home/vagrant/ros_ws/devel/share/common-lisp/ros/baxter_core_msgs/msg/AnalogOutputCommand.lisp
@@ -218,6 +221,7 @@ e8ccdba890291e36410fbd4e3c75d4ff /home/vagrant/ros_ws/devel/share/common-lisp/ro
 25d4de9b5e2df5faf0c9e738920e144e /home/vagrant/ros_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetModelState.lisp
 cd96bd9875c875d2eaf6b688b6ad5bd4 /home/vagrant/ros_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SetPhysicsProperties.lisp
 f9051f1ed907d2286fa45b815fb45560 /home/vagrant/ros_ws/devel/share/common-lisp/ros/gazebo_msgs/srv/SpawnModel.lisp
+b3be3f92891e9d428ac42bdd2f2075a0 /home/vagrant/ros_ws/devel/share/common-lisp/ros/lab5_pkg/srv/capture.lisp
 4abf1e2b3e96db30e125a26dbc0062b2 /home/vagrant/ros_ws/devel/share/gennodejs/ros/baxter_core_msgs/msg/AnalogIOState.js
 d5884898e08a2554c7c80bd59f9ac71c /home/vagrant/ros_ws/devel/share/gennodejs/ros/baxter_core_msgs/msg/AnalogIOStates.js
 72a4261d3bfe57fa4011da3483aab328 /home/vagrant/ros_ws/devel/share/gennodejs/ros/baxter_core_msgs/msg/AnalogOutputCommand.js
@@ -286,6 +290,7 @@ a18cda73e46fa0888672c758b309ccb2 /home/vagrant/ros_ws/devel/share/gennodejs/ros/
 683b697f051aaa06ebc3f5045d6c2f6c /home/vagrant/ros_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetModelState.js
 ace750abf398f58d71fb8bb5712b1bc3 /home/vagrant/ros_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SetPhysicsProperties.js
 f69daa817fb52401988cabe57bae5070 /home/vagrant/ros_ws/devel/share/gennodejs/ros/gazebo_msgs/srv/SpawnModel.js
+2896067ce3d8eef51a5f14b946885c0f /home/vagrant/ros_ws/devel/share/gennodejs/ros/lab5_pkg/srv/capture.js
 bd015d8cc2f8631bdd36a58f0835ae51 /home/vagrant/ros_ws/devel/share/roseus/ros/baxter_core_msgs/manifest.l
 64cb83075489f7edb5a2668f56c1829b /home/vagrant/ros_ws/devel/share/roseus/ros/baxter_core_msgs/msg/AnalogIOState.l
 66a72eae7a1d5f70e3f37106d35a68e9 /home/vagrant/ros_ws/devel/share/roseus/ros/baxter_core_msgs/msg/AnalogIOStates.l
@@ -357,6 +362,8 @@ ec73f664b0466d1736b0ee5c1fe83100 /home/vagrant/ros_ws/devel/share/roseus/ros/gaz
 fe4433a83789d24bbb9ad6771f92087e /home/vagrant/ros_ws/devel/share/roseus/ros/gazebo_msgs/srv/SetModelState.l
 220816f30b680be135727b95920cf408 /home/vagrant/ros_ws/devel/share/roseus/ros/gazebo_msgs/srv/SetPhysicsProperties.l
 eb738b8f298b22b3568fdffe34e921cb /home/vagrant/ros_ws/devel/share/roseus/ros/gazebo_msgs/srv/SpawnModel.l
+3b655452a68277b5f5f40c754b9c81b6 /home/vagrant/ros_ws/devel/share/roseus/ros/lab5_pkg/manifest.l
+b32411f4b0100ed37da4cc8d0a20eedf /home/vagrant/ros_ws/devel/share/roseus/ros/lab5_pkg/srv/capture.l
 884f0909898b44fa4451b7025016986c CMakeFiles/clean_test_results
 271891d54249ddfe806c8693ec8d6367 baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOState
 24f44ef66275d433b9172f015115e6a9 baxter/baxter/baxter_common/baxter_core_msgs/CMakeFiles/_baxter_core_msgs_generate_messages_check_deps_AnalogIOStates
@@ -454,3 +461,9 @@ b498af9f72f80bf39f7c364f0d99e5b6 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFile
 59a8debb15b9206d596ad66ee8cc990e baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_range_range_plugin.test
 4a41cdae9eaa4ac066de3d1d35d18be1 baxter/gazebo_ros_pkgs/gazebo_plugins/CMakeFiles/run_tests_gazebo_plugins_rostest_test_set_model_state_test_set_model_state_test.test
 4dc99744e4e9666748084fb1105494e5 baxter/gazebo_ros_pkgs/gazebo_ros/CMakeFiles/gazebo_ros_gencfg
+d2f09bbdc1a811dc4b50d416b6edb6f2 lab5_pkg/CMakeFiles/_lab5_pkg_generate_messages_check_deps_capture
+ff8feb046123f4333e8b4b77d491cf12 lab5_pkg/CMakeFiles/lab5_pkg_generate_messages_cpp
+ff8feb046123f4333e8b4b77d491cf12 lab5_pkg/CMakeFiles/lab5_pkg_generate_messages_eus
+ff8feb046123f4333e8b4b77d491cf12 lab5_pkg/CMakeFiles/lab5_pkg_generate_messages_lisp
+ff8feb046123f4333e8b4b77d491cf12 lab5_pkg/CMakeFiles/lab5_pkg_generate_messages_nodejs
+ff8feb046123f4333e8b4b77d491cf12 lab5_pkg/CMakeFiles/lab5_pkg_generate_messages_py

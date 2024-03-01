@@ -30,15 +30,13 @@ from math import fabs
 
 import rospy
 
-from std_msgs.msg import (
-    Bool
-)
+from std_msgs.msg import Bool
 
 import baxter_dataflow
 
 from baxter_core_msgs.msg import (
-   HeadPanCommand,
-   HeadState,
+    HeadPanCommand,
+    HeadState,
 )
 from baxter_interface import settings
 
@@ -50,6 +48,7 @@ class Head(object):
     Used to control the head pan angle and to enable/disable the head nod
     action.
     """
+
     def __init__(self):
         """
         Constructor.
@@ -57,32 +56,26 @@ class Head(object):
         self._state = dict()
 
         self._pub_pan = rospy.Publisher(
-            '/robot/head/command_head_pan',
-            HeadPanCommand,
-            queue_size=10)
+            "/robot/head/command_head_pan", HeadPanCommand, queue_size=10
+        )
 
         self._pub_nod = rospy.Publisher(
-            '/robot/head/command_head_nod',
-            Bool,
-            queue_size=10)
+            "/robot/head/command_head_nod", Bool, queue_size=10
+        )
 
-        state_topic = '/robot/head/head_state'
-        self._sub_state = rospy.Subscriber(
-            state_topic,
-            HeadState,
-            self._on_head_state)
+        state_topic = "/robot/head/head_state"
+        self._sub_state = rospy.Subscriber(state_topic, HeadState, self._on_head_state)
 
         baxter_dataflow.wait_for(
             lambda: len(self._state) != 0,
             timeout=5.0,
-            timeout_msg=("Failed to get current head state from %s" %
-                         (state_topic,)),
+            timeout_msg=("Failed to get current head state from %s" % (state_topic,)),
         )
 
     def _on_head_state(self, msg):
-        self._state['pan'] = msg.pan
-        self._state['panning'] = msg.isTurning
-        self._state['nodding'] = msg.isNodding
+        self._state["pan"] = msg.pan
+        self._state["panning"] = msg.isTurning
+        self._state["nodding"] = msg.isNodding
 
     def pan(self):
         """
@@ -91,7 +84,7 @@ class Head(object):
         @rtype: float
         @return: current angle in radians
         """
-        return self._state['pan']
+        return self._state["pan"]
 
     def nodding(self):
         """
@@ -100,7 +93,7 @@ class Head(object):
         @rtype: bool
         @return: True if the head is currently nodding, False otherwise.
         """
-        return self._state['nodding']
+        return self._state["nodding"]
 
     def panning(self):
         """
@@ -109,7 +102,7 @@ class Head(object):
         @rtype: bool
         @return: True if the head is currently panning, False otherwise.
         """
-        return self._state['panning']
+        return self._state["panning"]
 
     def set_pan(self, angle, speed=1.0, timeout=10.0, scale_speed=False):
         """
@@ -127,27 +120,31 @@ class Head(object):
                             to use legacy range between 0-100 [100]
         """
         if scale_speed:
-            cmd_speed = speed / 100.0;
+            cmd_speed = speed / 100.0
         else:
             cmd_speed = speed
-        if (cmd_speed < HeadPanCommand.MIN_SPEED_RATIO or
-              cmd_speed > HeadPanCommand.MAX_SPEED_RATIO):
-            rospy.logerr(("Commanded Speed, ({0}), outside of valid range"
-                          " [{1}, {2}]").format(cmd_speed,
-                          HeadPanCommand.MIN_SPEED_RATIO,
-                          HeadPanCommand.MAX_SPEED_RATIO))
+        if (
+            cmd_speed < HeadPanCommand.MIN_SPEED_RATIO
+            or cmd_speed > HeadPanCommand.MAX_SPEED_RATIO
+        ):
+            rospy.logerr(
+                ("Commanded Speed, ({0}), outside of valid range" " [{1}, {2}]").format(
+                    cmd_speed,
+                    HeadPanCommand.MIN_SPEED_RATIO,
+                    HeadPanCommand.MAX_SPEED_RATIO,
+                )
+            )
         msg = HeadPanCommand(angle, cmd_speed, True)
         self._pub_pan.publish(msg)
 
         if not timeout == 0:
             baxter_dataflow.wait_for(
-                lambda: (abs(self.pan() - angle) <=
-                         settings.HEAD_PAN_ANGLE_TOLERANCE),
+                lambda: (abs(self.pan() - angle) <= settings.HEAD_PAN_ANGLE_TOLERANCE),
                 timeout=timeout,
                 rate=100,
                 timeout_msg="Failed to move head to pan command %f" % angle,
-                body=lambda: self._pub_pan.publish(msg)
-                )
+                body=lambda: self._pub_pan.publish(msg),
+            )
 
     def command_nod(self, timeout=5.0):
         """
@@ -166,7 +163,7 @@ class Head(object):
                 timeout=timeout,
                 rate=100,
                 timeout_msg="Failed to initiate head nod command",
-                body=lambda: self._pub_nod.publish(True)
+                body=lambda: self._pub_nod.publish(True),
             )
 
             # Wait for nod to complete
@@ -175,5 +172,5 @@ class Head(object):
                 timeout=timeout,
                 rate=100,
                 timeout_msg="Failed to complete head nod command",
-                body=lambda: self._pub_nod.publish(False)
+                body=lambda: self._pub_nod.publish(False),
             )

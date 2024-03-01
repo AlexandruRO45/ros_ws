@@ -15,18 +15,18 @@
 
 using namespace cv;
 
-void diffBetween(Mat& orig, Mat& diff, long& total_diff)
+void diffBetween(Mat &orig, Mat &diff, long &total_diff)
 {
   MatIterator_<Vec3b> it, end;
   Vec3b orig_pixel, diff_pixel;
   total_diff = 0;
 
-  for(int i=0; i<orig.rows; i++)
+  for (int i = 0; i < orig.rows; i++)
   {
-    for(int j=0; j<orig.cols; j++)
+    for (int j = 0; j < orig.cols; j++)
     {
-      orig_pixel = orig.at<cv::Vec3b>(i,j);
-      diff_pixel = diff.at<cv::Vec3b>(i,j);
+      orig_pixel = orig.at<cv::Vec3b>(i, j);
+      diff_pixel = diff.at<cv::Vec3b>(i, j);
       total_diff += abs(orig_pixel[0] - diff_pixel[0]) +
                     abs(orig_pixel[1] - diff_pixel[1]) +
                     abs(orig_pixel[2] - diff_pixel[2]);
@@ -36,7 +36,7 @@ void diffBetween(Mat& orig, Mat& diff, long& total_diff)
 
 class DistortionTest : public testing::Test
 {
- protected:
+protected:
   ros::NodeHandle nh_;
 
   // Used to listen for images
@@ -52,14 +52,14 @@ class DistortionTest : public testing::Test
   // Stores received camera metadata
   sensor_msgs::CameraInfoConstPtr cam_info_distorted_;
 
- public:
+public:
   void cameraDistortionTest();
 
-  void imageCallback(const sensor_msgs::ImageConstPtr& msg, int cam_index)
+  void imageCallback(const sensor_msgs::ImageConstPtr &msg, int cam_index)
   {
     // for now, only support 2 cameras
     assert(cam_index == 0 || cam_index == 1);
-    if(cam_index == 0)
+    if (cam_index == 0)
     {
       cam_image_undistorted_ = msg;
     }
@@ -68,7 +68,7 @@ class DistortionTest : public testing::Test
       cam_image_distorted_ = msg;
     }
   }
-  void camInfoCallback(const sensor_msgs::CameraInfoConstPtr& msg)
+  void camInfoCallback(const sensor_msgs::CameraInfoConstPtr &msg)
   {
     cam_info_distorted_ = msg;
   }
@@ -84,8 +84,7 @@ void DistortionTest::cameraDistortionTest()
       trans.subscribe("/camera_undistorted/image_raw",
                       1,
                       boost::bind(&DistortionTest::imageCallback,
-                      dynamic_cast<DistortionTest*>(this), _1, 0)
-                     );
+                                  dynamic_cast<DistortionTest *>(this), _1, 0));
 
   cam_info_distorted_ = nullptr;
   cam_image_distorted_ = nullptr;
@@ -94,23 +93,22 @@ void DistortionTest::cameraDistortionTest()
       trans.subscribe("/camera_distorted/image_raw",
                       1,
                       boost::bind(&DistortionTest::imageCallback,
-                      dynamic_cast<DistortionTest*>(this), _1, 1)
-                     );
+                                  dynamic_cast<DistortionTest *>(this), _1, 1));
   cam_info_distorted_sub_ =
       nh_.subscribe("/camera_distorted/camera_info",
                     1,
                     &DistortionTest::camInfoCallback,
-                    dynamic_cast<DistortionTest*>(this)
-                   );
+                    dynamic_cast<DistortionTest *>(this));
 
   // keep waiting until we have an image
 
-  if(cam_info_distorted_ && cam_image_distorted_) {
+  if (cam_info_distorted_ && cam_image_distorted_)
+  {
     std::cerr << "available immediately" << std::endl;
   }
   while (!cam_info_distorted_ ||
-      !cam_image_distorted_ ||
-      !cam_image_undistorted_)
+         !cam_image_distorted_ ||
+         !cam_image_undistorted_)
   {
     ros::Duration(0.1).sleep();
   }
@@ -120,16 +118,16 @@ void DistortionTest::cameraDistortionTest()
 
   // load camera coefficients from published ROS information
   Mat intrinsic_distorted_matrix = Mat(3, 3, CV_64F);
-  if(cam_info_distorted_->K.size() == 9)
+  if (cam_info_distorted_->K.size() == 9)
   {
     memcpy(intrinsic_distorted_matrix.data, cam_info_distorted_->K.data(),
-      cam_info_distorted_->K.size()*sizeof(double));
+           cam_info_distorted_->K.size() * sizeof(double));
   }
   Mat distortion_coeffs = Mat(5, 1, CV_64F);
-  if(cam_info_distorted_->D.size() == 5)
+  if (cam_info_distorted_->D.size() == 5)
   {
     memcpy(distortion_coeffs.data, cam_info_distorted_->D.data(),
-      cam_info_distorted_->D.size()*sizeof(double));
+           cam_info_distorted_->D.size() * sizeof(double));
   }
 
   // Information acquired, now test the quality of the undistortion
@@ -138,17 +136,16 @@ void DistortionTest::cameraDistortionTest()
   Mat fixed = distorted.clone();
   Mat undistorted = Mat(cv_bridge::toCvCopy(cam_image_undistorted_)->image);
 
-  //crop the image to remove black borders leftover from (un)distortion
+  // crop the image to remove black borders leftover from (un)distortion
   int cropBorder = 50;
   cv::Rect myROI(cropBorder, cropBorder,
-    fixed.rows - 2 * cropBorder, fixed.cols - 2 * cropBorder);
+                 fixed.rows - 2 * cropBorder, fixed.cols - 2 * cropBorder);
   cv::Mat fixed_crop = fixed(myROI);
   cv::Mat undistorted_crop = undistorted(myROI);
 
-
   undistort(distorted, fixed, intrinsic_distorted_matrix, distortion_coeffs);
 
-  //Ensure that we didn't crop away everything
+  // Ensure that we didn't crop away everything
   ASSERT_GT(distorted.rows, 0);
   ASSERT_GT(distorted.cols, 0);
   ASSERT_GT(undistorted.rows, 0);
@@ -164,19 +161,19 @@ void DistortionTest::cameraDistortionTest()
   const double OFFSET = 0.01;
 
   // test each parameter, varying one at a time
-  for(size_t i = 0; i < 5; ++i)
+  for (size_t i = 0; i < 5; ++i)
   {
-    distortion_coeffs.at<double>(i,0) += OFFSET;
+    distortion_coeffs.at<double>(i, 0) += OFFSET;
     undistort(distorted, fixed, intrinsic_distorted_matrix, distortion_coeffs);
     diffBetween(fixed_crop, undistorted_crop, diff2);
     EXPECT_GE(diff2, diff1);
-    distortion_coeffs.at<double>(i,0) -= OFFSET;
+    distortion_coeffs.at<double>(i, 0) -= OFFSET;
 
-    distortion_coeffs.at<double>(i,0) -= OFFSET;
+    distortion_coeffs.at<double>(i, 0) -= OFFSET;
     undistort(distorted, fixed, intrinsic_distorted_matrix, distortion_coeffs);
     diffBetween(fixed_crop, undistorted_crop, diff2);
     EXPECT_GE(diff2, diff1);
-    distortion_coeffs.at<double>(i,0) += OFFSET;
+    distortion_coeffs.at<double>(i, 0) += OFFSET;
   }
 }
 
