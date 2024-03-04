@@ -33,11 +33,8 @@ if __name__ == '__main__':
     model_path = rospkg.RosPack().get_path('baxter_chess')+"/models/"
 
     # Spawned Piece Pose
-    spawned_piece_pose = Pose(Point(x=0.3, y=0.55, z=0.78))
+    spawned_piece_pose = Pose(position=Point(x=0.3, y=0.55, z=0.78))
     spawned_piece = rospy.Publisher('spawned_piece', Pose, queue_size=10)
-
-    # Spawn the spawned piece into the simulation
-    print srv_call("spawned_piece", "", "", spawned_piece_pose, "world")
     
     # Load chessboard model
     with open(model_path + "chessboard/model.sdf", "r") as f:
@@ -78,8 +75,9 @@ if __name__ == '__main__':
                 spawned_piece.publish(pose)
                 print(rospy.get_time())
                 rospy.sleep(0.1)
-            elif piece == '*':
-                print('Error: No piece in this position: %s%d' % (piece,col))
+                #print(rospy.wait_for_message("spawn_next", Empty)) 
+            elif not piece == '*':
+                print('Error: No piece in this position: %s' % (piece))
     
     # Publish parameters to the ROS parameter server
     rospy.set_param('board_setup', board_setup) # Board setup

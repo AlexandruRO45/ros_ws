@@ -19,9 +19,9 @@ void modelStatesCallback(const gazebo_msgs::ModelStatesConstPtr &msg)
   tf::Quaternion quat;
   double dummy;
 
-  for(size_t modelInd = 0; modelInd < modelCount; ++modelInd)
+  for (size_t modelInd = 0; modelInd < modelCount; ++modelInd)
   {
-    if(msg->name[modelInd] == "pioneer2dx")
+    if (msg->name[modelInd] == "pioneer2dx")
     {
       vehicleSpawned_ = true;
 
@@ -36,7 +36,7 @@ void modelStatesCallback(const gazebo_msgs::ModelStatesConstPtr &msg)
   }
 }
 
-TEST (ModelStateTest, FrameTest)
+TEST(ModelStateTest, FrameTest)
 {
   vehicleSpawned_ = false;
   curHeading_ = 0;
@@ -53,7 +53,7 @@ TEST (ModelStateTest, FrameTest)
   state.reference_frame = "pioneer2dx::chassis";
 
   // Wait for model to spawn
-  while(!vehicleSpawned_)
+  while (!vehicleSpawned_)
   {
     ros::spinOnce();
     ros::Duration(0.1).sleep();
@@ -66,7 +66,7 @@ TEST (ModelStateTest, FrameTest)
     modelStatePub.publish(state);
     ros::Duration(0.2).sleep();
     ros::spinOnce();
-  } while(::fabs(curHeading_ - M_PI/4) > 0.05);
+  } while (::fabs(curHeading_ - M_PI / 4) > 0.05);
 
   state.pose.orientation.z = 0;
   state.pose.position.x = 0.1;
@@ -77,7 +77,7 @@ TEST (ModelStateTest, FrameTest)
     modelStatePub.publish(state);
     ros::Duration(0.2).sleep();
     ros::spinOnce();
-  } while(::sqrt(curX_*curX_ + curY_*curY_) < 5.0);
+  } while (::sqrt(curX_ * curX_ + curY_ * curY_) < 5.0);
 
   // The X and Y values should be approximately the same,
   // and should be roughly sqrt(25/2)
@@ -93,7 +93,7 @@ TEST (ModelStateTest, FrameTest)
     modelStatePub.publish(state);
     ros::Duration(0.2).sleep();
     ros::spinOnce();
-  } while(::sqrt(curX_*curX_ + curY_*curY_) > 0.1);
+  } while (::sqrt(curX_ * curX_ + curY_ * curY_) > 0.1);
 
   EXPECT_LT(::fabs(curX_), 0.01);
   EXPECT_LT(::fabs(curY_), 0.01);

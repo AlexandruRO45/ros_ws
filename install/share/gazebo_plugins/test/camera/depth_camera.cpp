@@ -23,18 +23,19 @@ protected:
   ros::Time depth_stamp_;
   bool has_new_points_;
   ros::Time points_stamp_;
+
 public:
-  void imageCallback(const sensor_msgs::ImageConstPtr& msg)
+  void imageCallback(const sensor_msgs::ImageConstPtr &msg)
   {
     image_stamp_ = msg->header.stamp;
     has_new_image_ = true;
   }
-  void depthCallback(const sensor_msgs::ImageConstPtr& msg)
+  void depthCallback(const sensor_msgs::ImageConstPtr &msg)
   {
     depth_stamp_ = msg->header.stamp;
     has_new_depth_ = true;
   }
-  void pointsCallback(const sensor_msgs::PointCloud2ConstPtr& msg)
+  void pointsCallback(const sensor_msgs::PointCloud2ConstPtr &msg)
   {
     points_stamp_ = msg->header.stamp;
     has_new_points_ = true;
@@ -48,13 +49,13 @@ TEST_F(DepthCameraTest, cameraSubscribeTest)
   image_transport::ImageTransport it(nh_);
   cam_sub_ = it.subscribe("camera1/image_raw", 1,
                           &DepthCameraTest::imageCallback,
-                          dynamic_cast<DepthCameraTest*>(this));
+                          dynamic_cast<DepthCameraTest *>(this));
   depth_sub_ = it.subscribe("camera1/depth/image_raw", 1,
                             &DepthCameraTest::depthCallback,
-                            dynamic_cast<DepthCameraTest*>(this));
+                            dynamic_cast<DepthCameraTest *>(this));
   points_sub_ = nh_.subscribe("camera1/points", 1,
-                             &DepthCameraTest::pointsCallback,
-                             dynamic_cast<DepthCameraTest*>(this));
+                              &DepthCameraTest::pointsCallback,
+                              dynamic_cast<DepthCameraTest *>(this));
 #if 0
   // wait for gazebo to start publishing
   // TODO(lucasw) this isn't really necessary since this test
@@ -120,7 +121,7 @@ TEST_F(DepthCameraTest, cameraSubscribeTest)
   }
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
   ros::init(argc, argv, "gazebo_depth_camera_test");
   testing::InitGoogleTest(&argc, argv);

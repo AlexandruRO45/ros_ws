@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 
 #ifndef GAZEBO_ROS_LASER_HH
 #define GAZEBO_ROS_LASER_HH
@@ -45,55 +45,89 @@ namespace gazebo
   class GazeboRosLaser : public GpuRayPlugin
   {
     /// \brief Constructor
-    public: GazeboRosLaser();
+  public:
+    GazeboRosLaser();
 
     /// \brief Destructor
-    public: ~GazeboRosLaser();
+  public:
+    ~GazeboRosLaser();
 
     /// \brief Load the plugin
     /// \param take in SDF root element
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+  public:
+    void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// \brief Keep track of number of connctions
-    private: int laser_connect_count_;
-    private: void LaserConnect();
-    private: void LaserDisconnect();
+  private:
+    int laser_connect_count_;
+
+  private:
+    void LaserConnect();
+
+  private:
+    void LaserDisconnect();
 
     // Pointer to the model
-    private: std::string world_name_;
-    private: physics::WorldPtr world_;
+  private:
+    std::string world_name_;
+
+  private:
+    physics::WorldPtr world_;
     /// \brief The parent sensor
-    private: sensors::GpuRaySensorPtr parent_ray_sensor_;
+  private:
+    sensors::GpuRaySensorPtr parent_ray_sensor_;
 
     /// \brief pointer to ros node
-    private: ros::NodeHandle* rosnode_;
-    private: ros::Publisher pub_;
-    private: PubQueue<sensor_msgs::LaserScan>::Ptr pub_queue_;
+  private:
+    ros::NodeHandle *rosnode_;
+
+  private:
+    ros::Publisher pub_;
+
+  private:
+    PubQueue<sensor_msgs::LaserScan>::Ptr pub_queue_;
 
     /// \brief topic name
-    private: std::string topic_name_;
+  private:
+    std::string topic_name_;
 
     /// \brief frame transform name, should match link name
-    private: std::string frame_name_;
+  private:
+    std::string frame_name_;
 
     /// \brief tf prefix
-    private: std::string tf_prefix_;
+  private:
+    std::string tf_prefix_;
 
     /// \brief for setting ROS name space
-    private: std::string robot_namespace_;
+  private:
+    std::string robot_namespace_;
 
     // deferred load in case ros is blocking
-    private: sdf::ElementPtr sdf;
-    private: void LoadThread();
-    private: boost::thread deferred_load_thread_;
-    private: unsigned int seed;
+  private:
+    sdf::ElementPtr sdf;
 
-    private: gazebo::transport::NodePtr gazebo_node_;
-    private: gazebo::transport::SubscriberPtr laser_scan_sub_;
-    private: void OnScan(ConstLaserScanStampedPtr &_msg);
+  private:
+    void LoadThread();
+
+  private:
+    boost::thread deferred_load_thread_;
+
+  private:
+    unsigned int seed;
+
+  private:
+    gazebo::transport::NodePtr gazebo_node_;
+
+  private:
+    gazebo::transport::SubscriberPtr laser_scan_sub_;
+
+  private:
+    void OnScan(ConstLaserScanStampedPtr &_msg);
 
     /// \brief prevents blocking
-    private: PubMultiQueue pmq;
+  private:
+    PubMultiQueue pmq;
   };
 }
 #endif

@@ -15,8 +15,9 @@ protected:
   image_transport::Subscriber cam_sub_;
   int images_received_;
   ros::Time image_stamp_;
+
 public:
-  void imageCallback(const sensor_msgs::ImageConstPtr& msg)
+  void imageCallback(const sensor_msgs::ImageConstPtr &msg)
   {
     image_stamp_ = msg->header.stamp;
     images_received_++;
@@ -30,7 +31,7 @@ TEST_F(TriggeredCameraTest, cameraSubscribeTest)
   image_transport::ImageTransport it(nh_);
   cam_sub_ = it.subscribe("camera1/image_raw", 5,
                           &TriggeredCameraTest::imageCallback,
-                          dynamic_cast<TriggeredCameraTest*>(this));
+                          dynamic_cast<TriggeredCameraTest *>(this));
 
   // wait for 3 seconds to confirm that we don't receive any images
   for (unsigned int i = 0; i < 30; ++i)
@@ -106,7 +107,7 @@ TEST_F(TriggeredCameraTest, cameraSubscribeTest)
   cam_sub_.shutdown();
 }
 
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
   ros::init(argc, argv, "gazebo_camera_test");
   testing::InitGoogleTest(&argc, argv);

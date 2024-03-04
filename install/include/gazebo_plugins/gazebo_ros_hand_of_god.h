@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 /*
  * Desc: 3D position interface.
  * Author: Sachin Chitta and John Hsu
@@ -39,33 +39,37 @@ namespace gazebo
 
   class GazeboRosHandOfGod : public ModelPlugin
   {
-  /// \brief Constructor
-  public: GazeboRosHandOfGod();
+    /// \brief Constructor
+  public:
+    GazeboRosHandOfGod();
 
-  /// \brief Destructor
-  public: virtual ~GazeboRosHandOfGod();
+    /// \brief Destructor
+  public:
+    virtual ~GazeboRosHandOfGod();
 
-  /// \brief Load the controller
-  public: void Load( physics::ModelPtr _parent, sdf::ElementPtr _sdf );
+    /// \brief Load the controller
+  public:
+    void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf);
 
-  /// \brief Update the controller
-  protected: virtual void GazeboUpdate();
+    /// \brief Update the controller
+  protected:
+    virtual void GazeboUpdate();
 
-  /// Pointer to the update event connection
-  private: event::ConnectionPtr update_connection_;
-           boost::shared_ptr<tf2_ros::Buffer> tf_buffer_;
-           boost::shared_ptr<tf2_ros::TransformListener> tf_listener_;
-           boost::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
-           physics::ModelPtr model_;
-           physics::LinkPtr floating_link_;
-           std::string link_name_;
-           std::string robot_namespace_;
-           std::string frame_id_;
-           double kl_, ka_;
-           double cl_, ca_;
+    /// Pointer to the update event connection
+  private:
+    event::ConnectionPtr update_connection_;
+    boost::shared_ptr<tf2_ros::Buffer> tf_buffer_;
+    boost::shared_ptr<tf2_ros::TransformListener> tf_listener_;
+    boost::shared_ptr<tf2_ros::TransformBroadcaster> tf_broadcaster_;
+    physics::ModelPtr model_;
+    physics::LinkPtr floating_link_;
+    std::string link_name_;
+    std::string robot_namespace_;
+    std::string frame_id_;
+    double kl_, ka_;
+    double cl_, ca_;
   };
 
 }
 
 #endif
-

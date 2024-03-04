@@ -17,10 +17,11 @@ protected:
   image_transport::Subscriber cam_sub_;
   bool has_new_image_;
   ros::Time image_stamp_;
+
 public:
   void subscribeTest();
 
-  void imageCallback(const sensor_msgs::ImageConstPtr& msg)
+  void imageCallback(const sensor_msgs::ImageConstPtr &msg)
   {
     image_stamp_ = msg->header.stamp;
     has_new_image_ = true;
@@ -34,7 +35,7 @@ void CameraTest::subscribeTest()
   image_transport::ImageTransport it(nh_);
   cam_sub_ = it.subscribe("camera1/image_raw", 1,
                           &CameraTest::imageCallback,
-                          dynamic_cast<CameraTest*>(this));
+                          dynamic_cast<CameraTest *>(this));
 
 #if 0
   // wait for gazebo to start publishing

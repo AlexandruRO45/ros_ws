@@ -28,7 +28,7 @@
   <run_depend>rethink_ee_description</run_depend>
 
   <export>
-    <metapackage/>
+    <metapackage />
   </export>
 
 </package>

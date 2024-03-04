@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 /*
  * Desc: 3D position interface.
  * Author: Sachin Chitta and John Hsu
@@ -37,20 +37,22 @@ namespace gazebo
    class GazeboRosTemplate : public ModelPlugin
    {
       /// \brief Constructor
-      public: GazeboRosTemplate();
+   public:
+      GazeboRosTemplate();
 
       /// \brief Destructor
-      public: virtual ~GazeboRosTemplate();
+   public:
+      virtual ~GazeboRosTemplate();
 
       /// \brief Load the controller
-      public: void Load( physics::ModelPtr _parent, sdf::ElementPtr _sdf );
+   public:
+      void Load(physics::ModelPtr _parent, sdf::ElementPtr _sdf);
 
       /// \brief Update the controller
-      protected: virtual void UpdateChild();
-
+   protected:
+      virtual void UpdateChild();
    };
 
 }
 
 #endif
-

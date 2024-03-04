@@ -37,7 +37,6 @@
 #ifndef GAZEBO_ROS_RANGE_H
 #define GAZEBO_ROS_RANGE_H
 
-
 #include <string>
 
 #include <boost/bind.hpp>
@@ -63,83 +62,127 @@
 namespace gazebo
 {
 
-class GazeboRosRange : public RayPlugin
-{
+    class GazeboRosRange : public RayPlugin
+    {
 
-    /// \brief Constructor
-    public: GazeboRosRange();
+        /// \brief Constructor
+    public:
+        GazeboRosRange();
 
-    /// \brief Destructor
-    public: ~GazeboRosRange();
+        /// \brief Destructor
+    public:
+        ~GazeboRosRange();
 
-    /// \brief Load the plugin
-    /// \param take in SDF root element
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+        /// \brief Load the plugin
+        /// \param take in SDF root element
+    public:
+        void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
-    /// \brief Update the controller
-    protected: virtual void OnNewLaserScans();
+        /// \brief Update the controller
+    protected:
+        virtual void OnNewLaserScans();
 
-    /// \brief Put range data to the ROS topic
-    private: void PutRangeData(common::Time &_updateTime);
+        /// \brief Put range data to the ROS topic
+    private:
+        void PutRangeData(common::Time &_updateTime);
 
-    /// \brief Keep track of number of connctions
-    private: int range_connect_count_;
-    private: void RangeConnect();
-    private: void RangeDisconnect();
+        /// \brief Keep track of number of connctions
+    private:
+        int range_connect_count_;
 
-    // Pointer to the model
-    private: physics::WorldPtr world_;
-    /// \brief The parent sensor
-    private: sensors::SensorPtr parent_sensor_;
-    private: sensors::RaySensorPtr parent_ray_sensor_;
+    private:
+        void RangeConnect();
 
-    /// \brief pointer to ros node
-    private: ros::NodeHandle* rosnode_;
-    private: ros::Publisher pub_;
+    private:
+        void RangeDisconnect();
 
-    /// \brief ros message
-    private: sensor_msgs::Range range_msg_;
+        // Pointer to the model
+    private:
+        physics::WorldPtr world_;
+        /// \brief The parent sensor
+    private:
+        sensors::SensorPtr parent_sensor_;
 
-    /// \brief topic name
-    private: std::string topic_name_;
+    private:
+        sensors::RaySensorPtr parent_ray_sensor_;
 
-    /// \brief frame transform name, should match link name
-    private: std::string frame_name_;
+        /// \brief pointer to ros node
+    private:
+        ros::NodeHandle *rosnode_;
 
-    /// \brief radiation type : ultrasound or infrared
-    private: std::string radiation_;
+    private:
+        ros::Publisher pub_;
 
-    /// \brief sensor field of view
-    private: double fov_;
-    /// \brief Gaussian noise
-    private: double gaussian_noise_;
+        /// \brief ros message
+    private:
+        sensor_msgs::Range range_msg_;
 
-    /// \brief Gaussian noise generator
-    private: double GaussianKernel(double mu, double sigma);
+        /// \brief topic name
+    private:
+        std::string topic_name_;
 
-    /// \brief mutex to lock access to fields that are used in message callbacks
-    private: boost::mutex lock_;
+        /// \brief frame transform name, should match link name
+    private:
+        std::string frame_name_;
 
-    /// \brief hack to mimic hokuyo intensity cutoff of 100
-    private: double hokuyo_min_intensity_;
+        /// \brief radiation type : ultrasound or infrared
+    private:
+        std::string radiation_;
 
-    /// update rate of this sensor
-    private: double update_rate_;
-    private: double update_period_;
-    private: common::Time last_update_time_;
+        /// \brief sensor field of view
+    private:
+        double fov_;
+        /// \brief Gaussian noise
+    private:
+        double gaussian_noise_;
 
-    /// \brief for setting ROS name space
-    private: std::string robot_namespace_;
+        /// \brief Gaussian noise generator
+    private:
+        double GaussianKernel(double mu, double sigma);
 
-    private: ros::CallbackQueue range_queue_;
-    private: void RangeQueueThread();
-    private: boost::thread callback_queue_thread_;
+        /// \brief mutex to lock access to fields that are used in message callbacks
+    private:
+        boost::mutex lock_;
 
-    // deferred load in case ros is blocking
-    private: sdf::ElementPtr sdf;
-    private: void LoadThread();
-    private: boost::thread deferred_load_thread_;
-    private: unsigned int seed;
-};
+        /// \brief hack to mimic hokuyo intensity cutoff of 100
+    private:
+        double hokuyo_min_intensity_;
+
+        /// update rate of this sensor
+    private:
+        double update_rate_;
+
+    private:
+        double update_period_;
+
+    private:
+        common::Time last_update_time_;
+
+        /// \brief for setting ROS name space
+    private:
+        std::string robot_namespace_;
+
+    private:
+        ros::CallbackQueue range_queue_;
+
+    private:
+        void RangeQueueThread();
+
+    private:
+        boost::thread callback_queue_thread_;
+
+        // deferred load in case ros is blocking
+    private:
+        sdf::ElementPtr sdf;
+
+    private:
+        void LoadThread();
+
+    private:
+        boost::thread deferred_load_thread_;
+
+    private:
+        unsigned int seed;
+    };
 }
 #endif // GAZEBO_ROS_RANGE_H

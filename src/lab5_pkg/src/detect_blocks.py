@@ -11,7 +11,6 @@ import tf
 from tf.transformations import quaternion_from_euler
 
 from lab5_pkg.srv import captureResponse, capture
-
 import cv2  # Import OpenCV modules
 
 # **** Globals
@@ -110,7 +109,7 @@ def block_detection(input_img):
     # with the RGB ordering (I know, weird). So you can swap colour channels as follow
     b, g, r = cv2.split(input_img)  # get b,g,r
     # rgb_img = cv2.merge([r, g, b])  # switch it to rgb
-    cv2.imwrite('camera_image.jpg', input_img)
+    cv2.imwrite("../srv/detection.jpg", out_img)
 
     # Display the RGB image (matplotlib is only used in jupyter, here you can use OpenCV builtin fns)
     #cv2.imshow("Image window", input_img)
@@ -188,7 +187,7 @@ def block_detection(input_img):
 
     # cv2.imshow("Fitted Ellipse", out_img)
     # cv2.waitKey(3)
-    cv2.imwrite('detection.jpg', out_img)
+    cv2.imwrite('../srv/detection.jpg', out_img)
 
     return centroid, angle
 

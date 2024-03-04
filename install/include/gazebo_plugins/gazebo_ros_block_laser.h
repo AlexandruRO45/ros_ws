@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *
-*/
+ */
 /*
  * Desc: ros laser controller.
  * Author: Nathan Koenig
@@ -50,79 +50,114 @@ namespace gazebo
   {
     /// \brief Constructor
     /// \param parent The parent entity, must be a Model or a Sensor
-    public: GazeboRosBlockLaser();
+  public:
+    GazeboRosBlockLaser();
 
     /// \brief Destructor
-    public: ~GazeboRosBlockLaser();
+  public:
+    ~GazeboRosBlockLaser();
 
     /// \brief Load the plugin
     /// \param take in SDF root element
-    public: void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
+  public:
+    void Load(sensors::SensorPtr _parent, sdf::ElementPtr _sdf);
 
     /// \brief Update the controller
-    protected: virtual void OnNewLaserScans();
+  protected:
+    virtual void OnNewLaserScans();
 
     /// \brief Put laser data to the ROS topic
-    private: void PutLaserData(common::Time &_updateTime);
+  private:
+    void PutLaserData(common::Time &_updateTime);
 
-    private: common::Time last_update_time_;
+  private:
+    common::Time last_update_time_;
 
     /// \brief Keep track of number of connctions
-    private: int laser_connect_count_;
-    private: void LaserConnect();
-    private: void LaserDisconnect();
+  private:
+    int laser_connect_count_;
+
+  private:
+    void LaserConnect();
+
+  private:
+    void LaserDisconnect();
 
     // Pointer to the model
-    private: physics::WorldPtr world_;
+  private:
+    physics::WorldPtr world_;
     /// \brief The parent sensor
-    private: sensors::SensorPtr parent_sensor_;
-    private: sensors::RaySensorPtr parent_ray_sensor_;
+  private:
+    sensors::SensorPtr parent_sensor_;
+
+  private:
+    sensors::RaySensorPtr parent_ray_sensor_;
 
     /// \brief pointer to ros node
-    private: ros::NodeHandle* rosnode_;
-    private: ros::Publisher pub_;
+  private:
+    ros::NodeHandle *rosnode_;
+
+  private:
+    ros::Publisher pub_;
 
     /// \brief ros message
-    private: sensor_msgs::PointCloud cloud_msg_;
+  private:
+    sensor_msgs::PointCloud cloud_msg_;
 
     /// \brief topic name
-    private: std::string topic_name_;
+  private:
+    std::string topic_name_;
 
     /// \brief frame transform name, should match link name
-    private: std::string frame_name_;
+  private:
+    std::string frame_name_;
 
     /// \brief Gaussian noise
-    private: double gaussian_noise_;
+  private:
+    double gaussian_noise_;
 
     /// \brief Gaussian noise generator
-    private: double GaussianKernel(double mu,double sigma);
+  private:
+    double GaussianKernel(double mu, double sigma);
 
     /// \brief A mutex to lock access to fields that are used in message callbacks
-    private: boost::mutex lock;
+  private:
+    boost::mutex lock;
 
     /// \brief hack to mimic hokuyo intensity cutoff of 100
-    //private: ParamT<double> *hokuyoMinIntensityP;
-    private: double hokuyo_min_intensity_;
+    // private: ParamT<double> *hokuyoMinIntensityP;
+  private:
+    double hokuyo_min_intensity_;
 
     /// update rate of this sensor
-    private: double update_rate_;
+  private:
+    double update_rate_;
 
     /// \brief for setting ROS name space
-    private: std::string robot_namespace_;
+  private:
+    std::string robot_namespace_;
 
     // Custom Callback Queue
-    private: ros::CallbackQueue laser_queue_;
-    private: void LaserQueueThread();
-    private: boost::thread callback_laser_queue_thread_;
+  private:
+    ros::CallbackQueue laser_queue_;
+
+  private:
+    void LaserQueueThread();
+
+  private:
+    boost::thread callback_laser_queue_thread_;
 
     // subscribe to world stats
-    private: transport::NodePtr node_;
-    private: common::Time sim_time_;
-    public: void OnStats( const boost::shared_ptr<msgs::WorldStatistics const> &_msg);
+  private:
+    transport::NodePtr node_;
 
+  private:
+    common::Time sim_time_;
+
+  public:
+    void OnStats(const boost::shared_ptr<msgs::WorldStatistics const> &_msg);
   };
 
 }
 
 #endif
-

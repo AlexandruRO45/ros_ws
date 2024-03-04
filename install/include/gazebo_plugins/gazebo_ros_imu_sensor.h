@@ -1,13 +1,13 @@
 /* Copyright [2015] [Alessandro Settimi]
- * 
+ *
  * email: ale.settimi@gmail.com
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -53,7 +53,7 @@ namespace gazebo
 
   protected:
     /// \brief Update the sensor.
-    virtual void UpdateChild(const gazebo::common::UpdateInfo &/*_info*/);
+    virtual void UpdateChild(const gazebo::common::UpdateInfo & /*_info*/);
 
   private:
     /// \brief Load the parameters from the sdf file.
@@ -62,9 +62,9 @@ namespace gazebo
     /// \param mu offset value.
     /// \param sigma scaling value.
     double GuassianKernel(double mu, double sigma);
-    
+
     /// \brief Ros NodeHandle pointer.
-    ros::NodeHandle* node;
+    ros::NodeHandle *node;
     /// \brief Ros Publisher for imu data.
     ros::Publisher imu_data_publisher;
     /// \brief Ros IMU message.
@@ -75,7 +75,7 @@ namespace gazebo
     /// \brief Pointer to the update event connection.
     gazebo::event::ConnectionPtr connection;
     /// \brief Pointer to the sensor.
-    sensors::ImuSensor* sensor;
+    sensors::ImuSensor *sensor;
     /// \brief Pointer to the sdf config file.
     sdf::ElementPtr sdf;
     /// \brief Orientation data from the sensor.
@@ -84,11 +84,11 @@ namespace gazebo
     ignition::math::Vector3d accelerometer_data;
     /// \brief Angular velocity data from the sensor.
     ignition::math::Vector3d gyroscope_data;
-    
+
     /// \brief Seed for the Gaussian noise generator.
     unsigned int seed;
 
-    //loaded parameters
+    // loaded parameters
     /// \brief The data is published on the topic named: /robot_namespace/topic_name.
     std::string robot_namespace;
     /// \brief The data is published on the topic named: /robot_namespace/topic_name.
@@ -104,4 +104,4 @@ namespace gazebo
   };
 }
 
-#endif //GAZEBO_ROS_IMU_SENSOR_H
+#endif // GAZEBO_ROS_IMU_SENSOR_H
