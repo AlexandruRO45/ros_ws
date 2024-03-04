@@ -64,20 +64,20 @@ roslaunch baxter_moveit_config baxter_grippers.launch
 ```
 Terminal 4:
 ```
-rosrun chess_baxter spawn_chessboard.py
+rosrun baxter_chess spawn_chessboard.py
 ```
 Terminal 5:
 ```
-rosrun chess_baxter pick_and_plave_moveit.py
+rosrun baxter_chess pick_and_plave_moveit.py
 ```
 Terminal 6:
 ```
-rosrun chess_baxter gazebo2tfframe.py
+rosrun baxter_chess gazebo2tfframe.py
 ```
 
 In order to delete the chessboard and its components, run the command:
 ```
-rosrun chess_baxter delete_chessgame.py
+rosrun baxter_chess delete_chessgame.py
 ```
 
 
