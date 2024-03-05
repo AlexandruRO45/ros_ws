@@ -1,6 +1,8 @@
 #!/usr/bin/env python  
 import rospy
 import math
+import numpy
+from transforms3d import quaternions
 
 # Importing TF to facilitate the task of receiving transformations
 import tf2_ros

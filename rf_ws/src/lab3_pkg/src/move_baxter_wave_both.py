@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+import numpy
 import sys
 import copy
 import rospy
@@ -18,26 +18,26 @@ def wave_generator(group, initial_pose_left, initial_pose_right, step=15, radius
     wave_reverse = []
     
     for t in range(45,135,step):
-        y_wave = initial_pose_left.position.y + radius_wave * np.cos(np.deg2rad(t))
-        z_wave = initial_pose_left.position.z + radius_wave * np.sin(np.deg2rad(t))
+        y_wave = initial_pose_left.position.y + radius_wave * numpy.cos(numpy.deg2rad(t))
+        z_wave = initial_pose_left.position.z + radius_wave * numpy.sin(numpy.deg2rad(t))
         c_pose_left.position.y = y_wave
         c_pose_left.position.z = z_wave
         
-        y_wave = initial_pose_right.position.y + radius_wave * np.cos(np.deg2rad(t))
-        z_wave = initial_pose_right.position.z + radius_wave * np.sin(np.deg2rad(t))
+        y_wave = initial_pose_right.position.y + radius_wave * numpy.cos(numpy.deg2rad(t))
+        z_wave = initial_pose_right.position.z + radius_wave * numpy.sin(numpy.deg2rad(t))
         c_pose_right.position.y = y_wave
         c_pose_right.position.z = z_wave
         wave.append((copy.deepcopy(c_pose_left), copy.deepcopy(c_pose_right)))
     
     # Now the other way
     for t in range(135,45,-1*step):
-        y_wave = initial_pose_left.position.y + radius_wave * np.cos(np.deg2rad(t))
-        z_wave = initial_pose_left.position.z + radius_wave * np.sin(np.deg2rad(t))
+        y_wave = initial_pose_left.position.y + radius_wave * numpy.cos(numpy.deg2rad(t))
+        z_wave = initial_pose_left.position.z + radius_wave * numpy.sin(numpy.deg2rad(t))
         c_pose_left.position.y = y_wave
         c_pose_left.position.z = z_wave
         
-        y_wave = initial_pose_right.position.y + radius_wave * np.cos(np.deg2rad(t))
-        z_wave = initial_pose_right.position.z + radius_wave * np.sin(np.deg2rad(t))
+        y_wave = initial_pose_right.position.y + radius_wave * numpy.cos(numpy.deg2rad(t))
+        z_wave = initial_pose_right.position.z + radius_wave * numpy.sin(numpy.deg2rad(t))
         c_pose_right.position.y = y_wave
         c_pose_right.position.z = z_wave
         wave_reverse.append((copy.deepcopy(c_pose_left), copy.deepcopy(c_pose_right)))
