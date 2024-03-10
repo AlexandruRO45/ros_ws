@@ -4,6 +4,10 @@ from gazebo_msgs.srv import *
 from geometry_msgs.msg import *
 from copy import deepcopy
 from pick_and_place_moveit import PickAndPlaceMoveIt
+from std_msgs.msg import (
+    Empty,
+    String,
+)
 
 # http://wiki.ros.org/simulator_gazebo/Tutorials/ListOfMaterials
 
@@ -77,14 +81,18 @@ def main():
             pose.position.y = board_pose.position.y - 0.55 + frame_dist + origin_piece + col * (2 * origin_piece)
             pose.position.z += 0.018
             piece_positionmap[str(row)+str(col)] = [pose.position.x, pose.position.y, pose.position.z-0.93] #0.93 to compensate Gazebo RViz origin difference
+            place_position = piece_positionmap[str(row)+str(col)]
+            if piece in pieces_xml:
+                model_spawn("%s%d" % (piece,col), pieces_xml[piece], spawned_piece_pose)
             if piece in list_pieces:
                 piece_names.append("%s%d" % (piece,col))
-                model_spawn("%s%d" % (piece,col), pieces_xml[piece], spawned_piece_pose)
-                
-                # spawned_piece_pose.publish(pose)
-                # print(rospy.get_time())
-                # rospy.sleep(0.1)
-                # print(rospy.wait_for_message("spawn_next", Empty)) 
+                pnp.pick(Pose(position = Point(spawned_piece_pose.position.x,spawned_piece_pose.position.y,place_position[2] - 0.015), orientation = overhead_orientation))
+                pnp.place(Pose(position = Point(place_position[0], place_position[1], place_position[2] + 0.008), orientation = overhead_orientation))
+                pnp.move_to_start(Pose(position = Point(x=0.7, y=0.135, z=0.35), orientation=overhead_orientation))
+            #     spawned_piece_pose.publish(pose)
+            #     print(rospy.get_time())
+            #     rospy.sleep(0.1)
+            #     print(rospy.wait_for_message("spawn_next", Empty)) 
             # elif not piece == '*':
             #     print('Error: No piece in this position: %s' % (piece))
 
