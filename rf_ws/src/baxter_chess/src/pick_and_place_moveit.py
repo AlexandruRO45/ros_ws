@@ -185,16 +185,19 @@ def main():
     # NOTE: Gazebo and Rviz has different origins, even though they are connected. For this
     # we need to compensate for this offset which is 0.93 from the ground in gazebo to
     # the actual 0, 0, 0 in Rviz.
-    starting_pose = Pose(
-        position=Point(x=0.7, y=0.135, z=0.35),
-        orientation=overhead_orientation)
+    starting_pose = Pose(position=Point(x=0.7, y=0.135, z=0.35),orientation=overhead_orientation)
     pnp = PickAndPlaceMoveIt(limb, hover_distance)
-
-
-
-
-
-    block_poses = list()
+    positionmap = rospy.get_param('piece_target_position_map')
+    pick_list = []
+    pick_block_poses = list()
+    for pick in pick_list:
+        position = positionmap[pick]
+        pick_block_poses.append(Pose(position=Point(x=position[0], y=position[1], z=position[2]), orientation=overhead_orientation))
+    place_list = []
+    place_block_poses = list()
+    for place in place_list:
+        position = positionmap[pick]
+        place_block_poses.append(Pose(position=Point(x=position[0], y=position[1], z=position[2]), orientation=overhead_orientation))
     # The Pose of the block in its initial location.
     # You may wish to replace these poses with estimates
     # from a perception node.
@@ -203,24 +206,24 @@ def main():
     # to command MoveIt! to go below because the table is 74 cm height.
     # Since the offset is 0.93, we just simply need to substract
     # 0.74 - 0.93 = -0.15 in Z
-    block_poses.append(Pose(
-        position=Point(x=0.7, y=0.135, z=-0.14),
-        orientation=overhead_orientation))
+    # block_poses.append(Pose(
+    #     position=Point(x=0.7, y=0.135, z=-0.14),
+    #     orientation=overhead_orientation))
     # Feel free to add additional desired poses for the object.
     # Each additional pose will get its own pick and place.
-    block_poses.append(Pose(
-        position=Point(x=0.7, y=-0.135, z=-0.14),
-        orientation=overhead_orientation))
+    # block_poses.append(Pose(
+    #     position=Point(x=0.7, y=-0.135, z=-0.14),
+    #     orientation=overhead_orientation))
 
     # Move to the desired starting angles
     pnp.move_to_start(starting_pose)
     idx = 0
-    while not rospy.is_shutdown():
-        print("\nPicking...")
-        pnp.pick(block_poses[idx])
-        print("\nPlacing...")
-        idx = (idx+1) % len(block_poses)
-        pnp.place(block_poses[idx])
+    for idx in range(6):
+        while not rospy.is_shutdown():
+            print("\nPicking...")
+            pnp.pick(pick_block_poses[idx])
+            print("\nPlacing...")
+            pnp.place(place_block_poses[idx])
     return 0
 
 
