@@ -1,27 +1,24 @@
 #!/usr/bin/env python
 import sys
 import copy
-
 import rospy
 import rospkg
-
+import baxter_interface
+import moveit_commander
 from std_msgs.msg import (
     Empty,
+    String,
 )
-
 from geometry_msgs.msg import (
     Pose,
     Point,
     Quaternion,
 )
-
 from gazebo_msgs.srv import (
     SpawnModel,
     DeleteModel,
 )
 
-import baxter_interface
-import moveit_commander
 
 
 class PickAndPlaceMoveIt(object):
@@ -118,50 +115,6 @@ class PickAndPlaceMoveIt(object):
         self.gripper_open()
         # retract to clear object
         self._retract()
-
-
-# def load_gazebo_models(table_pose=Pose(position=Point(x=1.0, y=0.0, z=0.0)),
-#                        table_reference_frame="world",
-#                        block_pose=Pose(position=Point(x=0.68, y=0.11, z=0.7825)),
-#                        block_reference_frame="world"):
-#     # Get Models' Path
-#     model_path = rospkg.RosPack().get_path('baxter_sim_examples')+"/models/"
-#     # Load Table SDF
-#     table_xml = ''
-#     with open(model_path + "cafe_table/model.sdf", "r") as table_file:
-#         table_xml = table_file.read().replace('\n', '')
-#     # Load block SDF
-#     block_xml = ''
-#     with open(model_path + "block/model.sdf", "r") as block_file:
-#         block_xml = block_file.read().replace('\n', '')
-#     # Spawn Table SDF
-#     rospy.wait_for_service('/gazebo/spawn_sdf_model')
-#     try:
-#         spawn_sdf = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
-#         spawn_sdf("cafe_table", table_xml, "/", table_pose, table_reference_frame)
-#     except rospy.ServiceException, e:
-#         rospy.logerr("Spawn SDF service call failed: {0}".format(e))
-#     # Spawn block SDF
-#     rospy.wait_for_service('/gazebo/spawn_sdf_model')
-#     try:
-#         spawn_sdf = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
-#         spawn_sdf("block", block_xml, "/", block_pose, block_reference_frame)
-#     except rospy.ServiceException, e:
-#         rospy.logerr("Spawn SDF service call failed: {0}".format(e))
-
-
-# def delete_gazebo_models():
-#     # This will be called on ROS Exit, deleting Gazebo models
-#     # Do not wait for the Gazebo Delete Model service, since
-#     # Gazebo should already be running. If the service is not
-#     # available since Gazebo has been killed, it is fine to error out
-#     try:
-#         delete_model = rospy.ServiceProxy('/gazebo/delete_model', DeleteModel)
-#         delete_model("cafe_table")
-#         delete_model("block")
-#     except rospy.ServiceException, e:
-#         rospy.loginfo("Delete Model service call failed: {0}".format(e))
-
 
 def main():
     moveit_commander.roscpp_initialize(sys.argv)
