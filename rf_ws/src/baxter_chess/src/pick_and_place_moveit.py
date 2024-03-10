@@ -194,34 +194,34 @@ def main():
 
 
 
-    # block_poses = list()
-    # # The Pose of the block in its initial location.
-    # # You may wish to replace these poses with estimates
-    # # from a perception node.
+    block_poses = list()
+    # The Pose of the block in its initial location.
+    # You may wish to replace these poses with estimates
+    # from a perception node.
 
-    # # NOTE: Remember that there's an offset in Rviz wrt Gazebo. We need
-    # # to command MoveIt! to go below because the table is 74 cm height.
-    # # Since the offset is 0.93, we just simply need to substract
-    # # 0.74 - 0.93 = -0.15 in Z
-    # block_poses.append(Pose(
-    #     position=Point(x=0.7, y=0.135, z=-0.14),
-    #     orientation=overhead_orientation))
-    # # Feel free to add additional desired poses for the object.
-    # # Each additional pose will get its own pick and place.
-    # block_poses.append(Pose(
-    #     position=Point(x=0.7, y=-0.135, z=-0.14),
-    #     orientation=overhead_orientation))
+    # NOTE: Remember that there's an offset in Rviz wrt Gazebo. We need
+    # to command MoveIt! to go below because the table is 74 cm height.
+    # Since the offset is 0.93, we just simply need to substract
+    # 0.74 - 0.93 = -0.15 in Z
+    block_poses.append(Pose(
+        position=Point(x=0.7, y=0.135, z=-0.14),
+        orientation=overhead_orientation))
+    # Feel free to add additional desired poses for the object.
+    # Each additional pose will get its own pick and place.
+    block_poses.append(Pose(
+        position=Point(x=0.7, y=-0.135, z=-0.14),
+        orientation=overhead_orientation))
 
-    # # Move to the desired starting angles
-    # pnp.move_to_start(starting_pose)
-    # idx = 0
-    # while not rospy.is_shutdown():
-    #     print("\nPicking...")
-    #     pnp.pick(block_poses[idx])
-    #     print("\nPlacing...")
-    #     idx = (idx+1) % len(block_poses)
-    #     pnp.place(block_poses[idx])
-    # return 0
+    # Move to the desired starting angles
+    pnp.move_to_start(starting_pose)
+    idx = 0
+    while not rospy.is_shutdown():
+        print("\nPicking...")
+        pnp.pick(block_poses[idx])
+        print("\nPlacing...")
+        idx = (idx+1) % len(block_poses)
+        pnp.place(block_poses[idx])
+    return 0
 
 
 if __name__ == '__main__':

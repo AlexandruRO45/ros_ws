@@ -77,7 +77,7 @@ rosrun baxter_chess spawn_chessboard_h.py
 ```
 ### Terminal 5:
 ```
-rosrun baxter_chess pick_and_plave_moveit.py
+rosrun baxter_chess pick_and_place_moveit.py
 ```
 ### Terminal 6:
 ```
