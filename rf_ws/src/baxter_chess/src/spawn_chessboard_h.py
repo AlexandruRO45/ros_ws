@@ -50,7 +50,7 @@ def setup_chess_pieces(model_path, board_pose, pnp, overhead_orientation):
             piece_positionmap[str(row)+str(col)] = [pose.position.x, pose.position.y, pose.position.z-0.93] # Compensating Gazebo RViz origin difference
             
             if piece in pieces_xml:
-                piece_name = f"{piece}{col}"
+                piece_name = "{}{}".format(piece, col)
                 spawn_model(piece_name, pieces_xml[piece], spawned_piece_pose)
 
                  if piece in list_pieces:
@@ -81,6 +81,8 @@ def main():
 
     model_path = rospkg.RosPack().get_path('baxter_sim_examples') + "/models/"
     spawn_table(model_path)
+
+    model_path = rospkg.RosPack().get_path('baxter_chess') + "/models/"
     board_pose = spawn_chessboard(model_path)
 
     board_setup, list_pieces, piece_positionmap, piece_names, pieces_xml = setup_chess_pieces(model_path, board_pose, pnp, overhead_orientation)
