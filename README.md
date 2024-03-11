@@ -56,7 +56,9 @@ The can be included at the end if the file by using (vim/nano or any other editi
 nano ~/.bashrc
 ```
 
-Then, you can use the packages as usual. For example, to launch the chess pick and place game, run:
+Then, you are free to use the packages as usual. 
+
+To launch the chess pick and place game, run (give a 10-30 seconds delay between commands to allow them be properly configured):
 
 ### Terminal 1:
 ```

@@ -1,15 +1,11 @@
 #!/usr/bin/env python
+#http://wiki.ros.org/simulator_gazebo/Tutorials/ListOfMaterials
 import sys, rospy, tf, rospkg
 from gazebo_msgs.srv import *
 from geometry_msgs.msg import *
 from copy import deepcopy
 from pick_and_place_moveit import PickAndPlaceMoveIt
-from std_msgs.msg import (
-    Empty,
-    String,
-)
 
-# http://wiki.ros.org/simulator_gazebo/Tutorials/ListOfMaterials
 
 def model_load(model_path):
     with open(model_path, "r") as f:
@@ -19,6 +15,7 @@ def model_spawn(model_name, model_xml, model_pose):
     try:
         spawn_sdf = rospy.ServiceProxy('/gazebo/spawn_sdf_model', SpawnModel)
         spawn_sdf(model_name, model_xml, "/", model_pose, "world")
+        rospy.loginfo("Spawned model '{}' successfully.".format(model_name))
     except rospy.ServiceException, e:
         rospy.logerr("Spawn SDF service call failed: {0}".format(e))
 
@@ -45,10 +42,6 @@ def main():
     board_xml = model_load(model_path + "chessboard/model.sdf")
     model_spawn("chessboard", board_xml, board_pose)
 
-    # Spawned Piece Pose
-    # spawned_piece_pose = Pose(position=Point(x=0.3, y=0.65, z=0.78))
-    # spawned_piece = rospy.Publisher('spawned_piece', Pose, queue_size=5)
-
     # Add chesspieces into the simulation
     origin_piece = 0.03125
     
@@ -61,7 +54,8 @@ def main():
     #board_setup = ['rnbqkbnr', 'pppppppp', '', '', '', '', 'PPPPPPPP', 'RNBQKBNR']
     
     # Board setup (Simplified chess game)
-    board_setup = ['r******r', '', '**k*****', '', '', '******K*', '', 'R******R']
+    #board_setup = ['r******r', '', '**k*****', '', '', '******K*', '', 'R******R']
+    board_setup = ['r******r', '', 'k*******', '', '', '*******K', '', 'R******R']
 
     piece_positionmap = dict()
     piece_names = []
@@ -73,28 +67,31 @@ def main():
     spawned_piece_pose.position.z = 0.8
 
     for row, each in enumerate(board_setup):
-        # print row
+        rospy.loginfo("Iteration {}: ".format(row+1))
         for col, piece in enumerate(each):
-            # print col
+            rospy.loginfo("Piece at position ({}, {}): {}".format(row, col, piece))
+            
             pose = deepcopy(board_pose)
             pose.position.x = board_pose.position.x + frame_dist + origin_piece + row * (2 * origin_piece)
             pose.position.y = board_pose.position.y - 0.55 + frame_dist + origin_piece + col * (2 * origin_piece)
             pose.position.z += 0.018
+            
             piece_positionmap[str(row)+str(col)] = [pose.position.x, pose.position.y, pose.position.z-0.93] #0.93 to compensate Gazebo RViz origin difference
             place_position = piece_positionmap[str(row)+str(col)]
+            
             if piece in pieces_xml:
                 model_spawn("%s%d" % (piece,col), pieces_xml[piece], spawned_piece_pose)
+            
             if piece in list_pieces:
                 piece_names.append("%s%d" % (piece,col))
                 pnp.pick(Pose(position = Point(spawned_piece_pose.position.x,spawned_piece_pose.position.y,place_position[2] - 0.015), orientation = overhead_orientation))
+                rospy.loginfo("Picking up piece: {}".format(piece))
                 pnp.place(Pose(position = Point(place_position[0], place_position[1], place_position[2] + 0.008), orientation = overhead_orientation))
+                rospy.loginfo("Placing piece at ({}, {}, {})".format(place_position[0],place_position[1],place_position[2]))
                 pnp.move_to_start(Pose(position = Point(x=0.7, y=0.135, z=0.35), orientation=overhead_orientation))
-            #     spawned_piece_pose.publish(pose)
-            #     print(rospy.get_time())
-            #     rospy.sleep(0.1)
-            #     print(rospy.wait_for_message("spawn_next", Empty)) 
-            # elif not piece == '*':
-            #     print('Error: No piece in this position: %s' % (piece))
+            
+            elif not piece == '*':
+                rospy.loginfo('Error: No piece in this position: %s' % (piece))
 
     # Publish parameters to the ROS parameter server
     rospy.set_param('board_setup', board_setup) # Board setup
@@ -105,4 +102,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    sys.exit(main())

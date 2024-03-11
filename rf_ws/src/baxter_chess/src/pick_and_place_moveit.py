@@ -37,6 +37,7 @@ class PickAndPlaceMoveIt(object):
         # This is an interface to one group of joints.  In our case, we want to use the "right_arm".
         # We will use this to plan and execute motions
         self._group = moveit_commander.MoveGroupCommander(limb+"_arm")
+        
 
     def move_to_start(self, start_angles=None):
         print("Moving the {0} arm to start pose...".format(self._limb_name))
@@ -141,12 +142,12 @@ def main():
     starting_pose = Pose(position=Point(x=0.7, y=0.135, z=0.35),orientation=overhead_orientation)
     pnp = PickAndPlaceMoveIt(limb, hover_distance)
     positionmap = rospy.get_param('piece_target_position_map')
-    pick_list = []
+    pick_list = ['00', '70', '20']
     pick_block_poses = list()
     for pick in pick_list:
         position = positionmap[pick]
         pick_block_poses.append(Pose(position=Point(x=position[0], y=position[1], z=position[2]), orientation=overhead_orientation))
-    place_list = []
+    place_list = ['04', '50', '21']
     place_block_poses = list()
     for place in place_list:
         position = positionmap[pick]
@@ -171,8 +172,7 @@ def main():
     # Move to the desired starting angles
     pnp.move_to_start(starting_pose)
     idx = 0
-    for idx in range(6):
-        while not rospy.is_shutdown():
+    for idx in range(3):
             print("\nPicking...")
             pnp.pick(pick_block_poses[idx])
             print("\nPlacing...")
