@@ -38,6 +38,22 @@ class PickAndPlaceMoveIt(object):
         # We will use this to plan and execute motions
         self._group = moveit_commander.MoveGroupCommander(limb+"_arm")
         
+        # Reduce the speed of the robot's movements
+        self._group.set_max_velocity_scaling_factor(0.5)
+        self._group.set_max_acceleration_scaling_factor(0.5)
+
+        # Increase the torque limits of the robot's joints
+        self._limb = self._group.get_limb_interface()
+        self._limb.set_joint_torques({
+            'right_s0': 100,
+            'right_s1': 100,
+            'right_e0': 100,
+            'right_e1': 100,
+            'right_w0': 100,
+            'right_w1': 100,
+            'right_w2': 100,
+        })
+        
 
     def move_to_start(self, start_angles=None):
         print("Moving the {0} arm to start pose...".format(self._limb_name))
