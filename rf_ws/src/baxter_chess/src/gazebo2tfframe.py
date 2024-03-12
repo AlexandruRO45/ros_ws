@@ -5,7 +5,7 @@ from gazebo_msgs.msg import LinkStates
 
 class Gazebo2TFFrame:
     def __init__(self, link_name):
-        self.pose = None
+        self.pose = {}
         self.input_linkname = link_name
 
         # Initialize ROS node

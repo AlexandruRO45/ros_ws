@@ -20,7 +20,8 @@ if __name__ == '__main__':
                 piece_name = "%s%d" % (piece, col)
                 print "Deleting "+piece_name
                 delete_model(piece_name)
-
+    print "Deleting "+ cafe_table
     delete_model("cafe_table")
+    print "Deleting "+ chessboard
     delete_model("chessboard")
 

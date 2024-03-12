@@ -92,16 +92,21 @@ def main():
     spawn_model("chessboard", board_xml, board_pose)
 
     # Chess pieces setup
+    list_pieces = 'rnbqkpRNBQKP'
     pieces_xml = {
         piece: load_model("{}/models/{}.sdf".format(rospack.get_path('baxter_chess'), piece))
-        for piece in 'rnbqkpRNBQKP'
+        for piece in list_pieces
     }
     board_setup = [
         'r******r', '********', 'k*******', '********', '********', '*******K', '********', 'R******R'
     ]
     piece_position_map, piece_names = set_up_chess_pieces(pnp, board_pose, pieces_xml, board_setup, overhead_orientation)
 
-    rospy.set_param('piece_target_position_map', piece_position_map)
+    rospy.set_param('board_setup', board_setup) # Board setup
+    rospy.set_param('list_pieces', list_pieces) # List of unique pieces
+    rospy.set_param('piece_target_position_map', piece_position_map) # 3D positions for each square in the chessboard
+    rospy.set_param('piece_names', piece_names) # Pieces that will be part of the game
+    rospy.set_param('pieces_xml', pieces_xml) # File paths to Gazebo models, i.e. SDF files
 
 
 if __name__ == '__main__':
