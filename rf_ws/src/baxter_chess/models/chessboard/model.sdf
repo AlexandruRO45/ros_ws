@@ -6,8 +6,8 @@
 		<link name="board">
 			<collision name="collision">
 				<geometry>
-					<mesh>
-						<uri>model://chessboard/chessboard.dae</uri>
+					<mesh> <!-- Hard coded location uri needs to be changed -->
+						<uri>/home/vagrant/ros_ws/rf_ws/src/baxter_chess/models/chessboard/chessboard.dae</uri>
 						<scale>0.0625 0.0625 0.0625</scale>
 					</mesh>
 				</geometry>
@@ -29,8 +29,8 @@
 			<visual name="visual">
 				<cast_shadows>false</cast_shadows>
 				<geometry>
-					<mesh>
-						<uri>model://chessboard/chessboard.dae</uri>
+					<mesh> <!-- Hard coded location uri needs to be changed -->
+						<uri>/home/vagrant/ros_ws/rf_ws/src/baxter_chess/models/chessboard/chessboard.dae</uri>
 						<scale>0.0625 0.0625 0.0625</scale>
 					</mesh>
 				</geometry>

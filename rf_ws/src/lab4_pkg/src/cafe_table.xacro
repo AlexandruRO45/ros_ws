@@ -36,5 +36,5 @@
     <axis xyz="0 0 1"/>
     <parent link="world"/>
     <child link="cafe_table__link"/>
-</joint>
+  </joint>
 </robot>
