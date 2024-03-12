@@ -7,6 +7,7 @@ import moveit_commander
 from geometry_msgs.msg import Pose, Point, Quaternion
 from std_msgs.msg import Empty
 import baxter_interface
+from chess_game import ChessGame
 
 
 class PickAndPlaceMoveIt:
@@ -118,22 +119,39 @@ def main():
 
     pnp = PickAndPlaceMoveIt(limb)
     position_map = rospy.get_param('piece_target_position_map')
+    game = ChessGame()
+    number_of_moves = 6
 
-    pick_list = ['00', '70', '20']
-    place_list = ['04', '50', '21']
+    for i in range(number_of_moves):
+        game.print_game_state()
+        team = 1 if i % 2 == 0 else 2
+        print("\nMove {}: Team {}'s turn".format(i + 1, team))
 
-    pick_block_poses = prepare_poses(overhead_orientation, position_map, pick_list)
-    place_block_poses = prepare_poses(overhead_orientation, position_map, place_list)
+        moves = game.generate_random_valid_move(team)
+        print(moves)
+        if moves is None:
+            print("No valid moves found!")
+            break
+        else:
+            move_from = "{}{}".format(moves[0], moves[1])
+            move_to = "{}{}".format(moves[2], moves[3])
 
+        pick_list = [move_from]
+        place_list = [move_to]
+        pick_block_poses = prepare_poses(overhead_orientation, position_map, pick_list)
+        place_block_poses = prepare_poses(overhead_orientation, position_map, place_list)
 
-    pnp.move_to_start(starting_pose)
+        print("Picking from {}, and placing to {}".format(move_from, move_to))
+        for pick_pose, place_pose in zip(pick_block_poses, place_block_poses):
+            print("\nPicking...")
+            pnp.pick(pick_pose)
+            print("\nPlacing...")
+            pnp.place(place_pose)
 
+        game.update_state(move_from, move_to)
+        game.save_state_to_file()
 
-    for pick_pose, place_pose in zip(pick_block_poses, place_block_poses):
-        print("\nPicking...")
-        pnp.pick(pick_pose)
-        print("\nPlacing...")
-        pnp.place(place_pose)
+    game.print_game_state()
 
     return 0
 

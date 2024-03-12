@@ -24,19 +24,20 @@ def set_up_chess_pieces(pnp, board_pose, pieces_xml, board_setup, overhead_orien
     for row, line in enumerate(board_setup):
         rospy.loginfo("Iteration {}: ".format(row + 1))
         for col, piece in enumerate(line):
+
+            target_position = [
+                board_pose.position.x + frame_distance + origin_piece + row * (2 * origin_piece),
+                board_pose.position.y - 0.55 + frame_distance + origin_piece + col * (2 * origin_piece),
+                board_pose.position.z + 0.018 - 0.93
+            ]  # Compensating for Gazebo-RViz origin difference
+
+            piece_position_map["{}{}".format(row, col)] = target_position
+
             if piece in pieces_xml:
                 spawn_piece_position = deepcopy(spawned_piece_pose)
                 model_name = "{}{}".format(piece, col)
                 spawn_model(model_name, pieces_xml[piece], spawn_piece_position)
                 piece_names.append(model_name)
-
-                target_position = [
-                    board_pose.position.x + frame_distance + origin_piece + row * (2 * origin_piece),
-                    board_pose.position.y - 0.55 + frame_distance + origin_piece + col * (2 * origin_piece),
-                    board_pose.position.z + 0.018 - 0.93
-                ]  # Compensating for Gazebo-RViz origin difference
-
-                piece_position_map["{}{}".format(row, col)] = target_position
 
                 if piece != '*':  # Actual piece to be moved
                     pnp.pick(
@@ -96,11 +97,11 @@ def main():
         for piece in 'rnbqkpRNBQKP'
     }
     board_setup = [
-        'r******r', '', 'k*******', '', '', '*******K', '', 'R******R'
+        'r******r', '********', 'k*******', '********', '********', '*******K', '********', 'R******R'
     ]
     piece_position_map, piece_names = set_up_chess_pieces(pnp, board_pose, pieces_xml, board_setup, overhead_orientation)
 
-
+    rospy.set_param('piece_target_position_map', piece_position_map)
 
 
 if __name__ == '__main__':
