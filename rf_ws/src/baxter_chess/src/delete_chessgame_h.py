@@ -21,16 +21,16 @@ class ChessboardDeleter:
     for row, each in enumerate(self.board_setup):
       for col, piece in enumerate(each):
         if piece in self.list_pieces:
-          piece_name = f"{piece}{col}"  # Use f-string for cleaner string formatting
-          print(f"Deleting {piece_name}")
+          piece_name = "{}{}".format(piece,col)  # Use f-string for cleaner string formatting
+          print("Deleting {}".format(piece_name))
           self.delete_model(piece_name)
 
   def delete_cafe_table(self):
-    print(f"Deleting cafe_table")
+    print("Deleting cafe_table")
     self.delete_model("cafe_table")
 
   def delete_chessboard(self):
-    print(f"Deleting chessboard")
+    print("Deleting chessboard")
     self.delete_model("chessboard")
 
 if __name__ == '__main__':
