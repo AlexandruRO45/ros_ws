@@ -1,181 +1,140 @@
 #!/usr/bin/env python
+
 import sys
 import copy
 import rospy
-import rospkg
-import baxter_interface
 import moveit_commander
-from std_msgs.msg import (
-    Empty,
-    String,
-)
-from geometry_msgs.msg import (
-    Pose,
-    Point,
-    Quaternion,
-)
-from gazebo_msgs.srv import (
-    SpawnModel,
-    DeleteModel,
-)
+from geometry_msgs.msg import Pose, Point, Quaternion
+from std_msgs.msg import Empty
+import baxter_interface
 
 
-
-class PickAndPlaceMoveIt(object):
+class PickAndPlaceMoveIt:
     def __init__(self, limb, hover_distance=0.15, verbose=True):
-        self._limb_name = limb  # string
-        self._hover_distance = hover_distance  # in meters
-        self._verbose = verbose  # bool
-        self._limb = baxter_interface.Limb(limb)
-        self._gripper = baxter_interface.Gripper(limb)
-        print("Getting robot state... ")
-        self._rs = baxter_interface.RobotEnable(baxter_interface.CHECK_VERSION)
-        self._init_state = self._rs.state().enabled
+        """
+        Initialize the Pick and Place operation using Baxter and MoveIt.
+
+        Args:
+            limb (str): The limb to use ('left' or 'right').
+            hover_distance (float): Distance to hover above target before and after pick/place.
+            verbose (bool): Enable verbose output for debugging.
+        """
+
+        self.limb_name = limb
+        self.hover_distance = hover_distance
+        self.verbose = verbose
+        self.limb = baxter_interface.Limb(limb)
+        self.gripper = baxter_interface.Gripper(limb)
+
+
+         # Enable the robot and initialize required interfaces
         print("Enabling robot... ")
+        rs = baxter_interface.RobotEnable(baxter_interface.CHECK_VERSION)
+        self.init_state = rs.state().enabled
 
-        self._robot = moveit_commander.RobotCommander()
-        # This is an interface to one group of joints.  In our case, we want to use the "right_arm".
-        # We will use this to plan and execute motions
-        self._group = moveit_commander.MoveGroupCommander(limb+"_arm") 
+        self.robot = moveit_commander.RobotCommander()
+        self.group = moveit_commander.MoveGroupCommander("{}_arm".format(limb))
 
-    def move_to_start(self, start_angles=None):
-        print("Moving the {0} arm to start pose...".format(self._limb_name))
 
+    def move_to_start(self, start_pose):
+        """Moves the arm to the starting pose."""
+        print("Moving the {} arm to start pose...".format(self.limb_name))
         self.gripper_open()
-        self._group.set_pose_target(start_angles)
-        plan = self._group.plan()
-        self._group.execute(plan)
+        self.set_target_and_move(start_pose)
         rospy.sleep(1.0)
         print("Running. Ctrl-c to quit")
 
-    def _guarded_move_to_joint_position(self, joint_angles):
-        if joint_angles:
-            self._limb.move_to_joint_positions(joint_angles)
-        else:
-            rospy.logerr("No Joint Angles provided for move_to_joint_positions. Staying put.")
+    def set_target_and_move(self, pose):
+        """Sets the target pose and moves the arm."""
+        self.group.set_pose_target(pose)
+        plan = self.group.plan()
+        self.group.execute(plan)
 
     def gripper_open(self):
-        self._gripper.open()
+        """Opens the gripper."""
+        self.gripper.open()
         rospy.sleep(1.0)
 
     def gripper_close(self):
-        self._gripper.close()
+        """Closes the gripper."""
+        self.gripper.close()
         rospy.sleep(1.0)
 
-    def _approach(self, pose):
-        approach = copy.deepcopy(pose)
-        # approach with a pose the hover-distance above the requested pose
-        approach.position.z = approach.position.z + self._hover_distance
+    def approach(self, pose):
+        """Approaches the given pose."""
+        approach_pose = copy.deepcopy(pose)
+        approach_pose.position.z += self.hover_distance
+        self.set_target_and_move(approach_pose)
 
-        self._group.set_pose_target(approach)
-        plan = self._group.plan()
-        self._group.execute(plan)
-
-    def _retract(self):
-        # retrieve current pose from endpoint
-        current_pose = self._limb.endpoint_pose()
-        ik_pose = Pose()
-        ik_pose.position.x = current_pose['position'].x
-        ik_pose.position.y = current_pose['position'].y
-        ik_pose.position.z = current_pose['position'].z + self._hover_distance
-        ik_pose.orientation.x = current_pose['orientation'].x
-        ik_pose.orientation.y = current_pose['orientation'].y
-        ik_pose.orientation.z = current_pose['orientation'].z
-        ik_pose.orientation.w = current_pose['orientation'].w
-
-        # servo up from current pose
-        self._group.set_pose_target(ik_pose)
-        plan = self._group.plan()
-        self._group.execute(plan)
-
-    def _servo_to_pose(self, pose):
-        # servo down to release
-        self._group.set_pose_target(pose)
-        plan = self._group.plan()
-        self._group.execute(plan)
+    def retract(self):
+        """Retracts the arm from the target."""
+        current_pose = self.limb.endpoint_pose()
+        retract_pose = Pose(
+            position=Point(
+                x=current_pose['position'].x,
+                y=current_pose['position'].y,
+                z=current_pose['position'].z + self.hover_distance),
+            orientation=current_pose['orientation'])
+        self.set_target_and_move(retract_pose)
 
     def pick(self, pose):
-        # open the gripper
+        """Performs the pick operation."""
         self.gripper_open()
-        # servo above pose
-        self._approach(pose)
-        # servo to pose
-        self._servo_to_pose(pose)
-        # close gripper
+        self.approach(pose)
+        self.set_target_and_move(pose)  # Move to the exact pose
         self.gripper_close()
-        # retract to clear object
-        self._retract()
+        self.retract()
 
     def place(self, pose):
-        # servo above pose
-        self._approach(pose)
-        # servo to pose
-        self._servo_to_pose(pose)
-        # open the gripper
+        """Performs the place operation."""
+        self.approach(pose)
+        self.set_target_and_move(pose)  # Move to the exact pose
         self.gripper_open()
-        # retract to clear object
-        self._retract()
+        self.retract()
+
+def prepare_poses(orientation, position_map, pick_list):
+    """Prepares a list of poses based on specified pick positions."""
+    return [
+        Pose(
+            position=Point(
+                    x=position[0], 
+                    y=position[1], 
+                    z=position[2]
+                ), 
+            orientation=orientation
+        ) for position in (position_map[pick] for pick in pick_list)
+    ]
 
 def main():
     moveit_commander.roscpp_initialize(sys.argv)
     rospy.init_node("ik_pick_and_place_moveit")
-
-    # # Load Gazebo Models via Spawning Services
-    # # Note that the models reference is the /world frame
-    # # and the IK operates with respect to the /base frame
-    # load_gazebo_models()
-    # # Remove models from the scene on shutdown
-    # rospy.on_shutdown(delete_gazebo_models)
-
-    # Wait for the All Clear from emulator startup
     rospy.wait_for_message("/robot/sim/started", Empty)
 
     limb = 'left'
-    hover_distance = 0.15  # meters
+    overhead_orientation = Quaternion(
+        x=-0.0249590815779, y=0.999649402929,
+        z=0.00737916180073, w=0.00486450832011)
+    starting_pose = Pose(position=Point(x=0.7, y=0.135, z=0.35), orientation=overhead_orientation)
 
-    # An orientation for gripper fingers to be overhead and parallel to the obj
-    overhead_orientation = Quaternion(x=-0.0249590815779, y=0.999649402929, z=0.00737916180073, w=0.00486450832011)
-    # NOTE: Gazebo and Rviz has different origins, even though they are connected. For this
-    # we need to compensate for this offset which is 0.93 from the ground in gazebo to
-    # the actual 0, 0, 0 in Rviz.
-    starting_pose = Pose(position=Point(x=0.7, y=0.135, z=0.35),orientation=overhead_orientation)
-    pnp = PickAndPlaceMoveIt(limb, hover_distance)
-    positionmap = rospy.get_param('piece_target_position_map')
+    pnp = PickAndPlaceMoveIt(limb)
+    position_map = rospy.get_param('piece_target_position_map')
+
     pick_list = ['00', '70', '20']
-    pick_block_poses = list()
-    for pick in pick_list:
-        position = positionmap[pick]
-        pick_block_poses.append(Pose(position=Point(x=position[0], y=position[1], z=position[2]), orientation=overhead_orientation))
     place_list = ['04', '50', '21']
-    place_block_poses = list()
-    for place in place_list:
-        position = positionmap[pick]
-        place_block_poses.append(Pose(position=Point(x=position[0], y=position[1], z=position[2]), orientation=overhead_orientation))
-    # The Pose of the block in its initial location.
-    # You may wish to replace these poses with estimates
-    # from a perception node.
 
-    # NOTE: Remember that there's an offset in Rviz wrt Gazebo. We need
-    # to command MoveIt! to go below because the table is 74 cm height.
-    # Since the offset is 0.93, we just simply need to substract
-    # 0.74 - 0.93 = -0.15 in Z
-    # block_poses.append(Pose(
-    #     position=Point(x=0.7, y=0.135, z=-0.14),
-    #     orientation=overhead_orientation))
-    # Feel free to add additional desired poses for the object.
-    # Each additional pose will get its own pick and place.
-    # block_poses.append(Pose(
-    #     position=Point(x=0.7, y=-0.135, z=-0.14),
-    #     orientation=overhead_orientation))
+    pick_block_poses = prepare_poses(overhead_orientation, position_map, pick_list)
+    place_block_poses = prepare_poses(overhead_orientation, position_map, place_list)
 
-    # Move to the desired starting angles
+
     pnp.move_to_start(starting_pose)
-    idx = 0
-    for idx in range(3):
-            print("\nPicking...")
-            pnp.pick(pick_block_poses[idx])
-            print("\nPlacing...")
-            pnp.place(place_block_poses[idx])
+
+
+    for pick_pose, place_pose in zip(pick_block_poses, place_block_poses):
+        print("\nPicking...")
+        pnp.pick(pick_pose)
+        print("\nPlacing...")
+        pnp.place(place_pose)
+
     return 0
 
 
