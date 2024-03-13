@@ -1,0 +1,2 @@
+baxter_chess:lab1_pkg:lab2_pkg:lab3_pkg:lab4_pkg:lab5_pkg
+-DCATKIN_DEVEL_PREFIX=/home/vagrant/ros_ws/rf_ws/devel -DCMAKE_INSTALL_PREFIX=/home/vagrant/ros_ws/rf_ws/install -G Unix Makefiles

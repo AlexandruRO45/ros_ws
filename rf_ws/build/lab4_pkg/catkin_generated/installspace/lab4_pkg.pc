@@ -1,0 +1,8 @@
+prefix=/home/vagrant/ros_ws/rf_ws/install
+
+Name: lab4_pkg
+Description: Description of lab4_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/vagrant/ros_ws/rf_ws/install/lib 
+Requires: 
