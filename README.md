@@ -1,30 +1,35 @@
 # ROS Workspace (Melodic)
 
-This repository contains a ROS workspace with several packages for a good understanding in robotics foundation. 
+This repository contains a ROS workspace with several packages to understand the robotics foundation better (experimenting with the simulated robot, Baxter). 
 
 ## Packages
 
 The workspace contains the following packages:
 
-* **camera_calibration**: Contains tools for calibrating cameras.
-* **image_processing**: Contains tools for processing images.
-* **navigation**: Contains tools for robot navigation.
-* **perception**: Contains tools for object detection and recognition.
-* **planning**: Contains tools for path planning.
-* **robot_control**: Contains tools for controlling robots.
-* **simulation**: Contains tools for simulating robots and environments.
+* **Gazebo Simulator**: 3D robotics simulator that provides a physics engine, high-quality graphics, and a plugin architecture for robot simulation.
+* **RViz**: a visualization tool for ROS that allows you to visualize sensor data, robot models, and the environment, useful for debugging and understanding robot behaviour.
+* **MoveIt!**: ROS framework for motion planning, manipulation, and control, providing tools for kinematics, collision checking, and visualization.
+* **OMPL (Open Motion Planning Library)**: powerful library for motion planning, providing implementations of various motion planning algorithms. 
+* **ROS Control**: a set of ROS packages that provide tools for controlling robot joints and interfaces with hardware drivers.
 
-The rf_ws folder contains all the practical labs to get started with baxter:
-* **baxter_chess**:
-* **lab1_pkg**:
-* **lab2_pkg**:
-* **lab3_pkg**:
-* **lab4_pkg**:
-* **lab5_pkg**:
+
+
+The rf_ws folder contains all the practical labs to get started with Baxter:
+* **baxter_chess**: Testing the ability of Baxter to move chess pieces on the chessboard. 
+* **lab1_pkg**: Exploring the simulation facilities in ROS and navigating Baxter's arms using keyboard arrows.
+* **lab2_pkg**: Learn how ROS handles coordinate transformations and discover the Unified Robot Description Format (URDF) and XML macros (aka XACRO). 
+* **lab3_pkg**: Using the ROS motion planning framework, Moveit to discover planning algorithms via the Open Motion Planning Library (OMPL).
+* **lab4_pkg**: Application of the framework for locating an object, grasping it and placing it in another location.
+* **lab5_pkg**: Visualisation camera using a depth sensor to detect blocks and pick/place them around the environment. 
+
 
 ## Installation
 
-To install the workspace, clone it to your designated location. The virtual machine to run the workspace can be found here.
+To install the workspace, clone it to your designated location. To facilitate easy setup and usage of the ROS workspace (as Melodic reached the EOL date), you can download a pre-configured virtual machine (VM) image for VirtualBox. This VM includes all the necessary software and packages to run the ROS environment and experiment with the provided repository.
+
+### Download Link:
+
+[ROS Melodic Virtual Machine Image](example.com/ros-melodic-vm-image)
 
 Build the workspace only after deleting build, devel and install folders for a fresh install or if you do not use the virtual machine provided:
 
@@ -51,14 +56,14 @@ source ~/ros_ws/devel/setup.bash
 source ~/ros_ws/rf_ws/devel/setup.bash
 ```
 
-The can be included at the end if the file by using (vim/nano or any other editing tool):
+They can be included at the end of the file by using (vim/nano or any other editing tool):
 ```
 nano ~/.bashrc
 ```
 
 Then, you are free to use the packages as usual. 
 
-To launch the chess pick and place game, run (give a 10-30 seconds delay between commands to allow them be properly configured):
+To launch the chess pick and place game, run (give a 10-30 seconds delay between commands to allow them to be properly configured):
 
 ### Terminal 1:
 ```
@@ -86,11 +91,10 @@ rosrun baxter_chess pick_and_place_moveit.py
 rosrun baxter_chess gazebo2tfframe.py
 ```
 
-In order to delete the chessboard and its components, run the command:
+To delete the chessboard and its components, run the command:
 ```
 rosrun baxter_chess delete_chessgame_h.py
 ```
-
 
 ## Contributing
 
