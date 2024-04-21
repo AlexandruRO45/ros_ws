@@ -29,7 +29,7 @@ To install the workspace, clone it to your designated location. To facilitate ea
 
 ### Download Link:
 
-[ROS Melodic Virtual Machine Image](example.com/ros-melodic-vm-image)
+[ROS Melodic Virtual Machine Image](https://drive.google.com/drive/folders/1-asjY5BQOW_zEhT6_00lPzvrY0FAn9ux?usp=sharing)
 
 Build the workspace only after deleting build, devel and install folders for a fresh install or if you do not use the virtual machine provided:
 
